@@ -2,7 +2,7 @@
 # Slider widget.
 widget = "slider"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
-active = true  # Activate this widget? true/false
+active = false  # Activate this widget? true/false
 weight = 25  # Order that this section will appear.
 
 # Slide interval.
@@ -15,25 +15,6 @@ height = ""
 
 # Slides.
 # Duplicate an `[[item]]` block to add more slides.
-[[item]]
-
-  [[feature]]
-    icon = "r-project"
-    icon_pack = "fab"
-    name = "R"
-    description = "90%"
-  
-  [[feature]]
-    icon = "chart-line"
-    icon_pack = "fas"
-    name = "Statistics"
-    description = "100%"  
-  
-  [[feature]]
-    icon = "camera-retro"
-    icon_pack = "fas"
-    name = "Photography"
-    description = "10%"
 
 [[item]]
   title = "Hello"

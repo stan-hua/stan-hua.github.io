@@ -1,0 +1,18 @@
+# Theme metadata
+name = "CherryMx"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+primary = "#789F9A"
+
+# Menu
+menu_primary = "#F2E5C9"
+menu_text = "#34495e"
+menu_text_active = "#34495e"
+menu_title = "#2b2b2b"
+
+# Home sections
+home_section_odd = "rgb(255, 255, 255)"
+home_section_even = "rgb(247, 247, 247)"

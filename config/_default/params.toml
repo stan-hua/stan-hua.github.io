@@ -13,10 +13,10 @@
 #   Latest themes (may require updating): https://sourcethemes.com/academic/themes/
 #   Browse built-in themes in `themes/academic/data/themes/`
 #   Browse user installed themes in `data/themes/`
-theme = "minimal"
+theme = "my_theme"
 
 # Enable users to switch between day and night mode?
-day_night = true
+day_night = false
 
 # Override the theme's font set (optional).
 #   Latest font sets (may require updating): https://sourcethemes.com/academic/themes/
@@ -111,17 +111,17 @@ coordinates = {latitude = "43.660749", longitude = "-79.395270"}
 
 # Contact links
 #   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
-#contact_links = [
-#  {icon = "github", icon_pack = "fab", name = "Github", link = "https://github.com/stan-hua"},
-#  {icon = "linkedin", icon_pack = "fab", name = "Connect with Me", link = "https://www.linkedin.com/in/stanley-z-hua"},
-#  ]
+contact_links = [
+  {icon = "github", icon_pack = "fab", name = "Github", link = "https://github.com/stan-hua"},
+  {icon = "linkedin", icon_pack = "fab", name = "Connect with Me", link = "https://www.linkedin.com/in/stanley-z-hua"},
+  ]
 
 ############################
 ## Social
 ############################
 
 # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
-sharing_image = ""
+sharing_image = "me"
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
 twitter = ""
@@ -144,7 +144,7 @@ address_format = "en-us"
 ############################
 
 # Main menu alignment (l = left, c = center, r = right) and logo options.
-main_menu = {align = "l", show_logo = false, highlight_active_link = true, show_language = false}
+main_menu = {align = "l", show_logo = true, highlight_active_link = true, show_language = false}
 
 # Show estimated reading time for posts? (true/false)
 reading_time = false

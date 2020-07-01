@@ -5,31 +5,29 @@ bio: My research interests include distributed robotics, mobile computing and pr
   matter.
 education:
   courses:
-  - course: H.BSc in Bioinformatics and Computational Biology
+  - course: H.BSc in Bioinformatics & Computational Biology
     institution: University of Toronto
-    year: 2023
+    year: In Progress
 email: ""
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+- Computational Biology
+- Medicine
+- Data Science
 organizations:
 - name: University of Toronto
   url: ""
-role: Undergraduate Student
+role: Undergraduate
 social:
 - icon: envelope
   icon_pack: fas
-  link: '#contact'
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: mailto:stanley.hua@mail.utoronto.ca
 - icon: github
   icon_pack: fab
   link: https://github.com/stan-hua
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/stanley-z-hua
+  
 superuser: true
 title: Stanley Z. Hua
 user_groups:
@@ -37,6 +35,8 @@ user_groups:
 - Visitors
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Coming from the Philippines, his first year was filled with new experiences, encounters, newly-found independence, new habits for studying and living, and a greater drive to succeed. Soon, he will be entering his second year with hopes of working under a computational lab that studies genomic or medical data.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+His most audacious goal is to enter the prestigious UofT MD/Ph.D program.
+
+
