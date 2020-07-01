@@ -1,0 +1,9 @@
+{
+    "path" : "~/Website/content/home",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
