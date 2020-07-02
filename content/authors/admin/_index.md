@@ -1,8 +1,7 @@
 ---
 authors:
 - admin
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+bio: Documenting interesting concepts for the future.
 education:
   courses:
   - course: H.BSc in Bioinformatics & Computational Biology
@@ -35,7 +34,7 @@ user_groups:
 - Visitors
 ---
 
-Coming from the Philippines, his first year was filled with new experiences, encounters, newly-found independence, new habits for studying and living, and a greater drive to succeed. Soon, he will be entering his second year with hopes of working under a computational lab that studies genomic or medical data.
+Coming from the Philippines, his first year was filled with new experiences, encounters, newly-found independence, new habits for studying and living, and a greater drive to succeed. Soon, he will be entering his second year with hopes of working under a computational lab studying genomic or medical data.
 
 His most audacious goal is to enter the prestigious UofT MD/Ph.D program.
 

@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R | Stanley Z. Hua</title>
-    <link>/category/r/</link>
-      <atom:link href="/category/r/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tag/r/</link>
+      <atom:link href="/tag/r/index.xml" rel="self" type="application/rss+xml" />
     <description>R</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/me</url>
       <title>R</title>
-      <link>/category/r/</link>
+      <link>/tag/r/</link>
     </image>
     
     <item>
@@ -20,7 +20,7 @@
       <description>
 
 
-&lt;p&gt;&lt;em&gt;Here lies my first blog post.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Here lies my first blog post.&lt;/strong&gt;&lt;/p&gt;
 </description>
     </item>
     

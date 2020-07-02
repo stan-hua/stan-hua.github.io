@@ -2,6 +2,9 @@
 header:
   caption: ""
   image: ""
+layout: 
+  section: 
+    post
 title: Posts
-view: 2
 ---
+
