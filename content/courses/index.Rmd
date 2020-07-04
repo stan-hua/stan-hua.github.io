@@ -53,12 +53,12 @@ summary h3{
 <h3>EdX (online)</h3>
 </summary>
 <p>
-- [x] Harvard Data Science: <span style="padding-left: 5px; display:inline">*R Basics*</span>
+- [x] HarvardX Data Science: <span style="padding-left: 5px; display:inline">*R Basics*</span>
 
-- [x] Harvard Data Science: <span style="padding-left: 5px; display:inline">*Visualization*</span>
+- [x] HarvardX Data Science: <span style="padding-left: 5px; display:inline">*Visualization*</span>
 
-- [x] Harvard Data Science: <span style="padding-left: 5px; display:inline">*Probability*</span>
+- [x] HarvardX Data Science: <span style="padding-left: 5px; display:inline">*Probability*</span>
 
-- [x] Harvard Data Science: <span style="padding-left: 5px; display:inline">*Inference and Modeling*</span>
+- [x] HarvardX Data Science: <span style="padding-left: 5px; display:inline">*Inference and Modeling*</span>
 </p>
 </details>
