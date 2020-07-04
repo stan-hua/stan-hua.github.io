@@ -10,8 +10,7 @@ education:
 email: ""
 interests:
 - Computational Biology
-- Medicine
-- Data Science
+- Programming
 organizations:
 - name: University of Toronto
   url: ""
@@ -34,8 +33,8 @@ user_groups:
 - Visitors
 ---
 
-Coming from the Philippines, his first year was filled with new experiences, encounters, newly-found independence, new habits for studying and living, and a greater drive to succeed. Soon, he will be entering his second year with hopes of working under a computational lab studying genomic or medical data.
+Coming from the Philippines, his first year was filled with new experiences, encounters, newly-found independence, new habits for studying and living, and a greater hunger to succeed. Soon, he will be entering his second year with hopes of working under a computational lab studying genomic or medical data.
 
-His most audacious goal is to enter the prestigious UofT MD/Ph.D program.
+His current and most audacious goal is to enter the UofT MD/Ph.D program.
 
 

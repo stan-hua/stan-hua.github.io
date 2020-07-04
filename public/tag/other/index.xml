@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Other | Stanley Z. Hua</title>
+    <link>/tag/other/</link>
+      <atom:link href="/tag/other/index.xml" rel="self" type="application/rss+xml" />
+    <description>Other</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 13 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/me</url>
+      <title>Other</title>
+      <link>/tag/other/</link>
+    </image>
+    
+    <item>
+      <title>COVID19 Policy Hackathon</title>
+      <link>/project/covid19-policy-hackathon-int/</link>
+      <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>/project/covid19-policy-hackathon-int/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

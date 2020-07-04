@@ -5,12 +5,49 @@
     <link>/courses/</link>
       <atom:link href="/courses/index.xml" rel="self" type="application/rss+xml" />
     <description>Courses</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 05 May 2019 00:00:00 +0100</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 03 Jul 2020 18:50:01 -0400</lastBuildDate>
     <image>
       <url>/img/me</url>
       <title>Courses</title>
       <link>/courses/</link>
     </image>
+    
+    <item>
+      <title>Courses</title>
+      <link>/courses/</link>
+      <pubDate>Fri, 03 Jul 2020 18:50:01 -0400</pubDate>
+      <guid>/courses/</guid>
+      <description>
+
+
+&lt;div id=&#34;completed&#34; class=&#34;section level2 tabset&#34;&gt;
+&lt;h2&gt;Completed&lt;/h2&gt;
+&lt;div id=&#34;university-courses&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;University Courses&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
+BIO120:&lt;/li&gt;
+&lt;li&gt;[x]&lt;/li&gt;
+&lt;li&gt;[x]&lt;/li&gt;
+&lt;li&gt;[x]&lt;/li&gt;
+&lt;li&gt;[x]&lt;/li&gt;
+&lt;li&gt;[x]&lt;/li&gt;
+&lt;li&gt;[x]&lt;/li&gt;
+&lt;li&gt;[x]&lt;/li&gt;
+&lt;li&gt;[x]&lt;/li&gt;
+&lt;li&gt;[x]&lt;/li&gt;
+&lt;li&gt;[x]&lt;/li&gt;
+&lt;li&gt;[x]&lt;/li&gt;
+&lt;li&gt;[x]&lt;/li&gt;
+&lt;li&gt;[x]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;online-courses&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Online Courses&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
   </channel>
 </rss>

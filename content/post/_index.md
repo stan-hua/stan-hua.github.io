@@ -1,10 +1,10 @@
 ---
 header:
-  caption: ""
+  caption: "A hub for sharing concepts in any field under the sun."
   image: ""
 layout: 
   section: 
     post
-title: Posts
+title: The Curiosity Box
 ---
 
