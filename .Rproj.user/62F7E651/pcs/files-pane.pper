@@ -1,5 +1,5 @@
 {
-    "path" : "~/Website/themes/hugo-academic/layouts/partials",
+    "path" : "~/Website/static",
     "sortOrder" : [
         {
             "ascending" : true,
