@@ -11,6 +11,7 @@ date: 2020-07-03T18:50:01-04:00
 lastmod: 2020-07-03T18:50:01-04:00
 featured: false
 draft: false
+share: false
 ---
 <style>
 summary h3{ 
