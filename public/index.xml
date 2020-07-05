@@ -42,9 +42,6 @@
       <description>
 
 
-&lt;style&gt;
-h3{font-weight:normal;}
-&lt;/style&gt;
 &lt;details&gt;
 &lt;summary&gt;
 If you’re trying to simulate a random event for whatever reason using R, then you’ve come to the right place!
@@ -88,7 +85,7 @@ simulations &amp;lt;- sapply(Ns, function(N){
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+02&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.060000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.090000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+04&lt;/td&gt;
@@ -96,7 +93,7 @@ simulations &amp;lt;- sapply(Ns, function(N){
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+06&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.083437&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.083484&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -115,6 +112,9 @@ simulations &amp;lt;- sapply(Ns, function(N){
                 a and b are the values we attribute to success and failure (i.e. 1 and -1);&lt;br /&gt;
                 p is the probability of success (i.e. 1/12);&lt;br /&gt;
                 and N is the sample size.&lt;/div&gt;
+&lt;style&gt;
+      h3{font-weight:normal;}
+&lt;/style&gt;
 &lt;/div&gt;
 </description>
     </item>

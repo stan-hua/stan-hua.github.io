@@ -21,10 +21,6 @@ projects: []
 share: true
 math: true
 ---
-<style>
-h3{font-weight:normal;}
-</style>
-
 <details>
 <summary>
 If you're trying to simulate a random event for whatever reason using R, then you've come to the right place!
@@ -91,3 +87,8 @@ $SE[\bar X] = |b - a| * \frac{\sqrt{p(1-p)}}{N} $
 |                 a and b are the values we attribute to success and failure (i.e. 1 and -1); 
 |                 p is the probability of success (i.e. 1/12); 
 |                 and N is the sample size.
+
+
+<style>
+      h3{font-weight:normal;}
+</style>
