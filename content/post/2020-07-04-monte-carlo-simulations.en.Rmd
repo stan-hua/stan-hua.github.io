@@ -9,7 +9,7 @@ tags:
   - Modeling
   - Probability
 subtitle: ''
-summary: ''
+summary: 'Wondering about the probability of die rolls?'
 authors: []
 lastmod: '2020-07-05T22:55:04-04:00'
 featured: no
