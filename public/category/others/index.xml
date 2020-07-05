@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Others | Stanley Z. Hua</title>
+    <link>/category/others/</link>
+      <atom:link href="/category/others/index.xml" rel="self" type="application/rss+xml" />
+    <description>Others</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/me</url>
+      <title>Others</title>
+      <link>/category/others/</link>
+    </image>
+    
+    <item>
+      <title>A First</title>
+      <link>/post/first/a-first/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/post/first/a-first/</guid>
+      <description>
+
+
+&lt;p&gt;&lt;strong&gt;Here lies my first blog post.&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

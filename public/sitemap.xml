@@ -18,6 +18,41 @@
   </url>
   
   <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-07-05T22:55:04-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/modeling/</loc>
+    <lastmod>2020-07-05T22:55:04-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/monte-carlo-simulations/</loc>
+    <lastmod>2020-07-05T22:55:04-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/probability/</loc>
+    <lastmod>2020-07-05T22:55:04-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/category/r/</loc>
+    <lastmod>2020-07-05T22:55:04-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-07-05T22:55:04-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-07-05T22:55:04-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/courses/</loc>
     <lastmod>2020-07-03T18:50:01-04:00</lastmod>
   </url>
@@ -38,17 +73,7 @@
   </url>
   
   <url>
-    <loc>/tag/r/</loc>
-    <lastmod>2020-07-01T20:11:50-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-07-01T20:11:50-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
+    <loc>/category/others/</loc>
     <lastmod>2020-07-01T20:11:50-04:00</lastmod>
   </url>
   
@@ -145,10 +170,6 @@
   <url>
     <loc>/publication/conference-paper/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
   </url>
   
   <url>

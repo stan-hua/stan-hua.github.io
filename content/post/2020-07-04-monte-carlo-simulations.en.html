@@ -1,0 +1,100 @@
+---
+title: Monte Carlo Simulations
+author: ''
+date: '2020-07-04'
+slug: monte-carlo-simulations
+categories:
+  - R
+tags:
+  - Modeling
+  - Probability
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-07-05T22:55:04-04:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+share: true
+math: true
+---
+
+
+
+<style>
+h3{font-weight:normal;}
+</style>
+<details>
+<summary>
+If you’re trying to simulate a random event for whatever reason using R, then you’ve come to the right place!
+</summary>
+<p>
+<blockquote>
+<p>If not, or if you do not have true or estimated probabilities for your simulation, then this is not for you!</p>
+</blockquote>
+</p>
+</details>
+<hr />
+<div id="premise" class="section level3">
+<h3><em>Premise</em></h3>
+<p>Say you want to understand how randomness works, and you want to roll a 12-sided die and see how many times it lands on 1. You’ll do roll a die 100, 10,000, 1,000,000 times.</p>
+<p><strong><em>Note:</em></strong> Every side of the die has a probability of 1/12, but the outcome of each roll is random and independent from one another.
+<br><br></p>
+</div>
+<div id="step-0-set-the-seed-to-some-arbitrary-constant.-optional" class="section level3">
+<h3><strong>Step 0:</strong> Set the seed to some arbitrary constant. (Optional)</h3>
+<pre class="r"><code>set.seed(2009, sample.kind=&quot;Rounding&quot;)    #for R 3.6 and later
+
+set.seed(2009)                            #for 3.5 and older</code></pre>
+<p>If you wish to observe the same results for lower numbers of draws, you can place this at the start of your script.
+<br><br></p>
+</div>
+<div id="step-1-construct-a-method-for-sampling." class="section level3">
+<h3><strong>Step 1:</strong> Construct a method for sampling.</h3>
+<pre class="r"><code>Ns = c(100, 10000, 1000000)                                          #number of simulations
+
+simulations &lt;- sapply(Ns, function(N){
+  sim &lt;- sample(c(1, -1), N, replace=TRUE, prob=c(1/12, 11/12))   #sampling
+  mean(sim == 1)                                                  #find the proportion of rolls which are 1 (success)
+})</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Sample.Size</th>
+<th align="center">Proportion.Observed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1e+02</td>
+<td align="center">0.060000</td>
+</tr>
+<tr class="even">
+<td align="center">1e+04</td>
+<td align="center">0.079900</td>
+</tr>
+<tr class="odd">
+<td align="center">1e+06</td>
+<td align="center">0.083437</td>
+</tr>
+</tbody>
+</table>
+<p>The sample function takes N rolls (with replacement). The result can either be 1; a success (landing on 1), or -1; a failure (not landing on one). The keyword argument “prob” defines the probability for possible events success or failure.</p>
+<p>As you can see from the results, the <strong><em>proportion</em></strong> of rolls landing on 1 converges to the probability we defined it to be (1/12 = 0.0833), as the <strong><em>number</em></strong> of rolls increases.</p>
+<p><br></p>
+<p>To close, it may be good to point out a common misconception when it comes to expectation. Say if you and your friends are tossing a coin and it lands on heads, you might be tempted to say “The next one will be tails!”, but that’s wrong. We know logically that the probability of either side landing is 1/2, but we would only be able to observe this when we sum up the results of maybe a thousand or hundred thousand rolls, as we have just done.
+<br></p>
+<p>The <em>Law of Large Numbers</em> (or <em>the Law of Averages</em>) states that as the number of draws (rolls) increases, the standard error (standard deviation but for samples) of the expected value approaches 0. In which case, the expected value converges to the probability we defined.
+<br><br></p>
+<p><strong><em>Enrichment</em></strong></p>
+<p>You can try to compute for the standard error for each simulation using the formula:</p>
+<p>$SE[X] = |b - a| *  $</p>
+<div class="line-block">    where SE means standard error;<br />
+                X_bar is the sample random variable;<br />
+                a and b are the values we attribute to success and failure (i.e. 1 and -1);<br />
+                p is the probability of success (i.e. 1/12);<br />
+                and N is the sample size.</div>
+</div>

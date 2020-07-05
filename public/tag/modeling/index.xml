@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R | Stanley Z. Hua</title>
-    <link>/category/r/</link>
-      <atom:link href="/category/r/index.xml" rel="self" type="application/rss+xml" />
-    <description>R</description>
+    <title>Modeling | Stanley Z. Hua</title>
+    <link>/tag/modeling/</link>
+      <atom:link href="/tag/modeling/index.xml" rel="self" type="application/rss+xml" />
+    <description>Modeling</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 04 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/me</url>
-      <title>R</title>
-      <link>/category/r/</link>
+      <title>Modeling</title>
+      <link>/tag/modeling/</link>
     </image>
     
     <item>
