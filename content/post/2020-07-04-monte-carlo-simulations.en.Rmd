@@ -9,7 +9,7 @@ tags:
   - Modeling
   - Probability
 subtitle: ''
-summary: 'After a bad roll, would you expect your luck to turn?'
+summary: 'After a bad roll, should you expect your luck to turn?'
 authors: []
 lastmod: '2020-07-05T22:55:04-04:00'
 featured: no
