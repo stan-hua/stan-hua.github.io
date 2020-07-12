@@ -14,9 +14,9 @@
     
     <item>
       <title>Monte Carlo Simulations</title>
-      <link>/post/monte-carlo-simulations/</link>
+      <link>/post/monte-carlo-simulations/monte-carlo-simulations/</link>
       <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/post/monte-carlo-simulations/</guid>
+      <guid>/post/monte-carlo-simulations/monte-carlo-simulations/</guid>
       <description>
 
 
@@ -63,15 +63,15 @@ simulations &amp;lt;- sapply(Ns, function(N){
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+02&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.050000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.1300&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+04&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.080000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.0792&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+06&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.083576&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.0834&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -82,9 +82,20 @@ simulations &amp;lt;- sapply(Ns, function(N){
 &lt;br&gt;&lt;/p&gt;
 &lt;p&gt;The &lt;em&gt;Law of Large Numbers&lt;/em&gt; (or &lt;em&gt;the Law of Averages&lt;/em&gt;) states that as the number of draws (rolls) increases, the standard error (standard deviation but for samples) of the expected value approaches 0. In which case, the expected value converges to the probability we defined.
 &lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: For cases wherein the probability is not defined, we can use the &lt;code&gt;replicate&lt;/code&gt; function that takes two arguments. The second argument defines a line or set of lines to replicate, while the first argument is the number of times you wish to repeat the second argument.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;: Creating a list of sample means.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;array                           # a non-empty numeric array of length 100,000
+B &amp;lt;- 1000                       # number of replications
+N &amp;lt;- 100                        # number of samples
+sample_means &amp;lt;- replicate(B, {
+    sample_array &amp;lt;- sample(array, N, replace=TRUE)
+    mean(sample_array)          #like a function; this is returned
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Enrichment&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;You can try to compute for the standard error for each simulation using the formula:&lt;/p&gt;
-&lt;p&gt;$SE[X] = |b - a| *  $&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(SE[\overline{X}]=|b-a|*\frac{\sqrt{p(1-p)}}{N}\)&lt;/span&gt;&lt;/p&gt;
 &lt;div class=&#34;line-block&#34;&gt;    where SE means standard error;&lt;br /&gt;
                 X_bar is the sample random variable;&lt;br /&gt;
                 a and b are the values we attribute to success and failure (i.e. 1 and -1);&lt;br /&gt;

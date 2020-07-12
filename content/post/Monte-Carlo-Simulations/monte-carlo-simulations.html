@@ -11,7 +11,7 @@ tags:
 subtitle: ''
 summary: 'After a bad roll, should you expect your luck to turn?'
 authors: []
-lastmod: '2020-07-05T22:55:04-04:00'
+lastmod: '2020-07-11T22:55:04-04:00'
 featured: no
 image:
   caption: ''
@@ -67,15 +67,15 @@ simulations &lt;- sapply(Ns, function(N){
 <tbody>
 <tr class="odd">
 <td align="center">1e+02</td>
-<td align="center">0.050000</td>
+<td align="center">0.1300</td>
 </tr>
 <tr class="even">
 <td align="center">1e+04</td>
-<td align="center">0.080000</td>
+<td align="center">0.0792</td>
 </tr>
 <tr class="odd">
 <td align="center">1e+06</td>
-<td align="center">0.083576</td>
+<td align="center">0.0834</td>
 </tr>
 </tbody>
 </table>
@@ -86,9 +86,20 @@ simulations &lt;- sapply(Ns, function(N){
 <br></p>
 <p>The <em>Law of Large Numbers</em> (or <em>the Law of Averages</em>) states that as the number of draws (rolls) increases, the standard error (standard deviation but for samples) of the expected value approaches 0. In which case, the expected value converges to the probability we defined.
 <br><br></p>
+<p><strong>NOTE</strong>: For cases wherein the probability is not defined, we can use the <code>replicate</code> function that takes two arguments. The second argument defines a line or set of lines to replicate, while the first argument is the number of times you wish to repeat the second argument.</p>
+<p><em>Example</em>: Creating a list of sample means.</p>
+<pre><code>array                           # a non-empty numeric array of length 100,000
+B &lt;- 1000                       # number of replications
+N &lt;- 100                        # number of samples
+sample_means &lt;- replicate(B, {
+    sample_array &lt;- sample(array, N, replace=TRUE)
+    mean(sample_array)          #like a function; this is returned
+})
+</code></pre>
+<p><br><br></p>
 <p><strong><em>Enrichment</em></strong></p>
 <p>You can try to compute for the standard error for each simulation using the formula:</p>
-<p>$SE[X] = |b - a| *  $</p>
+<p><span class="math inline">\(SE[\overline{X}]=|b-a|*\frac{\sqrt{p(1-p)}}{N}\)</span></p>
 <div class="line-block">    where SE means standard error;<br />
                 X_bar is the sample random variable;<br />
                 a and b are the values we attribute to success and failure (i.e. 1 and -1);<br />

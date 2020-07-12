@@ -19,37 +19,47 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-07-05T22:55:04-04:00</lastmod>
+    <lastmod>2020-07-11T22:55:04-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/tag/modeling/</loc>
-    <lastmod>2020-07-05T22:55:04-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/monte-carlo-simulations/</loc>
-    <lastmod>2020-07-05T22:55:04-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/probability/</loc>
-    <lastmod>2020-07-05T22:55:04-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/category/r/</loc>
-    <lastmod>2020-07-05T22:55:04-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-07-05T22:55:04-04:00</lastmod>
+    <loc>/category/python/</loc>
+    <lastmod>2020-07-11T22:39:51-04:00</lastmod>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-07-05T22:55:04-04:00</lastmod>
+    <lastmod>2020-07-11T22:55:04-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/pandas/useful/</loc>
+    <lastmod>2020-07-11T22:39:51-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/modeling/</loc>
+    <lastmod>2020-07-11T22:55:04-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/monte-carlo-simulations/monte-carlo-simulations/</loc>
+    <lastmod>2020-07-11T22:55:04-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/probability/</loc>
+    <lastmod>2020-07-11T22:55:04-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/category/r/</loc>
+    <lastmod>2020-07-11T22:55:04-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-07-11T22:55:04-04:00</lastmod>
   </url>
   
   <url>

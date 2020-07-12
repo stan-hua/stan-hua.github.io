@@ -1,0 +1,120 @@
+---
+title: Things to know from the Pandas Library
+author: ''
+date: '2020-07-11'
+slug: useful
+categories:
+  - Python
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-07-11T22:39:51-04:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+draft: TRUE
+---
+<style>
+h2{
+  text-decoration: underline;
+  line-height: 5pt;
+}
+h3{ 
+  display: list-item; 
+  list-style-type: disc;
+  list-style-position: inside;
+  font-size:17px;
+  font-family:"Cambria"
+}
+</style>
+
+## Importing
+
+### Import the library
+
+```
+import pandas as pd
+```
+
+### Read csv file data
+
+```
+df = pd.read_csv(file_path, index_col=None)
+```
+
+<br>
+
+## About dataset
+
+### Print summary of data
+
+```
+df.describe()
+```
+
+### Check column names
+
+```
+df.columns
+```
+
+### Columns of a specific type
+
+```
+df.dtypes == 'object'
+```
+
+### 
+
+```
+
+```
+<br>
+
+## Handling data
+
+### Apply
+
+```
+
+```
+
+### Piping
+
+```
+
+```
+
+### Filter
+
+```
+
+```
+
+### Dropping NA
+
+```
+
+```
+
+### Unique vs Nunique
+
+```
+
+```
+
+### 
+
+```
+
+```
+
+### 
+
+```
+
+```

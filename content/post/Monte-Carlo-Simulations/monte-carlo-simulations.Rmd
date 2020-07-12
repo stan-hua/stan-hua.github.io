@@ -11,7 +11,7 @@ tags:
 subtitle: ''
 summary: 'After a bad roll, should you expect your luck to turn?'
 authors: []
-lastmod: '2020-07-05T22:55:04-04:00'
+lastmod: '2020-07-11T22:55:04-04:00'
 featured: no
 image:
   caption: ''
@@ -76,11 +76,26 @@ To close, it may be good to point out a common misconception when it comes to ex
 The *Law of Large Numbers* (or *the Law of Averages*) states that as the number of draws (rolls) increases, the standard error (standard deviation but for samples) of the expected value approaches 0. In which case, the expected value converges to the probability we defined.
 <br><br>
 
+**NOTE**: For cases wherein the probability is not defined, we can use the `replicate` function that takes two arguments. The second argument defines a line or set of lines to replicate, while the first argument is the number of times you wish to repeat the second argument.
+
+*Example*: Creating a list of sample means.
+```
+array                           # a non-empty numeric array of length 100,000
+B <- 1000                       # number of replications
+N <- 100                        # number of samples
+sample_means <- replicate(B, {
+    sample_array <- sample(array, N, replace=TRUE)
+    mean(sample_array)          #like a function; this is returned
+})
+
+```
+<br><br>
+
 ***Enrichment***
 
 You can try to compute for the standard error for each simulation using the formula:
 
-$SE[\bar X] = |b - a| * \frac{\sqrt{p(1-p)}}{N} $
+$SE[\overline{X}]=|b-a|*\frac{\sqrt{p(1-p)}}{N}$
 
 |     where SE means standard error;
 |                 X_bar is the sample random variable; 
