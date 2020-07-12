@@ -85,15 +85,15 @@ simulations &amp;lt;- sapply(Ns, function(N){
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+02&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.11000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.050000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+04&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.07860&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.080000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+06&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.08358&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.083576&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -179,7 +179,7 @@ HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34
 HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;&lt;em&gt;Visualization&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
 HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;&lt;em&gt;Probability&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; /&gt;
+&lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
 HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;&lt;em&gt;Inference and Modeling&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/p&gt;
