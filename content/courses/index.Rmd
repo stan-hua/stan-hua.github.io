@@ -73,7 +73,8 @@ summary h3{
 </summary>
 <p>
 - [x] Intro to Machine Learning
-- [ ] Intermediate Machine Learning
+- [x] Intermediate Machine Learning
+- [ ] Feature Engineering
 
 </p>
 </details>
