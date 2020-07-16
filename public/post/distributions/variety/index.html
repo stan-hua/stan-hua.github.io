@@ -27,10 +27,10 @@
   
     
   
-  <meta name="description" content="After a bad roll, should you expect your luck to turn?">
+  <meta name="description" content="Curious to see if your data follows a particular distribution?">
 
   
-  <link rel="alternate" hreflang="en-us" href="/post/monte-carlo-simulations/monte-carlo-simulations/">
+  <link rel="alternate" hreflang="en-us" href="/post/distributions/variety/">
 
   
 
@@ -42,9 +42,6 @@
   
 
   
-  
-  
-  <script src="/js/mathjax-config.js"></script>
   
 
   
@@ -176,9 +173,9 @@
 
       
       
-
+        
       
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+
       
     
       
@@ -220,7 +217,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu4e1243eff0b251057f4d971b74b2ba81_2125_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu4e1243eff0b251057f4d971b74b2ba81_2125_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="/post/monte-carlo-simulations/monte-carlo-simulations/">
+  <link rel="canonical" href="/post/distributions/variety/">
 
   
   
@@ -235,15 +232,15 @@
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Stanley Z. Hua">
-  <meta property="og:url" content="/post/monte-carlo-simulations/monte-carlo-simulations/">
-  <meta property="og:title" content="Monte Carlo Simulations | Stanley Z. Hua">
-  <meta property="og:description" content="After a bad roll, should you expect your luck to turn?"><meta property="og:image" content="/img/me">
+  <meta property="og:url" content="/post/distributions/variety/">
+  <meta property="og:title" content="Distributions | Stanley Z. Hua">
+  <meta property="og:description" content="Curious to see if your data follows a particular distribution?"><meta property="og:image" content="/img/me">
   <meta property="twitter:image" content="/img/me"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-07-04T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2020-07-12T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-07-11T22:55:04-04:00">
+    <meta property="article:modified_time" content="2020-07-12T16:09:53-04:00">
   
 
   
@@ -267,12 +264,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "/post/monte-carlo-simulations/monte-carlo-simulations/"
+    "@id": "/post/distributions/variety/"
   },
-  "headline": "Monte Carlo Simulations",
+  "headline": "Distributions",
   
-  "datePublished": "2020-07-04T00:00:00Z",
-  "dateModified": "2020-07-11T22:55:04-04:00",
+  "datePublished": "2020-07-12T00:00:00Z",
+  "dateModified": "2020-07-12T16:09:53-04:00",
   
   "author": {
     "@type": "Person",
@@ -287,7 +284,7 @@
       "url": "/images/logo_hua8210ea1de5412abeaf8ca8d2a58dee0_72128_192x192_fit_lanczos_2.png"
     }
   },
-  "description": "After a bad roll, should you expect your luck to turn?"
+  "description": "Curious to see if your data follows a particular distribution?"
 }
 </script>
 
@@ -305,7 +302,7 @@
 
 
 
-  <title>Monte Carlo Simulations | Stanley Z. Hua</title>
+  <title>Distributions | Stanley Z. Hua</title>
 
 </head>
 <body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
@@ -536,7 +533,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Monte Carlo Simulations</h1>
+  <h1>Distributions</h1>
 
   
 
@@ -557,7 +554,7 @@
           Last updated on
       
     
-    Jul 11, 2020
+    Jul 12, 2020
   </span>
   
 
@@ -604,90 +601,46 @@
       
 
 
-<details>
-<summary>
-If you’re trying to simulate a random event for whatever reason using R, then you’ve come to the right place!
-</summary>
-<p>
-<blockquote>
-<p>If not, or if you do not have true or estimated probabilities for your simulation, then this is not for you!</p>
-</blockquote>
-</p>
-</details>
-<hr />
-<div id="premise" class="section level3">
-<h3><em>Premise</em></h3>
-<p>Say you want to understand how randomness works, and you want to roll a 12-sided die and see how many times it lands on 1. You’ll do roll a die 100, 10,000, 1,000,000 times.</p>
-<p><strong><em>Note:</em></strong> Every side of the die has a probability of 1/12, but the outcome of each roll is random and independent from one another.
-<br><br></p>
-</div>
-<div id="step-0-set-the-seed-to-some-arbitrary-constant.-optional" class="section level3">
-<h3><strong>Step 0:</strong> Set the seed to some arbitrary constant. (Optional)</h3>
-<pre class="r"><code>set.seed(2009, sample.kind=&quot;Rounding&quot;)    #for R 3.6 and later
+<div id="normal-distribution" class="section level2">
+<h2>Normal Distribution</h2>
+<p>Probably one of the most important distributions in statistics, the normal distribution is most notably used in hypothesis testing and confidence intervals.</p>
+<div id="testing-out-the-clt" class="section level3">
+<h3>Testing out the CLT</h3>
+<pre><code>library(tidyverse)
+library(ggplot2)
+library(gridExtra)
 
-set.seed(2009)                            #for 3.5 and older</code></pre>
-<p>If you wish to observe the same results for lower numbers of draws, you can place this at the start of your script.
-<br><br></p>
-</div>
-<div id="step-1-construct-a-method-for-sampling." class="section level3">
-<h3><strong>Step 1:</strong> Construct a method for sampling.</h3>
-<pre class="r"><code>Ns = c(100, 10000, 1000000)                                          #number of simulations
+data(BJsales)
+numeric_data &lt;- as.numeric(BJsales)
+X &lt;- mean(numeric_data)
+B &lt;- 10000
 
-simulations &lt;- sapply(Ns, function(N){
-  sim &lt;- sample(c(1, -1), N, replace=TRUE, prob=c(1/12, 11/12))   #sampling
-  mean(sim == 1)                                                  #find the proportion of rolls which are 1 (success)
-})</code></pre>
-<table>
-<thead>
-<tr class="header">
-<th align="center">Sample.Size</th>
-<th align="center">Proportion.Observed</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">1e+02</td>
-<td align="center">0.1300</td>
-</tr>
-<tr class="even">
-<td align="center">1e+04</td>
-<td align="center">0.0792</td>
-</tr>
-<tr class="odd">
-<td align="center">1e+06</td>
-<td align="center">0.0834</td>
-</tr>
-</tbody>
-</table>
-<p>The sample function takes N rolls (with replacement). The result can either be 1; a success (landing on 1), or -1; a failure (not landing on one). The keyword argument “prob” defines the probability for possible events success or failure.</p>
-<p>As you can see from the results, the <strong><em>proportion</em></strong> of rolls landing on 1 converges to the probability we defined it to be (1/12 = 0.0833), as the <strong><em>number</em></strong> of rolls increases.</p>
-<p><br></p>
-<p>To close, it may be good to point out a common misconception when it comes to expectation. Say if you and your friends are tossing a coin and it lands on heads, you might be tempted to say “The next one will be tails!”, but that’s wrong. We know logically that the probability of either side landing is 1/2, but we would only be able to observe this when we sum up the results of maybe a thousand or hundred thousand rolls, as we have just done.
-<br></p>
-<p>The <em>Law of Large Numbers</em> (or <em>the Law of Averages</em>) states that as the number of draws (rolls) increases, the standard error (standard deviation but for samples) of the expected value approaches 0. In which case, the expected value converges to the probability we defined.
-<br><br></p>
-<p><strong>NOTE</strong>: For cases wherein the probability is not defined, we can use the <code>replicate</code> function that takes two arguments. The second argument defines a line or set of lines to replicate, while the first argument is the number of times you wish to repeat the second argument.</p>
-<p><em>Example</em>: Creating a list of sample means.</p>
-<pre><code>array                           # a non-empty numeric array of length 100,000
-B &lt;- 1000                       # number of replications
-N &lt;- 100                        # number of samples
-sample_means &lt;- replicate(B, {
-    sample_array &lt;- sample(array, N, replace=TRUE)
-    mean(sample_array)          #like a function; this is returned
+sample_means &lt;- replicate(length(numeric_data), {
+  samples &lt;- sample(numeric_data, 30, replace=TRUE)
+  mean(samples)
 })
-</code></pre>
-<p><br><br></p>
-<p><strong><em>Enrichment</em></strong></p>
-<p>You can try to compute for the standard error for each simulation using the formula:</p>
-<p><span class="math inline">\(SE[\overline{X}]=|b-a|*\frac{\sqrt{p(1-p)}}{N}\)</span></p>
-<div class="line-block">    where SE means standard error;<br />
-                X_bar is the sample random variable;<br />
-                a and b are the values we attribute to success and failure (i.e. 1 and -1);<br />
-                p is the probability of success (i.e. 1/12);<br />
-                and N is the sample size.</div>
-<style>
-      h3{font-weight:normal;}
-</style>
+
+df &lt;- data.frame(numeric_data, sample_means)
+
+plot_dist &lt;- df %&gt;% 
+  ggplot(aes(x=numeric_data)) +
+  geom_density(fill=&quot;gray&quot;) +
+  ggtitle(NULL) +
+  xlab(&quot;BJ Sales&quot;) +
+  ylab(&quot;Probability Density&quot;) +
+  ylim(c(0, 0.09)) +
+  theme_classic()
+
+plot_sample &lt;- df %&gt;% 
+  ggplot(aes(x=sample_means)) +
+  geom_density(fill=&quot;gray&quot;) +
+  ggtitle(NULL) +
+  xlab(&quot;Means of Sample Sales&quot;) +
+  ylab(&quot;Probability Density&quot;) +
+  theme_classic()
+
+grid.arrange(plot_dist, plot_sample)</code></pre>
+</div>
 </div>
 
     </div>
@@ -701,9 +654,7 @@ sample_means &lt;- replicate(B, {
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tag/modeling/">Modeling</a>
-  
-  <a class="badge badge-light" href="/tag/probability/">Probability</a>
+  <a class="badge badge-light" href="/tag/other/">Other</a>
   
 </div>
 
@@ -720,7 +671,7 @@ sample_means &lt;- replicate(B, {
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/post/monte-carlo-simulations/monte-carlo-simulations/&amp;text=Monte%20Carlo%20Simulations" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=/post/distributions/variety/&amp;text=Distributions" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -733,7 +684,7 @@ sample_means &lt;- replicate(B, {
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/post/monte-carlo-simulations/monte-carlo-simulations/&amp;t=Monte%20Carlo%20Simulations" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=/post/distributions/variety/&amp;t=Distributions" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -746,7 +697,7 @@ sample_means &lt;- replicate(B, {
       
       
       <li>
-        <a href="mailto:?subject=Monte%20Carlo%20Simulations&amp;body=/post/monte-carlo-simulations/monte-carlo-simulations/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Distributions&amp;body=/post/distributions/variety/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -759,7 +710,7 @@ sample_means &lt;- replicate(B, {
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/post/monte-carlo-simulations/monte-carlo-simulations/&amp;title=Monte%20Carlo%20Simulations" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=/post/distributions/variety/&amp;title=Distributions" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -772,7 +723,7 @@ sample_means &lt;- replicate(B, {
       
       
       <li>
-        <a href="whatsapp://send?text=Monte%20Carlo%20Simulations%20/post/monte-carlo-simulations/monte-carlo-simulations/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Distributions%20/post/distributions/variety/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -785,7 +736,7 @@ sample_means &lt;- replicate(B, {
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/post/monte-carlo-simulations/monte-carlo-simulations/&amp;title=Monte%20Carlo%20Simulations" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=/post/distributions/variety/&amp;title=Distributions" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -905,7 +856,9 @@ sample_means &lt;- replicate(B, {
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/post/distributions/variety/">Distributions</a></li>
+      <li><a href="/project/covid19-policy-hackathon-int/">COVID19 Policy Hackathon</a></li>
+      
+      <li><a href="/post/monte-carlo-simulations/monte-carlo-simulations/">Monte Carlo Simulations</a></li>
       
     </ul>
   </div>

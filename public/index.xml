@@ -35,6 +35,58 @@
     </item>
     
     <item>
+      <title>Distributions</title>
+      <link>/post/distributions/variety/</link>
+      <pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/post/distributions/variety/</guid>
+      <description>
+
+
+&lt;div id=&#34;normal-distribution&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Normal Distribution&lt;/h2&gt;
+&lt;p&gt;Probably one of the most important distributions in statistics, the normal distribution is most notably used in hypothesis testing and confidence intervals.&lt;/p&gt;
+&lt;div id=&#34;testing-out-the-clt&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Testing out the CLT&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;library(tidyverse)
+library(ggplot2)
+library(gridExtra)
+
+data(BJsales)
+numeric_data &amp;lt;- as.numeric(BJsales)
+X &amp;lt;- mean(numeric_data)
+B &amp;lt;- 10000
+
+sample_means &amp;lt;- replicate(length(numeric_data), {
+  samples &amp;lt;- sample(numeric_data, 30, replace=TRUE)
+  mean(samples)
+})
+
+df &amp;lt;- data.frame(numeric_data, sample_means)
+
+plot_dist &amp;lt;- df %&amp;gt;% 
+  ggplot(aes(x=numeric_data)) +
+  geom_density(fill=&amp;quot;gray&amp;quot;) +
+  ggtitle(NULL) +
+  xlab(&amp;quot;BJ Sales&amp;quot;) +
+  ylab(&amp;quot;Probability Density&amp;quot;) +
+  ylim(c(0, 0.09)) +
+  theme_classic()
+
+plot_sample &amp;lt;- df %&amp;gt;% 
+  ggplot(aes(x=sample_means)) +
+  geom_density(fill=&amp;quot;gray&amp;quot;) +
+  ggtitle(NULL) +
+  xlab(&amp;quot;Means of Sample Sales&amp;quot;) +
+  ylab(&amp;quot;Probability Density&amp;quot;) +
+  theme_classic()
+
+grid.arrange(plot_dist, plot_sample)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Things to know from the Pandas Library</title>
       <link>/post/pandas/useful/</link>
       <pubDate>Sat, 11 Jul 2020 00:00:00 +0000</pubDate>
@@ -257,6 +309,8 @@ HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34
 HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;&lt;em&gt;Probability&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
 HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;&lt;em&gt;Inference and Modeling&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; /&gt;
+HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;&lt;em&gt;Productivity Tools&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/p&gt;
 &lt;/details&gt;

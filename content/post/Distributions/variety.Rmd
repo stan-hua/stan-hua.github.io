@@ -1,0 +1,79 @@
+---
+title: Distributions
+author: ''
+date: '2020-07-12'
+slug: variety
+categories:
+  - R
+tags:
+  - Other
+subtitle: ''
+summary: 'Curious to see if your data follows a particular distribution?'
+authors: []
+lastmod: '2020-07-12T16:09:53-04:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+draft: TRUE
+---
+
+## Normal Distribution
+
+Probably one of the most important distributions in statistics, the normal distribution is most notably used in hypothesis testing and confidence intervals.
+
+### Testing out the CLT
+```
+library(tidyverse)
+library(ggplot2)
+library(gridExtra)
+
+data(BJsales)
+numeric_data <- as.numeric(BJsales)
+X <- mean(numeric_data)
+B <- 10000
+
+sample_means <- replicate(length(numeric_data), {
+  samples <- sample(numeric_data, 30, replace=TRUE)
+  mean(samples)
+})
+
+df <- data.frame(numeric_data, sample_means)
+
+plot_dist <- df %>% 
+  ggplot(aes(x=numeric_data)) +
+  geom_density(fill="gray") +
+  ggtitle(NULL) +
+  xlab("BJ Sales") +
+  ylab("Probability Density") +
+  ylim(c(0, 0.09)) +
+  theme_classic()
+
+plot_sample <- df %>% 
+  ggplot(aes(x=sample_means)) +
+  geom_density(fill="gray") +
+  ggtitle(NULL) +
+  xlab("Means of Sample Sales") +
+  ylab("Probability Density") +
+  theme_classic()
+
+grid.arrange(plot_dist, plot_sample)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
