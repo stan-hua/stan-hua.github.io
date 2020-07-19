@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python | Stanley Z. Hua</title>
-    <link>/category/python/</link>
-      <atom:link href="/category/python/index.xml" rel="self" type="application/rss+xml" />
-    <description>Python</description>
+    <title>Python Libraries | Stanley Z. Hua</title>
+    <link>/tag/python-libraries/</link>
+      <atom:link href="/tag/python-libraries/index.xml" rel="self" type="application/rss+xml" />
+    <description>Python Libraries</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 11 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/me</url>
-      <title>Python</title>
-      <link>/category/python/</link>
+      <title>Python Libraries</title>
+      <link>/tag/python-libraries/</link>
     </image>
     
     <item>

@@ -6,7 +6,7 @@ slug: variety
 categories:
   - R
 tags:
-  - Other
+  - Statistics and Probability
 subtitle: ''
 summary: 'Curious to see if your data follows a particular distribution?'
 authors: []
@@ -19,13 +19,45 @@ image:
 projects: []
 draft: TRUE
 ---
+<style>
+.bod{
+  font-family: Arial;
+  font-size: 10pt;
+  display: inline-block;
+  margin-left: 15px;
+  text-indent: 50px;
+}
+h2{
+  text-decoration: underline;
+  padding-top: 15px;
+  font-family: "Arial";
+  text-align: center;
+}
+h3{ 
+  display: list-item;
+  list-style-type: upper-roman;;
+  list-style-position: inside;
+  font-size:17px;
+  font-family:"Cambria";
+  font-style: italic;
+  margin-left: 7px;
+}
+
+</style>
 
 ## Normal Distribution
 
+<p class="bod">
 Probably one of the most important distributions in statistics, the normal distribution is most notably used in hypothesis testing and confidence intervals.
+</p>
 
-### Testing out the CLT
-```
+### Testing out the Central Limit Theorem
+
+<p class="bod">
+To make an illustrative point, RStudio's built-in dataset BJsales will be used. The data describes the number of sales every day for some consecutive months. Its probability density was graphed below.
+</p>
+
+```{r prelim, echo=FALSE, include=FALSE, eval=TRUE}
 library(tidyverse)
 library(ggplot2)
 library(gridExtra)
@@ -49,25 +81,30 @@ plot_dist <- df %>%
   xlab("BJ Sales") +
   ylab("Probability Density") +
   ylim(c(0, 0.09)) +
-  theme_classic()
+  theme_classic() +
+  theme(axis.title.y = element_text(size = rel(0.9), angle = 90))
 
 plot_sample <- df %>% 
   ggplot(aes(x=sample_means)) +
   geom_density(fill="gray") +
   ggtitle(NULL) +
-  xlab("Means of Sample Sales") +
+  xlab("Sample Means") +
   ylab("Probability Density") +
-  theme_classic()
-
-grid.arrange(plot_dist, plot_sample)
+  theme_classic() +
+  theme(axis.title.y = element_text(size = rel(0.9), angle = 90))
 ```
 
+```{r plot, fig.show='hold', echo=FALSE, fig.dim=c(3.2,2.5)}
+plot_dist
+```
 
+Notice how the distribution is bimodal with one peak centered at 217 and the other at 257! Now look what happens when you take 30 samples from  
 
+<br>
 
-
-
-
+```{r plot2, fig.show='hold', echo=FALSE, fig.dim=c(3.2,2.5)}
+plot_sample
+```
 
 
 

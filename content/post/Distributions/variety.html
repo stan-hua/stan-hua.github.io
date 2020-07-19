@@ -6,7 +6,7 @@ slug: variety
 categories:
   - R
 tags:
-  - Other
+  - Statistics and Probability
 subtitle: ''
 summary: 'Curious to see if your data follows a particular distribution?'
 authors: []
@@ -22,44 +22,44 @@ draft: TRUE
 
 
 
+<style>
+.bod{
+  font-family: Arial;
+  font-size: 10pt;
+  display: inline-block;
+  margin-left: 15px;
+  text-indent: 50px;
+}
+h2{
+  text-decoration: underline;
+  padding-top: 15px;
+  font-family: "Arial";
+  text-align: center;
+}
+h3{ 
+  display: list-item;
+  list-style-type: upper-roman;;
+  list-style-position: inside;
+  font-size:17px;
+  font-family:"Cambria";
+  font-style: italic;
+  margin-left: 7px;
+}
+
+</style>
 <div id="normal-distribution" class="section level2">
 <h2>Normal Distribution</h2>
-<p>Probably one of the most important distributions in statistics, the normal distribution is most notably used in hypothesis testing and confidence intervals.</p>
-<div id="testing-out-the-clt" class="section level3">
-<h3>Testing out the CLT</h3>
-<pre><code>library(tidyverse)
-library(ggplot2)
-library(gridExtra)
-
-data(BJsales)
-numeric_data &lt;- as.numeric(BJsales)
-X &lt;- mean(numeric_data)
-B &lt;- 10000
-
-sample_means &lt;- replicate(length(numeric_data), {
-  samples &lt;- sample(numeric_data, 30, replace=TRUE)
-  mean(samples)
-})
-
-df &lt;- data.frame(numeric_data, sample_means)
-
-plot_dist &lt;- df %&gt;% 
-  ggplot(aes(x=numeric_data)) +
-  geom_density(fill=&quot;gray&quot;) +
-  ggtitle(NULL) +
-  xlab(&quot;BJ Sales&quot;) +
-  ylab(&quot;Probability Density&quot;) +
-  ylim(c(0, 0.09)) +
-  theme_classic()
-
-plot_sample &lt;- df %&gt;% 
-  ggplot(aes(x=sample_means)) +
-  geom_density(fill=&quot;gray&quot;) +
-  ggtitle(NULL) +
-  xlab(&quot;Means of Sample Sales&quot;) +
-  ylab(&quot;Probability Density&quot;) +
-  theme_classic()
-
-grid.arrange(plot_dist, plot_sample)</code></pre>
+<p class="bod">
+Probably one of the most important distributions in statistics, the normal distribution is most notably used in hypothesis testing and confidence intervals.
+</p>
+<div id="testing-out-the-central-limit-theorem" class="section level3">
+<h3>Testing out the Central Limit Theorem</h3>
+<p class="bod">
+To make an illustrative point, RStudio’s built-in dataset BJsales will be used. The data describes the number of sales every day for some consecutive months. Its probability density was graphed below.
+</p>
+<p><img src="/post/Distributions/variety_files/figure-html/plot-1.png" width="307.2" /></p>
+<p>Notice how the distribution is bimodal with one peak centered at 217 and the other at 257! Now look what happens when you take 30 samples from</p>
+<p><br></p>
+<p><img src="/post/Distributions/variety_files/figure-html/plot2-1.png" width="307.2" /></p>
 </div>
 </div>

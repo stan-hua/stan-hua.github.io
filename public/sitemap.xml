@@ -19,16 +19,11 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-07-12T16:09:53-04:00</lastmod>
+    <lastmod>2020-07-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/post/distributions/variety/</loc>
-    <lastmod>2020-07-12T16:09:53-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/other/</loc>
     <lastmod>2020-07-12T16:09:53-04:00</lastmod>
   </url>
   
@@ -38,23 +33,33 @@
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>/tag/statistics-and-probability/</loc>
     <lastmod>2020-07-12T16:09:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-07-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-07-12T16:09:53-04:00</lastmod>
+    <lastmod>2020-07-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/category/python/</loc>
-    <lastmod>2020-07-11T22:39:51-04:00</lastmod>
+    <lastmod>2020-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/python-libraries/</loc>
+    <lastmod>2020-07-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/post/pandas/useful/</loc>
-    <lastmod>2020-07-11T22:39:51-04:00</lastmod>
+    <lastmod>2020-07-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -64,11 +69,6 @@
   
   <url>
     <loc>/post/monte-carlo-simulations/monte-carlo-simulations/</loc>
-    <lastmod>2020-07-11T22:55:04-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/probability/</loc>
     <lastmod>2020-07-11T22:55:04-04:00</lastmod>
   </url>
   
@@ -99,6 +99,11 @@
   
   <url>
     <loc>/project/covid19-policy-hackathon-int/</loc>
+    <lastmod>2020-06-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/other/</loc>
     <lastmod>2020-06-13T00:00:00+00:00</lastmod>
   </url>
   

@@ -5,64 +5,12 @@
     <link>/tag/other/</link>
       <atom:link href="/tag/other/index.xml" rel="self" type="application/rss+xml" />
     <description>Other</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 12 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 13 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/me</url>
       <title>Other</title>
       <link>/tag/other/</link>
     </image>
-    
-    <item>
-      <title>Distributions</title>
-      <link>/post/distributions/variety/</link>
-      <pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/post/distributions/variety/</guid>
-      <description>
-
-
-&lt;div id=&#34;normal-distribution&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Normal Distribution&lt;/h2&gt;
-&lt;p&gt;Probably one of the most important distributions in statistics, the normal distribution is most notably used in hypothesis testing and confidence intervals.&lt;/p&gt;
-&lt;div id=&#34;testing-out-the-clt&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Testing out the CLT&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;library(tidyverse)
-library(ggplot2)
-library(gridExtra)
-
-data(BJsales)
-numeric_data &amp;lt;- as.numeric(BJsales)
-X &amp;lt;- mean(numeric_data)
-B &amp;lt;- 10000
-
-sample_means &amp;lt;- replicate(length(numeric_data), {
-  samples &amp;lt;- sample(numeric_data, 30, replace=TRUE)
-  mean(samples)
-})
-
-df &amp;lt;- data.frame(numeric_data, sample_means)
-
-plot_dist &amp;lt;- df %&amp;gt;% 
-  ggplot(aes(x=numeric_data)) +
-  geom_density(fill=&amp;quot;gray&amp;quot;) +
-  ggtitle(NULL) +
-  xlab(&amp;quot;BJ Sales&amp;quot;) +
-  ylab(&amp;quot;Probability Density&amp;quot;) +
-  ylim(c(0, 0.09)) +
-  theme_classic()
-
-plot_sample &amp;lt;- df %&amp;gt;% 
-  ggplot(aes(x=sample_means)) +
-  geom_density(fill=&amp;quot;gray&amp;quot;) +
-  ggtitle(NULL) +
-  xlab(&amp;quot;Means of Sample Sales&amp;quot;) +
-  ylab(&amp;quot;Probability Density&amp;quot;) +
-  theme_classic()
-
-grid.arrange(plot_dist, plot_sample)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
     
     <item>
       <title>COVID19 Policy Hackathon</title>

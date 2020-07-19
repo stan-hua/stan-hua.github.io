@@ -7,7 +7,7 @@ categories:
   - R
 tags:
   - Modeling
-  - Probability
+  - Statistics and Probability
 subtitle: ''
 summary: 'After a bad roll, should you expect your luck to turn?'
 authors: []

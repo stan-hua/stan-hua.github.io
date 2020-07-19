@@ -20,112 +20,174 @@
       <description>
 
 
+&lt;style&gt;
+.bod{
+  font-family: Arial;
+  font-size: 10pt;
+  display: inline-block;
+  margin-left: 15px;
+  text-indent: 50px;
+}
+h2{
+  text-decoration: underline;
+  padding-top: 15px;
+  font-family: &#34;Arial&#34;;
+  text-align: center;
+}
+h3{ 
+  display: list-item;
+  list-style-type: upper-roman;;
+  list-style-position: inside;
+  font-size:17px;
+  font-family:&#34;Cambria&#34;;
+  font-style: italic;
+  margin-left: 7px;
+}
+
+&lt;/style&gt;
 &lt;div id=&#34;normal-distribution&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Normal Distribution&lt;/h2&gt;
-&lt;p&gt;Probably one of the most important distributions in statistics, the normal distribution is most notably used in hypothesis testing and confidence intervals.&lt;/p&gt;
-&lt;div id=&#34;testing-out-the-clt&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Testing out the CLT&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;library(tidyverse)
-library(ggplot2)
-library(gridExtra)
-
-data(BJsales)
-numeric_data &amp;lt;- as.numeric(BJsales)
-X &amp;lt;- mean(numeric_data)
-B &amp;lt;- 10000
-
-sample_means &amp;lt;- replicate(length(numeric_data), {
-  samples &amp;lt;- sample(numeric_data, 30, replace=TRUE)
-  mean(samples)
-})
-
-df &amp;lt;- data.frame(numeric_data, sample_means)
-
-plot_dist &amp;lt;- df %&amp;gt;% 
-  ggplot(aes(x=numeric_data)) +
-  geom_density(fill=&amp;quot;gray&amp;quot;) +
-  ggtitle(NULL) +
-  xlab(&amp;quot;BJ Sales&amp;quot;) +
-  ylab(&amp;quot;Probability Density&amp;quot;) +
-  ylim(c(0, 0.09)) +
-  theme_classic()
-
-plot_sample &amp;lt;- df %&amp;gt;% 
-  ggplot(aes(x=sample_means)) +
-  geom_density(fill=&amp;quot;gray&amp;quot;) +
-  ggtitle(NULL) +
-  xlab(&amp;quot;Means of Sample Sales&amp;quot;) +
-  ylab(&amp;quot;Probability Density&amp;quot;) +
-  theme_classic()
-
-grid.arrange(plot_dist, plot_sample)&lt;/code&gt;&lt;/pre&gt;
+&lt;p class=&#34;bod&#34;&gt;
+Probably one of the most important distributions in statistics, the normal distribution is most notably used in hypothesis testing and confidence intervals.
+&lt;/p&gt;
+&lt;div id=&#34;testing-out-the-central-limit-theorem&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Testing out the Central Limit Theorem&lt;/h3&gt;
+&lt;p class=&#34;bod&#34;&gt;
+To make an illustrative point, RStudio’s built-in dataset BJsales will be used. The data describes the number of sales every day for some consecutive months. Its probability density was graphed below.
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/Distributions/variety_files/figure-html/plot-1.png&#34; width=&#34;307.2&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Notice how the distribution is bimodal with one peak centered at 217 and the other at 257! Now look what happens when you take 30 samples from&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/Distributions/variety_files/figure-html/plot2-1.png&#34; width=&#34;307.2&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
-      <title>Things to know from the Pandas Library</title>
+      <title>Save the Pandas...library</title>
       <link>/post/pandas/useful/</link>
       <pubDate>Sat, 11 Jul 2020 00:00:00 +0000</pubDate>
       <guid>/post/pandas/useful/</guid>
       <description>&lt;style&gt;
+
+.bod{
+  font-family: Arial;
+  font-size: 11pt;
+  display: inline-block;
+  margin-left: 10px;
+}
+
 h2{
   text-decoration: underline;
   line-height: 5pt;
+  text-align: center;
+  padding-top: 30px;
 }
 h3{ 
-  display: list-item; 
+  display: list-item;
   list-style-type: disc;
   list-style-position: inside;
   font-size:17px;
-  font-family:&#34;Cambria&#34;
+  font-family:&#34;Cambria&#34;;
 }
 &lt;/style&gt;
+&lt;p&gt;By convention, &amp;ldquo;&lt;em&gt;&lt;strong&gt;df&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; will refer to a dataframe object, while &amp;ldquo;&lt;em&gt;&lt;strong&gt;Series&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; will refer to a series object.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;importing&#34;&gt;Importing&lt;/h2&gt;
-&lt;h3 id=&#34;import-the-library&#34;&gt;Import the library&lt;/h3&gt;
+&lt;h3 id=&#34;importing-the-libraries&#34;&gt;Importing the Libraries&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;import pandas as pd
+import numpy as np        #NumPy library required by Pandas library
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;read-csv-file-data&#34;&gt;Read csv file data&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;df = pd.read_csv(file_path, index_col=None)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;br&gt;
 &lt;h2 id=&#34;about-dataset&#34;&gt;About dataset&lt;/h2&gt;
-&lt;h3 id=&#34;print-summary-of-data&#34;&gt;Print summary of data&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;df.describe()
-&lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;check-column-names&#34;&gt;Check column names&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;df.columns
+
+Series.name
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;columns-of-a-specific-type&#34;&gt;Columns of a specific type&lt;/h3&gt;
+&lt;h3 id=&#34;check-shape-of-object&#34;&gt;Check shape of object&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;df.shape
+
+Series.shape
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;columns-of-a-specific-data-type-type&#34;&gt;Columns of a specific data type type&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;df.dtypes == &#39;object&#39;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;heading&#34;&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;h3 id=&#34;describe-data&#34;&gt;Describe data&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;df.describe()
 &lt;/code&gt;&lt;/pre&gt;
-&lt;br&gt;
+&lt;!-- ### --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- &lt;br&gt; --&gt;
 &lt;h2 id=&#34;handling-data&#34;&gt;Handling data&lt;/h2&gt;
-&lt;h3 id=&#34;apply&#34;&gt;Apply&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;piping&#34;&gt;Piping&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;h3 id=&#34;apply-a-function-on-a-pandas-object&#34;&gt;Apply (a function on a pandas object)&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;df.apply(FUN, axis=0, *args)    #FUN: any (valid) function to apply
+                                #axis: axis to assess
+                                #*args: additional keyword arguments for FUN
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;filter&#34;&gt;Filter&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;pre&gt;&lt;code&gt;df.filter(items=, like=None)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;dropping-na&#34;&gt;Dropping NA&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;h3 id=&#34;get-dummies----aka-one-hot-encoding&#34;&gt;Get Dummies    (aka One Hot Encoding)&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;df.get_dummies(dummy_na=False, columns=None, sparse=False, drop_first=False, dtype=np.uint8)
+        #dummy_na: if True, adds dummy column for NA
+        #columns: if !None, columns specified will be one hot encoded
+        #sparse: whether resulting columns will be SparseArray objects (True) or NumPy arrays(False) 
+        #drop_first: removes first unique dummy variable from unique objects in column
+        #dtype: data type for new columns (e.g. float)
+
+
+Series.get_dummies(dummy_na=False, columns=None, sparse=False, drop_first=False, dtype=&#39;np.uint8&#39;)
 &lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;handling-na&#34;&gt;Handling NA&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;#Finding NA and inverse
+df.isna()
+Series.isna()
+
+df.notna()
+Series.isna()
+
+
+#Dropping NA
+df.dropna(axis=0, how=&#39;any&#39;, thresh=None, subset=None, inplace=False)
+        #axis: axis to assess
+        #how: when to drop axis (e.g. how=&#39;all&#39; drops IFF all values are NA)
+        #thresh: number of NAs in axis to drop
+        #subset: labels on axis to be considered
+        #inplace: by default, returns new object. If True, modifies existing object
+        
+Series.dropna(axis=0, how=None,inplace=False)
+
+
+#Filling NA
+df.fillna(value=None, method=None, axis=None, inplace=False, limit=None)
+        #value: value to fill holes
+        #method: method for filling holes.*
+        #inplace: by default, returns new object. If True, modifies existing object
+        #limit: max number of consecutive NAs to fill. Will be left as NA if value is exceeded
+
+Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;piping-data-through-multiple-functions&#34;&gt;Piping data through multiple functions&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;(df.pipe(FUN1)
+    .pipe(FUN2, arg1=foo)                  
+    .pipe((FUN3, &amp;quot;arg2&amp;quot;), arg1=bar)        #when FUN3&#39;s main arg. is not df, supply tuple
+                                                where str contains location for df (e.g. &amp;quot;arg2&amp;quot;)
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p class=&#39;bod&#39;&gt; &lt;b&gt;NOTE&lt;/b&gt;: similar to %&gt;% operation in R. &lt;/p&gt;
 &lt;h3 id=&#34;unique-vs-nunique&#34;&gt;Unique vs Nunique&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;pre&gt;&lt;code&gt;for col in df.columns:    #for loop to get column names
+  df[col].unique()            #returns unique values in column &#39;col&#39;
+  df[col].nunique()           #returns unique values in column AND drop NAs
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;heading-1&#34;&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;heading-2&#34;&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- ###  --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- ``` --&gt;
 </description>
     </item>
     
@@ -180,15 +242,15 @@ simulations &amp;lt;- sapply(Ns, function(N){
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+02&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.1300&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.040000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+04&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.0792&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.085600&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+06&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.0834&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.083467&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

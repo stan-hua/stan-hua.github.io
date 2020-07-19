@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="h2{text-decoration: underline;line-height: 5pt;}h3{ display: list-item; list-style-type: disc;list-style-position: inside;font-size:17px;font-family:&#34;Cambria&#34;}Importing Import the library import pandas as pd Read csv file data df = pd.">
+  <meta name="description" content="Amassing a collection of useful Python Pandas library commands!">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/pandas/useful/">
@@ -233,14 +233,14 @@
   
   <meta property="og:site_name" content="Stanley Z. Hua">
   <meta property="og:url" content="/post/pandas/useful/">
-  <meta property="og:title" content="Things to know from the Pandas Library | Stanley Z. Hua">
-  <meta property="og:description" content="h2{text-decoration: underline;line-height: 5pt;}h3{ display: list-item; list-style-type: disc;list-style-position: inside;font-size:17px;font-family:&#34;Cambria&#34;}Importing Import the library import pandas as pd Read csv file data df = pd."><meta property="og:image" content="/img/me">
+  <meta property="og:title" content="Save the Pandas...library | Stanley Z. Hua">
+  <meta property="og:description" content="Amassing a collection of useful Python Pandas library commands!"><meta property="og:image" content="/img/me">
   <meta property="twitter:image" content="/img/me"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2020-07-11T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-07-11T22:39:51-04:00">
+    <meta property="article:modified_time" content="2020-07-18T00:00:00&#43;00:00">
   
 
   
@@ -266,10 +266,10 @@
     "@type": "WebPage",
     "@id": "/post/pandas/useful/"
   },
-  "headline": "Things to know from the Pandas Library",
+  "headline": "Save the Pandas...library",
   
   "datePublished": "2020-07-11T00:00:00Z",
-  "dateModified": "2020-07-11T22:39:51-04:00",
+  "dateModified": "2020-07-18T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -284,7 +284,7 @@
       "url": "/images/logo_hua8210ea1de5412abeaf8ca8d2a58dee0_72128_192x192_fit_lanczos_2.png"
     }
   },
-  "description": "h2{\rtext-decoration: underline;\rline-height: 5pt;\r}\rh3{ display: list-item; list-style-type: disc;\rlist-style-position: inside;\rfont-size:17px;\rfont-family:\"Cambria\"\r}\r\rImporting Import the library import pandas as pd\r Read csv file data df = pd."
+  "description": "Amassing a collection of useful Python Pandas library commands!"
 }
 </script>
 
@@ -302,7 +302,7 @@
 
 
 
-  <title>Things to know from the Pandas Library | Stanley Z. Hua</title>
+  <title>Save the Pandas...library | Stanley Z. Hua</title>
 
 </head>
 <body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
@@ -533,7 +533,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Things to know from the Pandas Library</h1>
+  <h1>Save the Pandas...library</h1>
 
   
 
@@ -554,7 +554,7 @@
           Last updated on
       
     
-    Jul 11, 2020
+    Jul 18, 2020
   </span>
   
 
@@ -599,62 +599,124 @@
 
     <div class="article-style">
       <style>
+
+.bod{
+  font-family: Arial;
+  font-size: 11pt;
+  display: inline-block;
+  margin-left: 10px;
+}
+
 h2{
   text-decoration: underline;
   line-height: 5pt;
+  text-align: center;
+  padding-top: 30px;
 }
 h3{ 
-  display: list-item; 
+  display: list-item;
   list-style-type: disc;
   list-style-position: inside;
   font-size:17px;
-  font-family:"Cambria"
+  font-family:"Cambria";
 }
 </style>
+<p>By convention, &ldquo;<em><strong>df</strong></em>&rdquo; will refer to a dataframe object, while &ldquo;<em><strong>Series</strong></em>&rdquo; will refer to a series object.</p>
+<hr>
 <h2 id="importing">Importing</h2>
-<h3 id="import-the-library">Import the library</h3>
+<h3 id="importing-the-libraries">Importing the Libraries</h3>
 <pre><code>import pandas as pd
+import numpy as np        #NumPy library required by Pandas library
 </code></pre>
 <h3 id="read-csv-file-data">Read csv file data</h3>
 <pre><code>df = pd.read_csv(file_path, index_col=None)
 </code></pre>
-<br>
 <h2 id="about-dataset">About dataset</h2>
-<h3 id="print-summary-of-data">Print summary of data</h3>
-<pre><code>df.describe()
-</code></pre>
 <h3 id="check-column-names">Check column names</h3>
 <pre><code>df.columns
+
+Series.name
 </code></pre>
-<h3 id="columns-of-a-specific-type">Columns of a specific type</h3>
+<h3 id="check-shape-of-object">Check shape of object</h3>
+<pre><code>df.shape
+
+Series.shape
+</code></pre>
+<h3 id="columns-of-a-specific-data-type-type">Columns of a specific data type type</h3>
 <pre><code>df.dtypes == 'object'
 </code></pre>
-<h3 id="heading"></h3>
-<pre><code>
+<h3 id="describe-data">Describe data</h3>
+<pre><code>df.describe()
 </code></pre>
-<br>
+<!-- ### -->
+<!-- ``` -->
+<!-- ``` -->
+<!-- <br> -->
 <h2 id="handling-data">Handling data</h2>
-<h3 id="apply">Apply</h3>
-<pre><code>
-</code></pre>
-<h3 id="piping">Piping</h3>
-<pre><code>
+<h3 id="apply-a-function-on-a-pandas-object">Apply (a function on a pandas object)</h3>
+<pre><code>df.apply(FUN, axis=0, *args)    #FUN: any (valid) function to apply
+                                #axis: axis to assess
+                                #*args: additional keyword arguments for FUN
 </code></pre>
 <h3 id="filter">Filter</h3>
-<pre><code>
+<pre><code>df.filter(items=, like=None)
 </code></pre>
-<h3 id="dropping-na">Dropping NA</h3>
-<pre><code>
+<h3 id="get-dummies----aka-one-hot-encoding">Get Dummies    (aka One Hot Encoding)</h3>
+<pre><code>df.get_dummies(dummy_na=False, columns=None, sparse=False, drop_first=False, dtype=np.uint8)
+        #dummy_na: if True, adds dummy column for NA
+        #columns: if !None, columns specified will be one hot encoded
+        #sparse: whether resulting columns will be SparseArray objects (True) or NumPy arrays(False) 
+        #drop_first: removes first unique dummy variable from unique objects in column
+        #dtype: data type for new columns (e.g. float)
+
+
+Series.get_dummies(dummy_na=False, columns=None, sparse=False, drop_first=False, dtype='np.uint8')
 </code></pre>
+<h3 id="handling-na">Handling NA</h3>
+<pre><code>#Finding NA and inverse
+df.isna()
+Series.isna()
+
+df.notna()
+Series.isna()
+
+
+#Dropping NA
+df.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
+        #axis: axis to assess
+        #how: when to drop axis (e.g. how='all' drops IFF all values are NA)
+        #thresh: number of NAs in axis to drop
+        #subset: labels on axis to be considered
+        #inplace: by default, returns new object. If True, modifies existing object
+        
+Series.dropna(axis=0, how=None,inplace=False)
+
+
+#Filling NA
+df.fillna(value=None, method=None, axis=None, inplace=False, limit=None)
+        #value: value to fill holes
+        #method: method for filling holes.*
+        #inplace: by default, returns new object. If True, modifies existing object
+        #limit: max number of consecutive NAs to fill. Will be left as NA if value is exceeded
+
+Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)
+</code></pre>
+<h3 id="piping-data-through-multiple-functions">Piping data through multiple functions</h3>
+<pre><code>(df.pipe(FUN1)
+    .pipe(FUN2, arg1=foo)                  
+    .pipe((FUN3, &quot;arg2&quot;), arg1=bar)        #when FUN3's main arg. is not df, supply tuple
+                                                where str contains location for df (e.g. &quot;arg2&quot;)
+)
+</code></pre>
+<p class='bod'> <b>NOTE</b>: similar to %>% operation in R. </p>
 <h3 id="unique-vs-nunique">Unique vs Nunique</h3>
-<pre><code>
+<pre><code>for col in df.columns:    #for loop to get column names
+  df[col].unique()            #returns unique values in column 'col'
+  df[col].nunique()           #returns unique values in column AND drop NAs
 </code></pre>
-<h3 id="heading-1"></h3>
-<pre><code>
-</code></pre>
-<h3 id="heading-2"></h3>
-<pre><code>
-</code></pre>
+<!-- ###  -->
+<!-- ``` -->
+<!-- ``` -->
 
     </div>
 
@@ -664,6 +726,12 @@ h3{
 
 
 
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/python-libraries/">Python Libraries</a>
+  
+</div>
 
 
 
@@ -678,7 +746,7 @@ h3{
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/post/pandas/useful/&amp;text=Things%20to%20know%20from%20the%20Pandas%20Library" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=/post/pandas/useful/&amp;text=Save%20the%20Pandas...library" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -691,7 +759,7 @@ h3{
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/post/pandas/useful/&amp;t=Things%20to%20know%20from%20the%20Pandas%20Library" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=/post/pandas/useful/&amp;t=Save%20the%20Pandas...library" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -704,7 +772,7 @@ h3{
       
       
       <li>
-        <a href="mailto:?subject=Things%20to%20know%20from%20the%20Pandas%20Library&amp;body=/post/pandas/useful/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Save%20the%20Pandas...library&amp;body=/post/pandas/useful/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -717,7 +785,7 @@ h3{
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/post/pandas/useful/&amp;title=Things%20to%20know%20from%20the%20Pandas%20Library" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=/post/pandas/useful/&amp;title=Save%20the%20Pandas...library" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -730,7 +798,7 @@ h3{
       
       
       <li>
-        <a href="whatsapp://send?text=Things%20to%20know%20from%20the%20Pandas%20Library%20/post/pandas/useful/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Save%20the%20Pandas...library%20/post/pandas/useful/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -743,7 +811,7 @@ h3{
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/post/pandas/useful/&amp;title=Things%20to%20know%20from%20the%20Pandas%20Library" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=/post/pandas/useful/&amp;title=Save%20the%20Pandas...library" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
