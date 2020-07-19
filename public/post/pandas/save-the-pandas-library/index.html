@@ -27,10 +27,10 @@
   
     
   
-  <meta name="description" content="Amassing a collection of useful Python Pandas library commands!">
+  <meta name="description" content="">
 
   
-  <link rel="alternate" hreflang="en-us" href="/post/pandas/useful/">
+  <link rel="alternate" hreflang="en-us" href="/post/pandas/save-the-pandas-library/">
 
   
 
@@ -217,7 +217,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu4e1243eff0b251057f4d971b74b2ba81_2125_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu4e1243eff0b251057f4d971b74b2ba81_2125_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="/post/pandas/useful/">
+  <link rel="canonical" href="/post/pandas/save-the-pandas-library/">
 
   
   
@@ -232,15 +232,15 @@
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Stanley Z. Hua">
-  <meta property="og:url" content="/post/pandas/useful/">
-  <meta property="og:title" content="Save the Pandas...library | Stanley Z. Hua">
-  <meta property="og:description" content="Amassing a collection of useful Python Pandas library commands!"><meta property="og:image" content="/img/me">
+  <meta property="og:url" content="/post/pandas/save-the-pandas-library/">
+  <meta property="og:title" content="Save the Pandas . . . library | Stanley Z. Hua">
+  <meta property="og:description" content=""><meta property="og:image" content="/img/me">
   <meta property="twitter:image" content="/img/me"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2020-07-11T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-07-18T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2020-07-18T23:08:19-04:00">
   
 
   
@@ -264,12 +264,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "/post/pandas/useful/"
+    "@id": "/post/pandas/save-the-pandas-library/"
   },
-  "headline": "Save the Pandas...library",
+  "headline": "Save the Pandas . . . library",
   
   "datePublished": "2020-07-11T00:00:00Z",
-  "dateModified": "2020-07-18T00:00:00Z",
+  "dateModified": "2020-07-18T23:08:19-04:00",
   
   "author": {
     "@type": "Person",
@@ -284,7 +284,7 @@
       "url": "/images/logo_hua8210ea1de5412abeaf8ca8d2a58dee0_72128_192x192_fit_lanczos_2.png"
     }
   },
-  "description": "Amassing a collection of useful Python Pandas library commands!"
+  "description": ""
 }
 </script>
 
@@ -302,7 +302,7 @@
 
 
 
-  <title>Save the Pandas...library | Stanley Z. Hua</title>
+  <title>Save the Pandas . . . library | Stanley Z. Hua</title>
 
 </head>
 <body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
@@ -533,7 +533,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Save the Pandas...library</h1>
+  <h1>Save the Pandas . . . library</h1>
 
   
 
@@ -601,145 +601,7 @@
       
 
 
-<style>
 
-.bod{
-  font-family: Arial;
-  font-size: 11pt;
-  display: inline-block;
-  margin-left: 10px;
-}
-
-h2{
-  text-decoration: underline;
-  line-height: 5pt;
-  text-align: center;
-  padding-top: 30px;
-}
-h3{ 
-  display: list-item;
-  list-style-type: disc;
-  list-style-position: inside;
-  font-size:17px;
-  font-family:"Cambria";
-}
-</style>
-<p>By convention, “<strong><em>df</em></strong>” will refer to a dataframe object, while “<strong><em>Series</em></strong>” will refer to a series object.</p>
-<hr />
-<div id="importing" class="section level2">
-<h2>Importing</h2>
-<div id="importing-the-libraries" class="section level3">
-<h3>Importing the Libraries</h3>
-<pre><code>import pandas as pd
-import numpy as np        #NumPy library required by Pandas library</code></pre>
-</div>
-<div id="read-csv-file-data" class="section level3">
-<h3>Read csv file data</h3>
-<pre><code>df = pd.read_csv(file_path, index_col=None)</code></pre>
-</div>
-</div>
-<div id="about-dataset" class="section level2">
-<h2>About dataset</h2>
-<div id="check-column-names" class="section level3">
-<h3>Check column names</h3>
-<pre><code>df.columns
-
-Series.name</code></pre>
-</div>
-<div id="check-shape-of-object" class="section level3">
-<h3>Check shape of object</h3>
-<pre><code>df.shape
-
-Series.shape</code></pre>
-</div>
-<div id="columns-of-a-specific-data-type-type" class="section level3">
-<h3>Columns of a specific data type type</h3>
-<pre><code>df.dtypes == &#39;object&#39;</code></pre>
-</div>
-<div id="describe-data" class="section level3">
-<h3>Describe data</h3>
-<pre><code>df.describe()</code></pre>
-<!-- ### -->
-<!-- ``` -->
-<!-- ``` -->
-<!-- <br> -->
-</div>
-</div>
-<div id="handling-data" class="section level2">
-<h2>Handling data</h2>
-<div id="apply-a-function-on-a-pandas-object" class="section level3">
-<h3>Apply (a function on a pandas object)</h3>
-<pre><code>df.apply(FUN, axis=0, *args)    #FUN: any (valid) function to apply
-                                #axis: axis to assess
-                                #*args: additional keyword arguments for FUN</code></pre>
-</div>
-<div id="filter" class="section level3">
-<h3>Filter</h3>
-<pre><code>df.filter(items=, like=None)</code></pre>
-</div>
-<div id="get-dummies-aka-one-hot-encoding" class="section level3">
-<h3>Get Dummies (aka One Hot Encoding)</h3>
-<pre><code>df.get_dummies(dummy_na=False, columns=None, sparse=False, drop_first=False, dtype=np.uint8)
-        #dummy_na: if True, adds dummy column for NA
-        #columns: if !None, columns specified will be one hot encoded
-        #sparse: whether resulting columns will be SparseArray objects (True) or NumPy arrays(False) 
-        #drop_first: removes first unique dummy variable from unique objects in column
-        #dtype: data type for new columns (e.g. float)
-
-
-Series.get_dummies(dummy_na=False, columns=None, sparse=False, drop_first=False, dtype=&#39;np.uint8&#39;)</code></pre>
-</div>
-<div id="handling-na" class="section level3">
-<h3>Handling NA</h3>
-<pre><code>#Finding NA and inverse
-df.isna()
-Series.isna()
-
-df.notna()
-Series.isna()
-
-
-#Dropping NA
-df.dropna(axis=0, how=&#39;any&#39;, thresh=None, subset=None, inplace=False)
-        #axis: axis to assess
-        #how: when to drop axis (e.g. how=&#39;all&#39; drops IFF all values are NA)
-        #thresh: number of NAs in axis to drop
-        #subset: labels on axis to be considered
-        #inplace: by default, returns new object. If True, modifies existing object
-        
-Series.dropna(axis=0, how=None,inplace=False)
-
-
-#Filling NA
-df.fillna(value=None, method=None, axis=None, inplace=False, limit=None)
-        #value: value to fill holes
-        #method: method for filling holes.*
-        #inplace: by default, returns new object. If True, modifies existing object
-        #limit: max number of consecutive NAs to fill. Will be left as NA if value is exceeded
-
-Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)</code></pre>
-</div>
-<div id="piping-data-through-multiple-functions" class="section level3">
-<h3>Piping data through multiple functions</h3>
-<pre><code>(df.pipe(FUN1)
-    .pipe(FUN2, arg1=foo)                  
-    .pipe((FUN3, &quot;arg2&quot;), arg1=bar)        #when FUN3&#39;s main arg. is not df, supply tuple
-                                                where str contains location for df (e.g. &quot;arg2&quot;)
-)</code></pre>
-<p class="bod">
-<b>NOTE</b>: similar to %&gt;% operation in R.
-</p>
-</div>
-<div id="unique-vs-nunique" class="section level3">
-<h3>Unique vs Nunique</h3>
-<pre><code>for col in df.columns:    #for loop to get column names
-  df[col].unique()            #returns unique values in column &#39;col&#39;
-  df[col].nunique()           #returns unique values in column AND drop NAs</code></pre>
-<!-- ###  -->
-<!-- ``` -->
-<!-- ``` -->
-</div>
-</div>
 
     </div>
 
@@ -769,7 +631,7 @@ Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)</co
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/post/pandas/useful/&amp;text=Save%20the%20Pandas...library" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=/post/pandas/save-the-pandas-library/&amp;text=Save%20the%20Pandas%20.%20.%20.%20library" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -782,7 +644,7 @@ Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)</co
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/post/pandas/useful/&amp;t=Save%20the%20Pandas...library" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=/post/pandas/save-the-pandas-library/&amp;t=Save%20the%20Pandas%20.%20.%20.%20library" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -795,7 +657,7 @@ Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)</co
       
       
       <li>
-        <a href="mailto:?subject=Save%20the%20Pandas...library&amp;body=/post/pandas/useful/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Save%20the%20Pandas%20.%20.%20.%20library&amp;body=/post/pandas/save-the-pandas-library/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -808,7 +670,7 @@ Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)</co
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/post/pandas/useful/&amp;title=Save%20the%20Pandas...library" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=/post/pandas/save-the-pandas-library/&amp;title=Save%20the%20Pandas%20.%20.%20.%20library" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -821,7 +683,7 @@ Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)</co
       
       
       <li>
-        <a href="whatsapp://send?text=Save%20the%20Pandas...library%20/post/pandas/useful/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Save%20the%20Pandas%20.%20.%20.%20library%20/post/pandas/save-the-pandas-library/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -834,7 +696,7 @@ Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)</co
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/post/pandas/useful/&amp;title=Save%20the%20Pandas...library" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=/post/pandas/save-the-pandas-library/&amp;title=Save%20the%20Pandas%20.%20.%20.%20library" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -949,6 +811,15 @@ Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)</co
 
 
   
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/pandas/useful/">Save the Pandas...library</a></li>
+      
+    </ul>
+  </div>
   
 
 
