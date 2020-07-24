@@ -26,6 +26,7 @@ date_format = "Jan 2006"
   date_end = ""
   description = """
   Responsibilities include:
+  * Increasing the club's online presence
   * Supervise biweekly community table tennis drop-ins
   * Prepare for Intramural Tournaments
   * Plan 1-2 social events throughout the year

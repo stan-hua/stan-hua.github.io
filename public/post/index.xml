@@ -144,6 +144,13 @@ Series.shape&lt;/code&gt;&lt;/pre&gt;
                                 #axis: axis to assess
                                 #*args: additional keyword arguments for FUN&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+&lt;div id=&#34;assign-new-columns&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Assign (new columns)&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;df.assign(col_name = col_1*col_2/col_3)&lt;/code&gt;&lt;/pre&gt;
+&lt;p class=&#34;bod&#34;&gt;
+Used to create new columns. Similar to “mutate” in R.
+&lt;/p&gt;
+&lt;/div&gt;
 &lt;div id=&#34;filter&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Filter&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;df.filter(items=, like=None)&lt;/code&gt;&lt;/pre&gt;
@@ -191,7 +198,7 @@ df.fillna(value=None, method=None, axis=None, inplace=False, limit=None)
 Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;piping-data-through-multiple-functions&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Piping data through multiple functions&lt;/h3&gt;
+&lt;h3&gt;Piping data (through multiple functions)&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;(df.pipe(FUN1)
     .pipe(FUN2, arg1=foo)                  
     .pipe((FUN3, &amp;quot;arg2&amp;quot;), arg1=bar)        #when FUN3&amp;#39;s main arg. is not df, supply tuple
@@ -201,12 +208,21 @@ Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)&lt;
 &lt;b&gt;NOTE&lt;/b&gt;: similar to %&amp;gt;% operation in R.
 &lt;/p&gt;
 &lt;/div&gt;
+&lt;div id=&#34;query-columns&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Query (columns)&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;df.query(&amp;#39;expression&amp;#39;)    #expression must be conditional using column variable/s
+                          #prefix &amp;quot;@&amp;quot; before variable name if outside of dataframe env.
+                          #prefix ` ` to encapsulate variable name with spaces&lt;/code&gt;&lt;/pre&gt;
+&lt;p class=&#34;bod&#34;&gt;
+Can be used to filter rows.
+&lt;/p&gt;
+&lt;/div&gt;
 &lt;div id=&#34;unique-vs-nunique&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Unique vs Nunique&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;for col in df.columns:    #for loop to get column names
   df[col].unique()            #returns unique values in column &amp;#39;col&amp;#39;
   df[col].nunique()           #returns unique values in column AND drop NAs&lt;/code&gt;&lt;/pre&gt;
-&lt;!-- ###  --&gt;
+&lt;!-- ### --&gt;
 &lt;!-- ``` --&gt;
 &lt;!-- ``` --&gt;
 &lt;/div&gt;

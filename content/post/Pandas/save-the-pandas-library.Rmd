@@ -110,6 +110,14 @@ df.apply(FUN, axis=0, *args)    #FUN: any (valid) function to apply
                                 #*args: additional keyword arguments for FUN
 ```
 
+### Assign (new columns)
+
+```
+df.assign(col_name = col_1*col_2/col_3)
+```
+
+<p class='bod'> Used to create new columns. Similar to "mutate" in R. </p>
+
 ### Filter
 
 ```
@@ -162,7 +170,7 @@ df.fillna(value=None, method=None, axis=None, inplace=False, limit=None)
 Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)
 ```
 
-### Piping data through multiple functions
+### Piping data (through multiple functions)
 
 ```
 (df.pipe(FUN1)
@@ -174,13 +182,15 @@ Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)
 
 <p class='bod'> <b>NOTE</b>: similar to %>% operation in R. </p>
 
-### Query columns
+### Query (columns)
 
 ```
 df.query('expression')    #expression must be conditional using column variable/s
                           #prefix "@" before variable name if outside of dataframe env.
                           #prefix ` ` to encapsulate variable name with spaces
 ```
+
+<p class='bod'> Can be used to filter rows. </p>
 
 
 ### Unique vs Nunique

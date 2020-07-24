@@ -673,6 +673,13 @@ Series.shape</code></pre>
                                 #axis: axis to assess
                                 #*args: additional keyword arguments for FUN</code></pre>
 </div>
+<div id="assign-new-columns" class="section level3">
+<h3>Assign (new columns)</h3>
+<pre><code>df.assign(col_name = col_1*col_2/col_3)</code></pre>
+<p class="bod">
+Used to create new columns. Similar to “mutate” in R.
+</p>
+</div>
 <div id="filter" class="section level3">
 <h3>Filter</h3>
 <pre><code>df.filter(items=, like=None)</code></pre>
@@ -720,7 +727,7 @@ df.fillna(value=None, method=None, axis=None, inplace=False, limit=None)
 Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)</code></pre>
 </div>
 <div id="piping-data-through-multiple-functions" class="section level3">
-<h3>Piping data through multiple functions</h3>
+<h3>Piping data (through multiple functions)</h3>
 <pre><code>(df.pipe(FUN1)
     .pipe(FUN2, arg1=foo)                  
     .pipe((FUN3, &quot;arg2&quot;), arg1=bar)        #when FUN3&#39;s main arg. is not df, supply tuple
@@ -730,12 +737,21 @@ Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)</co
 <b>NOTE</b>: similar to %&gt;% operation in R.
 </p>
 </div>
+<div id="query-columns" class="section level3">
+<h3>Query (columns)</h3>
+<pre><code>df.query(&#39;expression&#39;)    #expression must be conditional using column variable/s
+                          #prefix &quot;@&quot; before variable name if outside of dataframe env.
+                          #prefix ` ` to encapsulate variable name with spaces</code></pre>
+<p class="bod">
+Can be used to filter rows.
+</p>
+</div>
 <div id="unique-vs-nunique" class="section level3">
 <h3>Unique vs Nunique</h3>
 <pre><code>for col in df.columns:    #for loop to get column names
   df[col].unique()            #returns unique values in column &#39;col&#39;
   df[col].nunique()           #returns unique values in column AND drop NAs</code></pre>
-<!-- ###  -->
+<!-- ### -->
 <!-- ``` -->
 <!-- ``` -->
 </div>
