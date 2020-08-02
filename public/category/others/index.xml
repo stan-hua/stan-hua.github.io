@@ -5,12 +5,40 @@
     <link>/category/others/</link>
       <atom:link href="/category/others/index.xml" rel="self" type="application/rss+xml" />
     <description>Others</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/me</url>
       <title>Others</title>
       <link>/category/others/</link>
     </image>
+    
+    <item>
+      <title>Connecting to a remote server</title>
+      <link>/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</guid>
+      <description>&lt;p&gt;Working from home?&lt;/p&gt;
+&lt;p&gt;You might be one of us who need to connect to a remote server from home. Now, how do you do this? Maybe it&amp;rsquo;s better to ask first what is your operating system (e.g. Windows, MacOS, etc.).&lt;/p&gt;
+&lt;p&gt;This post will show you 1) how to &lt;em&gt;&lt;strong&gt;connect to a remote server&lt;/strong&gt;&lt;/em&gt; on Windows, AND 2) how to *&lt;em&gt;&lt;strong&gt;mount&lt;/strong&gt;&lt;/em&gt; the server on your computer on Windows and Debian.&lt;/p&gt;
+&lt;p&gt;This blog post assumes you know basic Unix commands. If not, I recommend learning some of the basics, then come back when you&amp;rsquo;re done!&lt;/p&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;1-simple-access-to-server-files-via-ssh-secure-shell&#34;&gt;1. Simple access to server files via ssh (Secure Shell)&lt;/h3&gt;
+&lt;p&gt;Before you start, you&amp;rsquo;ll most likely be needing 3 things: 1) the &lt;strong&gt;username&lt;/strong&gt; of your server account, 2) the server &lt;strong&gt;IP adress&lt;/strong&gt;, and 3) the password associated with the server account if applicable. Okay, now open your command prompt via cmd.exe. Your command prompt command should generally follow what is displayed below.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;C:Users/...&amp;gt; ssh username@125.950.26.789            #format is ssh host@ip_address
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, you may be prompted by the console to input your password. After doing so, you should be connected. Congratulations!&lt;/p&gt;
+&lt;p&gt;However, note that this connection will be gone once you exit the command prompt, or when your machine is powered off or loses internet, then you would need to connect again&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;p&gt;Soon enough, you&amp;rsquo;ll realize that having to do this often becomes annoying. Another option is to mount the server files, then you&amp;rsquo;ll be able to view the files on your machine as if they were just any files on your desktop.&lt;/p&gt;
+&lt;h3 id=&#34;2-mounting-server-files-via-ssfhs&#34;&gt;2.. Mounting server files via ssfhs&lt;/h3&gt;
+&lt;h3 id=&#34;additional-resources&#34;&gt;Additional Resources&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh&#34; target=&#34;_blank&#34;&gt;SSHFS Mounting&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;*&lt;strong&gt;Mounting&lt;/strong&gt; simply means having the remote server&amp;rsquo;s files on your local machine to access.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>A First</title>

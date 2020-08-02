@@ -31,17 +31,17 @@ h2{
   text-decoration: underline;
   padding-top: 15px;
   font-family: "Arial";
-  text-align: center;
+  text-align: left;
 }
-h3{ 
-  display: list-item;
-  list-style-type: upper-roman;;
-  list-style-position: inside;
-  font-size:17px;
-  font-family:"Cambria";
-  font-style: italic;
-  margin-left: 7px;
-}
+<!-- h3{  -->
+<!--   display: list-item; -->
+<!--   list-style-type: upper-roman;; -->
+<!--   list-style-position: inside; -->
+<!--   font-size:17px; -->
+<!--   font-family:"Cambria"; -->
+<!--   font-style: italic; -->
+<!--   margin-left: 7px; -->
+<!-- } -->
 
 </style>
 
@@ -98,7 +98,9 @@ plot_sample <- df %>%
 plot_dist
 ```
 
+<p class="bod">
 Notice how the distribution is bimodal with one peak centered at 217 and the other at 257! Now look what happens when you take 30 samples from  
+</p>
 
 <br>
 

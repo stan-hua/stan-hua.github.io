@@ -6,7 +6,7 @@ slug: a-first
 categories: [Others]
 tags:
 subtitle: ''
-summary: 'One to set the record books...or not'
+summary: 'One to set the record books'
 authors: []
 lastmod: '2020-07-01T20:11:50-04:00'
 featured: no

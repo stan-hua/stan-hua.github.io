@@ -27,10 +27,10 @@
   
     
   
-  <meta name="description" content="After a bad roll, should you expect your luck to turn?">
+  <meta name="description" content="Amassing a collection of useful Python Pandas library commands!">
 
   
-  <link rel="alternate" hreflang="en-us" href="/post/monte-carlo-simulations/monte-carlo-simulations/">
+  <link rel="alternate" hreflang="en-us" href="/post/pandas/useful_commands_to_remember/">
 
   
 
@@ -42,9 +42,6 @@
   
 
   
-  
-  
-  <script src="/js/mathjax-config.js"></script>
   
 
   
@@ -176,9 +173,9 @@
 
       
       
-
+        
       
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+
       
     
       
@@ -220,7 +217,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu4e1243eff0b251057f4d971b74b2ba81_2125_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu4e1243eff0b251057f4d971b74b2ba81_2125_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="/post/monte-carlo-simulations/monte-carlo-simulations/">
+  <link rel="canonical" href="/post/pandas/useful_commands_to_remember/">
 
   
   
@@ -235,15 +232,15 @@
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Stanley Z. Hua">
-  <meta property="og:url" content="/post/monte-carlo-simulations/monte-carlo-simulations/">
-  <meta property="og:title" content="Monte Carlo Simulations | Stanley Z. Hua">
-  <meta property="og:description" content="After a bad roll, should you expect your luck to turn?"><meta property="og:image" content="/img/me">
+  <meta property="og:url" content="/post/pandas/useful_commands_to_remember/">
+  <meta property="og:title" content="Save the Pandas...library | Stanley Z. Hua">
+  <meta property="og:description" content="Amassing a collection of useful Python Pandas library commands!"><meta property="og:image" content="/img/me">
   <meta property="twitter:image" content="/img/me"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-07-04T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2020-07-11T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-07-11T22:55:04-04:00">
+    <meta property="article:modified_time" content="2020-08-01T00:00:00&#43;00:00">
   
 
   
@@ -267,12 +264,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "/post/monte-carlo-simulations/monte-carlo-simulations/"
+    "@id": "/post/pandas/useful_commands_to_remember/"
   },
-  "headline": "Monte Carlo Simulations",
+  "headline": "Save the Pandas...library",
   
-  "datePublished": "2020-07-04T00:00:00Z",
-  "dateModified": "2020-07-11T22:55:04-04:00",
+  "datePublished": "2020-07-11T00:00:00Z",
+  "dateModified": "2020-08-01T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -287,7 +284,7 @@
       "url": "/images/logo_hua8210ea1de5412abeaf8ca8d2a58dee0_72128_192x192_fit_lanczos_2.png"
     }
   },
-  "description": "After a bad roll, should you expect your luck to turn?"
+  "description": "Amassing a collection of useful Python Pandas library commands!"
 }
 </script>
 
@@ -305,7 +302,7 @@
 
 
 
-  <title>Monte Carlo Simulations | Stanley Z. Hua</title>
+  <title>Save the Pandas...library | Stanley Z. Hua</title>
 
 </head>
 <body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
@@ -536,7 +533,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Monte Carlo Simulations</h1>
+  <h1>Save the Pandas...library</h1>
 
   
 
@@ -557,7 +554,7 @@
           Last updated on
       
     
-    Jul 11, 2020
+    Aug 1, 2020
   </span>
   
 
@@ -573,7 +570,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/category/r/">R</a></span>
+    <i class="fas fa-folder mr-1"></i><a href="/category/python/">Python</a></span>
   
 
 </div>
@@ -604,90 +601,205 @@
       
 
 
-<details>
-<summary>
-If you’re trying to simulate a random event for whatever reason using R, then you’ve come to the right place!
-</summary>
-<p>
-<blockquote>
-<p>If not, or if you do not have true or estimated probabilities for your simulation, then this is not for you!</p>
-</blockquote>
-</p>
-</details>
-<hr />
-<div id="premise" class="section level3">
-<h3><em>Premise</em></h3>
-<p>Say you want to understand how randomness works, and you want to roll a 12-sided die and see how many times it lands on 1. You’ll do roll a die 100, 10,000, 1,000,000 times.</p>
-<p><strong><em>Note:</em></strong> Every side of the die has a probability of 1/12, but the outcome of each roll is random and independent from one another.
-<br><br></p>
-</div>
-<div id="step-0-set-the-seed-to-some-arbitrary-constant.-optional" class="section level3">
-<h3><strong>Step 0:</strong> Set the seed to some arbitrary constant. (Optional)</h3>
-<pre class="r"><code>set.seed(2009, sample.kind=&quot;Rounding&quot;)    #for R 3.6 and later
-
-set.seed(2009)                            #for 3.5 and older</code></pre>
-<p>If you wish to observe the same results for lower numbers of draws, you can place this at the start of your script.
-<br><br></p>
-</div>
-<div id="step-1-construct-a-method-for-sampling." class="section level3">
-<h3><strong>Step 1:</strong> Construct a method for sampling.</h3>
-<pre class="r"><code>Ns = c(100, 10000, 1000000)                                          #number of simulations
-
-simulations &lt;- sapply(Ns, function(N){
-  sim &lt;- sample(c(1, -1), N, replace=TRUE, prob=c(1/12, 11/12))   #sampling
-  mean(sim == 1)                                                  #find the proportion of rolls which are 1 (success)
-})</code></pre>
-<table>
-<thead>
-<tr class="header">
-<th align="center">Sample.Size</th>
-<th align="center">Proportion.Observed</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">1e+02</td>
-<td align="center">0.050000</td>
-</tr>
-<tr class="even">
-<td align="center">1e+04</td>
-<td align="center">0.088100</td>
-</tr>
-<tr class="odd">
-<td align="center">1e+06</td>
-<td align="center">0.083335</td>
-</tr>
-</tbody>
-</table>
-<p>The sample function takes N rolls (with replacement). The result can either be 1; a success (landing on 1), or -1; a failure (not landing on one). The keyword argument “prob” defines the probability for possible events success or failure.</p>
-<p>As you can see from the results, the <strong><em>proportion</em></strong> of rolls landing on 1 converges to the probability we defined it to be (1/12 = 0.0833), as the <strong><em>number</em></strong> of rolls increases.</p>
-<p><br></p>
-<p>To close, it may be good to point out a common misconception when it comes to expectation. Say if you and your friends are tossing a coin and it lands on heads, you might be tempted to say “The next one will be tails!”, but that’s wrong. We know logically that the probability of either side landing is 1/2, but we would only be able to observe this when we sum up the results of maybe a thousand or hundred thousand rolls, as we have just done.
-<br></p>
-<p>The <em>Law of Large Numbers</em> (or <em>the Law of Averages</em>) states that as the number of draws (rolls) increases, the standard error (standard deviation but for samples) of the expected value approaches 0. In which case, the expected value converges to the probability we defined.
-<br><br></p>
-<p><strong>NOTE</strong>: For cases wherein the probability is not defined, we can use the <code>replicate</code> function that takes two arguments. The second argument defines a line or set of lines to replicate, while the first argument is the number of times you wish to repeat the second argument.</p>
-<p><em>Example</em>: Creating a list of sample means.</p>
-<pre><code>array                           # a non-empty numeric array of length 100,000
-B &lt;- 1000                       # number of replications
-N &lt;- 100                        # number of samples
-sample_means &lt;- replicate(B, {
-    sample_array &lt;- sample(array, N, replace=TRUE)
-    mean(sample_array)          #like a function; this is returned
-})
-</code></pre>
-<p><br><br></p>
-<p><strong><em>Enrichment</em></strong></p>
-<p>You can try to compute for the standard error for each simulation using the formula:</p>
-<p><span class="math inline">\(SE[\overline{X}]=|b-a|*\frac{\sqrt{p(1-p)}}{N}\)</span></p>
-<div class="line-block">    where SE means standard error;<br />
-                X_bar is the sample random variable;<br />
-                a and b are the values we attribute to success and failure (i.e. 1 and -1);<br />
-                p is the probability of success (i.e. 1/12);<br />
-                and N is the sample size.</div>
 <style>
-      h3{font-weight:normal;}
+
+.bod{
+  font-family: Arial !important;
+  font-size: 11pt !important;
+  display: inline-block !important;
+  margin-left: 10px !important;
+  line-height: 15pt !important;
+}
+
+h2{
+  text-decoration: underline;
+  line-height: 5pt;
+  text-align: center;
+  padding-top: 30px;
+}
+h3{ 
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+  font-size:17px;
+  font-family:"Cambria";
+}
 </style>
+<p>By convention, “<strong><em>df</em></strong>” will refer to a dataframe object, while “<strong><em>Series</em></strong>” will refer to a series object.</p>
+<hr />
+<!-- ### -->
+<!-- ``` -->
+<!-- ``` -->
+<!-- <br> -->
+<div id="importing" class="section level2">
+<h2>Importing</h2>
+<div id="importing-the-libraries" class="section level3">
+<h3>Importing the Libraries</h3>
+<pre><code>import pandas as pd
+import numpy as np        #NumPy library required by Pandas library</code></pre>
+</div>
+<div id="read-csv-file-data" class="section level3">
+<h3>Read csv file data</h3>
+<pre><code>df = pd.read_csv(file_path, index_col=None)</code></pre>
+<!-- ################################################################ -->
+</div>
+</div>
+<div id="about-dataset" class="section level2">
+<h2>About dataset</h2>
+<div id="check-column-names" class="section level3">
+<h3>Check column names</h3>
+<pre><code>df.columns
+
+Series.name</code></pre>
+</div>
+<div id="check-shape-of-object" class="section level3">
+<h3>Check shape of object</h3>
+<pre><code>df.shape
+
+Series.shape</code></pre>
+</div>
+<div id="columns-of-a-specific-data-type-type" class="section level3">
+<h3>Columns of a specific data type type</h3>
+<pre><code>df.dtypes == &#39;object&#39;</code></pre>
+</div>
+<div id="describe-data" class="section level3">
+<h3>Describe data</h3>
+<pre><code>df.describe()</code></pre>
+</div>
+<div id="unique-vs-nunique" class="section level3">
+<h3>Unique vs Nunique</h3>
+<pre><code>for col in df.columns:    #for loop to get column names
+  df[col].unique()            #returns unique values in column &#39;col&#39;
+  df[col].nunique()           #returns unique values in column AND drop NAs</code></pre>
+<!-- ################################################################ -->
+</div>
+</div>
+<div id="slicing-and-filtering" class="section level2">
+<h2>Slicing and Filtering</h2>
+<div id="filter" class="section level3">
+<h3>Filter</h3>
+<pre><code>df.filter(items=, like=None)</code></pre>
+</div>
+<div id="iloc" class="section level3">
+<h3><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.iloc.html" target="_blank">Iloc </a></h3>
+<pre><code>df.iloc[row_position, col_position]    #general format</code></pre>
+<p class="bod">
+COPY of dataframe is slice is returned. This CANNOT be used in assignment. Also, note that only integers, its derivations and boolean arrays can be used to index.
+</p>
+</div>
+<div id="loc" class="section level3">
+<h3><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.loc.html" target="_blank">Loc</a></h3>
+<pre><code>index = (df.Color==&quot;Red&quot;) &amp; (df.Item==&quot;Shirt&quot;)        #produces a boolean array
+df.loc[index]        #returns original dataframe sliced
+
+
+df.loc[row_indexer, col_indexer]        #general format</code></pre>
+<p class="bod">
+Note, colon “:” is not needed by col_indexer like in <em>df.loc[index, :]</em> to choose all columns, and slice of ORIGINAL dataframe is returned. This can be used for assignment.
+</p>
+</div>
+<div id="query-columns" class="section level3">
+<h3>Query (columns)</h3>
+<pre><code>df.query(&#39;expression&#39;)    #expression must be conditional using column variable/s
+                          #prefix &quot;@&quot; before variable name if outside of dataframe env.
+                          #prefix ` ` to encapsulate variable name with spaces</code></pre>
+<p class="bod">
+Can be used to filter rows.
+</p>
+<!-- ################################################################ -->
+</div>
+</div>
+<div id="data-processing" class="section level2">
+<h2>Data Processing</h2>
+<div id="apply-a-function-on-a-pandas-object" class="section level3">
+<h3>Apply (a function on a pandas object)</h3>
+<pre><code>df.apply(FUN, axis=0, *args)    #FUN: any (valid) function to apply
+                                #axis: axis to assess
+                                #*args: additional keyword arguments for FUN</code></pre>
+</div>
+<div id="assign-new-columns" class="section level3">
+<h3>Assign (new columns)</h3>
+<pre><code>df.assign(col_name = col_1*col_2/col_3)</code></pre>
+<p class="bod">
+Used to create new columns. Similar to “mutate” in R.
+</p>
+</div>
+<div id="get-dummies-aka-one-hot-encoding" class="section level3">
+<h3>Get Dummies (aka One Hot Encoding)</h3>
+<pre><code>df.get_dummies(dummy_na=False, columns=None, sparse=False, drop_first=False, dtype=np.uint8)
+        #dummy_na: if True, adds dummy column for NA
+        #columns: if !None, columns specified will be one hot encoded
+        #sparse: whether resulting columns will be SparseArray objects (True) or NumPy arrays(False) 
+        #drop_first: removes first unique dummy variable from unique objects in column
+        #dtype: data type for new columns (e.g. float)
+
+
+Series.get_dummies(dummy_na=False, columns=None, sparse=False, drop_first=False, dtype=&#39;np.uint8&#39;)</code></pre>
+</div>
+<div id="group-by-then-transform" class="section level3">
+<h3>Group by, then Transform</h3>
+<pre><code>df.groupby(by=category).transform(FUN)
+</code></pre>
+<div class="bod">
+<p>Grouping a dataframe then transforming it is a very common operation. A dataframe is converted into a “GroupBy” object depending on <em>category</em>, which may be a string or list of strings representing column names. Then the resulting object’s values are passed into <em>FUN</em> by the transform function and a column of the same size is returned.</p>
+</div>
+</div>
+<div id="handling-na" class="section level3">
+<h3>Handling NA</h3>
+<pre><code>#Finding NA and inverse
+df.isna()
+Series.isna()
+
+df.notna()
+Series.isna()
+
+
+#Dropping NA
+df.dropna(axis=0, how=&#39;any&#39;, thresh=None, subset=None, inplace=False)
+        #axis: axis to assess
+        #how: when to drop axis (e.g. how=&#39;all&#39; drops IFF all values are NA)
+        #thresh: number of NAs in axis to drop
+        #subset: labels on axis to be considered
+        #inplace: by default, returns new object. If True, modifies existing object
+        
+Series.dropna(axis=0, how=None,inplace=False)
+
+
+#Filling NA
+df.fillna(value=None, method=None, axis=None, inplace=False, limit=None)
+        #value: value to fill holes
+        #method: method for filling holes.*
+        #inplace: by default, returns new object. If True, modifies existing object
+        #limit: max number of consecutive NAs to fill. Will be left as NA if value is exceeded
+
+Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)</code></pre>
+</div>
+<div id="mapping-passing-each-cell-into-a-function-and-replacing-the-input" class="section level3">
+<h3>Mapping, passing each cell into a function and replacing the input</h3>
+<pre><code>df.applymap(FUN)
+Series.map(FUN)</code></pre>
+<p class="bod">
+Iterates by rows (for Series) and cell (for DataFrame), passing cell value into function with the output value replacing its input value.
+</p>
+</div>
+<div id="piping-data-through-multiple-functions" class="section level3">
+<h3>Piping data (through multiple functions)</h3>
+<pre><code>(df.pipe(FUN1)
+    .pipe(FUN2, arg1=foo)                  
+    .pipe((FUN3, &quot;arg2&quot;), arg1=bar)        #when FUN3&#39;s main arg. is not df, supply tuple
+                                                where str contains location for df (e.g. &quot;arg2&quot;)
+)</code></pre>
+<p class="bod">
+<b>NOTE</b>: similar to %&gt;% operation in R.
+</p>
+<p><br></p>
+<div class="bod">
+<p>A great resource for comparing df.<strong>agg</strong>(), df.<strong>apply</strong>(), df.<strong>applymap</strong>() and df.<strong>transform</strong>() can be found <a href="https://stackoverflow.com/questions/46210678/whats-the-difference-between-transform-vs-applymap-for-pandas-dataframe">here</a>.</p>
+</div>
+<!-- ### -->
+<!-- ``` -->
+<!-- ``` -->
+</div>
 </div>
 
     </div>
@@ -701,9 +813,7 @@ sample_means &lt;- replicate(B, {
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tag/modeling/">Modeling</a>
-  
-  <a class="badge badge-light" href="/tag/statistics-and-probability/">Statistics and Probability</a>
+  <a class="badge badge-light" href="/tag/python-libraries/">Python Libraries</a>
   
 </div>
 
@@ -720,7 +830,7 @@ sample_means &lt;- replicate(B, {
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/post/monte-carlo-simulations/monte-carlo-simulations/&amp;text=Monte%20Carlo%20Simulations" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=/post/pandas/useful_commands_to_remember/&amp;text=Save%20the%20Pandas...library" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -733,7 +843,7 @@ sample_means &lt;- replicate(B, {
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/post/monte-carlo-simulations/monte-carlo-simulations/&amp;t=Monte%20Carlo%20Simulations" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=/post/pandas/useful_commands_to_remember/&amp;t=Save%20the%20Pandas...library" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -746,7 +856,7 @@ sample_means &lt;- replicate(B, {
       
       
       <li>
-        <a href="mailto:?subject=Monte%20Carlo%20Simulations&amp;body=/post/monte-carlo-simulations/monte-carlo-simulations/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Save%20the%20Pandas...library&amp;body=/post/pandas/useful_commands_to_remember/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -759,7 +869,7 @@ sample_means &lt;- replicate(B, {
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/post/monte-carlo-simulations/monte-carlo-simulations/&amp;title=Monte%20Carlo%20Simulations" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=/post/pandas/useful_commands_to_remember/&amp;title=Save%20the%20Pandas...library" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -772,7 +882,7 @@ sample_means &lt;- replicate(B, {
       
       
       <li>
-        <a href="whatsapp://send?text=Monte%20Carlo%20Simulations%20/post/monte-carlo-simulations/monte-carlo-simulations/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Save%20the%20Pandas...library%20/post/pandas/useful_commands_to_remember/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -785,7 +895,7 @@ sample_means &lt;- replicate(B, {
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/post/monte-carlo-simulations/monte-carlo-simulations/&amp;title=Monte%20Carlo%20Simulations" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=/post/pandas/useful_commands_to_remember/&amp;title=Save%20the%20Pandas...library" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -900,15 +1010,6 @@ sample_means &lt;- replicate(B, {
 
 
   
-  
-  <div class="article-widget content-widget-hr">
-    <h3>Related</h3>
-    <ul>
-      
-      <li><a href="/post/distributions/variety/">Distributions</a></li>
-      
-    </ul>
-  </div>
   
 
 

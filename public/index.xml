@@ -35,6 +35,34 @@
     </item>
     
     <item>
+      <title>Connecting to a remote server</title>
+      <link>/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</guid>
+      <description>&lt;p&gt;Working from home?&lt;/p&gt;
+&lt;p&gt;You might be one of us who need to connect to a remote server from home. Now, how do you do this? Maybe it&amp;rsquo;s better to ask first what is your operating system (e.g. Windows, MacOS, etc.).&lt;/p&gt;
+&lt;p&gt;This post will show you 1) how to &lt;em&gt;&lt;strong&gt;connect to a remote server&lt;/strong&gt;&lt;/em&gt; on Windows, AND 2) how to *&lt;em&gt;&lt;strong&gt;mount&lt;/strong&gt;&lt;/em&gt; the server on your computer on Windows and Debian.&lt;/p&gt;
+&lt;p&gt;This blog post assumes you know basic Unix commands. If not, I recommend learning some of the basics, then come back when you&amp;rsquo;re done!&lt;/p&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;1-simple-access-to-server-files-via-ssh-secure-shell&#34;&gt;1. Simple access to server files via ssh (Secure Shell)&lt;/h3&gt;
+&lt;p&gt;Before you start, you&amp;rsquo;ll most likely be needing 3 things: 1) the &lt;strong&gt;username&lt;/strong&gt; of your server account, 2) the server &lt;strong&gt;IP adress&lt;/strong&gt;, and 3) the password associated with the server account if applicable. Okay, now open your command prompt via cmd.exe. Your command prompt command should generally follow what is displayed below.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;C:Users/...&amp;gt; ssh username@125.950.26.789            #format is ssh host@ip_address
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, you may be prompted by the console to input your password. After doing so, you should be connected. Congratulations!&lt;/p&gt;
+&lt;p&gt;However, note that this connection will be gone once you exit the command prompt, or when your machine is powered off or loses internet, then you would need to connect again&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;p&gt;Soon enough, you&amp;rsquo;ll realize that having to do this often becomes annoying. Another option is to mount the server files, then you&amp;rsquo;ll be able to view the files on your machine as if they were just any files on your desktop.&lt;/p&gt;
+&lt;h3 id=&#34;2-mounting-server-files-via-ssfhs&#34;&gt;2.. Mounting server files via ssfhs&lt;/h3&gt;
+&lt;h3 id=&#34;additional-resources&#34;&gt;Additional Resources&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh&#34; target=&#34;_blank&#34;&gt;SSHFS Mounting&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;*&lt;strong&gt;Mounting&lt;/strong&gt; simply means having the remote server&amp;rsquo;s files on your local machine to access.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Distributions</title>
       <link>/post/distributions/variety/</link>
       <pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate>
@@ -54,17 +82,17 @@ h2{
   text-decoration: underline;
   padding-top: 15px;
   font-family: &#34;Arial&#34;;
-  text-align: center;
+  text-align: left;
 }
-h3{ 
-  display: list-item;
-  list-style-type: upper-roman;;
-  list-style-position: inside;
-  font-size:17px;
-  font-family:&#34;Cambria&#34;;
-  font-style: italic;
-  margin-left: 7px;
-}
+&lt;!-- h3{  --&gt;
+&lt;!--   display: list-item; --&gt;
+&lt;!--   list-style-type: upper-roman;; --&gt;
+&lt;!--   list-style-position: inside; --&gt;
+&lt;!--   font-size:17px; --&gt;
+&lt;!--   font-family:&#34;Cambria&#34;; --&gt;
+&lt;!--   font-style: italic; --&gt;
+&lt;!--   margin-left: 7px; --&gt;
+&lt;!-- } --&gt;
 
 &lt;/style&gt;
 &lt;div id=&#34;normal-distribution&#34; class=&#34;section level2&#34;&gt;
@@ -78,7 +106,9 @@ Probably one of the most important distributions in statistics, the normal distr
 To make an illustrative point, RStudio’s built-in dataset BJsales will be used. The data describes the number of sales every day for some consecutive months. Its probability density was graphed below.
 &lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/post/Distributions/variety_files/figure-html/plot-1.png&#34; width=&#34;307.2&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Notice how the distribution is bimodal with one peak centered at 217 and the other at 257! Now look what happens when you take 30 samples from&lt;/p&gt;
+&lt;p class=&#34;bod&#34;&gt;
+Notice how the distribution is bimodal with one peak centered at 217 and the other at 257! Now look what happens when you take 30 samples from
+&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/post/Distributions/variety_files/figure-html/plot2-1.png&#34; width=&#34;307.2&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -88,19 +118,20 @@ To make an illustrative point, RStudio’s built-in dataset BJsales will be used
     
     <item>
       <title>Save the Pandas...library</title>
-      <link>/post/pandas/useful/</link>
+      <link>/post/pandas/useful_commands_to_remember/</link>
       <pubDate>Sat, 11 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/post/pandas/useful/</guid>
+      <guid>/post/pandas/useful_commands_to_remember/</guid>
       <description>
 
 
 &lt;style&gt;
 
 .bod{
-  font-family: Arial;
-  font-size: 11pt;
-  display: inline-block;
-  margin-left: 10px;
+  font-family: Arial !important;
+  font-size: 11pt !important;
+  display: inline-block !important;
+  margin-left: 10px !important;
+  line-height: 15pt !important;
 }
 
 h2{
@@ -119,6 +150,10 @@ h3{
 &lt;/style&gt;
 &lt;p&gt;By convention, “&lt;strong&gt;&lt;em&gt;df&lt;/em&gt;&lt;/strong&gt;” will refer to a dataframe object, while “&lt;strong&gt;&lt;em&gt;Series&lt;/em&gt;&lt;/strong&gt;” will refer to a series object.&lt;/p&gt;
 &lt;hr /&gt;
+&lt;!-- ### --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- &lt;br&gt; --&gt;
 &lt;div id=&#34;importing&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Importing&lt;/h2&gt;
 &lt;div id=&#34;importing-the-libraries&#34; class=&#34;section level3&#34;&gt;
@@ -129,6 +164,7 @@ import numpy as np        #NumPy library required by Pandas library&lt;/code&gt;
 &lt;div id=&#34;read-csv-file-data&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Read csv file data&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;df = pd.read_csv(file_path, index_col=None)&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- ################################################################ --&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;about-dataset&#34; class=&#34;section level2&#34;&gt;
@@ -152,14 +188,52 @@ Series.shape&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;describe-data&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Describe data&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;df.describe()&lt;/code&gt;&lt;/pre&gt;
-&lt;!-- ### --&gt;
-&lt;!-- ``` --&gt;
-&lt;!-- ``` --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+&lt;/div&gt;
+&lt;div id=&#34;unique-vs-nunique&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Unique vs Nunique&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;for col in df.columns:    #for loop to get column names
+  df[col].unique()            #returns unique values in column &amp;#39;col&amp;#39;
+  df[col].nunique()           #returns unique values in column AND drop NAs&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- ################################################################ --&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;handling-data&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Handling data&lt;/h2&gt;
+&lt;div id=&#34;slicing-and-filtering&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Slicing and Filtering&lt;/h2&gt;
+&lt;div id=&#34;filter&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Filter&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;df.filter(items=, like=None)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;iloc&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.iloc.html&#34; target=&#34;_blank&#34;&gt;Iloc &lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;df.iloc[row_position, col_position]    #general format&lt;/code&gt;&lt;/pre&gt;
+&lt;p class=&#34;bod&#34;&gt;
+COPY of dataframe is slice is returned. This CANNOT be used in assignment. Also, note that only integers, its derivations and boolean arrays can be used to index.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;loc&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;a href=&#34;https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.loc.html&#34; target=&#34;_blank&#34;&gt;Loc&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;index = (df.Color==&amp;quot;Red&amp;quot;) &amp;amp; (df.Item==&amp;quot;Shirt&amp;quot;)        #produces a boolean array
+df.loc[index]        #returns original dataframe sliced
+
+
+df.loc[row_indexer, col_indexer]        #general format&lt;/code&gt;&lt;/pre&gt;
+&lt;p class=&#34;bod&#34;&gt;
+Note, colon “:” is not needed by col_indexer like in &lt;em&gt;df.loc[index, :]&lt;/em&gt; to choose all columns, and slice of ORIGINAL dataframe is returned. This can be used for assignment.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;query-columns&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Query (columns)&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;df.query(&amp;#39;expression&amp;#39;)    #expression must be conditional using column variable/s
+                          #prefix &amp;quot;@&amp;quot; before variable name if outside of dataframe env.
+                          #prefix ` ` to encapsulate variable name with spaces&lt;/code&gt;&lt;/pre&gt;
+&lt;p class=&#34;bod&#34;&gt;
+Can be used to filter rows.
+&lt;/p&gt;
+&lt;!-- ################################################################ --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-processing&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Processing&lt;/h2&gt;
 &lt;div id=&#34;apply-a-function-on-a-pandas-object&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Apply (a function on a pandas object)&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;df.apply(FUN, axis=0, *args)    #FUN: any (valid) function to apply
@@ -173,10 +247,6 @@ Series.shape&lt;/code&gt;&lt;/pre&gt;
 Used to create new columns. Similar to “mutate” in R.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;filter&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Filter&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;df.filter(items=, like=None)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 &lt;div id=&#34;get-dummies-aka-one-hot-encoding&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Get Dummies (aka One Hot Encoding)&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;df.get_dummies(dummy_na=False, columns=None, sparse=False, drop_first=False, dtype=np.uint8)
@@ -188,6 +258,14 @@ Used to create new columns. Similar to “mutate” in R.
 
 
 Series.get_dummies(dummy_na=False, columns=None, sparse=False, drop_first=False, dtype=&amp;#39;np.uint8&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;group-by-then-transform&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Group by, then Transform&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;df.groupby(by=category).transform(FUN)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;bod&#34;&gt;
+&lt;p&gt;Grouping a dataframe then transforming it is a very common operation. A dataframe is converted into a “GroupBy” object depending on &lt;em&gt;category&lt;/em&gt;, which may be a string or list of strings representing column names. Then the resulting object’s values are passed into &lt;em&gt;FUN&lt;/em&gt; by the transform function and a column of the same size is returned.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;handling-na&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Handling NA&lt;/h3&gt;
@@ -219,6 +297,14 @@ df.fillna(value=None, method=None, axis=None, inplace=False, limit=None)
 
 Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+&lt;div id=&#34;mapping-passing-each-cell-into-a-function-and-replacing-the-input&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Mapping, passing each cell into a function and replacing the input&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;df.applymap(FUN)
+Series.map(FUN)&lt;/code&gt;&lt;/pre&gt;
+&lt;p class=&#34;bod&#34;&gt;
+Iterates by rows (for Series) and cell (for DataFrame), passing cell value into function with the output value replacing its input value.
+&lt;/p&gt;
+&lt;/div&gt;
 &lt;div id=&#34;piping-data-through-multiple-functions&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Piping data (through multiple functions)&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;(df.pipe(FUN1)
@@ -229,21 +315,10 @@ Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)&lt;
 &lt;p class=&#34;bod&#34;&gt;
 &lt;b&gt;NOTE&lt;/b&gt;: similar to %&amp;gt;% operation in R.
 &lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;div class=&#34;bod&#34;&gt;
+&lt;p&gt;A great resource for comparing df.&lt;strong&gt;agg&lt;/strong&gt;(), df.&lt;strong&gt;apply&lt;/strong&gt;(), df.&lt;strong&gt;applymap&lt;/strong&gt;() and df.&lt;strong&gt;transform&lt;/strong&gt;() can be found &lt;a href=&#34;https://stackoverflow.com/questions/46210678/whats-the-difference-between-transform-vs-applymap-for-pandas-dataframe&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;query-columns&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Query (columns)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;df.query(&amp;#39;expression&amp;#39;)    #expression must be conditional using column variable/s
-                          #prefix &amp;quot;@&amp;quot; before variable name if outside of dataframe env.
-                          #prefix ` ` to encapsulate variable name with spaces&lt;/code&gt;&lt;/pre&gt;
-&lt;p class=&#34;bod&#34;&gt;
-Can be used to filter rows.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;unique-vs-nunique&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Unique vs Nunique&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;for col in df.columns:    #for loop to get column names
-  df[col].unique()            #returns unique values in column &amp;#39;col&amp;#39;
-  df[col].nunique()           #returns unique values in column AND drop NAs&lt;/code&gt;&lt;/pre&gt;
 &lt;!-- ### --&gt;
 &lt;!-- ``` --&gt;
 &lt;!-- ``` --&gt;
@@ -303,15 +378,15 @@ simulations &amp;lt;- sapply(Ns, function(N){
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+02&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.040000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.050000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+04&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.085600&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.088100&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+06&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.083467&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.083335&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

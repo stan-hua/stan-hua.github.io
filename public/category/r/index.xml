@@ -32,17 +32,17 @@ h2{
   text-decoration: underline;
   padding-top: 15px;
   font-family: &#34;Arial&#34;;
-  text-align: center;
+  text-align: left;
 }
-h3{ 
-  display: list-item;
-  list-style-type: upper-roman;;
-  list-style-position: inside;
-  font-size:17px;
-  font-family:&#34;Cambria&#34;;
-  font-style: italic;
-  margin-left: 7px;
-}
+&lt;!-- h3{  --&gt;
+&lt;!--   display: list-item; --&gt;
+&lt;!--   list-style-type: upper-roman;; --&gt;
+&lt;!--   list-style-position: inside; --&gt;
+&lt;!--   font-size:17px; --&gt;
+&lt;!--   font-family:&#34;Cambria&#34;; --&gt;
+&lt;!--   font-style: italic; --&gt;
+&lt;!--   margin-left: 7px; --&gt;
+&lt;!-- } --&gt;
 
 &lt;/style&gt;
 &lt;div id=&#34;normal-distribution&#34; class=&#34;section level2&#34;&gt;
@@ -56,7 +56,9 @@ Probably one of the most important distributions in statistics, the normal distr
 To make an illustrative point, RStudio’s built-in dataset BJsales will be used. The data describes the number of sales every day for some consecutive months. Its probability density was graphed below.
 &lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/post/Distributions/variety_files/figure-html/plot-1.png&#34; width=&#34;307.2&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Notice how the distribution is bimodal with one peak centered at 217 and the other at 257! Now look what happens when you take 30 samples from&lt;/p&gt;
+&lt;p class=&#34;bod&#34;&gt;
+Notice how the distribution is bimodal with one peak centered at 217 and the other at 257! Now look what happens when you take 30 samples from
+&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/post/Distributions/variety_files/figure-html/plot2-1.png&#34; width=&#34;307.2&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -115,15 +117,15 @@ simulations &amp;lt;- sapply(Ns, function(N){
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+02&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.040000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.050000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+04&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.085600&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.088100&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+06&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.083467&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.083335&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

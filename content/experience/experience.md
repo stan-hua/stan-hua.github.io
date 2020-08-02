@@ -17,6 +17,18 @@ date_format = "Jan 2006"
 #   Required fields are `title`, `company`, and `date_start`.
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
+
+[[experience]]
+  title = "ROP Student"
+  company = "Tyrrell4Innovation Lab"
+  company_url = "http://www.tyrrell4innovation.ca"
+  location = "Canada"
+  date_start = "2020-07-25"
+  date_end = ""
+  description = """
+  * Creating and carrying out efficient means of quality assessment of brain MRI scans of patients with MS and Vasculitis.
+  """
+
 [[experience]]
   title = "Events Coordinator"
   company = "University of Toronto Table Tennis Club"
@@ -25,14 +37,15 @@ date_format = "Jan 2006"
   date_start = "2020-04-01"
   date_end = ""
   description = """
-  Responsibilities include:
-  * Increasing the club's online presence
-  * Supervise biweekly community table tennis drop-ins
-  * Prepare for Intramural Tournaments
-  * Plan 1-2 social events throughout the year
-  * Organize the UTTTC booth at the annual UofT Club’s Fair
+  Thus far, responsibilities have included:
+  * Increasing the club's online presence through social media posts on Facebook
+  * Acting to create a new platform for members of the community to interact with
   """
-
+# * Future supervision of biweekly community table tennis drop-ins upon resuming of normal activities
+# * Preparation and supervision of Intramural Tournaments
+# * Planning of 1-2 social events throughout the year
+# * Organizing of booth at the annual UofT Club’s Fair
+  
 [[experience]]
   title = "Volunteer Photographer"
   company = "West Neighbourhood House"
