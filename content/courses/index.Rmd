@@ -78,6 +78,7 @@ summary h3{
 <p>
 - [x] Intro to Machine Learning
 - [x] Intermediate Machine Learning
+- [ ] Deep Learning
 - [ ] Feature Engineering
 - [ ] SQL
 
