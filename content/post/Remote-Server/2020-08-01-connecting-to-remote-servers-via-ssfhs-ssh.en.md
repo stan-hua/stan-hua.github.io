@@ -44,7 +44,7 @@ This post will show you 1) how to connect to a remote server on Windows, AND 2) 
 ### 1. Simple access to server files via ssh (Secure Shell)
 
 <p>
-Before you start, you'll most likely be needing 3 things: 1) the **username** of your server account, 2) the server **IP adress**, and 3) the password associated with the server account if applicable. Okay, now open your command prompt via cmd.exe. Your command prompt command should generally follow what is displayed below.
+Before you start, you'll most likely be needing 3 things: 1) the <b>username</b> of your server account, 2) the server <b>IP adress</b>, and 3) the password associated with the server account if applicable. Okay, now open your command prompt via cmd.exe. Your command prompt command should generally follow what is displayed below.
 </p>
 
 ```
