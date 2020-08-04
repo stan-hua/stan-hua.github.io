@@ -259,6 +259,23 @@ Iterates by rows (for Series) and cell (for DataFrame), passing cell value into 
 <div class='bod'>
 A great resource for comparing df.**agg**(), df.**apply**(), df.**applymap**() and df.**transform**() can be found <a href="https://stackoverflow.com/questions/46210678/whats-the-difference-between-transform-vs-applymap-for-pandas-dataframe">here</a>.
 </div>
+
+### Rolling
+
+```
+df.rolling(num_observations).FUN()
+Series.rolling(num_observations).FUN()
+
+
+#Example of counting observations every 7 days past
+Series.rolling('7d').count()-1        #subtraction excludes day 
+```
+
+<div class='bod'>
+This is similar to GroupBy then Transform, but function is applied to "rolls" going down a specific column/index.
+</div>
+
+
 <!-- ### -->
 
 <!-- ``` -->

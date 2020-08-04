@@ -78,9 +78,9 @@ summary h3{
 <p>
 - [x] Intro to Machine Learning
 - [x] Intermediate Machine Learning
+- [x] Feature Engineering
 - [ ] Deep Learning
-- [ ] Feature Engineering
-- [ ] SQL
+- [ ] Natural Language Processing
 
 </p>
 </details>
