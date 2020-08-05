@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects | Stanley Z. Hua</title>
-    <link>/project/</link>
-      <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://stanhua.rbind.io/project/</link>
+      <atom:link href="http://stanhua.rbind.io/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 13 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/me</url>
+      <url>http://stanhua.rbind.io/img/me</url>
       <title>Projects</title>
-      <link>/project/</link>
+      <link>http://stanhua.rbind.io/project/</link>
     </image>
     
     <item>
       <title>COVID19 Policy Hackathon</title>
-      <link>/project/covid19-policy-hackathon-int/</link>
+      <link>http://stanhua.rbind.io/project/covid19-policy-hackathon-int/</link>
       <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>/project/covid19-policy-hackathon-int/</guid>
+      <guid>http://stanhua.rbind.io/project/covid19-policy-hackathon-int/</guid>
       <description></description>
     </item>
     
     <item>
       <title>UnBDC 2020 Entry</title>
-      <link>/project/unbdc2020-ext/</link>
+      <link>http://stanhua.rbind.io/project/unbdc2020-ext/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
-      <guid>/project/unbdc2020-ext/</guid>
+      <guid>http://stanhua.rbind.io/project/unbdc2020-ext/</guid>
       <description></description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stanley Z. Hua</title>
-    <link>/</link>
-      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://stanhua.rbind.io/</link>
+      <atom:link href="http://stanhua.rbind.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Stanley Z. Hua</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/me</url>
+      <url>http://stanhua.rbind.io/img/me</url>
       <title>Stanley Z. Hua</title>
-      <link>/</link>
+      <link>http://stanhua.rbind.io/</link>
     </image>
     
     <item>
       <title>Example Talk</title>
-      <link>/talk/example/</link>
+      <link>http://stanhua.rbind.io/talk/example/</link>
       <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
-      <guid>/talk/example/</guid>
+      <guid>http://stanhua.rbind.io/talk/example/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
@@ -36,9 +36,9 @@
     
     <item>
       <title>Connecting to a remote server</title>
-      <link>/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</link>
+      <link>http://stanhua.rbind.io/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</guid>
+      <guid>http://stanhua.rbind.io/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</guid>
       <description>&lt;style&gt;
 
 .note{font-size: 10pt;
@@ -57,7 +57,7 @@ p{text-indent: 2em;}
 &lt;hr&gt;
 &lt;h3 id=&#34;1-simple-access-to-server-files-via-ssh-secure-shell&#34;&gt;1. Simple access to server files via ssh (Secure Shell)&lt;/h3&gt;
 &lt;p&gt;
-Before you start, you&#39;ll most likely be needing 3 things: 1) the **username** of your server account, 2) the server **IP adress**, and 3) the password associated with the server account if applicable. Okay, now open your command prompt via cmd.exe. Your command prompt command should generally follow what is displayed below.
+Before you start, you&#39;ll most likely be needing 3 things: 1) the &lt;b&gt;username&lt;/b&gt; of your server account, 2) the server &lt;b&gt;IP adress&lt;/b&gt;, and 3) the password associated with the server account if applicable. Okay, now open your command prompt via cmd.exe. Your command prompt command should generally follow what is displayed below.
 &lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;C:Users/...&amp;gt; ssh username@125.950.26.789            #format is ssh host@ip_address
 &lt;/code&gt;&lt;/pre&gt;
@@ -111,64 +111,10 @@ sudo sshfs -o allow_other,default_permissions username@ip_address:/file_path /mn
     </item>
     
     <item>
-      <title>Distributions</title>
-      <link>/post/distributions/variety/</link>
-      <pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/post/distributions/variety/</guid>
-      <description>
-
-
-&lt;style&gt;
-.bod{
-  font-family: Arial;
-  font-size: 10pt;
-  display: inline-block;
-  margin-left: 15px;
-  text-indent: 50px;
-}
-h2{
-  text-decoration: underline;
-  padding-top: 15px;
-  font-family: &#34;Arial&#34;;
-  text-align: left;
-}
-&lt;!-- h3{  --&gt;
-&lt;!--   display: list-item; --&gt;
-&lt;!--   list-style-type: upper-roman;; --&gt;
-&lt;!--   list-style-position: inside; --&gt;
-&lt;!--   font-size:17px; --&gt;
-&lt;!--   font-family:&#34;Cambria&#34;; --&gt;
-&lt;!--   font-style: italic; --&gt;
-&lt;!--   margin-left: 7px; --&gt;
-&lt;!-- } --&gt;
-
-&lt;/style&gt;
-&lt;div id=&#34;normal-distribution&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Normal Distribution&lt;/h2&gt;
-&lt;p class=&#34;bod&#34;&gt;
-Probably one of the most important distributions in statistics, the normal distribution is most notably used in hypothesis testing and confidence intervals.
-&lt;/p&gt;
-&lt;div id=&#34;testing-out-the-central-limit-theorem&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Testing out the Central Limit Theorem&lt;/h3&gt;
-&lt;p class=&#34;bod&#34;&gt;
-To make an illustrative point, RStudio’s built-in dataset BJsales will be used. The data describes the number of sales every day for some consecutive months. Its probability density was graphed below.
-&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/Distributions/variety_files/figure-html/plot-1.png&#34; width=&#34;307.2&#34; /&gt;&lt;/p&gt;
-&lt;p class=&#34;bod&#34;&gt;
-Notice how the distribution is bimodal with one peak centered at 217 and the other at 257! Now look what happens when you take 30 samples from
-&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/Distributions/variety_files/figure-html/plot2-1.png&#34; width=&#34;307.2&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Save the Pandas...library</title>
-      <link>/post/pandas/useful_commands_to_remember/</link>
+      <link>http://stanhua.rbind.io/post/pandas/useful_commands_to_remember/</link>
       <pubDate>Sat, 11 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/post/pandas/useful_commands_to_remember/</guid>
+      <guid>http://stanhua.rbind.io/post/pandas/useful_commands_to_remember/</guid>
       <description>
 
 
@@ -367,6 +313,18 @@ Iterates by rows (for Series) and cell (for DataFrame), passing cell value into 
 &lt;div class=&#34;bod&#34;&gt;
 &lt;p&gt;A great resource for comparing df.&lt;strong&gt;agg&lt;/strong&gt;(), df.&lt;strong&gt;apply&lt;/strong&gt;(), df.&lt;strong&gt;applymap&lt;/strong&gt;() and df.&lt;strong&gt;transform&lt;/strong&gt;() can be found &lt;a href=&#34;https://stackoverflow.com/questions/46210678/whats-the-difference-between-transform-vs-applymap-for-pandas-dataframe&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rolling&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Rolling&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;df.rolling(num_observations).FUN()
+Series.rolling(num_observations).FUN()
+
+
+#Example of counting observations every 7 days past
+Series.rolling(&amp;#39;7d&amp;#39;).count()-1        #subtraction excludes day &lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;bod&#34;&gt;
+&lt;p&gt;This is similar to GroupBy then Transform, but function is applied to “rolls” going down a specific column/index.&lt;/p&gt;
+&lt;/div&gt;
 &lt;!-- ### --&gt;
 &lt;!-- ``` --&gt;
 &lt;!-- ``` --&gt;
@@ -377,9 +335,9 @@ Iterates by rows (for Series) and cell (for DataFrame), passing cell value into 
     
     <item>
       <title>Monte Carlo Simulations</title>
-      <link>/post/monte-carlo-simulations/monte-carlo-simulations/</link>
+      <link>http://stanhua.rbind.io/post/monte-carlo-simulations/monte-carlo-simulations/</link>
       <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/post/monte-carlo-simulations/monte-carlo-simulations/</guid>
+      <guid>http://stanhua.rbind.io/post/monte-carlo-simulations/monte-carlo-simulations/</guid>
       <description>
 
 
@@ -426,15 +384,15 @@ simulations &amp;lt;- sapply(Ns, function(N){
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+02&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.050000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.110000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+04&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.088100&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.080000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+06&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.083335&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.083293&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -473,9 +431,9 @@ sample_means &amp;lt;- replicate(B, {
     
     <item>
       <title>Courses Completed</title>
-      <link>/courses/</link>
+      <link>http://stanhua.rbind.io/courses/</link>
       <pubDate>Fri, 03 Jul 2020 18:50:01 -0400</pubDate>
-      <guid>/courses/</guid>
+      <guid>http://stanhua.rbind.io/courses/</guid>
       <description>
 
 
@@ -554,12 +512,12 @@ Kaggle Micro-courses(online)
 Intro to Machine Learning&lt;/li&gt;
 &lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
 Intermediate Machine Learning&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
+Feature Engineering&lt;/li&gt;
 &lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; /&gt;
 Deep Learning&lt;/li&gt;
 &lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; /&gt;
-Feature Engineering&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; /&gt;
-SQL&lt;/li&gt;
+Natural Language Processing&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/p&gt;
 &lt;/details&gt;
@@ -568,25 +526,25 @@ SQL&lt;/li&gt;
     
     <item>
       <title>Experience</title>
-      <link>/experience/</link>
+      <link>http://stanhua.rbind.io/experience/</link>
       <pubDate>Thu, 02 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/experience/</guid>
+      <guid>http://stanhua.rbind.io/experience/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>/project_direct/</link>
+      <link>http://stanhua.rbind.io/project_direct/</link>
       <pubDate>Thu, 02 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/project_direct/</guid>
+      <guid>http://stanhua.rbind.io/project_direct/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A First</title>
-      <link>/post/first/a-first/</link>
+      <link>http://stanhua.rbind.io/post/first/a-first/</link>
       <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/post/first/a-first/</guid>
+      <guid>http://stanhua.rbind.io/post/first/a-first/</guid>
       <description>
 
 
@@ -596,25 +554,25 @@ SQL&lt;/li&gt;
     
     <item>
       <title>COVID19 Policy Hackathon</title>
-      <link>/project/covid19-policy-hackathon-int/</link>
+      <link>http://stanhua.rbind.io/project/covid19-policy-hackathon-int/</link>
       <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>/project/covid19-policy-hackathon-int/</guid>
+      <guid>http://stanhua.rbind.io/project/covid19-policy-hackathon-int/</guid>
       <description></description>
     </item>
     
     <item>
       <title>UnBDC 2020 Entry</title>
-      <link>/project/unbdc2020-ext/</link>
+      <link>http://stanhua.rbind.io/project/unbdc2020-ext/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
-      <guid>/project/unbdc2020-ext/</guid>
+      <guid>http://stanhua.rbind.io/project/unbdc2020-ext/</guid>
       <description></description>
     </item>
     
     <item>
       <title>An example preprint / working paper</title>
-      <link>/publication/preprint/</link>
+      <link>http://stanhua.rbind.io/publication/preprint/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/preprint/</guid>
+      <guid>http://stanhua.rbind.io/publication/preprint/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
@@ -627,9 +585,9 @@ SQL&lt;/li&gt;
     
     <item>
       <title>Slides</title>
-      <link>/slides/example/</link>
+      <link>http://stanhua.rbind.io/slides/example/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>/slides/example/</guid>
+      <guid>http://stanhua.rbind.io/slides/example/</guid>
       <description>&lt;h1 id=&#34;create-slides-in-markdown-with-academic&#34;&gt;Create slides in Markdown with Academic&lt;/h1&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic&lt;/a&gt; | 
@@ -761,9 +719,9 @@ Three
     
     <item>
       <title>An example journal article</title>
-      <link>/publication/journal-article/</link>
+      <link>http://stanhua.rbind.io/publication/journal-article/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>/publication/journal-article/</guid>
+      <guid>http://stanhua.rbind.io/publication/journal-article/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -781,9 +739,9 @@ Three
     
     <item>
       <title>An example conference paper</title>
-      <link>/publication/conference-paper/</link>
+      <link>http://stanhua.rbind.io/publication/conference-paper/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      <guid>/publication/conference-paper/</guid>
+      <guid>http://stanhua.rbind.io/publication/conference-paper/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.

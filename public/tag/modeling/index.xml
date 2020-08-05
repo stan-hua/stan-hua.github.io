@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Modeling | Stanley Z. Hua</title>
-    <link>/tag/modeling/</link>
-      <atom:link href="/tag/modeling/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://stanhua.rbind.io/tag/modeling/</link>
+      <atom:link href="http://stanhua.rbind.io/tag/modeling/index.xml" rel="self" type="application/rss+xml" />
     <description>Modeling</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 04 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/me</url>
+      <url>http://stanhua.rbind.io/img/me</url>
       <title>Modeling</title>
-      <link>/tag/modeling/</link>
+      <link>http://stanhua.rbind.io/tag/modeling/</link>
     </image>
     
     <item>
       <title>Monte Carlo Simulations</title>
-      <link>/post/monte-carlo-simulations/monte-carlo-simulations/</link>
+      <link>http://stanhua.rbind.io/post/monte-carlo-simulations/monte-carlo-simulations/</link>
       <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/post/monte-carlo-simulations/monte-carlo-simulations/</guid>
+      <guid>http://stanhua.rbind.io/post/monte-carlo-simulations/monte-carlo-simulations/</guid>
       <description>
 
 
@@ -63,15 +63,15 @@ simulations &amp;lt;- sapply(Ns, function(N){
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+02&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.050000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.110000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+04&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.088100&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.080000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+06&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.083335&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.083293&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

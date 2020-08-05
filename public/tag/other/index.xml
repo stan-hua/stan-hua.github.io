@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Other | Stanley Z. Hua</title>
-    <link>/tag/other/</link>
-      <atom:link href="/tag/other/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://stanhua.rbind.io/tag/other/</link>
+      <atom:link href="http://stanhua.rbind.io/tag/other/index.xml" rel="self" type="application/rss+xml" />
     <description>Other</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/me</url>
+      <url>http://stanhua.rbind.io/img/me</url>
       <title>Other</title>
-      <link>/tag/other/</link>
+      <link>http://stanhua.rbind.io/tag/other/</link>
     </image>
     
     <item>
       <title>Connecting to a remote server</title>
-      <link>/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</link>
+      <link>http://stanhua.rbind.io/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</guid>
+      <guid>http://stanhua.rbind.io/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</guid>
       <description>&lt;style&gt;
 
 .note{font-size: 10pt;
@@ -35,7 +35,7 @@ p{text-indent: 2em;}
 &lt;hr&gt;
 &lt;h3 id=&#34;1-simple-access-to-server-files-via-ssh-secure-shell&#34;&gt;1. Simple access to server files via ssh (Secure Shell)&lt;/h3&gt;
 &lt;p&gt;
-Before you start, you&#39;ll most likely be needing 3 things: 1) the **username** of your server account, 2) the server **IP adress**, and 3) the password associated with the server account if applicable. Okay, now open your command prompt via cmd.exe. Your command prompt command should generally follow what is displayed below.
+Before you start, you&#39;ll most likely be needing 3 things: 1) the &lt;b&gt;username&lt;/b&gt; of your server account, 2) the server &lt;b&gt;IP adress&lt;/b&gt;, and 3) the password associated with the server account if applicable. Okay, now open your command prompt via cmd.exe. Your command prompt command should generally follow what is displayed below.
 &lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;C:Users/...&amp;gt; ssh username@125.950.26.789            #format is ssh host@ip_address
 &lt;/code&gt;&lt;/pre&gt;
@@ -90,9 +90,9 @@ sudo sshfs -o allow_other,default_permissions username@ip_address:/file_path /mn
     
     <item>
       <title>COVID19 Policy Hackathon</title>
-      <link>/project/covid19-policy-hackathon-int/</link>
+      <link>http://stanhua.rbind.io/project/covid19-policy-hackathon-int/</link>
       <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>/project/covid19-policy-hackathon-int/</guid>
+      <guid>http://stanhua.rbind.io/project/covid19-policy-hackathon-int/</guid>
       <description></description>
     </item>
     
