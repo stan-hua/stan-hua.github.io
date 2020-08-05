@@ -254,11 +254,6 @@ Iterates by rows (for Series) and cell (for DataFrame), passing cell value into 
 
 <p class='bod'> <b>NOTE</b>: similar to %>% operation in R. </p>
 
-<br>
-
-<div class='bod'>
-A great resource for comparing df.**agg**(), df.**apply**(), df.**applymap**() and df.**transform**() can be found <a href="https://stackoverflow.com/questions/46210678/whats-the-difference-between-transform-vs-applymap-for-pandas-dataframe">here</a>.
-</div>
 
 ### Rolling
 
@@ -281,3 +276,9 @@ This is similar to GroupBy then Transform, but function is applied to "rolls" go
 <!-- ``` -->
 
 <!-- ``` -->
+
+<br>
+
+<div class='bod'>
+A great resource for comparing df.**agg**(), df.**apply**(), df.**applymap**() and df.**transform**() can be found <a href="https://stackoverflow.com/questions/46210678/whats-the-difference-between-transform-vs-applymap-for-pandas-dataframe">here</a>.
+</div>
