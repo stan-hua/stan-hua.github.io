@@ -46,11 +46,12 @@ subtitle = "*A hub for exploring any concept under the sun.*"
   #   Any HTML color name or Hex value is valid.
 
   # Background color.
-  # color = "navy"
+  # color = "#8da2c9"
   
   # Background gradient.
-gradient_start = "LavenderBlush"
-gradient_end = "White"
+#gradient_start = "#f0f0f0"
+#gradient_end = "#ffffff"
+
   
   # Background image.
   # image = "background.jpg"  # Name of image in `static/img/`.

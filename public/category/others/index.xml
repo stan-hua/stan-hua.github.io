@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Others | Stanley Z. Hua</title>
-    <link>http://stanhua.rbind.io/category/others/</link>
-      <atom:link href="http://stanhua.rbind.io/category/others/index.xml" rel="self" type="application/rss+xml" />
+    <link>/category/others/</link>
+      <atom:link href="/category/others/index.xml" rel="self" type="application/rss+xml" />
     <description>Others</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://stanhua.rbind.io/img/me</url>
+      <url>/img/me</url>
       <title>Others</title>
-      <link>http://stanhua.rbind.io/category/others/</link>
+      <link>/category/others/</link>
     </image>
     
     <item>
       <title>Connecting to a remote server</title>
-      <link>http://stanhua.rbind.io/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</link>
+      <link>/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>http://stanhua.rbind.io/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</guid>
+      <guid>/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</guid>
       <description>&lt;style&gt;
 
 .note{font-size: 10pt;
@@ -90,9 +90,9 @@ sudo sshfs -o allow_other,default_permissions username@ip_address:/file_path /mn
     
     <item>
       <title>A First</title>
-      <link>http://stanhua.rbind.io/post/first/a-first/</link>
+      <link>/post/first/a-first/</link>
       <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>http://stanhua.rbind.io/post/first/a-first/</guid>
+      <guid>/post/first/a-first/</guid>
       <description>
 
 

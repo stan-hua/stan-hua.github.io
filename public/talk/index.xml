@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recent &amp; Upcoming Talks | Stanley Z. Hua</title>
-    <link>http://stanhua.rbind.io/talk/</link>
-      <atom:link href="http://stanhua.rbind.io/talk/index.xml" rel="self" type="application/rss+xml" />
+    <link>/talk/</link>
+      <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Talks</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://stanhua.rbind.io/img/me</url>
+      <url>/img/me</url>
       <title>Recent &amp; Upcoming Talks</title>
-      <link>http://stanhua.rbind.io/talk/</link>
+      <link>/talk/</link>
     </image>
     
     <item>
       <title>Example Talk</title>
-      <link>http://stanhua.rbind.io/talk/example/</link>
+      <link>/talk/example/</link>
       <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
-      <guid>http://stanhua.rbind.io/talk/example/</guid>
+      <guid>/talk/example/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.

@@ -13,8 +13,6 @@ title = "Biography"
 author = "admin"
 
 [design.background]
-#color = "LavenderBlush"
-gradient_start = "White"
-gradient_end = "LavenderBlush"
-
+#gradient_start = "#ffffff" 
+#gradient_end = "#f0f0f0" 
 +++

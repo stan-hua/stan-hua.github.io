@@ -8,3 +8,4 @@ layout:
 title: The Curiosity Box
 ---
 
+color = "#8da2c9"

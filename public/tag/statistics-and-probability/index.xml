@@ -2,21 +2,75 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Statistics and Probability | Stanley Z. Hua</title>
-    <link>http://stanhua.rbind.io/tag/statistics-and-probability/</link>
-      <atom:link href="http://stanhua.rbind.io/tag/statistics-and-probability/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tag/statistics-and-probability/</link>
+      <atom:link href="/tag/statistics-and-probability/index.xml" rel="self" type="application/rss+xml" />
     <description>Statistics and Probability</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 04 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 12 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://stanhua.rbind.io/img/me</url>
+      <url>/img/me</url>
       <title>Statistics and Probability</title>
-      <link>http://stanhua.rbind.io/tag/statistics-and-probability/</link>
+      <link>/tag/statistics-and-probability/</link>
     </image>
     
     <item>
+      <title>Distributions</title>
+      <link>/post/distributions/variety/</link>
+      <pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/post/distributions/variety/</guid>
+      <description>
+
+
+&lt;style&gt;
+.bod{
+  font-family: Arial;
+  font-size: 10pt;
+  display: inline-block;
+  margin-left: 15px;
+  text-indent: 50px;
+}
+h2{
+  text-decoration: underline;
+  padding-top: 15px;
+  font-family: &#34;Arial&#34;;
+  text-align: left;
+}
+&lt;!-- h3{  --&gt;
+&lt;!--   display: list-item; --&gt;
+&lt;!--   list-style-type: upper-roman;; --&gt;
+&lt;!--   list-style-position: inside; --&gt;
+&lt;!--   font-size:17px; --&gt;
+&lt;!--   font-family:&#34;Cambria&#34;; --&gt;
+&lt;!--   font-style: italic; --&gt;
+&lt;!--   margin-left: 7px; --&gt;
+&lt;!-- } --&gt;
+
+&lt;/style&gt;
+&lt;div id=&#34;normal-distribution&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Normal Distribution&lt;/h2&gt;
+&lt;p class=&#34;bod&#34;&gt;
+Probably one of the most important distributions in statistics, the normal distribution is most notably used in hypothesis testing and confidence intervals.
+&lt;/p&gt;
+&lt;div id=&#34;testing-out-the-central-limit-theorem&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Testing out the Central Limit Theorem&lt;/h3&gt;
+&lt;p class=&#34;bod&#34;&gt;
+To make an illustrative point, RStudio’s built-in dataset BJsales will be used. The data describes the number of sales every day for some consecutive months. Its probability density was graphed below.
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/Distributions/variety_files/figure-html/plot-1.png&#34; width=&#34;307.2&#34; /&gt;&lt;/p&gt;
+&lt;p class=&#34;bod&#34;&gt;
+Notice how the distribution is bimodal with one peak centered at 217 and the other at 257! Now look what happens when you take 30 samples from
+&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/Distributions/variety_files/figure-html/plot2-1.png&#34; width=&#34;307.2&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Monte Carlo Simulations</title>
-      <link>http://stanhua.rbind.io/post/monte-carlo-simulations/monte-carlo-simulations/</link>
+      <link>/post/monte-carlo-simulations/monte-carlo-simulations/</link>
       <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>http://stanhua.rbind.io/post/monte-carlo-simulations/monte-carlo-simulations/</guid>
+      <guid>/post/monte-carlo-simulations/monte-carlo-simulations/</guid>
       <description>
 
 
@@ -67,11 +121,11 @@ simulations &amp;lt;- sapply(Ns, function(N){
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+04&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.080000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.084800&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+06&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.083293&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.083378&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

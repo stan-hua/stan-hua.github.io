@@ -1,6 +1,6 @@
 ---
 date: "2020-06-13"
-external_link: covidpolicy.pdf
+external_link: project/covidpolicy.pdf
 image:
   caption: 
   focal_point: Smart

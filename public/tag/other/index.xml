@@ -2,21 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Other | Stanley Z. Hua</title>
-    <link>http://stanhua.rbind.io/tag/other/</link>
-      <atom:link href="http://stanhua.rbind.io/tag/other/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tag/other/</link>
+      <atom:link href="/tag/other/index.xml" rel="self" type="application/rss+xml" />
     <description>Other</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 26 Aug 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://stanhua.rbind.io/img/me</url>
+      <url>/img/me</url>
       <title>Other</title>
-      <link>http://stanhua.rbind.io/tag/other/</link>
+      <link>/tag/other/</link>
     </image>
     
     <item>
+      <title>AllRecipes Recipe Scraper</title>
+      <link>/project/recipe_scraper/</link>
+      <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>/project/recipe_scraper/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Connecting to a remote server</title>
-      <link>http://stanhua.rbind.io/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</link>
+      <link>/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>http://stanhua.rbind.io/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</guid>
+      <guid>/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</guid>
       <description>&lt;style&gt;
 
 .note{font-size: 10pt;
@@ -90,9 +98,9 @@ sudo sshfs -o allow_other,default_permissions username@ip_address:/file_path /mn
     
     <item>
       <title>COVID19 Policy Hackathon</title>
-      <link>http://stanhua.rbind.io/project/covid19-policy-hackathon-int/</link>
+      <link>/project/covid19-policy-hackathon-int/</link>
       <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>http://stanhua.rbind.io/project/covid19-policy-hackathon-int/</guid>
+      <guid>/project/covid19-policy-hackathon-int/</guid>
       <description></description>
     </item>
     
