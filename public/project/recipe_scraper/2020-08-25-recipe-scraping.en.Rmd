@@ -9,7 +9,6 @@ tags:
   - Data Wrangling
 output: flexdashboard::flex_dashboard
 runtime: shiny
-draft: TRUE
 ---
 
 ```{r setup,include=FALSE}
@@ -86,10 +85,11 @@ Column
 ### Preface
 
 This is a scrapping tool made to obtain recipes easily from AllRecipes.com.
+
 ---
 
 ```{r}
-renderText({"Hello World"})
+renderText(input$url)
 ```
 
 
