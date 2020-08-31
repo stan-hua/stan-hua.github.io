@@ -89,10 +89,8 @@ This is a scrapping tool made to obtain recipes easily from AllRecipes.com.
 ---
 
 ```{r}
-renderText(input$url)
+observeEvent(input$search,renderPrint(input$url))
 ```
-
-
 
 
 

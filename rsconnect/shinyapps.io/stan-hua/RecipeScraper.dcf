@@ -1,0 +1,12 @@
+name: RecipeScraper
+title: RecipeScraper
+username:
+account: stan-hua
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2721724
+bundleId: 3568918
+url: https://stan-hua.shinyapps.io/RecipeScraper/
+when: 1598661463.154
+asMultiple: FALSE
+asStatic: TRUE
