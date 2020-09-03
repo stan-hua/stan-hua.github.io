@@ -1,10 +1,10 @@
 ---
 date: "2020-08-26"
-external_link: project/recipe_scraper/2020-08-25-recipe-scraping.en.html
+external_link: https://stan-hua.shinyapps.io/RecipeScraper/
 image:
   caption: 
   focal_point: Smart
-summary: Built-in recipe scraper for AllRecipes.com
+summary: Recipe scraper for AllRecipes.com. Created with R, shiny, flexdashboard, and shinyapps.io
 tags:
 - Other
 title: AllRecipes Recipe Scraper
