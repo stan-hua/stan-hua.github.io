@@ -26,7 +26,8 @@ date_format = "Jan 2006"
   date_start = "2020-07-25"
   date_end = ""
   description = """
-  * Creating and carrying out efficient means of quality assessment of brain MRI scans of patients with MS and Vasculitis.
+  * Carried out quality assessment on brain MRI scans of Multiple Sclerosis patients and Vasculitis patients
+  * Used a Neurodebian Virtual Machine, along with FSL tools in analyzing brain MRI data of T1, T2 and FLAIR modalities.  
   """
 
 [[experience]]
@@ -37,15 +38,26 @@ date_format = "Jan 2006"
   date_start = "2020-04-01"
   date_end = ""
   description = """
-  Thus far, responsibilities have included:
-  * Increasing the club's online presence through social media posts on Facebook
-  * Acting to create a new platform for members of the community to interact with
+  Thus far,
+  * Increased the club's online presence through social media initiatives on Facebook
+  * Initiated and constructed a community forums for members to interact via a subreddit
   """
 # * Future supervision of biweekly community table tennis drop-ins upon resuming of normal activities
 # * Preparation and supervision of Intramural Tournaments
 # * Planning of 1-2 social events throughout the year
 # * Organizing of booth at the annual UofT Club’s Fair
   
+[[experience]]
+  title = "Volunteer Virtual Chess Class Instructor"
+  company = "Kensington Health, Second Mile Club"
+  company_url = "https://www.kensingtonhealth.org/"
+  location = "Canada"
+  date_start = "2020-08-25"
+  date_end = ""
+  description = """
+  Ventured into creating and conducting a weekly "Casual Chess" event for senior members of the community to connect and learn chess online via Zoom
+  """
+
 [[experience]]
   title = "Volunteer Photographer"
   company = "West Neighbourhood House"
@@ -54,7 +66,7 @@ date_format = "Jan 2006"
   date_start = "2020-02-01"
   date_end = "2020-02-01"
   description = """
-  Documented most of the community services the organization offers in preparation for their annual report.
+  Documented the organization's community services in preparation for their annual report
   """
 
 [[experience]]
@@ -65,7 +77,7 @@ date_format = "Jan 2006"
   date_start = "2018-11-01"
   date_end = "2019-02-01"
   description = """
-  Tutored a small group of 10 students on concepts in elementary Math and English
+  Tutored 10 students on concepts in elementary Math and English
   """
 
 [[experience]]
@@ -76,7 +88,7 @@ date_format = "Jan 2006"
   date_start = "2016-01-01"
   date_end = "2016-02-01"
   description = """
-  Collaborating with peers to prepare for and tutor basic Math to class of 40 elementary students
+  Collaborated with peers to prepare and review Math lessons with a class of 40 elementary students
   """
 
 [[experience]]
