@@ -38,8 +38,7 @@ date_format = "Jan 2006"
   date_start = "2020-04-01"
   date_end = ""
   description = """
-  Thus far,
-  * Increased the club's online presence through social media initiatives on Facebook
+  * Increased the club's online presence through social media initiatives
   * Initiated and constructed a community forums for members to interact via a subreddit
   """
 # * Future supervision of biweekly community table tennis drop-ins upon resuming of normal activities
