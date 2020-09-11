@@ -26,8 +26,7 @@ date_format = "Jan 2006"
   date_start = "2020-07-25"
   date_end = ""
   description = """
-  * Carried out quality assessment on brain MRI scans of Multiple Sclerosis patients and Vasculitis patients
-  * Used a Neurodebian Virtual Machine, along with FSL tools in analyzing brain MRI data of T1, T2 and FLAIR modalities.  
+Carried out quality assessment and registration on brain MRI images of MS patients.
   """
 
 [[experience]]
@@ -52,9 +51,9 @@ date_format = "Jan 2006"
   company_url = "https://www.kensingtonhealth.org/"
   location = "Canada"
   date_start = "2020-08-25"
-  date_end = ""
+  date_end = "2020-09-08"
   description = """
-  Ventured into creating and conducting a weekly "Casual Chess" event for senior members of the community to connect and learn chess online via Zoom
+  Hosted a weekly "Casual Chess" event for senior members of the community to connect and learn chess online
   """
 
 [[experience]]
