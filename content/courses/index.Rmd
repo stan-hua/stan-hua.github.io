@@ -15,38 +15,51 @@ share: false
 ---
 <style>
 summary h3{ 
-  display: inline-block; 
+  display: inline-block;
   font-size:20px;
-  font-family:"Times New Roman"
+  font-family:"Quicksand";
+  color: #e3e0bc !important;
+}
+h1{
+  color: #476e52 !important;
+}
+summary{
+  height: 30% !important;
 }
 </style>
+```{r setup,include=FALSE}
+library(tidyverse)
+library(DT)
+library(widgetframe)
+```
+```{r table,echo=FALSE}
+path<-"../../static/files/"
+first_name<-"first_year.csv"
+second_name<-"second_year.csv"
+
+first_year<-read.csv(paste(path,first_name,sep=""))
+second_year<-read.csv(paste(path,second_name,sep=""))
+
+
+df<-rbind(second_year,first_year) %>% datatable(rownames = FALSE,
+          options = list(
+            pageLength = 5,
+            autoWidth = TRUE,
+            columnDefs = list(list(
+              className = 'dt-left',
+              targets = 0),
+              list(className = 'dt-center', targets = 1))))
+```
+---
+
 <details>
 <summary>
 <h3>University of Toronto</h3>
-</summary>
-<p>
-- [x] *CSC108*,   <span style="padding-left: 10px; display:inline"> Introduction to Computer Programming</span>
-
-- [x] *BIO120*,   <span style="padding-left: 15px; display:inline">Adaptation and Biodiversity</span>
-
-- [x] *BIO130*,   <span style="padding-left: 15px; display:inline">Molecular and Cell Biology</span>
-
-- [x] *CHM135*,   <span style="padding-left: 5px; display:inline">Chemistry: Physical Principles</span>
-
-- [x] *CHM136*,   <span style="padding-left: 5px; display:inline">Introductory Organic Chemistry I</span>
-
-- [x] *MAT135*,   <span style="padding-left: 5px; display:inline">Calculus I</span>
-
-- [x] *MAT136*,   <span style="padding-left: 5px; display:inline">Calculus II</span>
-
-- [x] *IMM250*,   <span style="padding-left: 4px; display:inline">The Immune System and Infectious Disease</span>
-
-- [x] *PSY100*,   <span style="padding-left: 7px; display:inline">Introductory Psychology</span>
-
-- [x] *NMC101*,   <span style="padding-left: 4px; display:inline">Land of the Pharaohs</span>
-</p>
-</details>
-
+</summary><p>
+```{r output, echo=FALSE}
+widgetframe::frameWidget(df, height=320)
+```
+</p></details>
 
 <details>
 <summary>
@@ -63,24 +76,19 @@ summary h3{
 
 - [x] HarvardX Data Science: <span style="padding-left: 5px; display:inline">*Productivity Tools*</span>
 
-- [ ] HarvardX Data Science: <span style="padding-left: 5px; display:inline">*Wrangling*</span>
-
-- [ ] RiceX: <span style="padding-left: 5px; display:inline">*Linear Algebra Part 1*</span>
-
 </p>
 </details>
 
 
 <details>
 <summary>
-<h3>Kaggle Micro-courses(online)</h3>
+<h3>Kaggle Micro-courses (online)</h3>
 </summary>
 <p>
 - [x] Intro to Machine Learning
 - [x] Intermediate Machine Learning
 - [x] Feature Engineering
-- [ ] Deep Learning
-- [ ] Natural Language Processing
+- [x] Deep Learning
 
 </p>
 </details>

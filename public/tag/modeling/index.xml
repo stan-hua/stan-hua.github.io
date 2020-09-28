@@ -63,15 +63,15 @@ simulations &amp;lt;- sapply(Ns, function(N){
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+02&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.060000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.070000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+04&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.081700&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.083500&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+06&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.083534&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.082946&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

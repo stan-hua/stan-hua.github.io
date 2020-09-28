@@ -17,43 +17,43 @@ date_format = "Jan 2006"
 #   Required fields are `title`, `company`, and `date_start`.
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
-
 [[experience]]
-  title = "ROP Student"
-  company = "Tyrrell4Innovation Lab"
-  company_url = "http://www.tyrrell4innovation.ca"
-  location = "Canada"
-  date_start = "2020-07-25"
-  date_end = ""
-  description = """
-Carried out quality assessment and registration on brain MRI images of MS patients.
-  """
-
-[[experience]]
-  title = "Events Coordinator"
-  company = "University of Toronto Table Tennis Club"
+  title = "Student Leader & Athlete"
+  company = "Ateneo de Manila University"
   company_url = ""
-  location = "Canada"
-  date_start = "2020-04-01"
-  date_end = ""
+  location = "Quezon City, Philippines"
+  date_start = "2015-06-01"
+  date_end = "2019-12-31"
   description = """
-  * Increased the club's online presence through social media initiatives
-  * Initiated and constructed a community forums for members to interact via a subreddit
+  * Table Tennis Varsity Team Captain
+  * UAAP Table Tennis Player
+  * Class President, Class Vice President
+  * Dance Finance Co-Head
+  * Fund Drive CEO
+  * Lunduyan (Yoga Club) Member
+  * Ateneo Investment Club Member
   """
-# * Future supervision of biweekly community table tennis drop-ins upon resuming of normal activities
-# * Preparation and supervision of Intramural Tournaments
-# * Planning of 1-2 social events throughout the year
-# * Organizing of booth at the annual UofT Club’s Fair
-  
+
 [[experience]]
-  title = "Volunteer Virtual Chess Class Instructor"
-  company = "Kensington Health, Second Mile Club"
-  company_url = "https://www.kensingtonhealth.org/"
-  location = "Canada"
-  date_start = "2020-08-25"
-  date_end = "2020-09-08"
+  title = "Student Teacher"
+  company = "Corazon Aquino Elementary School"
+  company_url = ""
+  location = "Philippines"
+  date_start = "2016-01-01"
+  date_end = "2016-02-01"
   description = """
-  Hosted a weekly "Casual Chess" event for senior members of the community to connect and learn chess online
+  Collaborated with four peers to help review elementary Math concepts with a class of 40 students.
+  """
+
+[[experience]]
+  title = "Tutor"
+  company = "St. Mary's Elementary School"
+  company_url = ""
+  location = "Philippines"
+  date_start = "2018-11-01"
+  date_end = "2019-02-01"
+  description = """
+  Prepared teaching material weekly to help tutor elementary school students in Math and English.
   """
 
 [[experience]]
@@ -68,50 +68,51 @@ Carried out quality assessment and registration on brain MRI images of MS patien
   """
 
 [[experience]]
-  title = "Elementary School Volunteer Tutor"
-  company = "St. Mary's Elementary School"
+  title = "Events Coordinator"
+  company = "University of Toronto Table Tennis Club"
   company_url = ""
-  location = "Philippines"
-  date_start = "2018-11-01"
-  date_end = "2019-02-01"
+  location = "Canada"
+  date_start = "2020-04-01"
+  date_end = ""
   description = """
-  Tutored 10 students on concepts in elementary Math and English
+  * Increased the club's online presence through social media initiatives
+  * Initiated and constructed a community forums for members to interact via a subreddit
   """
-
+  
 [[experience]]
-  title = "Elementary School Student Teacher"
-  company = "Corazon Aquino Elementary School"
-  company_url = ""
-  location = "Philippines"
-  date_start = "2016-01-01"
-  date_end = "2016-02-01"
+  title = "Chess Class Instructor"
+  company = "Kensington Health, Second Mile Club"
+  company_url = "https://www.kensingtonhealth.org/"
+  location = "Online"
+  date_start = "2020-08-25"
+  date_end = "2020-09-08"
   description = """
-  Collaborated with peers to prepare and review Math lessons with a class of 40 elementary students
+  Hosted an online weekly "Casual Chess" event for senior members of the community to connect, learn and play chess.
   """
-
+  
+  
 [[experience]]
-  title = "Student Involvement"
-  company = "Ateneo de Manila High School"
-  company_url = ""
-  location = "Philippines"
-  date_start = "2015-06-01"
-  date_end = "2019-12-31"
+  title = "Undergraduate Research Project Student"
+  company = "Tyrrell4Innovation Lab"
+  company_url = "http://www.tyrrell4innovation.ca"
+  location = "Canada"
+  date_start = "2020-07-25"
+  date_end = ""
   description = """
-  Grade 9:
-  * Class Vice President
-  * Katipunan Fund Drive CEO
-  * Dance Finance Co-Head
+Carried out quality assessment and registration on brain MRI images of MS patients.
+  """
   
-  Grade 10:
-  * Class President
-  * Katipunan Fund Drive CEO
   
-  Grade 12:
-  * Varsity Team Captain
-  * Lunduyan (Yoga Club)
-  * Ateneo Investment Club
-  
-  Grade 9 to 12:
-  * UAAP Table Tennis Player
+[[experience]]
+  title = "Founder, President"
+  company = "UofT OFFLINE"
+  company_url = ""
+  location = "Online"
+  date_start = "2020-08-25"
+  date_end = ""
+  description = """
+  Founded a university organization that seeks to make up for the lack of opportunities to socialize and make genuine friends whilst pursuing
+education remotely.
+
   """
 +++

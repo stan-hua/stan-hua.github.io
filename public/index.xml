@@ -446,15 +446,15 @@ simulations &amp;lt;- sapply(Ns, function(N){
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+02&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.060000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.070000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+04&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.081700&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.083500&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+06&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.083534&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.082946&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -497,15 +497,26 @@ sample_means &amp;lt;- replicate(B, {
       <pubDate>Fri, 03 Jul 2020 18:50:01 -0400</pubDate>
       <guid>/courses/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;style&gt;
 summary h3{ 
-  display: inline-block; 
+  display: inline-block;
   font-size:20px;
-  font-family:&#34;Times New Roman&#34;
+  font-family:&#34;Quicksand&#34;;
+  color: #e3e0bc !important;
+}
+h1{
+  color: #476e52 !important;
+}
+summary{
+  height: 30% !important;
 }
 &lt;/style&gt;
+&lt;hr /&gt;
 &lt;details&gt;
 &lt;summary&gt;
 &lt;h3&gt;
@@ -513,28 +524,8 @@ University of Toronto
 &lt;/h3&gt;
 &lt;/summary&gt;
 &lt;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
-&lt;em&gt;CSC108&lt;/em&gt;, &lt;span style=&#34;padding-left: 10px; display:inline&#34;&gt; Introduction to Computer Programming&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
-&lt;em&gt;BIO120&lt;/em&gt;, &lt;span style=&#34;padding-left: 15px; display:inline&#34;&gt;Adaptation and Biodiversity&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
-&lt;em&gt;BIO130&lt;/em&gt;, &lt;span style=&#34;padding-left: 15px; display:inline&#34;&gt;Molecular and Cell Biology&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
-&lt;em&gt;CHM135&lt;/em&gt;, &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;Chemistry: Physical Principles&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
-&lt;em&gt;CHM136&lt;/em&gt;, &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;Introductory Organic Chemistry I&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
-&lt;em&gt;MAT135&lt;/em&gt;, &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;Calculus I&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
-&lt;em&gt;MAT136&lt;/em&gt;, &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;Calculus II&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
-&lt;em&gt;IMM250&lt;/em&gt;, &lt;span style=&#34;padding-left: 4px; display:inline&#34;&gt;The Immune System and Infectious Disease&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
-&lt;em&gt;PSY100&lt;/em&gt;, &lt;span style=&#34;padding-left: 7px; display:inline&#34;&gt;Introductory Psychology&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
-&lt;em&gt;NMC101&lt;/em&gt;, &lt;span style=&#34;padding-left: 4px; display:inline&#34;&gt;Land of the Pharaohs&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:320px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/courses/index_files/figure-html//widgets/widget_output.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;/p&gt;
 &lt;/details&gt;
 &lt;details&gt;
@@ -555,17 +546,13 @@ HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34
 HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;&lt;em&gt;Inference and Modeling&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
 HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;&lt;em&gt;Productivity Tools&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; /&gt;
-HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;&lt;em&gt;Wrangling&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; /&gt;
-RiceX: &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;&lt;em&gt;Linear Algebra Part 1&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/p&gt;
 &lt;/details&gt;
 &lt;details&gt;
 &lt;summary&gt;
 &lt;h3&gt;
-Kaggle Micro-courses(online)
+Kaggle Micro-courses (online)
 &lt;/h3&gt;
 &lt;/summary&gt;
 &lt;p&gt;
@@ -576,10 +563,8 @@ Intro to Machine Learning&lt;/li&gt;
 Intermediate Machine Learning&lt;/li&gt;
 &lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
 Feature Engineering&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; /&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
 Deep Learning&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; /&gt;
-Natural Language Processing&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/p&gt;
 &lt;/details&gt;
