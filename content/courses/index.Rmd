@@ -25,8 +25,8 @@ summary h3{
 h1{
   color: #476e52 !important;
 }
-
 </style>
+
 ```{r setup,include=FALSE}
 library(tidyverse)
 library(DT)
