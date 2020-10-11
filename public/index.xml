@@ -35,6 +35,59 @@
     </item>
     
     <item>
+      <title>Principle Component Analysis for Dummies</title>
+      <link>/post/pca/pca_for_dummies/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>/post/pca/pca_for_dummies/</guid>
+      <description>&lt;style&gt;
+body {background-color: #476e52 !important;}
+h3,h4{color: #e3e0bc !important;}
+.note{font-size: 10pt;
+      line-height: 20pt;
+      padding-bottom: 10px}
+p{text-indent: 2em;}
+
+details{font-size: 10pt;}
+summary{font-size: 100% !important;}
+&lt;/style&gt;
+&lt;div class=&#34;note&#34;&gt;
+&lt;b&gt;DISCLAIMER&lt;/b&gt;: This article is an introduction into PCA and does not go into depth into the statistics and code. Tread carefully! 
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3&gt;OVERVIEW&lt;/h3&gt;
+&lt;p&gt;PCA or Principle Component Analysis is known for two things: 1) Dimensionality Reduction, and 2) Structure Analysis. However more generally, it is used for &lt;strong&gt;factor extraction&lt;/strong&gt;, which is needed in Factor Analysis.&lt;/p&gt;
+&lt;div class=&#34;note&#34;&gt;
+&lt;b&gt;NOTE&lt;/b&gt;: There are plenty of resources online if you wish to learn more about Factor Analysis, but they will not be covered here!
+&lt;/div&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;h4&gt;TERMINOLOGY&lt;/h4&gt;
+&lt;p&gt;So as not to lose anyone, let&amp;rsquo;s define some useful terminology! 
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt; are what we are measuring.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;Example&lt;/summary&gt;
+&lt;p&gt;Say we have a table with &lt;i&gt;y&lt;/i&gt; rows and &lt;i&gt;x&lt;/i&gt; columns, then we have &lt;i&gt;x&lt;/i&gt; features. Imagine each row being the names of someone you know, and each column measure something distinct about all persons listed (e.g. their height, weight, deepest darkest secrets, etc.). These things we&#39;re measuring are the features.&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;Dimensionality Reduction&lt;/strong&gt; is exactly what it sounds like. The goal is to reduce the number of dimensions (i.e. number of features), while retaining &lt;em&gt;most&lt;/em&gt; information from the original data. Using this to understand underlying structures in the data is the idea behind &lt;strong&gt;Structure Analysis&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;Example and Enrichment&lt;/summary&gt;
+&lt;p&gt;Say you wish to visualize your data, in order to get an understanding of the relationships between each feature. But you have too many features that it becomes impossible to plot them on an x-y graph. How do you visualize without destroying your computer let alone your mind? Simple, you reduce the number of dimensions to 2, so that you can plot it on an x-y graph. &lt;/p&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;div class=&#34;note&#34;&gt;
+&lt;b&gt;NOTE&lt;/b&gt;: Dimensionality Reduction is different from &lt;i&gt;Feature Selection&lt;/i&gt; (e.g. L1 Regularization, L2 Regularization, etc.). The goal of feature selection is to select the most important features. Meanwhile, dimensionality reduction is used to lessen the number of dimensions while capturing the variation in the original data as much as possible.
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;Principal Components&lt;/strong&gt; are the [1, n] factors extracted from n features using Principal Component Analysis. You can think of them as new axes to view the original data. However, you can no longer interpret the principal components with the same interpretation of the previous features.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;Enrichment&lt;/summary&gt;
+If you have 10 features and you do PCA to get 10 factors, they are not the same. If you previously had age, weight, etc., now you simply have axes for data points with no semantic meaning.
+&lt;/details&gt;
+</description>
+    </item>
+    
+    <item>
       <title>AllRecipes Recipe Scraper</title>
       <link>/project/recipe_scraper/</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
@@ -48,13 +101,15 @@
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       <guid>/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</guid>
       <description>&lt;style&gt;
-
+body {background-color: #476e52 !important;}
+h3,h4{color: #e3e0bc !important;}
 .note{font-size: 10pt;
       line-height: 20pt;
       padding-bottom: 10px}
-
 p{text-indent: 2em;}
 
+details{font-size: 10pt;}
+summary{font-size: 100% !important;}
 &lt;/style&gt;
 &lt;p&gt;Working from home?&lt;/p&gt;
 &lt;p&gt;You might be one of us who need to connect to a remote server from home. Now, how do you do this? Maybe it&amp;rsquo;s better to ask first what is your operating system (e.g. Windows, MacOS, etc.).&lt;/p&gt;
@@ -67,9 +122,9 @@ p{text-indent: 2em;}
 &lt;p&gt;
 Before you start, you&#39;ll most likely be needing 3 things: 1) the &lt;b&gt;username&lt;/b&gt; of your server account, 2) the server &lt;b&gt;IP adress&lt;/b&gt;, and 3) the password associated with the server account if applicable. Okay, now open your command prompt via cmd.exe. Your command prompt command should generally follow what is displayed below.
 &lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;C:Users/...&amp;gt; ssh username@125.950.26.789            #format is ssh host@ip_address
+&lt;pre&gt;&lt;code&gt;...&amp;gt; ssh username@125.950.26.789
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now, you may be prompted by the console to input your password. After doing so, you should be connected. Congratulations!&lt;/p&gt;
+&lt;p&gt;The command is &amp;ldquo;ssh&amp;rdquo; followed by your server username, &amp;ldquo;@&amp;rdquo;, and the server ip address. After which, you may be prompted by the console to input your password. After doing so, you should be connected. Congratulations!&lt;/p&gt;
 &lt;div class=&#34;note&#34;&gt;
 &lt;b&gt;NOTE&lt;/b&gt;: This connection is temporary and will be gone once you exit the command prompt, or when your machine is powered off or loses connection to the internet. If so, you will need to enter the command again.
 &lt;/div&gt;
@@ -181,27 +236,16 @@ Notice how the distribution is bimodal with one peak centered at 217 and the oth
 
 
 &lt;style&gt;
-
-.bod{
-  font-family: Arial !important;
-  font-size: 11pt !important;
-  display: inline-block !important;
-  margin-left: 10px !important;
-  line-height: 15pt !important;
-}
-
+body {background-color: #476e52 !important;
+    font-size: 10pt}
+h3,h4{color: #e3e0bc !important;}
+&lt;!-- note{line-height: 20pt; --&gt;
+&lt;!--       padding-bottom: 10px} --&gt;
 h2{
   text-decoration: underline;
   line-height: 5pt;
   text-align: center;
   padding-top: 30px;
-}
-h3{ 
-  display: list-item;
-  list-style-type: disc;
-  list-style-position: inside;
-  font-size:17px;
-  font-family:&#34;Cambria&#34;;
 }
 &lt;/style&gt;
 &lt;p&gt;By convention, “&lt;strong&gt;&lt;em&gt;df&lt;/em&gt;&lt;/strong&gt;” will refer to a dataframe object, while “&lt;strong&gt;&lt;em&gt;Series&lt;/em&gt;&lt;/strong&gt;” will refer to a series object.&lt;/p&gt;
@@ -262,7 +306,7 @@ Series.shape&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;iloc&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;&lt;a href=&#34;https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.iloc.html&#34; target=&#34;_blank&#34;&gt;Iloc &lt;/a&gt;&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;df.iloc[row_position, col_position]    #general format&lt;/code&gt;&lt;/pre&gt;
-&lt;p class=&#34;bod&#34;&gt;
+&lt;p class=&#34;note&#34;&gt;
 COPY of dataframe is slice is returned. This CANNOT be used in assignment. Also, note that only integers, its derivations and boolean arrays can be used to index.
 &lt;/p&gt;
 &lt;/div&gt;
@@ -273,8 +317,8 @@ df.loc[index]        #returns original dataframe sliced
 
 
 df.loc[row_indexer, col_indexer]        #general format&lt;/code&gt;&lt;/pre&gt;
-&lt;p class=&#34;bod&#34;&gt;
-Note, colon “:” is not needed by col_indexer like in &lt;em&gt;df.loc[index, :]&lt;/em&gt; to choose all columns, and slice of ORIGINAL dataframe is returned. This can be used for assignment.
+&lt;p class=&#34;note&#34;&gt;
+&lt;b&gt;Note&lt;/b&gt;: colon “:” is not needed by col_indexer like in &lt;em&gt;df.loc[index, :]&lt;/em&gt; to choose all columns, and slice of ORIGINAL dataframe is returned. This can be used for assignment.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;query-columns&#34; class=&#34;section level3&#34;&gt;
@@ -282,7 +326,7 @@ Note, colon “:” is not needed by col_indexer like in &lt;em&gt;df.loc[index,
 &lt;pre&gt;&lt;code&gt;df.query(&amp;#39;expression&amp;#39;)    #expression must be conditional using column variable/s
                           #prefix &amp;quot;@&amp;quot; before variable name if outside of dataframe env.
                           #prefix ` ` to encapsulate variable name with spaces&lt;/code&gt;&lt;/pre&gt;
-&lt;p class=&#34;bod&#34;&gt;
+&lt;p class=&#34;note&#34;&gt;
 Can be used to filter rows.
 &lt;/p&gt;
 &lt;!-- ################################################################ --&gt;
@@ -299,7 +343,7 @@ Can be used to filter rows.
 &lt;div id=&#34;assign-new-columns&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Assign (new columns)&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;df.assign(col_name = col_1*col_2/col_3)&lt;/code&gt;&lt;/pre&gt;
-&lt;p class=&#34;bod&#34;&gt;
+&lt;p class=&#34;note&#34;&gt;
 Used to create new columns. Similar to “mutate” in R.
 &lt;/p&gt;
 &lt;/div&gt;
@@ -319,7 +363,7 @@ Series.get_dummies(dummy_na=False, columns=None, sparse=False, drop_first=False,
 &lt;h3&gt;Group by, then Transform&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;df.groupby(by=category).transform(FUN)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;bod&#34;&gt;
+&lt;div class=&#34;note&#34;&gt;
 &lt;p&gt;Grouping a dataframe then transforming it is a very common operation. A dataframe is converted into a “GroupBy” object depending on &lt;em&gt;category&lt;/em&gt;, which may be a string or list of strings representing column names. Then the resulting object’s values are passed into &lt;em&gt;FUN&lt;/em&gt; by the transform function and a column of the same size is returned.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -357,7 +401,7 @@ Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)&lt;
 &lt;h3&gt;Mapping, passing each cell into a function and replacing the input&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;df.applymap(FUN)
 Series.map(FUN)&lt;/code&gt;&lt;/pre&gt;
-&lt;p class=&#34;bod&#34;&gt;
+&lt;p class=&#34;note&#34;&gt;
 Iterates by rows (for Series) and cell (for DataFrame), passing cell value into function with the output value replacing its input value.
 &lt;/p&gt;
 &lt;/div&gt;
@@ -368,7 +412,7 @@ Iterates by rows (for Series) and cell (for DataFrame), passing cell value into 
     .pipe((FUN3, &amp;quot;arg2&amp;quot;), arg1=bar)        #when FUN3&amp;#39;s main arg. is not df, supply tuple
                                                 where str contains location for df (e.g. &amp;quot;arg2&amp;quot;)
 )&lt;/code&gt;&lt;/pre&gt;
-&lt;p class=&#34;bod&#34;&gt;
+&lt;p class=&#34;note&#34;&gt;
 &lt;b&gt;NOTE&lt;/b&gt;: similar to %&amp;gt;% operation in R.
 &lt;/p&gt;
 &lt;/div&gt;
@@ -380,16 +424,20 @@ Series.rolling(num_observations).FUN()
 
 #Example of counting observations every 7 days past
 Series.rolling(&amp;#39;7d&amp;#39;).count()-1        #subtraction excludes day &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;bod&#34;&gt;
+&lt;div class=&#34;note&#34;&gt;
 &lt;p&gt;This is similar to GroupBy then Transform, but function is applied to “rolls” going down a specific column/index.&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- ### --&gt;
 &lt;!-- ``` --&gt;
 &lt;!-- ``` --&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;div class=&#34;bod&#34;&gt;
-&lt;p&gt;A great resource for comparing df.&lt;strong&gt;agg&lt;/strong&gt;(), df.&lt;strong&gt;apply&lt;/strong&gt;(), df.&lt;strong&gt;applymap&lt;/strong&gt;() and df.&lt;strong&gt;transform&lt;/strong&gt;() can be found &lt;a href=&#34;https://stackoverflow.com/questions/46210678/whats-the-difference-between-transform-vs-applymap-for-pandas-dataframe&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
 &lt;/div&gt;
+&lt;div id=&#34;additional-resources&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Additional Resources&lt;/h3&gt;
+&lt;p class=&#34;note&#34;&gt;
+A great resource for comparing df.&lt;strong&gt;agg&lt;/strong&gt;(), df.&lt;strong&gt;apply&lt;/strong&gt;(), df.&lt;strong&gt;applymap&lt;/strong&gt;() and df.&lt;strong&gt;transform&lt;/strong&gt;() can be found &lt;a href=&#34;https://stackoverflow.com/questions/46210678/whats-the-difference-between-transform-vs-applymap-for-pandas-dataframe&#34;&gt;here&lt;/a&gt;.
+&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
@@ -403,19 +451,29 @@ Series.rolling(&amp;#39;7d&amp;#39;).count()-1        #subtraction excludes day 
       <description>
 
 
+&lt;style&gt;
+body {background-color: #476e52 !important;}
+h3,h4{color: #e3e0bc !important;}
+.note{font-size: 10pt;
+      line-height: 20pt;
+      padding-bottom: 10px}
+p{text-indent: 2em;}
+details{font-size: 10pt;}
+summary{font-size: 100% !important;}
+&lt;/style&gt;
 &lt;details&gt;
 &lt;summary&gt;
-If you’re trying to simulate a random event for whatever reason using R, then you’ve come to the right place!
+Trying to simulate a random event? Then you’ve come to the right place!
 &lt;/summary&gt;
 &lt;p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;If not, or if you do not have true or estimated probabilities for your simulation, then this is not for you!&lt;/p&gt;
+&lt;p&gt;If you do not have true proportion or estimated probabilities for your simulation, then this may not help you!&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/p&gt;
 &lt;/details&gt;
 &lt;hr /&gt;
 &lt;div id=&#34;premise&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;em&gt;Premise&lt;/em&gt;&lt;/h3&gt;
+&lt;h3&gt;Premise&lt;/h3&gt;
 &lt;p&gt;Say you want to understand how randomness works, and you want to roll a 12-sided die and see how many times it lands on 1. You’ll do roll a die 100, 10,000, 1,000,000 times.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; Every side of the die has a probability of 1/12, but the outcome of each roll is random and independent from one another.
 &lt;br&gt;&lt;br&gt;&lt;/p&gt;
@@ -446,25 +504,41 @@ simulations &amp;lt;- sapply(Ns, function(N){
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+02&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.070000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.100000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+04&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.083500&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.081800&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+06&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.082946&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.083099&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;The sample function takes N rolls (with replacement). The result can either be 1; a success (landing on 1), or -1; a failure (not landing on one). The keyword argument “prob” defines the probability for possible events success or failure.&lt;/p&gt;
 &lt;p&gt;As you can see from the results, the &lt;strong&gt;&lt;em&gt;proportion&lt;/em&gt;&lt;/strong&gt; of rolls landing on 1 converges to the probability we defined it to be (1/12 = 0.0833), as the &lt;strong&gt;&lt;em&gt;number&lt;/em&gt;&lt;/strong&gt; of rolls increases.&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h3&gt;
+For Understanding
+&lt;/h3&gt;
 &lt;p&gt;To close, it may be good to point out a common misconception when it comes to expectation. Say if you and your friends are tossing a coin and it lands on heads, you might be tempted to say “The next one will be tails!”, but that’s wrong. We know logically that the probability of either side landing is 1/2, but we would only be able to observe this when we sum up the results of maybe a thousand or hundred thousand rolls, as we have just done.
 &lt;br&gt;&lt;/p&gt;
 &lt;p&gt;The &lt;em&gt;Law of Large Numbers&lt;/em&gt; (or &lt;em&gt;the Law of Averages&lt;/em&gt;) states that as the number of draws (rolls) increases, the standard error (standard deviation but for samples) of the expected value approaches 0. In which case, the expected value converges to the probability we defined.
 &lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;
+Enrichment
+&lt;/h3&gt;
+&lt;p&gt;You can try to compute for the standard error for each simulation using the formula:&lt;/p&gt;
+&lt;div class=&#34;note&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(SE[\overline{X}]=|b-a|*\frac{\sqrt{p(1-p)}}{N}\)&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&#34;line-block&#34;&gt;    where SE means standard error;&lt;br /&gt;
+                X_bar is the sample random variable;&lt;br /&gt;
+                a and b are the values we attribute to success and failure (i.e. 1 and -1);&lt;br /&gt;
+                p is the probability of success (i.e. 1/12);&lt;br /&gt;
+                and N is the sample size.&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: For cases wherein the probability is not defined, we can use the &lt;code&gt;replicate&lt;/code&gt; function that takes two arguments. The second argument defines a line or set of lines to replicate, while the first argument is the number of times you wish to repeat the second argument.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Example&lt;/em&gt;: Creating a list of sample means.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;array                           # a non-empty numeric array of length 100,000
@@ -475,18 +549,6 @@ sample_means &amp;lt;- replicate(B, {
     mean(sample_array)          #like a function; this is returned
 })
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Enrichment&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;You can try to compute for the standard error for each simulation using the formula:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(SE[\overline{X}]=|b-a|*\frac{\sqrt{p(1-p)}}{N}\)&lt;/span&gt;&lt;/p&gt;
-&lt;div class=&#34;line-block&#34;&gt;    where SE means standard error;&lt;br /&gt;
-                X_bar is the sample random variable;&lt;br /&gt;
-                a and b are the values we attribute to success and failure (i.e. 1 and -1);&lt;br /&gt;
-                p is the probability of success (i.e. 1/12);&lt;br /&gt;
-                and N is the sample size.&lt;/div&gt;
-&lt;style&gt;
-      h3{font-weight:normal;}
-&lt;/style&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -508,15 +570,14 @@ summary h3{
   font-size:20px;
   font-family:&#34;Quicksand&#34;;
   color: #e3e0bc !important;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 h1{
   color: #476e52 !important;
 }
-summary{
-  height: 30% !important;
-}
+
 &lt;/style&gt;
-&lt;hr /&gt;
 &lt;details&gt;
 &lt;summary&gt;
 &lt;h3&gt;
@@ -531,28 +592,28 @@ University of Toronto
 &lt;details&gt;
 &lt;summary&gt;
 &lt;h3&gt;
-EdX (online)
+EdX
 &lt;/h3&gt;
 &lt;/summary&gt;
 &lt;p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
-HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;&lt;em&gt;R Basics&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
-HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;&lt;em&gt;Visualization&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
-HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;&lt;em&gt;Probability&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
-HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;&lt;em&gt;Inference and Modeling&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
-HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;&lt;em&gt;Productivity Tools&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
+HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;&lt;em&gt;R Basics&lt;/em&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
+HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;&lt;em&gt;Visualization&lt;/em&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
+HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;&lt;em&gt;Probability&lt;/em&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
+HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;&lt;em&gt;Inference and Modeling&lt;/em&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; checked=&#34;&#34; /&gt;
+HarvardX Data Science: &lt;span style=&#34;padding-left: 5px; display:inline&#34;&gt;&lt;em&gt;Productivity Tools&lt;/em&gt;&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/p&gt;
 &lt;/details&gt;
 &lt;details&gt;
 &lt;summary&gt;
 &lt;h3&gt;
-Kaggle Micro-courses (online)
+Kaggle Micro-courses
 &lt;/h3&gt;
 &lt;/summary&gt;
 &lt;p&gt;

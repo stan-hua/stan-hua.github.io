@@ -21,27 +21,16 @@ projects: []
 
 
 <style>
-
-.bod{
-  font-family: Arial !important;
-  font-size: 11pt !important;
-  display: inline-block !important;
-  margin-left: 10px !important;
-  line-height: 15pt !important;
-}
-
+body {background-color: #476e52 !important;
+    font-size: 10pt}
+h3,h4{color: #e3e0bc !important;}
+<!-- note{line-height: 20pt; -->
+<!--       padding-bottom: 10px} -->
 h2{
   text-decoration: underline;
   line-height: 5pt;
   text-align: center;
   padding-top: 30px;
-}
-h3{ 
-  display: list-item;
-  list-style-type: disc;
-  list-style-position: inside;
-  font-size:17px;
-  font-family:"Cambria";
 }
 </style>
 <p>By convention, “<strong><em>df</em></strong>” will refer to a dataframe object, while “<strong><em>Series</em></strong>” will refer to a series object.</p>
@@ -102,7 +91,7 @@ Series.shape</code></pre>
 <div id="iloc" class="section level3">
 <h3><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.iloc.html" target="_blank">Iloc </a></h3>
 <pre><code>df.iloc[row_position, col_position]    #general format</code></pre>
-<p class="bod">
+<p class="note">
 COPY of dataframe is slice is returned. This CANNOT be used in assignment. Also, note that only integers, its derivations and boolean arrays can be used to index.
 </p>
 </div>
@@ -113,8 +102,8 @@ df.loc[index]        #returns original dataframe sliced
 
 
 df.loc[row_indexer, col_indexer]        #general format</code></pre>
-<p class="bod">
-Note, colon “:” is not needed by col_indexer like in <em>df.loc[index, :]</em> to choose all columns, and slice of ORIGINAL dataframe is returned. This can be used for assignment.
+<p class="note">
+<b>Note</b>: colon “:” is not needed by col_indexer like in <em>df.loc[index, :]</em> to choose all columns, and slice of ORIGINAL dataframe is returned. This can be used for assignment.
 </p>
 </div>
 <div id="query-columns" class="section level3">
@@ -122,7 +111,7 @@ Note, colon “:” is not needed by col_indexer like in <em>df.loc[index, :]</e
 <pre><code>df.query(&#39;expression&#39;)    #expression must be conditional using column variable/s
                           #prefix &quot;@&quot; before variable name if outside of dataframe env.
                           #prefix ` ` to encapsulate variable name with spaces</code></pre>
-<p class="bod">
+<p class="note">
 Can be used to filter rows.
 </p>
 <!-- ################################################################ -->
@@ -139,7 +128,7 @@ Can be used to filter rows.
 <div id="assign-new-columns" class="section level3">
 <h3>Assign (new columns)</h3>
 <pre><code>df.assign(col_name = col_1*col_2/col_3)</code></pre>
-<p class="bod">
+<p class="note">
 Used to create new columns. Similar to “mutate” in R.
 </p>
 </div>
@@ -159,7 +148,7 @@ Series.get_dummies(dummy_na=False, columns=None, sparse=False, drop_first=False,
 <h3>Group by, then Transform</h3>
 <pre><code>df.groupby(by=category).transform(FUN)
 </code></pre>
-<div class="bod">
+<div class="note">
 <p>Grouping a dataframe then transforming it is a very common operation. A dataframe is converted into a “GroupBy” object depending on <em>category</em>, which may be a string or list of strings representing column names. Then the resulting object’s values are passed into <em>FUN</em> by the transform function and a column of the same size is returned.</p>
 </div>
 </div>
@@ -197,7 +186,7 @@ Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)</co
 <h3>Mapping, passing each cell into a function and replacing the input</h3>
 <pre><code>df.applymap(FUN)
 Series.map(FUN)</code></pre>
-<p class="bod">
+<p class="note">
 Iterates by rows (for Series) and cell (for DataFrame), passing cell value into function with the output value replacing its input value.
 </p>
 </div>
@@ -208,7 +197,7 @@ Iterates by rows (for Series) and cell (for DataFrame), passing cell value into 
     .pipe((FUN3, &quot;arg2&quot;), arg1=bar)        #when FUN3&#39;s main arg. is not df, supply tuple
                                                 where str contains location for df (e.g. &quot;arg2&quot;)
 )</code></pre>
-<p class="bod">
+<p class="note">
 <b>NOTE</b>: similar to %&gt;% operation in R.
 </p>
 </div>
@@ -220,15 +209,19 @@ Series.rolling(num_observations).FUN()
 
 #Example of counting observations every 7 days past
 Series.rolling(&#39;7d&#39;).count()-1        #subtraction excludes day </code></pre>
-<div class="bod">
+<div class="note">
 <p>This is similar to GroupBy then Transform, but function is applied to “rolls” going down a specific column/index.</p>
 </div>
 <!-- ### -->
 <!-- ``` -->
 <!-- ``` -->
 <p><br></p>
-<div class="bod">
-<p>A great resource for comparing df.<strong>agg</strong>(), df.<strong>apply</strong>(), df.<strong>applymap</strong>() and df.<strong>transform</strong>() can be found <a href="https://stackoverflow.com/questions/46210678/whats-the-difference-between-transform-vs-applymap-for-pandas-dataframe">here</a>.</p>
+<hr>
 </div>
+<div id="additional-resources" class="section level3">
+<h3>Additional Resources</h3>
+<p class="note">
+A great resource for comparing df.<strong>agg</strong>(), df.<strong>apply</strong>(), df.<strong>applymap</strong>() and df.<strong>transform</strong>() can be found <a href="https://stackoverflow.com/questions/46210678/whats-the-difference-between-transform-vs-applymap-for-pandas-dataframe">here</a>.
+</p>
 </div>
 </div>

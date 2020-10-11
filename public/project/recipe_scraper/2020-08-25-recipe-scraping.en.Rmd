@@ -1,5 +1,5 @@
 ---
-title: Recipe Scraping
+title: RECIPE SCRAPER
 author: ''
 date: ''
 slug: recipe-scraping
@@ -7,9 +7,34 @@ categories:
   - R
 tags:
   - Data Wrangling
-output: flexdashboard::flex_dashboard
+output: 
+  flexdashboard::flex_dashboard:
+    logo: logo2.png
 runtime: shiny
+
 ---
+<script>
+  $('.navbar-logo').wrap('<a href="https://stanhua.rbind.io/">');
+</script>
+
+<style>
+  .tab{margin-left: 20px;
+      line-height: 15%;
+      }
+  .navbar {
+    background-color: white;
+    border-color: black;
+      }
+  .navbar-brand {
+    color: black!important;
+    }
+  .section.sidebar{
+    background-color: #476e52;
+    justify-content: flex-end;
+    color: white!important;
+    }
+</style>
+
 
 ```{r setup,include=FALSE}
 library(rvest)
@@ -18,12 +43,12 @@ library(flexdashboard)
 ```
 
 ```{r, echo=FALSE}
-create_text<-function(input_url){
-  website<-function(link=input_url){
+create_text<-function(link){
+  website<-function(link=link){
     webpage<-read_html(link)
     recipefor_html<-html_nodes(webpage,'.heading-content')    #change if using different website
     recipefor<-html_text(recipefor_html)
-    recipefor<<-recipefor[4]                                   #change if using different website
+    recipefor<<-tail(recipefor,n=1)                                   #change if using different website
     
     #Fetch directions
     directions_html<-html_nodes(webpage,".instructions-section")
@@ -54,54 +79,43 @@ create_text<-function(input_url){
     pieces
   }
   
-  website(input_url)
+  website(link)
   
   # Recipe Title
-  header<-sprintf("### %s\n\n",recipefor)
+  header<-sprintf("<h2> %s</h2>",recipefor)
   
   # Instructions
-  instructions<-"### Directions\n"
-  instructions<-paste(instructions,paste(sprintf("%d. %s", 1:length(directions), directions),collapse="\n"),sep="<br>\n<br>")
+  instructions<-"<hr>\n<h3><b>Directions</h3></b>"
+  instructions<-paste(instructions,"<ol>", paste(sprintf("<li> %s", directions),collapse="<br>"), "</ol>")
   
   # Ingredients
-  ingredients_str<-"### Ingredients\n"
-  ingredients_str<-paste(ingredients_str,paste(sprintf("- [ ] %s\n", ingredients),collapse="\n"))
+  ingredients_str<-"<hr>\n<h3><b>Ingredients</h3></b>"
+  ingredients_str<-paste(ingredients_str,paste(sprintf('<p class="tab"><input type="checkbox" name="ingredient"> %s</p>', ingredients),collapse="<br>"))
   
-  #################writeLines(sprintf("- [ ] %s\n", 1:length(ingredients), ingredients))
-  return(paste(header,instructions,ingredients_str,sep="\n"))
+  paste(header,instructions,ingredients_str,sep="<br>")
 }
 ```
 
 Column {.sidebar data-width=300}
 -------------------------------------
 ```{r, echo=FALSE}
-textInput("url","Enter URL: ")
+textInput("url",HTML("<b>Enter URL</b>:"))
 actionButton("search", label = "Search")
 ```
 
 
 Column
 --------------------------------------
-### Preface
-
-This is a scrapping tool made to obtain recipes easily from AllRecipes.com.
+### **Preface**
+*A scrapping tool made to obtain recipes easily from AllRecipes.com*
 
 ---
-
 ```{r}
-observeEvent(input$search,renderPrint(input$url))
+blurb <- eventReactive(input$search,{HTML(create_text(input$url))})
+
+renderUI({blurb()})
+
 ```
-
-
-
-
-
-
-
-
-
-
-
 
 
 

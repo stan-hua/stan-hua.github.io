@@ -19,13 +19,15 @@ image:
 projects: []
 ---
 <style>
-
+body {background-color: #476e52 !important;}
+h3,h4{color: #e3e0bc !important;}
 .note{font-size: 10pt;
       line-height: 20pt;
       padding-bottom: 10px}
-
 p{text-indent: 2em;}
 
+details{font-size: 10pt;}
+summary{font-size: 100% !important;}
 </style>
 
 
@@ -48,10 +50,10 @@ Before you start, you'll most likely be needing 3 things: 1) the <b>username</b>
 </p>
 
 ```
-C:Users/...> ssh username@125.950.26.789            #format is ssh host@ip_address
+...> ssh username@125.950.26.789
 ```
 
-Now, you may be prompted by the console to input your password. After doing so, you should be connected. Congratulations!
+The command is "ssh" followed by your server username, "@", and the server ip address. After which, you may be prompted by the console to input your password. After doing so, you should be connected. Congratulations!
 
 <div class="note">
 <b>NOTE</b>: This connection is temporary and will be gone once you exit the command prompt, or when your machine is powered off or loses connection to the internet. If so, you will need to enter the command again.

@@ -18,27 +18,16 @@ image:
 projects: []
 ---
 <style>
-
-.bod{
-  font-family: Arial !important;
-  font-size: 11pt !important;
-  display: inline-block !important;
-  margin-left: 10px !important;
-  line-height: 15pt !important;
-}
-
+body {background-color: #476e52 !important;
+    font-size: 10pt}
+h3,h4{color: #e3e0bc !important;}
+<!-- note{line-height: 20pt; -->
+<!--       padding-bottom: 10px} -->
 h2{
   text-decoration: underline;
   line-height: 5pt;
   text-align: center;
   padding-top: 30px;
-}
-h3{ 
-  display: list-item;
-  list-style-type: disc;
-  list-style-position: inside;
-  font-size:17px;
-  font-family:"Cambria";
 }
 </style>
 
@@ -123,7 +112,7 @@ df.filter(items=, like=None)
 df.iloc[row_position, col_position]    #general format
 ```
 
-<p class='bod'>
+<p class='note'>
 COPY of dataframe is slice is returned. This CANNOT be used in assignment. Also, note that only integers, its derivations and boolean arrays can be used to index.
 </p>
 
@@ -137,8 +126,8 @@ df.loc[index]        #returns original dataframe sliced
 df.loc[row_indexer, col_indexer]        #general format
 ```
 
-<p class='bod'>
-Note, colon ":"  is not needed by col_indexer like in *df.loc[index, :]* to choose all columns, and slice of ORIGINAL dataframe is returned. This can be used for assignment.
+<p class='note'>
+<b>Note</b>: colon ":"  is not needed by col_indexer like in *df.loc[index, :]* to choose all columns, and slice of ORIGINAL dataframe is returned. This can be used for assignment.
 </p>
 
 ### Query (columns)
@@ -149,7 +138,7 @@ df.query('expression')    #expression must be conditional using column variable/
                           #prefix ` ` to encapsulate variable name with spaces
 ```
 
-<p class='bod'> Can be used to filter rows. </p>
+<p class='note'> Can be used to filter rows. </p>
 
 
 <!-- ################################################################ -->
@@ -169,7 +158,7 @@ df.apply(FUN, axis=0, *args)    #FUN: any (valid) function to apply
 df.assign(col_name = col_1*col_2/col_3)
 ```
 
-<p class='bod'> 
+<p class='note'> 
 Used to create new columns. Similar to "mutate" in R. 
 </p>
 
@@ -196,7 +185,7 @@ df.groupby(by=category).transform(FUN)
 
 ```
 
-<div class='bod'> 
+<div class='note'> 
 Grouping a dataframe then transforming it is a very common operation. A dataframe is converted into a "GroupBy" object depending on *category*, which may be a string or list of strings representing column names. Then the resulting object's values are passed into *FUN* by the transform function and a column of the same size is returned.
 </div>
 
@@ -238,7 +227,7 @@ Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)
 df.applymap(FUN)
 Series.map(FUN)
 ```
-<p class='bod'> 
+<p class='note'> 
 Iterates by rows (for Series) and cell (for DataFrame), passing cell value into function with the output value replacing its input value.
 </p>
 
@@ -252,7 +241,7 @@ Iterates by rows (for Series) and cell (for DataFrame), passing cell value into 
 )
 ```
 
-<p class='bod'> <b>NOTE</b>: similar to %>% operation in R. </p>
+<p class='note'> <b>NOTE</b>: similar to %>% operation in R. </p>
 
 
 ### Rolling
@@ -266,7 +255,7 @@ Series.rolling(num_observations).FUN()
 Series.rolling('7d').count()-1        #subtraction excludes day 
 ```
 
-<div class='bod'>
+<div class='note'>
 This is similar to GroupBy then Transform, but function is applied to "rolls" going down a specific column/index.
 </div>
 
@@ -279,6 +268,10 @@ This is similar to GroupBy then Transform, but function is applied to "rolls" go
 
 <br>
 
-<div class='bod'>
+<hr>
+
+### Additional Resources
+
+<p class='note'>
 A great resource for comparing df.**agg**(), df.**apply**(), df.**applymap**() and df.**transform**() can be found <a href="https://stackoverflow.com/questions/46210678/whats-the-difference-between-transform-vs-applymap-for-pandas-dataframe">here</a>.
-</div>
+</p>

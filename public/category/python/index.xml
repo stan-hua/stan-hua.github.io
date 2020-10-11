@@ -21,27 +21,16 @@
 
 
 &lt;style&gt;
-
-.bod{
-  font-family: Arial !important;
-  font-size: 11pt !important;
-  display: inline-block !important;
-  margin-left: 10px !important;
-  line-height: 15pt !important;
-}
-
+body {background-color: #476e52 !important;
+    font-size: 10pt}
+h3,h4{color: #e3e0bc !important;}
+&lt;!-- note{line-height: 20pt; --&gt;
+&lt;!--       padding-bottom: 10px} --&gt;
 h2{
   text-decoration: underline;
   line-height: 5pt;
   text-align: center;
   padding-top: 30px;
-}
-h3{ 
-  display: list-item;
-  list-style-type: disc;
-  list-style-position: inside;
-  font-size:17px;
-  font-family:&#34;Cambria&#34;;
 }
 &lt;/style&gt;
 &lt;p&gt;By convention, “&lt;strong&gt;&lt;em&gt;df&lt;/em&gt;&lt;/strong&gt;” will refer to a dataframe object, while “&lt;strong&gt;&lt;em&gt;Series&lt;/em&gt;&lt;/strong&gt;” will refer to a series object.&lt;/p&gt;
@@ -102,7 +91,7 @@ Series.shape&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;iloc&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;&lt;a href=&#34;https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.iloc.html&#34; target=&#34;_blank&#34;&gt;Iloc &lt;/a&gt;&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;df.iloc[row_position, col_position]    #general format&lt;/code&gt;&lt;/pre&gt;
-&lt;p class=&#34;bod&#34;&gt;
+&lt;p class=&#34;note&#34;&gt;
 COPY of dataframe is slice is returned. This CANNOT be used in assignment. Also, note that only integers, its derivations and boolean arrays can be used to index.
 &lt;/p&gt;
 &lt;/div&gt;
@@ -113,8 +102,8 @@ df.loc[index]        #returns original dataframe sliced
 
 
 df.loc[row_indexer, col_indexer]        #general format&lt;/code&gt;&lt;/pre&gt;
-&lt;p class=&#34;bod&#34;&gt;
-Note, colon “:” is not needed by col_indexer like in &lt;em&gt;df.loc[index, :]&lt;/em&gt; to choose all columns, and slice of ORIGINAL dataframe is returned. This can be used for assignment.
+&lt;p class=&#34;note&#34;&gt;
+&lt;b&gt;Note&lt;/b&gt;: colon “:” is not needed by col_indexer like in &lt;em&gt;df.loc[index, :]&lt;/em&gt; to choose all columns, and slice of ORIGINAL dataframe is returned. This can be used for assignment.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;query-columns&#34; class=&#34;section level3&#34;&gt;
@@ -122,7 +111,7 @@ Note, colon “:” is not needed by col_indexer like in &lt;em&gt;df.loc[index,
 &lt;pre&gt;&lt;code&gt;df.query(&amp;#39;expression&amp;#39;)    #expression must be conditional using column variable/s
                           #prefix &amp;quot;@&amp;quot; before variable name if outside of dataframe env.
                           #prefix ` ` to encapsulate variable name with spaces&lt;/code&gt;&lt;/pre&gt;
-&lt;p class=&#34;bod&#34;&gt;
+&lt;p class=&#34;note&#34;&gt;
 Can be used to filter rows.
 &lt;/p&gt;
 &lt;!-- ################################################################ --&gt;
@@ -139,7 +128,7 @@ Can be used to filter rows.
 &lt;div id=&#34;assign-new-columns&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Assign (new columns)&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;df.assign(col_name = col_1*col_2/col_3)&lt;/code&gt;&lt;/pre&gt;
-&lt;p class=&#34;bod&#34;&gt;
+&lt;p class=&#34;note&#34;&gt;
 Used to create new columns. Similar to “mutate” in R.
 &lt;/p&gt;
 &lt;/div&gt;
@@ -159,7 +148,7 @@ Series.get_dummies(dummy_na=False, columns=None, sparse=False, drop_first=False,
 &lt;h3&gt;Group by, then Transform&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;df.groupby(by=category).transform(FUN)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;bod&#34;&gt;
+&lt;div class=&#34;note&#34;&gt;
 &lt;p&gt;Grouping a dataframe then transforming it is a very common operation. A dataframe is converted into a “GroupBy” object depending on &lt;em&gt;category&lt;/em&gt;, which may be a string or list of strings representing column names. Then the resulting object’s values are passed into &lt;em&gt;FUN&lt;/em&gt; by the transform function and a column of the same size is returned.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -197,7 +186,7 @@ Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)&lt;
 &lt;h3&gt;Mapping, passing each cell into a function and replacing the input&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;df.applymap(FUN)
 Series.map(FUN)&lt;/code&gt;&lt;/pre&gt;
-&lt;p class=&#34;bod&#34;&gt;
+&lt;p class=&#34;note&#34;&gt;
 Iterates by rows (for Series) and cell (for DataFrame), passing cell value into function with the output value replacing its input value.
 &lt;/p&gt;
 &lt;/div&gt;
@@ -208,7 +197,7 @@ Iterates by rows (for Series) and cell (for DataFrame), passing cell value into 
     .pipe((FUN3, &amp;quot;arg2&amp;quot;), arg1=bar)        #when FUN3&amp;#39;s main arg. is not df, supply tuple
                                                 where str contains location for df (e.g. &amp;quot;arg2&amp;quot;)
 )&lt;/code&gt;&lt;/pre&gt;
-&lt;p class=&#34;bod&#34;&gt;
+&lt;p class=&#34;note&#34;&gt;
 &lt;b&gt;NOTE&lt;/b&gt;: similar to %&amp;gt;% operation in R.
 &lt;/p&gt;
 &lt;/div&gt;
@@ -220,16 +209,20 @@ Series.rolling(num_observations).FUN()
 
 #Example of counting observations every 7 days past
 Series.rolling(&amp;#39;7d&amp;#39;).count()-1        #subtraction excludes day &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;bod&#34;&gt;
+&lt;div class=&#34;note&#34;&gt;
 &lt;p&gt;This is similar to GroupBy then Transform, but function is applied to “rolls” going down a specific column/index.&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- ### --&gt;
 &lt;!-- ``` --&gt;
 &lt;!-- ``` --&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;div class=&#34;bod&#34;&gt;
-&lt;p&gt;A great resource for comparing df.&lt;strong&gt;agg&lt;/strong&gt;(), df.&lt;strong&gt;apply&lt;/strong&gt;(), df.&lt;strong&gt;applymap&lt;/strong&gt;() and df.&lt;strong&gt;transform&lt;/strong&gt;() can be found &lt;a href=&#34;https://stackoverflow.com/questions/46210678/whats-the-difference-between-transform-vs-applymap-for-pandas-dataframe&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
 &lt;/div&gt;
+&lt;div id=&#34;additional-resources&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Additional Resources&lt;/h3&gt;
+&lt;p class=&#34;note&#34;&gt;
+A great resource for comparing df.&lt;strong&gt;agg&lt;/strong&gt;(), df.&lt;strong&gt;apply&lt;/strong&gt;(), df.&lt;strong&gt;applymap&lt;/strong&gt;() and df.&lt;strong&gt;transform&lt;/strong&gt;() can be found &lt;a href=&#34;https://stackoverflow.com/questions/46210678/whats-the-difference-between-transform-vs-applymap-for-pandas-dataframe&#34;&gt;here&lt;/a&gt;.
+&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

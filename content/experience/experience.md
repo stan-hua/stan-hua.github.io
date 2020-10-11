@@ -17,22 +17,23 @@ date_format = "Jan 2006"
 #   Required fields are `title`, `company`, and `date_start`.
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
-[[experience]]
-  title = "Student Leader & Athlete"
-  company = "Ateneo de Manila University"
-  company_url = ""
-  location = "Quezon City, Philippines"
-  date_start = "2015-06-01"
-  date_end = "2019-12-31"
-  description = """
-  * Table Tennis Varsity Team Captain
-  * UAAP Table Tennis Player
-  * Class President, Class Vice President
-  * Dance Finance Co-Head
-  * Fund Drive CEO
-  * Lunduyan (Yoga Club) Member
-  * Ateneo Investment Club Member
-  """
+
+# [[experience]]
+#   title = "Student Leader & Athlete"
+#   company = "Ateneo de Manila University"
+#   company_url = ""
+#   location = "Quezon City, Philippines"
+#   date_start = "2015-06-01"
+#   date_end = "2019-12-31"
+#   description = """
+#   * Table Tennis Varsity Team Captain
+#   * UAAP Table Tennis Player
+#   * Class President, Class Vice President
+#   * Dance Finance Co-Head
+#   * Fund Drive CEO
+#   * Lunduyan (Yoga Club) Member
+#   * Ateneo Investment Club Member
+#   """
 
 [[experience]]
   title = "Student Teacher"
@@ -42,7 +43,7 @@ date_format = "Jan 2006"
   date_start = "2016-01-01"
   date_end = "2016-02-01"
   description = """
-  Collaborated with four peers to help review elementary Math concepts with a class of 40 students.
+  Collaborated with four peers to help a class of 40 students review elementary Math concepts.
   """
 
 [[experience]]
@@ -53,7 +54,7 @@ date_format = "Jan 2006"
   date_start = "2018-11-01"
   date_end = "2019-02-01"
   description = """
-  Prepared teaching material weekly to help tutor elementary school students in Math and English.
+  Prepared teaching material weekly to tutor elementary school students in Math and English.
   """
 
 [[experience]]
@@ -64,7 +65,7 @@ date_format = "Jan 2006"
   date_start = "2020-02-01"
   date_end = "2020-02-01"
   description = """
-  Documented the organization's community services in preparation for their annual report
+  Documented the organization's community services in preparation for their annual report.
   """
 
 [[experience]]

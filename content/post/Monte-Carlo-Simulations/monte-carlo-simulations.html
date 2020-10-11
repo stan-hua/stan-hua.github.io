@@ -24,19 +24,29 @@ math: true
 
 
 
+<style>
+body {background-color: #476e52 !important;}
+h3,h4{color: #e3e0bc !important;}
+.note{font-size: 10pt;
+      line-height: 20pt;
+      padding-bottom: 10px}
+p{text-indent: 2em;}
+details{font-size: 10pt;}
+summary{font-size: 100% !important;}
+</style>
 <details>
 <summary>
-If you’re trying to simulate a random event for whatever reason using R, then you’ve come to the right place!
+Trying to simulate a random event? Then you’ve come to the right place!
 </summary>
 <p>
 <blockquote>
-<p>If not, or if you do not have true or estimated probabilities for your simulation, then this is not for you!</p>
+<p>If you do not have true proportion or estimated probabilities for your simulation, then this may not help you!</p>
 </blockquote>
 </p>
 </details>
 <hr />
 <div id="premise" class="section level3">
-<h3><em>Premise</em></h3>
+<h3>Premise</h3>
 <p>Say you want to understand how randomness works, and you want to roll a 12-sided die and see how many times it lands on 1. You’ll do roll a die 100, 10,000, 1,000,000 times.</p>
 <p><strong><em>Note:</em></strong> Every side of the die has a probability of 1/12, but the outcome of each roll is random and independent from one another.
 <br><br></p>
@@ -67,25 +77,41 @@ simulations &lt;- sapply(Ns, function(N){
 <tbody>
 <tr class="odd">
 <td align="center">1e+02</td>
-<td align="center">0.070000</td>
+<td align="center">0.100000</td>
 </tr>
 <tr class="even">
 <td align="center">1e+04</td>
-<td align="center">0.083500</td>
+<td align="center">0.081800</td>
 </tr>
 <tr class="odd">
 <td align="center">1e+06</td>
-<td align="center">0.082946</td>
+<td align="center">0.083099</td>
 </tr>
 </tbody>
 </table>
 <p>The sample function takes N rolls (with replacement). The result can either be 1; a success (landing on 1), or -1; a failure (not landing on one). The keyword argument “prob” defines the probability for possible events success or failure.</p>
 <p>As you can see from the results, the <strong><em>proportion</em></strong> of rolls landing on 1 converges to the probability we defined it to be (1/12 = 0.0833), as the <strong><em>number</em></strong> of rolls increases.</p>
-<p><br></p>
+<br>
+<h3>
+For Understanding
+</h3>
 <p>To close, it may be good to point out a common misconception when it comes to expectation. Say if you and your friends are tossing a coin and it lands on heads, you might be tempted to say “The next one will be tails!”, but that’s wrong. We know logically that the probability of either side landing is 1/2, but we would only be able to observe this when we sum up the results of maybe a thousand or hundred thousand rolls, as we have just done.
 <br></p>
 <p>The <em>Law of Large Numbers</em> (or <em>the Law of Averages</em>) states that as the number of draws (rolls) increases, the standard error (standard deviation but for samples) of the expected value approaches 0. In which case, the expected value converges to the probability we defined.
 <br><br></p>
+<h3>
+Enrichment
+</h3>
+<p>You can try to compute for the standard error for each simulation using the formula:</p>
+<div class="note">
+<p><span class="math inline">\(SE[\overline{X}]=|b-a|*\frac{\sqrt{p(1-p)}}{N}\)</span></p>
+<div class="line-block">    where SE means standard error;<br />
+                X_bar is the sample random variable;<br />
+                a and b are the values we attribute to success and failure (i.e. 1 and -1);<br />
+                p is the probability of success (i.e. 1/12);<br />
+                and N is the sample size.</div>
+</div>
+<p><br><br></p>
 <p><strong>NOTE</strong>: For cases wherein the probability is not defined, we can use the <code>replicate</code> function that takes two arguments. The second argument defines a line or set of lines to replicate, while the first argument is the number of times you wish to repeat the second argument.</p>
 <p><em>Example</em>: Creating a list of sample means.</p>
 <pre><code>array                           # a non-empty numeric array of length 100,000
@@ -96,16 +122,4 @@ sample_means &lt;- replicate(B, {
     mean(sample_array)          #like a function; this is returned
 })
 </code></pre>
-<p><br><br></p>
-<p><strong><em>Enrichment</em></strong></p>
-<p>You can try to compute for the standard error for each simulation using the formula:</p>
-<p><span class="math inline">\(SE[\overline{X}]=|b-a|*\frac{\sqrt{p(1-p)}}{N}\)</span></p>
-<div class="line-block">    where SE means standard error;<br />
-                X_bar is the sample random variable;<br />
-                a and b are the values we attribute to success and failure (i.e. 1 and -1);<br />
-                p is the probability of success (i.e. 1/12);<br />
-                and N is the sample size.</div>
-<style>
-      h3{font-weight:normal;}
-</style>
 </div>

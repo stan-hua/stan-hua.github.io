@@ -27,10 +27,10 @@
   
     
   
-  <meta name="description" content="Adapting to remote work, learn quickly how to connect to a remote server from home using SSH and SSHFS!">
+  <meta name="description" content="body {background-color: #7d694a !important;}div h1{font-size: 120%}">
 
   
-  <link rel="alternate" hreflang="en-us" href="/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/">
+  <link rel="alternate" hreflang="en-us" href="/post/pca_for_dummies/">
 
   
 
@@ -217,7 +217,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu3e47dcbe8f840c0d5ef5459aa0cce648_690099_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu3e47dcbe8f840c0d5ef5459aa0cce648_690099_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/">
+  <link rel="canonical" href="/post/pca_for_dummies/">
 
   
   
@@ -232,15 +232,15 @@
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Stanley Z. Hua">
-  <meta property="og:url" content="/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/">
-  <meta property="og:title" content="Connecting to a remote server | Stanley Z. Hua">
-  <meta property="og:description" content="Adapting to remote work, learn quickly how to connect to a remote server from home using SSH and SSHFS!"><meta property="og:image" content="/img/me">
+  <meta property="og:url" content="/post/pca_for_dummies/">
+  <meta property="og:title" content="Principle Component Analysis for Big Dummies | Stanley Z. Hua">
+  <meta property="og:description" content="body {background-color: #7d694a !important;}div h1{font-size: 120%}"><meta property="og:image" content="/img/me">
   <meta property="twitter:image" content="/img/me"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-08-01T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2020-10-10T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-08-02T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2020-10-10T19:59:31-04:00">
   
 
   
@@ -264,12 +264,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/"
+    "@id": "/post/pca_for_dummies/"
   },
-  "headline": "Connecting to a remote server",
+  "headline": "Principle Component Analysis for Big Dummies",
   
-  "datePublished": "2020-08-01T00:00:00Z",
-  "dateModified": "2020-08-02T00:00:00Z",
+  "datePublished": "2020-10-10T00:00:00Z",
+  "dateModified": "2020-10-10T19:59:31-04:00",
   
   "author": {
     "@type": "Person",
@@ -284,7 +284,7 @@
       "url": "/images/logo_hu65ab962506affe5c14e8a2f7a1d1d040_271848_192x192_fit_lanczos_2.png"
     }
   },
-  "description": "Adapting to remote work, learn quickly how to connect to a remote server from home using SSH and SSHFS!"
+  "description": "\rbody {background-color: #7d694a !important;}\rdiv h1{font-size: 120%}\r\r"
 }
 </script>
 
@@ -302,7 +302,7 @@
 
 
 
-  <title>Connecting to a remote server | Stanley Z. Hua</title>
+  <title>Principle Component Analysis for Big Dummies | Stanley Z. Hua</title>
 
 </head>
 <body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
@@ -540,7 +540,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Connecting to a remote server</h1>
+  <h1>Principle Component Analysis for Big Dummies</h1>
 
   
 
@@ -561,7 +561,7 @@
           Last updated on
       
     
-    Aug 2, 2020
+    Oct 10, 2020
   </span>
   
 
@@ -572,15 +572,8 @@
   
   
   
-  <span class="middot-divider"></span>
-  <a href="/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/#disqus_thread"></a>
-  
 
   
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/category/others/">Others</a></span>
   
 
 </div>
@@ -609,76 +602,10 @@
 
     <div class="article-style">
       <style>
-body {background-color: #476e52 !important;}
-h3,h4{color: #e3e0bc !important;}
-.note{font-size: 10pt;
-      line-height: 20pt;
-      padding-bottom: 10px}
-p{text-indent: 2em;}
-
-details{font-size: 10pt;}
-summary{font-size: 100% !important;}
+body {background-color: #7d694a !important;}
+div h1{font-size: 120%}
 </style>
-<p>Working from home?</p>
-<p>You might be one of us who need to connect to a remote server from home. Now, how do you do this? Maybe it&rsquo;s better to ask first what is your operating system (e.g. Windows, MacOS, etc.).</p>
-<p>This post will show you 1) how to connect to a remote server on Windows, AND 2) how to <sup><strong>1</strong></sup>mount the server on your computer on Windows and Debian.</p>
-<div class="note">
-<b>NOTE</b>: This blog post assumes you know basic Unix commands. If not, I recommend learning some of the basics, then come back when you're done!
-</div>
-<hr>
-<h3 id="1-simple-access-to-server-files-via-ssh-secure-shell">1. Simple access to server files via ssh (Secure Shell)</h3>
-<p>
-Before you start, you'll most likely be needing 3 things: 1) the <b>username</b> of your server account, 2) the server <b>IP adress</b>, and 3) the password associated with the server account if applicable. Okay, now open your command prompt via cmd.exe. Your command prompt command should generally follow what is displayed below.
-</p>
-<pre><code>...&gt; ssh username@125.950.26.789
-</code></pre>
-<p>The command is &ldquo;ssh&rdquo; followed by your server username, &ldquo;@&rdquo;, and the server ip address. After which, you may be prompted by the console to input your password. After doing so, you should be connected. Congratulations!</p>
-<div class="note">
-<b>NOTE</b>: This connection is temporary and will be gone once you exit the command prompt, or when your machine is powered off or loses connection to the internet. If so, you will need to enter the command again.
-</div>
-<p>Soon enough, you&rsquo;ll realize the pain of having to do this every time you close the command prompt. Another option is to mount the server files. Then you&rsquo;ll be able to view the files on your machine as if they were just any files on your desktop!</p>
-<br>
-<h3 id="2-mounting-server-files-via-sshfs">2. Mounting server files via sshfs</h3>
-<p>SSHFS is Linux-based and doesn&rsquo;t come installed. See below on how to install it, and the command to mount server files on your computer.</p>
-<h4 id="on-windows">On Windows</h4>
-<p>First, download and install google&rsquo;s latest win-sshfs package by clicking <a href="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/win-sshfs/win-sshfs-0.0.1.5-setup.exe">here</a>. After doing this, you can simply input the following into your command line.</p>
-<pre><code>net use \\sshfs\username@ip_address//            #// brings you to your home dir. in the server
 
-
-##More examples
-#To connect at specific file path
-net use \\sshfs\username@ip_address//file-path
-net use \\sshfs\username@ip_address//Users\Stanley\Desktop
-
-#To enter password with command
-net use \\sshfs\username@ip_address//file-path /user:username password    #space between file path and /user: argument
-</code></pre>
-<div class="note">
-<b>NOTE</b>: <i>"net use"</i> is used to map network drives to your computer.
-</div>
-<h4 id="on-debian">On Debian</h4>
-<p>Similar to Windows, you have to install sshfs for Debian, but this can all be done in the terminal! Follow the steps below to install, then mount the remote server on your machine&hellip;</p>
-<pre><code>#Install SSHFS
-sudo apt-get install sshfs
-
-#OPT: Create directory to mount server files on
-sudo mkdir /mnt/droplet
-
-#Mount
-sudo sshfs -o allow_other,default_permissions username@ip_address:/file_path /mnt/droplet
-</code></pre>
-<div class="note">
-<b>NOTE</b>: Be careful of spaces!
-</div>
-<hr>
-<h3 id="additional-resources">Additional Resources</h3>
-<ul>
-<li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh" target="_blank">SSHFS Mounting</a></li>
-</ul>
-<br>
-<div class="note">
-<sup><b>1</sup>Mount</b> ::= having the remote server's files on your local machine, accessible by file explorer.
-</div>
     </div>
 
     
@@ -690,7 +617,7 @@ sudo sshfs -o allow_other,default_permissions username@ip_address:/file_path /mn
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tag/other/">Other</a>
+  <a class="badge badge-light" href="/tag/data-science/">Data Science</a>
   
 </div>
 
@@ -707,7 +634,7 @@ sudo sshfs -o allow_other,default_permissions username@ip_address:/file_path /mn
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/&amp;text=Connecting%20to%20a%20remote%20server" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=/post/pca_for_dummies/&amp;text=Principle%20Component%20Analysis%20for%20Big%20Dummies" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -720,7 +647,7 @@ sudo sshfs -o allow_other,default_permissions username@ip_address:/file_path /mn
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/&amp;t=Connecting%20to%20a%20remote%20server" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=/post/pca_for_dummies/&amp;t=Principle%20Component%20Analysis%20for%20Big%20Dummies" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -733,7 +660,7 @@ sudo sshfs -o allow_other,default_permissions username@ip_address:/file_path /mn
       
       
       <li>
-        <a href="mailto:?subject=Connecting%20to%20a%20remote%20server&amp;body=/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Principle%20Component%20Analysis%20for%20Big%20Dummies&amp;body=/post/pca_for_dummies/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -746,7 +673,7 @@ sudo sshfs -o allow_other,default_permissions username@ip_address:/file_path /mn
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/&amp;title=Connecting%20to%20a%20remote%20server" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=/post/pca_for_dummies/&amp;title=Principle%20Component%20Analysis%20for%20Big%20Dummies" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -759,7 +686,7 @@ sudo sshfs -o allow_other,default_permissions username@ip_address:/file_path /mn
       
       
       <li>
-        <a href="whatsapp://send?text=Connecting%20to%20a%20remote%20server%20/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Principle%20Component%20Analysis%20for%20Big%20Dummies%20/post/pca_for_dummies/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -772,7 +699,7 @@ sudo sshfs -o allow_other,default_permissions username@ip_address:/file_path /mn
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/&amp;title=Connecting%20to%20a%20remote%20server" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=/post/pca_for_dummies/&amp;title=Principle%20Component%20Analysis%20for%20Big%20Dummies" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -896,34 +823,6 @@ sudo sshfs -o allow_other,default_permissions username@ip_address:/file_path /mn
 
 
 
-<section id="comments">
-  
-    
-<div id="disqus_thread"></div>
-<script>
-  let disqus_config = function () {
-    
-    
-    
-  };
-  (function() {
-    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-      return;
-    }
-    var d = document, s = d.createElement('script'); s.async = true;
-    s.src = 'https://' + "stanhua-rbind-io" + '.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
-  
-</section>
-
 
 
 
@@ -932,19 +831,6 @@ sudo sshfs -o allow_other,default_permissions username@ip_address:/file_path /mn
 
 
   
-  
-  <div class="article-widget content-widget-hr">
-    <h3>Related</h3>
-    <ul>
-      
-      <li><a href="/project/recipe_scraper/">AllRecipes Recipe Scraper</a></li>
-      
-      <li><a href="/project/covid19-policy-hackathon-int/">COVID19 Policy Hackathon</a></li>
-      
-      <li><a href="/post/first/a-first/">A First</a></li>
-      
-    </ul>
-  </div>
   
 
 
@@ -1041,8 +927,6 @@ sudo sshfs -o allow_other,default_permissions username@ip_address:/file_path /mn
     
 
     
-    
-    <script id="dsq-count-scr" src="https://stanhua-rbind-io.disqus.com/count.js" async></script>
     
 
     

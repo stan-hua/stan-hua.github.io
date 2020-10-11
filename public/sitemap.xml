@@ -18,6 +18,26 @@
   </url>
   
   <url>
+    <loc>/tag/data-science/</loc>
+    <lastmod>2020-10-10T19:59:31-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/pca/pca_for_dummies/</loc>
+    <lastmod>2020-10-10T19:59:31-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-10-10T19:59:31-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-10-10T19:59:31-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/project/recipe_scraper/</loc>
     <lastmod>2020-08-26T00:00:00+00:00</lastmod>
   </url>
@@ -33,11 +53,6 @@
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-08-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/</loc>
     <lastmod>2020-08-02T00:00:00+00:00</lastmod>
   </url>
@@ -49,11 +64,6 @@
   
   <url>
     <loc>/category/others/</loc>
-    <lastmod>2020-08-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
     <lastmod>2020-08-02T00:00:00+00:00</lastmod>
   </url>
   

@@ -21,19 +21,30 @@ projects: []
 share: true
 math: true
 ---
+<style>
+body {background-color: #476e52 !important;}
+h3,h4{color: #e3e0bc !important;}
+.note{font-size: 10pt;
+      line-height: 20pt;
+      padding-bottom: 10px}
+p{text-indent: 2em;}
+details{font-size: 10pt;}
+summary{font-size: 100% !important;}
+</style>
+
 <details>
 <summary>
-If you're trying to simulate a random event for whatever reason using R, then you've come to the right place!
+Trying to simulate a random event? Then you've come to the right place!
 </summary>
 <p>
 
-> If not, or if  you do not have true or estimated probabilities for your simulation, then this is not for you!
+> If  you do not have true proportion or estimated probabilities for your simulation, then this may not help you!
 
 </p>
 </details>
 
 ***
-### *Premise*
+### Premise
 
 Say you want to understand how randomness works, and you want to roll a 12-sided die and see how many times it lands on 1. You'll do roll a die 100, 10,000, 1,000,000 times.
 
@@ -61,19 +72,37 @@ simulations <- sapply(Ns, function(N){
 })
 ```
 ```{r display, echo=FALSE}
-knitr::kable(data.frame("Sample Size"=Ns, "Proportion Observed"=simulations), align="c")
+knitr::kable(data.frame("Sample Size"=Ns, "Proportion Observed"=simulations), align="c", centering=TRUE)
 ```
+
 
 The sample function takes N rolls (with replacement). The result can either be 1; a success (landing on 1), or -1; a failure (not landing on one). The keyword argument "prob" defines the probability for possible events success or failure.
 
 As you can see from the results, the ***proportion*** of rolls landing on 1 converges to the probability we defined it to be (1/12 = 0.0833), as the ***number*** of rolls increases.
 
 <br>
+<h3>For Understanding</h3>
 
 To close, it may be good to point out a common misconception when it comes to expectation. Say if you and your friends are tossing a coin and it lands on heads, you might be tempted to say "The next one will be tails!", but that's wrong. We know logically that the probability of either side landing is 1/2, but we would only be able to observe this when we sum up the results of maybe a thousand or hundred thousand rolls, as we have just done. 
 <br>
 
 The *Law of Large Numbers* (or *the Law of Averages*) states that as the number of draws (rolls) increases, the standard error (standard deviation but for samples) of the expected value approaches 0. In which case, the expected value converges to the probability we defined.
+<br><br>
+
+<h3>Enrichment</h3>
+
+You can try to compute for the standard error for each simulation using the formula:
+
+<div class="note">
+$SE[\overline{X}]=|b-a|*\frac{\sqrt{p(1-p)}}{N}$
+
+|     where SE means standard error;
+|                 X_bar is the sample random variable; 
+|                 a and b are the values we attribute to success and failure (i.e. 1 and -1); 
+|                 p is the probability of success (i.e. 1/12); 
+|                 and N is the sample size.
+
+</div>
 <br><br>
 
 **NOTE**: For cases wherein the probability is not defined, we can use the `replicate` function that takes two arguments. The second argument defines a line or set of lines to replicate, while the first argument is the number of times you wish to repeat the second argument.
@@ -89,21 +118,3 @@ sample_means <- replicate(B, {
 })
 
 ```
-<br><br>
-
-***Enrichment***
-
-You can try to compute for the standard error for each simulation using the formula:
-
-$SE[\overline{X}]=|b-a|*\frac{\sqrt{p(1-p)}}{N}$
-
-|     where SE means standard error;
-|                 X_bar is the sample random variable; 
-|                 a and b are the values we attribute to success and failure (i.e. 1 and -1); 
-|                 p is the probability of success (i.e. 1/12); 
-|                 and N is the sample size.
-
-
-<style>
-      h3{font-weight:normal;}
-</style>

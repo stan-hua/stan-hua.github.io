@@ -18,13 +18,15 @@
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       <guid>/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</guid>
       <description>&lt;style&gt;
-
+body {background-color: #476e52 !important;}
+h3,h4{color: #e3e0bc !important;}
 .note{font-size: 10pt;
       line-height: 20pt;
       padding-bottom: 10px}
-
 p{text-indent: 2em;}
 
+details{font-size: 10pt;}
+summary{font-size: 100% !important;}
 &lt;/style&gt;
 &lt;p&gt;Working from home?&lt;/p&gt;
 &lt;p&gt;You might be one of us who need to connect to a remote server from home. Now, how do you do this? Maybe it&amp;rsquo;s better to ask first what is your operating system (e.g. Windows, MacOS, etc.).&lt;/p&gt;
@@ -37,9 +39,9 @@ p{text-indent: 2em;}
 &lt;p&gt;
 Before you start, you&#39;ll most likely be needing 3 things: 1) the &lt;b&gt;username&lt;/b&gt; of your server account, 2) the server &lt;b&gt;IP adress&lt;/b&gt;, and 3) the password associated with the server account if applicable. Okay, now open your command prompt via cmd.exe. Your command prompt command should generally follow what is displayed below.
 &lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;C:Users/...&amp;gt; ssh username@125.950.26.789            #format is ssh host@ip_address
+&lt;pre&gt;&lt;code&gt;...&amp;gt; ssh username@125.950.26.789
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now, you may be prompted by the console to input your password. After doing so, you should be connected. Congratulations!&lt;/p&gt;
+&lt;p&gt;The command is &amp;ldquo;ssh&amp;rdquo; followed by your server username, &amp;ldquo;@&amp;rdquo;, and the server ip address. After which, you may be prompted by the console to input your password. After doing so, you should be connected. Congratulations!&lt;/p&gt;
 &lt;div class=&#34;note&#34;&gt;
 &lt;b&gt;NOTE&lt;/b&gt;: This connection is temporary and will be gone once you exit the command prompt, or when your machine is powered off or loses connection to the internet. If so, you will need to enter the command again.
 &lt;/div&gt;
