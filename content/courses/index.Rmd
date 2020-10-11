@@ -50,7 +50,6 @@ df<-rbind(second_year,first_year) %>% datatable(rownames = FALSE,
               targets = 0),
               list(className = 'dt-center', targets = 1))))
 ```
-
 <details>
 <summary>
 <h3>University of Toronto</h3>
