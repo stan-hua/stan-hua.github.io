@@ -47,7 +47,7 @@ user_groups:
 
 
 
-Having just migrated from the Philippines, his first year of university was filled with new experiences, encounters,  independence, new habits for studying and living, and a greater hunger to learn. Currently, he is studying under the  <a href="http://www.tyrrell4innovation.ca"> **Tyrrell4Innovation Lab** </a> to understand medical imaging in the lens of data science and statistics, dealing with the severe lack of medical image data.
+Having migrated from the Philippines, his first year of university was filled with new experiences, encounters,  independence, new habits for studying and living, and a greater hunger to learn. Currently, he is working under the  <a href="http://www.tyrrell4innovation.ca"> **Tyrrell4Innovation Lab** </a> to understand the use of data science, statistics and deep learning in the field of medical imaging. 
 
 He hopes to pursue the field of personalized medicine using computational methods.
 
@@ -55,6 +55,6 @@ He hopes to pursue the field of personalized medicine using computational method
 
 **LANGUAGES**:  <span class="smaller">[Python, R, Unix, HTML, CSS, MATLAB]</span>
 
-<span class="libraries">***Python Libraries***:</span>  <span class="smaller">[pandas, numpy, matplotlib, sklearn, xgboost, lightgbm, category_encoders, itertools]</span>
+<span class="libraries">***Python Libraries***:</span>  <span class="smaller">[pandas, numpy, matplotlib, cv2, ast, os, sklearn, xgboost, lightgbm, category_encoders, itertools]</span>
 
 <span class="libraries">***R Libraries***:</span>  <span class="smaller">[rvest, ggplot2, tidyverse, dplyr, blogdown, knitr, shiny, flexdashboard]</span>

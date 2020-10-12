@@ -100,7 +100,9 @@ date_format = "Jan 2006"
   date_start = "2020-07-25"
   date_end = ""
   description = """
-Carried out quality assessment and registration on brain MRI images of MS patients.
+* Carried out data cleaning and preprocessing (i.e. quality assessment and registration) on brain MRI images of patients with MS or Vasculitis, in preparation for a deep learning model.
+* Working on a project to understand the effect of the number of principle components chosen after PCA on the performance and variability of clusters, after clustering.
+
   """
   
   
@@ -112,8 +114,7 @@ Carried out quality assessment and registration on brain MRI images of MS patien
   date_start = "2020-08-25"
   date_end = ""
   description = """
-  Founded a university organization that seeks to make up for the lack of opportunities to socialize and make genuine friends whilst pursuing
-education remotely.
+  Founded a ULife-recognized organization that seeks to make up for the lack of opportunities to socialize and make genuine connections whilst pursuing education remotely.
 
   """
 +++
