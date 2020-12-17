@@ -100,9 +100,10 @@ date_format = "Jan 2006"
   date_start = "2020-07-25"
   date_end = ""
   description = """
-* Carried out data cleaning and preprocessing (i.e. quality assessment and registration) on brain MRI images of patients with MS or Vasculitis, in preparation for a deep learning model.
-* Working on a project to understand the effect of the number of principle components chosen after PCA on the performance and variability of clusters, after clustering.
-
+* Cleaned and preprocessed (e.g. registration) brain MRI images of patients with Multiple Sclerosis versus Vasculitis.
+* Assisted in building of a classifier model to distinguish between MS and Vasculitis.
+* Assisting in a review of the current literature on multi-modality learning involving ultrasound images.
+* Working to understand the effect of dimensionality chosen from PCA on the Cluster Analysis of CNN-extracted image features.
   """
   
   
@@ -114,7 +115,19 @@ date_format = "Jan 2006"
   date_start = "2020-08-25"
   date_end = ""
   description = """
-  Founded a ULife-recognized organization that seeks to make up for the lack of opportunities to socialize and make genuine connections whilst pursuing education remotely.
+  Founded a ULife-recognized organization that seeks to make up for the lack of opportunities to socialize and make genuine connections whilst pursuing education remotely, through an online platform (i.e. Discord) and biweekly socials.
+
+  """
+
+[[experience]]
+  title = "General Council Member"
+  company = ""
+  company_url = ""
+  location = "Online"
+  date_start = "2020-09-01"
+  date_end = ""
+  description = """
+  Assisted in the duties of the Social Director. Assisted in the curation of the BCBSU Newsletter.
 
   """
 +++
