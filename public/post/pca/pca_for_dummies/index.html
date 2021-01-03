@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="Looking to get your feet wet but not looking to drown in all the new information? This is a brief overview on what PCA is and how it is used!">
+  <meta name="description" content="Here is a brief overview on Principal Component Analysis, one of the most popular methods of dimensionality reduction today!">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/pca/pca_for_dummies/">
@@ -38,10 +38,13 @@
   
   
   
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#8da2c9">
   
 
   
+  
+  
+  <script src="/js/mathjax-config.js"></script>
   
 
   
@@ -62,8 +65,8 @@
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
         
       
     
@@ -173,9 +176,9 @@
 
       
       
-        
-      
 
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
       
     
       
@@ -233,14 +236,14 @@
   
   <meta property="og:site_name" content="Stanley Z. Hua">
   <meta property="og:url" content="/post/pca/pca_for_dummies/">
-  <meta property="og:title" content="Principle Component Analysis for Dummies | Stanley Z. Hua">
-  <meta property="og:description" content="Looking to get your feet wet but not looking to drown in all the new information? This is a brief overview on what PCA is and how it is used!"><meta property="og:image" content="/img/me">
+  <meta property="og:title" content="Principle Component Analysis Part II | Stanley Z. Hua">
+  <meta property="og:description" content="Here is a brief overview on Principal Component Analysis, one of the most popular methods of dimensionality reduction today!"><meta property="og:image" content="/img/me">
   <meta property="twitter:image" content="/img/me"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-10-10T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2021-01-02T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-10-10T19:59:31-04:00">
+    <meta property="article:modified_time" content="2021-01-02T19:59:31-04:00">
   
 
   
@@ -266,10 +269,10 @@
     "@type": "WebPage",
     "@id": "/post/pca/pca_for_dummies/"
   },
-  "headline": "Principle Component Analysis for Dummies",
+  "headline": "Principle Component Analysis Part II",
   
-  "datePublished": "2020-10-10T00:00:00Z",
-  "dateModified": "2020-10-10T19:59:31-04:00",
+  "datePublished": "2021-01-02T00:00:00Z",
+  "dateModified": "2021-01-02T19:59:31-04:00",
   
   "author": {
     "@type": "Person",
@@ -284,7 +287,7 @@
       "url": "/images/logo_hu65ab962506affe5c14e8a2f7a1d1d040_271848_192x192_fit_lanczos_2.png"
     }
   },
-  "description": "Looking to get your feet wet but not looking to drown in all the new information? This is a brief overview on what PCA is and how it is used!"
+  "description": "Here is a brief overview on Principal Component Analysis, one of the most popular methods of dimensionality reduction today!"
 }
 </script>
 
@@ -302,10 +305,10 @@
 
 
 
-  <title>Principle Component Analysis for Dummies | Stanley Z. Hua</title>
+  <title>Principle Component Analysis Part II | Stanley Z. Hua</title>
 
 </head>
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
 
   <aside class="search-results" id="search">
   <div class="container">
@@ -510,6 +513,23 @@
       
 
       
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
 
       
 
@@ -540,7 +560,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Principle Component Analysis for Dummies</h1>
+  <h1>Principle Component Analysis Part II</h1>
 
   
 
@@ -561,7 +581,7 @@
           Last updated on
       
     
-    Oct 10, 2020
+    Jan 2, 2021
   </span>
   
 
@@ -605,9 +625,7 @@
 
     <div class="article-style">
       <style>
-body {background-color: #476e52 !important;
-      font-size: 80%}
-h3,h4{color: #e3e0bc !important;}
+body {font-size: 80%}
 .note{font-size: 10pt;
       line-height: 20pt;
       padding-bottom: 10px}
@@ -621,7 +639,7 @@ summary{font-size: 100% !important;}
 </div>
 <hr>
 <h3>OVERVIEW</h3>
-<p>PCA or Principle Component Analysis is known for two things: 1) Dimensionality Reduction, and 2) Structure Analysis. However more generally, it is used for <strong>factor extraction</strong>, which is needed in Factor Analysis.</p>
+<p>Principle Component Analysis (PCA) is known for two things: 1) Dimensionality Reduction, and 2) Structure Analysis. However more generally, it is used for <strong>factor extraction</strong>, which is needed in Factor Analysis.</p>
 <div class="note">
 <b>NOTE</b>: There are plenty of resources online if you wish to learn more about Factor Analysis, but they will not be covered here!
 </div>
@@ -654,7 +672,7 @@ If you have 10 features and you do PCA to get 10 factors, they are not the same.
 <p>To build intuition about what happens in Principal Component Analysis, let&rsquo;s use the graph below as an example.</p>
 <p><img src="/post/PCA/2020-10-10-pca-for-dummies.en_files/figure-html/plot-1.png" width="336" style="display: block; margin: auto;" /></p>
 <p>Here, we have 2 features. You can imagine each point representing an observation (e.g. one of your participants).</p>
-<p>When you implement PCA, imagine a line placed at the center (of all the data points). Imagine rotating it, and every time that you rotate it, it changes how far each observation (i.e. its projection onto the line) point is from the center of the line. This is also called the <strong>squared distances</strong>. And this is what we&rsquo;re trying to <em>maximize</em>.</p>
+<p>When you implement PCA, imagine a line placed at the mean (of all the data points). Imagine rotating it, and every time that you rotate it, it changes how far each observation (i.e. its projection onto the line) point is from the center of the line. This is also called the <strong>squared distances</strong>. And this is what we&rsquo;re trying to <em>maximize</em>.</p>
 <p>By doing so, it is as if we are trying to find a line where the observations are farthest from center. Thus, we capture the most amount of variation along this line, and this line is known as a principal component!</p>
 <p>Once again, notice how the features no longer have anything to do with the new axes (principal component). Also notice that if you had 3 or more features, graphing it like we did isn&rsquo;t possible.</p>
 <h3>Additional Resources</h3>
@@ -688,7 +706,7 @@ If you have 10 features and you do PCA to get 10 factors, they are not the same.
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/post/pca/pca_for_dummies/&amp;text=Principle%20Component%20Analysis%20for%20Dummies" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=/post/pca/pca_for_dummies/&amp;text=Principle%20Component%20Analysis%20Part%20II" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -701,7 +719,7 @@ If you have 10 features and you do PCA to get 10 factors, they are not the same.
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/post/pca/pca_for_dummies/&amp;t=Principle%20Component%20Analysis%20for%20Dummies" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=/post/pca/pca_for_dummies/&amp;t=Principle%20Component%20Analysis%20Part%20II" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -714,7 +732,7 @@ If you have 10 features and you do PCA to get 10 factors, they are not the same.
       
       
       <li>
-        <a href="mailto:?subject=Principle%20Component%20Analysis%20for%20Dummies&amp;body=/post/pca/pca_for_dummies/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Principle%20Component%20Analysis%20Part%20II&amp;body=/post/pca/pca_for_dummies/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -727,7 +745,7 @@ If you have 10 features and you do PCA to get 10 factors, they are not the same.
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/post/pca/pca_for_dummies/&amp;title=Principle%20Component%20Analysis%20for%20Dummies" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=/post/pca/pca_for_dummies/&amp;title=Principle%20Component%20Analysis%20Part%20II" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -740,7 +758,7 @@ If you have 10 features and you do PCA to get 10 factors, they are not the same.
       
       
       <li>
-        <a href="whatsapp://send?text=Principle%20Component%20Analysis%20for%20Dummies%20/post/pca/pca_for_dummies/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Principle%20Component%20Analysis%20Part%20II%20/post/pca/pca_for_dummies/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -753,7 +771,7 @@ If you have 10 features and you do PCA to get 10 factors, they are not the same.
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/post/pca/pca_for_dummies/&amp;title=Principle%20Component%20Analysis%20for%20Dummies" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=/post/pca/pca_for_dummies/&amp;title=Principle%20Component%20Analysis%20Part%20II" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -940,6 +958,8 @@ If you have 10 features and you do PCA to get 10 factors, they are not the same.
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
         
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/python.min.js"></script>
+        
       
 
     
@@ -956,7 +976,7 @@ If you have 10 features and you do PCA to get 10 factors, they are not the same.
 
     
     
-    <script>const isSiteThemeDark = true;</script>
+    <script>const isSiteThemeDark = false;</script>
     
 
     

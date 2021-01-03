@@ -38,10 +38,13 @@
   
   
   
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#8da2c9">
   
 
   
+  
+  
+  <script src="/js/mathjax-config.js"></script>
   
 
   
@@ -62,8 +65,8 @@
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
         
       
     
@@ -173,9 +176,9 @@
 
       
       
-        
-      
 
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
       
     
       
@@ -257,7 +260,7 @@
   <title>404 Page not found | Stanley Z. Hua</title>
 
 </head>
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
 
   <aside class="search-results" id="search">
   <div class="container">
@@ -462,6 +465,23 @@
       
 
       
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
 
       
 
@@ -494,7 +514,9 @@
     
       <li><a href="/talk/example/">Example Talk</a></li>
     
-      <li><a href="/post/pca/pca_for_dummies/">Principle Component Analysis for Dummies</a></li>
+      <li><a href="/post/pca-part-i/pca_part_1/">PCA Part I. Intro to Dimensionality Reduction</a></li>
+    
+      <li><a href="/post/pca-part-ii/pca_part_2/">PCA Part II. Intuition</a></li>
     
       <li><a href="/project/recipe_scraper/">AllRecipes Recipe Scraper</a></li>
     
@@ -509,8 +531,6 @@
       <li><a href="/courses/">Courses Completed</a></li>
     
       <li><a href="/experience/">Experience</a></li>
-    
-      <li><a href="/post/first/a-first/">A First</a></li>
     
   </ul>
   
@@ -535,6 +555,8 @@
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
         
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/python.min.js"></script>
+        
       
 
     
@@ -551,7 +573,7 @@
 
     
     
-    <script>const isSiteThemeDark = true;</script>
+    <script>const isSiteThemeDark = false;</script>
     
 
     

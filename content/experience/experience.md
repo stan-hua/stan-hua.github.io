@@ -121,7 +121,7 @@ date_format = "Jan 2006"
 
 [[experience]]
   title = "General Council Member"
-  company = ""
+  company = "UofT Bioinformatics and Computational Biology Students Union"
   company_url = ""
   location = "Online"
   date_start = "2020-09-01"

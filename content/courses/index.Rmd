@@ -18,19 +18,19 @@ summary h3{
   display: inline-block;
   font-size:20px;
   font-family:"Quicksand";
-  color: #e3e0bc !important;
   margin-top: 0;
   margin-bottom: 0;
 }
-h1{
-  color: #476e52 !important;
-}
+p{font-size: 80%; 
+text-indent: 2em;
+line-height: 0.5}
 </style>
 
 ```{r setup,include=FALSE}
 library(tidyverse)
 library(DT)
 library(widgetframe)
+library(knitr)
 ```
 ```{r table,echo=FALSE}
 path<-"../../static/files/"
@@ -41,7 +41,7 @@ first_year<-read.csv(paste(path,first_name,sep=""))
 second_year<-read.csv(paste(path,second_name,sep=""))
 
 
-df<-rbind(second_year,first_year) %>% datatable(rownames = FALSE,
+df_grades<-rbind(second_year,first_year) %>% datatable(rownames = FALSE,
           options = list(
             pageLength = 5,
             autoWidth = TRUE,
@@ -55,7 +55,8 @@ df<-rbind(second_year,first_year) %>% datatable(rownames = FALSE,
 <h3>University of Toronto</h3>
 </summary><p>
 ```{r output, echo=FALSE}
-widgetframe::frameWidget(df, height=320)
+# widgetframe::frameWidget(df, height=320)
+knitr::kable(rbind(second_year,first_year), align="cclc")
 ```
 </p></details>
 
@@ -64,14 +65,18 @@ widgetframe::frameWidget(df, height=320)
 <h3>EdX</h3>
 </summary>
 <p>
-- [x] HarvardX Data Science: <span style="padding-left: 5px; display:inline">*R Basics*</span>
-- [x] HarvardX Data Science: <span style="padding-left: 5px; display:inline">*Visualization*</span>
-- [x] HarvardX Data Science: <span style="padding-left: 5px; display:inline">*Probability*</span>
-- [x] HarvardX Data Science: <span style="padding-left: 5px; display:inline">*Inference and Modeling*</span>
-- [x] HarvardX Data Science: <span style="padding-left: 5px; display:inline">*Productivity Tools*</span>
+<i>
+<b>HarvardX Data Science: </b><span style="padding-left: 5px; display:inline">*R Basics*</span>
 
-</p>
-</details>
+<b>HarvardX Data Science: </b><span style="padding-left: 5px; display:inline">*Visualization*</span>
+
+<b>HarvardX Data Science: </b><span style="padding-left: 5px; display:inline">*Probability*</span>
+
+<b>HarvardX Data Science: </b><span style="padding-left: 5px; display:inline">*Inference and Modeling*</span>
+
+<b>HarvardX Data Science: </b><span style="padding-left: 5px; display:inline">*Productivity Tools*</span>
+
+</i></p></details>
 
 
 <details>
@@ -79,10 +84,15 @@ widgetframe::frameWidget(df, height=320)
 <h3>Kaggle Micro-courses</h3>
 </summary>
 <p>
-- [x] Intro to Machine Learning
-- [x] Intermediate Machine Learning
-- [x] Feature Engineering
-- [x] Deep Learning
+<b><i>
+Intro to Machine Learning
 
-</p>
-</details>
+Intermediate Machine Learning
+
+Feature Engineering
+
+Deep Learning
+
+Intro to SQL
+
+</b></i></p></details>

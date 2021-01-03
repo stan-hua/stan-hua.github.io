@@ -19,8 +19,6 @@ image:
 projects: []
 ---
 <style>
-body {background-color: #476e52 !important;}
-h3,h4{color: #e3e0bc !important;}
 .note{font-size: 10pt;
       line-height: 20pt;
       padding-bottom: 10px}

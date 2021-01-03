@@ -38,10 +38,13 @@
   
   
   
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#8da2c9">
   
 
   
+  
+  
+  <script src="/js/mathjax-config.js"></script>
   
 
   
@@ -62,8 +65,8 @@
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
         
       
     
@@ -173,9 +176,9 @@
 
       
       
-        
-      
 
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
       
     
       
@@ -275,7 +278,7 @@
   <title>Stanley Z. Hua</title>
 
 </head>
-<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class="dark">
+<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" >
 
   <aside class="search-results" id="search">
   <div class="container">
@@ -480,6 +483,23 @@
       
 
       
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
 
       
 
@@ -669,10 +689,10 @@
   }
 </style>
 <p>Having migrated from the Philippines, his first year of university was filled with new experiences, encounters,  independence, new habits for studying and living, and a greater hunger to learn. Currently, he is working under the  <a href="http://www.tyrrell4innovation.ca"> <strong>Tyrrell4Innovation Lab</strong> </a> to understand the use of data science, statistics and deep learning in the field of medical imaging.</p>
-<p>He hopes to pursue the field of personalized medicine using computational methods.</p>
+<p>He hopes to pursue the field of personalized medicine and/or molecular biology using deep learning methods.</p>
 <hr>
-<p><strong>LANGUAGES</strong>:  <span class="smaller">[Python, R, Unix, HTML, CSS, MATLAB]</span></p>
-<p><span class="libraries"><em><strong>Python Libraries</strong></em>:</span>  <span class="smaller">[pandas, numpy, matplotlib, cv2, ast, os, sklearn, xgboost, lightgbm, category_encoders, itertools]</span></p>
+<p><strong>LANGUAGES</strong>:  <span class="smaller">[Python, R, Unix, SQL, HTML, CSS, MATLAB]</span></p>
+<p><span class="libraries"><em><strong>Python Libraries</strong></em>:</span>  <span class="smaller">[pandas, numpy, matplotlib, tensorflow, keras, sklearn, PIL, cv2, ast, xgboost, lightgbm, category_encoders, tkinter]</span></p>
 <p><span class="libraries"><em><strong>R Libraries</strong></em>:</span>  <span class="smaller">[rvest, ggplot2, tidyverse, dplyr, blogdown, knitr, shiny, flexdashboard]</span></p>
 
 
@@ -823,13 +843,13 @@
   <div class="media-body">
 
     <h3 class="article-title mb-0 mt-0">
-      <a href="/post/pca/pca_for_dummies/" >Principle Component Analysis for Dummies</a>
+      <a href="/post/pca-part-i/pca_part_1/" >PCA Part I. Intro to Dimensionality Reduction</a>
     </h3>
 
     
-    <a href="/post/pca/pca_for_dummies/" class="summary-link">
+    <a href="/post/pca-part-i/pca_part_1/" class="summary-link">
       <div class="article-style">
-        Looking to get your feet wet but not looking to drown in all the new information? This is a brief overview on what PCA is and how it is used!
+        A quick briefer on the use of Dimensionality Reduction!
       </div>
     </a>
     
@@ -855,7 +875,7 @@
           Last updated on
       
     
-    Oct 10, 2020
+    Jan 2, 2021
   </span>
   
 
@@ -867,7 +887,94 @@
   
   
   <span class="middot-divider"></span>
-  <a href="/post/pca/pca_for_dummies/#disqus_thread"></a>
+  <a href="/post/pca-part-i/pca_part_1/#disqus_thread"></a>
+  
+
+  
+  
+
+</div>
+
+      
+    </div>
+
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+  </div>
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/post/pca-part-ii/pca_part_2/" >PCA Part II. Intuition</a>
+    </h3>
+
+    
+    <a href="/post/pca-part-ii/pca_part_2/" class="summary-link">
+      <div class="article-style">
+        Here is a brief overview on Principal Component Analysis, one of the most popular methods of dimensionality reduction today!
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+        
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    Jan 2, 2021
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/post/pca-part-ii/pca_part_2/#disqus_thread"></a>
   
 
   
@@ -1619,6 +1726,8 @@
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
         
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/python.min.js"></script>
+        
       
 
     
@@ -1635,7 +1744,7 @@
 
     
     
-    <script>const isSiteThemeDark = true;</script>
+    <script>const isSiteThemeDark = false;</script>
     
 
     

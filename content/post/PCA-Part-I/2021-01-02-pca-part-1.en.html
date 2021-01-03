@@ -1,0 +1,47 @@
+---
+title: PCA Part I. Intro to Dimensionality Reduction
+author: ''
+date: '2021-01-02'
+slug: pca_part_1
+categories: []
+tags:
+  - Data Science
+subtitle: ''
+summary: 'A quick briefer on the use of Dimensionality Reduction!'
+authors: []
+lastmod: '2021-01-02T23:24:44-05:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+
+<style>
+h1{font-size: 165%;}
+body {font-size: 80%}
+.note{font-size: 10pt;
+      line-height: 20pt;
+      padding-bottom: 10px}
+p{text-indent: 2em;}
+details{font-size: 10pt;}
+summary{font-size: 100% !important;}
+</style>
+<p>Imagine a newly-founded insurance company collects data on their customers (e.g. their sex, age, occupation, location). With this information, the company would like to group their customers, in order to ascertain who are more likely to have risks to their health. To make a profit, the executives believe that customers in high-risk groups should be charged more expensive premiums. They decide to outsource this problem to you. Now, you are given a table with 100,000 customers and 1000 different column variables. What do you do?</p>
+<p>If you’re stubborn, you can try to compare all 1000 variables for all 100,000 customers, but this is an impossible task, possibly even for a machine. There are simply way too many <em>dimensions</em> or variables to look at. What if you could inspect 2 or 3 variables instead? Though still a Herculean task for any human, it’s far more reasonable to compare two numbers than 1000.</p>
+<hr />
+<p>This brings us to the <strong>Curse of Dimensionality</strong>, which tells us that as the number of dimensions in our data increase, the distance between our data points are going to become equal. This is important! Most methods of grouping people (or clustering data points) is based on <em>Euclidean</em> distance between points. Intuitively, this is to say that the customers cannot be differentiated from one another, so how do you cluster them into groups?</p>
+<p>Generally, there are two ways you could <strong><em>reduce</em></strong> the <strong><em>dimensionality</em></strong> of your data. You can either select the top n number of most impactful variables related to health risk, such as age and occupation. Or you could represent those variables in another way. I am referring to 1) Feature Selection, and 2) Dimensionality Reduction. Make no mistake. They are very different methods!</p>
+<details>
+<summary>Enrichment</summary>
+<div class="note">
+<p><b>NOTE</b>: The <em>new</em> variables are combinations of the old variables. They will have no interpretable meaning. In feature selection, you’re simply keeping some variables and dropping the rest. Those variables retain their meaning!</p>
+</div>
+</details>
+<p><br></p>
+<p>The one I will be discussing soon is <strong>Dimensionality Reduction</strong>. The goal of which is to <strong><em>represent</em></strong> as much <strong><em>useful</em></strong> information in your data with the fewest number of dimensions.</p>
+<p>Imagine all the useful information about your participants could be represented with one or more <em>new</em> variables that can explain almost as much as those 1000 variables. That is the essence of dimensionality reduction! Now, you can proceed with grouping the company’s customers.</p>
+<p>In Part II, we will focus on building intuition for Principal Component Analysis, a frequently used dimensionality reduction method. See you there!</p>

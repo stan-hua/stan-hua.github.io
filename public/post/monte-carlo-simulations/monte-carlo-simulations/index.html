@@ -38,7 +38,7 @@
   
   
   
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#8da2c9">
   
 
   
@@ -65,8 +65,8 @@
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
         
       
     
@@ -308,7 +308,7 @@
   <title>Monte Carlo Simulations | Stanley Z. Hua</title>
 
 </head>
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
 
   <aside class="search-results" id="search">
   <div class="container">
@@ -513,6 +513,23 @@
       
 
       
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
 
       
 
@@ -615,8 +632,8 @@
 
 
 <style>
-body {background-color: #476e52 !important;}
-h3,h4{color: #e3e0bc !important;}
+<!-- body {background-color: #476e52 !important;} -->
+<!-- h3,h4{color: #e3e0bc !important;} -->
 .note{font-size: 10pt;
       line-height: 20pt;
       padding-bottom: 10px}
@@ -667,15 +684,15 @@ simulations &lt;- sapply(Ns, function(N){
 <tbody>
 <tr class="odd">
 <td align="center">1e+02</td>
-<td align="center">0.100000</td>
+<td align="center">0.040000</td>
 </tr>
 <tr class="even">
 <td align="center">1e+04</td>
-<td align="center">0.081800</td>
+<td align="center">0.079900</td>
 </tr>
 <tr class="odd">
 <td align="center">1e+06</td>
-<td align="center">0.083099</td>
+<td align="center">0.082951</td>
 </tr>
 </tbody>
 </table>
@@ -1005,6 +1022,8 @@ sample_means &lt;- replicate(B, {
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
         
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/python.min.js"></script>
+        
       
 
     
@@ -1021,7 +1040,7 @@ sample_means &lt;- replicate(B, {
 
     
     
-    <script>const isSiteThemeDark = true;</script>
+    <script>const isSiteThemeDark = false;</script>
     
 
     

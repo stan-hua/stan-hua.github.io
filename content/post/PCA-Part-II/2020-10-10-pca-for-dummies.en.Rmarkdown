@@ -1,0 +1,138 @@
+---
+title: PCA Part II. Intuition
+author: 
+date: '2021-01-02'
+slug: pca_part_2
+categories: []
+tags:
+  - Data Science
+subtitle: ''
+summary: 'Here is a brief overview on Principal Component Analysis, one of the most popular methods of dimensionality reduction today!'
+authors: []
+lastmod: '2021-01-02T19:59:31-04:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+<style>
+body {font-size: 80%}
+.note{font-size: 10pt;
+      line-height: 20pt;
+      padding-bottom: 10px}
+p{text-indent: 2em;}
+
+details{font-size: 10pt;}
+summary{font-size: 100% !important;}
+</style>
+
+<div class="note">
+<b>DISCLAIMER</b>: This is an introduction into PCA and does not go into depth on the statistics or code. Tread carefully! 
+</div>
+
+---
+
+<h3>OVERVIEW</h3>
+
+Principle Component Analysis (PCA) is known for two things: 1) Dimensionality Reduction, and 2) Structure Analysis. However more generally, it is used for **factor extraction**, which is needed in Factor Analysis. 
+
+<div class="note">
+<b>NOTE</b>: There are plenty of resources online if you wish to learn more about Factor Analysis, but they will not be covered here!
+</div>
+<br>
+
+<h4>TERMINOLOGY</h4>
+
+So as not to lose anyone, let's define some useful terminology! 
+<br><br>
+
+**Features** are what we are measuring. 
+
+<details>
+<summary>Example</summary>
+<p>Say we have a table with <i>y</i> rows and <i>x</i> columns, then we have <i>x</i> features. Imagine each row being the names of someone you know, and each column measure something distinct about all persons listed (e.g. their height, weight, deepest darkest secrets, etc.). These things we're measuring are the features.</p>
+</details>
+<br>
+
+**Dimensionality Reduction** is exactly what it sounds like. The goal is to reduce the number of dimensions (i.e. number of features), while retaining useful information from the original data.
+
+<details>
+<summary>Example and Enrichment</summary>
+<p>Say you wish to visualize your data, in order to get an understanding of the relationships between each feature. However, you have too many features. It becomes impossible to plot them on an x-y graph. How do you visualize this without destroying your computer let alone the laws of physics? Simple, you reduce the number of dimensions to 2. Now, you can plot it on a coordinate plane! </p>
+
+<div class="note">
+<b>NOTE</b>: Dimensionality Reduction is different from <i>Feature Selection</i> (e.g. L1 Regularization, L2 Regularization, etc.). The goal of feature selection is to select the most important features. Meanwhile, dimensionality reduction is used to lessen the number of dimensions while capturing the variation in the original data as much as possible.
+</div>
+</details>
+<br>
+
+Given p features, **Principal Components** are the [1, min(n, p)] new variables extracted from n features using Principal Component Analysis. You can think of them as new axes to view the original data. *However, you can no longer interpret the principal components the same way you did with previous features*.
+<details>
+<summary>Enrichment</summary>
+If you have 10 features and you transform them via PCA to get 10 principal components, they are not the same. If you previously had age and weight, now you simply have axes for data points with no interpretable meaning unlike the original variables. With PCA, you may end up with combinations of these variables. Tell me, is there meaning in a new variable that is 30% age and 70% weight?
+</details>
+<br><br>
+
+<h3>GENERAL IDEA</h3>
+
+To build intuition about what happens in Principal Component Analysis, let's use the graph below as an example. 
+
+```{r setup, include=FALSE}
+library(ggplot2)
+library(ggthemes)
+library(tidyverse)
+
+set.seed(1999)
+
+age<-runif(n=100, min=0, max=80)
+weight<-age+rnorm(n=100, 75, 15)
+example_df<-data.frame("Age"=age,"Weight"=weight)
+
+#Get center of data
+mean_x<-median(example_df$Age)
+mean_y<-mean(example_df$Weight)
+
+#Get stuff to plot PC_1
+pc1_x<-c(mean_x, 80)
+pc1_y<-c(mean_y, 165)
+
+#Get stuff to plot PC_2
+pc2_x<-c(mean_x, 34)
+pc2_y<-c(mean_y, 140)
+```
+
+```{r plot, echo=FALSE, fig.dim=c(3.5,3), fig.align='center'}
+ggplot() + 
+    geom_point(aes(example_df$Age,example_df$Weight),color="#5e718f",size=1) + 
+    geom_line(aes(x=pc1_x, y=pc1_y), size=1, alpha=0.9,) +
+    geom_line(aes(x=pc2_x, y=pc2_y), size=1, alpha=0.9,) +
+    theme_classic() + 
+    theme(axis.text.x = element_blank(),
+          axis.text.y = element_blank(),
+          axis.ticks = element_blank(),
+          axis.title.x = element_text(colour = "white", size=12, face="bold"),
+          axis.title.y = element_text(colour = "white", size=12, face="bold"),
+          plot.background = element_rect(fill = "gray",color=NA),
+          legend.position = "none") +
+    xlab("Feature 1") +
+    ylab("Feature 2") + 
+    scale_color_brewer(palette = "Dark2")
+```
+
+Here, we have 2 features. You can imagine each point representing an observation (e.g. one of your participants). 
+
+When you implement PCA, imagine a line placed at the mean (of all the data points). Imagine rotating it, and every time that you rotate it, it changes how far each observation (i.e. its projection onto the line) point is from the center of the line. This is also called the **squared distances**. And this is what we're trying to *maximize*. 
+
+By doing so, it is as if we are trying to find a line where the observations are farthest from center. Thus, we capture the most amount of variation along this line, and this line is known as a principal component! 
+
+
+Once again, notice how the features no longer have anything to do with the new axes (principal component). Also notice that if you had 3 or more features, graphing it like we did is no longer possible.
+
+In Part III, we will explore how to do PCA in Python. See you there!
+
+
+<h3>Additional Resources</h3>
+
+StatQuest has great videos explaining what I mentioned with the graph with more detail! 
