@@ -4,14 +4,13 @@ authors:
 bio: Documenting interesting concepts for the future.
 education:
   courses:
-  - course: H.BSc Bioinformatics & Computational Biology
+  - course: H.BSc. Bioinformatics & Computational Biology
     institution: University of Toronto
-    year: In Progress, 3.84/4
+    year: 2023, 3.85/4
 email: ""
 interests:
-- Data Science
+- Data Science & Machine Learning
 - Medicine
-- Programming
 organizations:
 - name: University of Toronto
   url: ""
@@ -47,14 +46,15 @@ user_groups:
 
 
 
-Having migrated from the Philippines, his first year of university was filled with new experiences, encounters,  independence, new habits for studying and living, and a greater hunger to learn. Currently, he is working under the  <a href="http://www.tyrrell4innovation.ca"> **Tyrrell4Innovation Lab** </a> to understand the use of data science, statistics and deep learning in the field of medical imaging. 
+Having migrated from the Philippines in 2019, my first year of university was filled with new experiences, encounters, independence, new habits for studying and living, and a greater hunger to learn. Currently, I am doing research  under <a href="http://www.tyrrell4innovation.ca">Prof. Pascal Tyrrell </a>, where I am learning about the use of data science, statistics and deep learning in the field of medicine and medical imaging. Particularly, my project extends a previous study that sought to understand the impact of dataset heterogeneity on model training.
 
-He hopes to pursue the field of personalized medicine and/or molecular biology using deep learning methods.
+
+In the future, I hope to continue working at the intersection of data science and molecular biology/personalized medicine.
 
 ---
 
-**LANGUAGES**:  <span class="smaller">[Python, R, Unix, SQL, HTML, CSS, MATLAB]</span>
+**LANGUAGES**:  <span class="smaller">[Python, R, Shell Script, SQL, HTML, CSS, LaTeX, MATLAB]</span>
 
-<span class="libraries">***Python Libraries***:</span>  <span class="smaller">[pandas, numpy, matplotlib, tensorflow, keras, sklearn, PIL, cv2, ast, xgboost, lightgbm, category_encoders, tkinter]</span>
+<span class="libraries">***Python Libraries***:</span>  <span class="smaller">[pandas, numpy, matplotlib, tensorflow, keras, sklearn, PIL, cv2, ast, xgboost, lightgbm, tkinter]</span>
 
 <span class="libraries">***R Libraries***:</span>  <span class="smaller">[rvest, ggplot2, tidyverse, dplyr, blogdown, knitr, shiny, flexdashboard]</span>

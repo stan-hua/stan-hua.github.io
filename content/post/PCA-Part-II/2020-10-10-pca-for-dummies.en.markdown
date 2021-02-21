@@ -1,7 +1,7 @@
 ---
 title: PCA Part II. Intuition
 author: 
-date: '2021-01-02'
+date: '2021-01-04'
 slug: pca_part_2
 categories: []
 tags:
@@ -81,7 +81,7 @@ To build intuition about what happens in Principal Component Analysis, let's use
 
 
 
-<img src="/post/PCA/2020-10-10-pca-for-dummies.en_files/figure-html/plot-1.png" width="336" style="display: block; margin: auto;" />
+<img src="/post/PCA-Part-II/2020-10-10-pca-for-dummies.en_files/figure-html/plot-1.png" width="336" style="display: block; margin: auto;" />
 
 Here, we have 2 features. You can imagine each point representing an observation (e.g. one of your participants). 
 

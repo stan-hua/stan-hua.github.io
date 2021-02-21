@@ -38,7 +38,7 @@
   
   
   
-  <meta name="theme-color" content="#8da2c9">
+  <meta name="theme-color" content="#2962ff">
   
 
   
@@ -241,7 +241,7 @@
   <meta property="twitter:image" content="/img/me"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-01-02T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2021-01-04T00:00:00&#43;00:00">
     
     <meta property="article:modified_time" content="2021-01-02T19:59:31-04:00">
   
@@ -271,7 +271,7 @@
   },
   "headline": "PCA Part II. Intuition",
   
-  "datePublished": "2021-01-02T00:00:00Z",
+  "datePublished": "2021-01-04T00:00:00Z",
   "dateModified": "2021-01-02T19:59:31-04:00",
   
   "author": {
@@ -670,7 +670,7 @@ If you have 10 features and you transform them via PCA to get 10 principal compo
 <br><br>
 <h3>GENERAL IDEA</h3>
 <p>To build intuition about what happens in Principal Component Analysis, let&rsquo;s use the graph below as an example.</p>
-<p><img src="/post/PCA/2020-10-10-pca-for-dummies.en_files/figure-html/plot-1.png" width="336" style="display: block; margin: auto;" /></p>
+<p><img src="/post/PCA-Part-II/2020-10-10-pca-for-dummies.en_files/figure-html/plot-1.png" width="336" style="display: block; margin: auto;" /></p>
 <p>Here, we have 2 features. You can imagine each point representing an observation (e.g. one of your participants).</p>
 <p>When you implement PCA, imagine a line placed at the mean (of all the data points). Imagine rotating it, and every time that you rotate it, it changes how far each observation (i.e. its projection onto the line) point is from the center of the line. This is also called the <strong>squared distances</strong>. And this is what we&rsquo;re trying to <em>maximize</em>.</p>
 <p>By doing so, it is as if we are trying to find a line where the observations are farthest from center. Thus, we capture the most amount of variation along this line, and this line is known as a principal component!</p>
