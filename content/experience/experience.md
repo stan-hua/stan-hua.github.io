@@ -93,41 +93,54 @@ date_format = "Jan 2006"
   
   
 [[experience]]
-  title = "Undergraduate Research Project Student"
-  company = "Tyrrell4Innovation Lab"
-  company_url = "http://www.tyrrell4innovation.ca"
-  location = "Canada"
-  date_start = "2020-07-25"
-  date_end = ""
-  description = """
-* Cleaned and preprocessed (e.g. registration) brain MRI images of patients with Multiple Sclerosis versus Vasculitis.
-* Assisted in building of a classifier model to distinguish between MS and Vasculitis.
-* Assisting in a review of the current literature on multi-modality learning involving ultrasound images.
-* Working to understand the effect of dimensionality chosen from PCA on the Cluster Analysis of CNN-extracted image features.
-  """
-  
-  
-[[experience]]
   title = "Founder, President"
-  company = "UofT OFFLINE"
+  company = "UofT Offline"
   company_url = ""
   location = "Online"
   date_start = "2020-08-25"
-  date_end = ""
+  date_end = "2021-05-01"
   description = """
-  Founded a ULife-recognized organization that seeks to make up for the lack of opportunities to socialize and make genuine connections whilst pursuing education remotely, through an online platform (i.e. Discord) and biweekly socials.
-
+* Founded a ULife-recognized organization to make up for the lack of opportunities for undergraduates to socialize while pursuing education remotely 
+* Conducted weekly socials and events throughout readings weeks through the Discord platform
   """
+
 
 [[experience]]
   title = "General Council Member"
   company = "UofT Bioinformatics and Computational Biology Students Union"
   company_url = ""
-  location = "Online"
+  location = "Remote"
   date_start = "2020-09-01"
-  date_end = ""
+  date_end = "2021-05-01"
   description = """
   Assisted in the duties of the Social Director. Assisted in the curation of the BCBSU Newsletter.
 
   """
+  
+  
+[[experience]]
+  title = "Undergraduate Research Project"
+  company = "Tyrrell Lab"
+  company_url = "http://www.tyrrell4innovation.ca"
+  location = "Remote"
+  date_start = "2020-07-25"
+  date_end = ""
+  description = """
+* Proposed Minimum Mode CV as a method for determining the number of principal components (of image features) to use, in understanding the impact of dataset heterogeneity on CNN model training
+* Cleaned dataset of T1 MRI brain images of patients with Multiple Sclerosis or Vasculitis.
+* Assisted in Scoping Review on deep learning using multiple modalities specifically including ultrasound.
+  """
+
+
+[[experience]]
+  title = "Undergraduate Summer Research Project"
+  company = "Moses Lab"
+  company_url = "http://www.tyrrell4innovation.ca"
+  location = "Remote"
+  date_start = "2021-05-03"
+  date_end = ""
+  description = """
+  Compiling microscopy datasets to create CytoImageNet; an image dataset for cytoimage transfer learning
+  """
+  
 +++

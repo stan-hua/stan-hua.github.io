@@ -21,8 +21,6 @@
 
 
 &lt;style&gt;
-&lt;!-- body {background-color: #476e52 !important;} --&gt;
-&lt;!-- h3,h4{color: #e3e0bc !important;} --&gt;
 .note{font-size: 10pt;
       line-height: 20pt;
       padding-bottom: 10px}
@@ -73,15 +71,15 @@ simulations &amp;lt;- sapply(Ns, function(N){
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+02&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.040000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.14000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+04&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.079900&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.08040&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+06&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.082951&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.08336&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

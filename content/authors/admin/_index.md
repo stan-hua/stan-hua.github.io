@@ -9,8 +9,9 @@ education:
     year: 2023, 3.85/4
 email: ""
 interests:
-- Data Science & Machine Learning
+- Data Science
 - Medicine
+- Deep Learning
 organizations:
 - name: University of Toronto
   url: ""
@@ -46,10 +47,11 @@ user_groups:
 
 
 
-Having migrated from the Philippines in 2019, my first year of university was filled with new experiences, encounters, independence, new habits for studying and living, and a greater hunger to learn. Currently, I am doing research  under <a href="http://www.tyrrell4innovation.ca">Prof. Pascal Tyrrell </a>, where I am learning about the use of data science, statistics and deep learning in the field of medicine and medical imaging. Particularly, my project extends a previous study that sought to understand the impact of dataset heterogeneity on model training.
+Having migrated from the Philippines in 2019, my first year of university was filled with new experiences, encounters, independence, new habits for studying and living, and a greater hunger to learn. 
 
+During my time with Prof. <a href="http://www.tyrrell4innovation.ca">Pascal Tyrrell</a>, I learned about applications of data science and deep learning in the field of medicine and medical imaging. This experience motivates me to pursue the intersection of data science and molecular biology/personalized medicine.
 
-In the future, I hope to continue working at the intersection of data science and molecular biology/personalized medicine.
+This summer, I will be working with Prof. <a href="http://www.moseslab.csb.utoronto.ca/">Alan Moses</a> and Alex Lu to create CytoImageNet, a dataset compiling datasets of microscopy              images for use in training models to extract image features specific to cells.
 
 ---
 

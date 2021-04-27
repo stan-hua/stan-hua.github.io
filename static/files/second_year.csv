@@ -1,6 +1,10 @@
 Year,Course Code,Name,Grade
-2,BCH210,Biochemistry I,IP
-2,BIO230,From Genes to Organisms,IP
-2,MAT223,Linear Algebra I,IP
-2,PSY270,Intro to Cognitive Psychology,IP
-2,STA299,Research Opportunity Program,IP
+2,BCH210,Biochemistry I,A-
+2,BCH311,Biochemistry II,In Progress
+2,BIO230,From Genes to Organisms,A+
+2,BIO260,Genetics,In Progress
+2,CSC148,Intro to Computer Science,In Progress
+2,CSC165,Mathematical Expression and Reasoning for Computer Science,In Progress
+2,MAT223,Linear Algebra I,A+
+2,PSY270,Intro to Cognitive Psychology,Credited
+2,STA299,Research Opportunity Program,In Progress

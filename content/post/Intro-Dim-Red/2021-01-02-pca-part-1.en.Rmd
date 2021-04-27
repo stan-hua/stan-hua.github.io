@@ -1,8 +1,8 @@
 ---
-title: PCA Part I. Intro to Dimensionality Reduction
+title: Intro to Dimensionality Reduction
 author: ''
 date: '2021-01-02'
-slug: pca_part_1
+slug: intro_to_dimred
 categories: []
 tags:
   - Data Science
@@ -50,6 +50,6 @@ The one I will be discussing soon is **Dimensionality Reduction**. The goal of w
 
 Imagine all the useful information about your participants could be represented with one or more *new* variables that can explain almost as much as those 1000 variables. That is the essence of dimensionality reduction! Now, you can proceed with grouping the company’s customers.
 
-In Part II, we will focus on building intuition for Principal Component Analysis, a frequently used dimensionality reduction method. See you there!
+In the next post, we will focus on building intuition for Principal Component Analysis, a frequently used dimensionality reduction method. See you there!
 
 

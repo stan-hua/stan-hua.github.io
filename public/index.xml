@@ -35,10 +35,10 @@
     </item>
     
     <item>
-      <title>PCA Part II. Intuition</title>
-      <link>/post/pca-part-ii/pca_part_2/</link>
+      <title>PCA Part I. Intuition</title>
+      <link>/post/pca-part-i/pca_part_1/</link>
       <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>/post/pca-part-ii/pca_part_2/</guid>
+      <guid>/post/pca-part-i/pca_part_1/</guid>
       <description>&lt;style&gt;
 body {font-size: 80%}
 .note{font-size: 10pt;
@@ -54,7 +54,7 @@ summary{font-size: 100% !important;}
 &lt;/div&gt;
 &lt;hr&gt;
 &lt;h3&gt;OVERVIEW&lt;/h3&gt;
-&lt;p&gt;Principle Component Analysis (PCA) is known for two things: 1) Dimensionality Reduction, and 2) Structure Analysis. However more generally, it is used for &lt;strong&gt;factor extraction&lt;/strong&gt;, which is needed in Factor Analysis.&lt;/p&gt;
+&lt;p&gt;Principle Component Analysis (PCA) is known for two things: 1) Dimensionality Reduction, and 2) Structure Analysis. Note that it can also be used for &lt;strong&gt;factor extraction&lt;/strong&gt;, the first step in Factor Analysis.&lt;/p&gt;
 &lt;div class=&#34;note&#34;&gt;
 &lt;b&gt;NOTE&lt;/b&gt;: There are plenty of resources online if you wish to learn more about Factor Analysis, but they will not be covered here!
 &lt;/div&gt;
@@ -85,22 +85,22 @@ If you have 10 features and you transform them via PCA to get 10 principal compo
 &lt;br&gt;&lt;br&gt;
 &lt;h3&gt;GENERAL IDEA&lt;/h3&gt;
 &lt;p&gt;To build intuition about what happens in Principal Component Analysis, let&amp;rsquo;s use the graph below as an example.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/PCA-Part-II/2020-10-10-pca-for-dummies.en_files/figure-html/plot-1.png&#34; width=&#34;336&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/PCA-Part-I/2020-10-10-pca-for-dummies.en_files/figure-html/plot-1.png&#34; width=&#34;336&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Here, we have 2 features. You can imagine each point representing an observation (e.g. one of your participants).&lt;/p&gt;
 &lt;p&gt;When you implement PCA, imagine a line placed at the mean (of all the data points). Imagine rotating it, and every time that you rotate it, it changes how far each observation (i.e. its projection onto the line) point is from the center of the line. This is also called the &lt;strong&gt;squared distances&lt;/strong&gt;. And this is what we&amp;rsquo;re trying to &lt;em&gt;maximize&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;By doing so, it is as if we are trying to find a line where the observations are farthest from center. Thus, we capture the most amount of variation along this line, and this line is known as a principal component!&lt;/p&gt;
 &lt;p&gt;Once again, notice how the features no longer have anything to do with the new axes (principal component). Also notice that if you had 3 or more features, graphing it like we did is no longer possible.&lt;/p&gt;
-&lt;p&gt;In Part III, we will explore how to do PCA in Python. See you there!&lt;/p&gt;
+&lt;p&gt;In Part II, we will explore how to do PCA in Python. See you there!&lt;/p&gt;
 &lt;h3&gt;Additional Resources&lt;/h3&gt;
 &lt;p&gt;StatQuest has great videos explaining what I mentioned with the graph with more detail!&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>PCA Part I. Intro to Dimensionality Reduction</title>
-      <link>/post/pca-part-i/pca_part_1/</link>
+      <title>Intro to Dimensionality Reduction</title>
+      <link>/post/intro-dim-red/intro_to_dimred/</link>
       <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>/post/pca-part-i/pca_part_1/</guid>
+      <guid>/post/intro-dim-red/intro_to_dimred/</guid>
       <description>
 
 
@@ -128,7 +128,7 @@ summary{font-size: 100% !important;}
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;The one I will be discussing soon is &lt;strong&gt;Dimensionality Reduction&lt;/strong&gt;. The goal of which is to &lt;strong&gt;&lt;em&gt;represent&lt;/em&gt;&lt;/strong&gt; as much &lt;strong&gt;&lt;em&gt;useful&lt;/em&gt;&lt;/strong&gt; information in your data with the fewest number of dimensions.&lt;/p&gt;
 &lt;p&gt;Imagine all the useful information about your participants could be represented with one or more &lt;em&gt;new&lt;/em&gt; variables that can explain almost as much as those 1000 variables. That is the essence of dimensionality reduction! Now, you can proceed with grouping the company’s customers.&lt;/p&gt;
-&lt;p&gt;In Part II, we will focus on building intuition for Principal Component Analysis, a frequently used dimensionality reduction method. See you there!&lt;/p&gt;
+&lt;p&gt;In the next post, we will focus on building intuition for Principal Component Analysis, a frequently used dimensionality reduction method. See you there!&lt;/p&gt;
 </description>
     </item>
     
@@ -280,9 +280,6 @@ Notice how the distribution is bimodal with one peak centered at 217 and the oth
 
 &lt;style&gt;
 body {font-size: 10pt}
-&lt;!-- h3,h4{color: #e3e0bc !important;} --&gt;
-&lt;!-- note{line-height: 20pt; --&gt;
-&lt;!--       padding-bottom: 10px} --&gt;
 h2{
   text-decoration: underline;
   line-height: 5pt;
@@ -298,64 +295,64 @@ h2{
 &lt;!-- &lt;br&gt; --&gt;
 &lt;div id=&#34;importing&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Importing&lt;/h2&gt;
-&lt;div id=&#34;importing-the-libraries&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Importing the Libraries&lt;/h3&gt;
+&lt;div id=&#34;importing-the-libraries&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Importing the Libraries&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;import pandas as pd
 import numpy as np        #NumPy library required by Pandas library&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;read-csv-file-data&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Read csv file data&lt;/h3&gt;
+&lt;div id=&#34;read-csv-file-data&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Read csv file data&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;df = pd.read_csv(file_path, index_col=None)&lt;/code&gt;&lt;/pre&gt;
 &lt;!-- ################################################################ --&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;about-dataset&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;About dataset&lt;/h2&gt;
-&lt;div id=&#34;check-column-names&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Check column names&lt;/h3&gt;
+&lt;div id=&#34;check-column-names&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Check column names&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;df.columns
 
 Series.name&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;check-shape-of-object&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Check shape of object&lt;/h3&gt;
+&lt;div id=&#34;check-shape-of-object&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Check shape of object&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;df.shape
 
 Series.shape&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;columns-of-a-specific-data-type-type&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Columns of a specific data type type&lt;/h3&gt;
+&lt;div id=&#34;columns-of-a-specific-data-type-type&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Columns of a specific data type type&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;df.dtypes == &amp;#39;object&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;describe-data&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Describe data&lt;/h3&gt;
+&lt;div id=&#34;describe-data&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Describe data&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;df.describe()&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;unique-vs-nunique&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Unique vs Nunique&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;for col in df.columns:    #for loop to get column names
-  df[col].unique()            #returns unique values in column &amp;#39;col&amp;#39;
-  df[col].nunique()           #returns unique values in column AND drop NAs&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;unique-vs-nunique&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Unique vs Nunique&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;for col in df.columns:    # for loop to get column names
+  df[col].unique()            # returns unique values in column &amp;#39;col&amp;#39;
+  df[col].nunique()           # returns unique values in column AND drop NAs&lt;/code&gt;&lt;/pre&gt;
 &lt;!-- ################################################################ --&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;slicing-and-filtering&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Slicing and Filtering&lt;/h2&gt;
-&lt;div id=&#34;filter&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Filter&lt;/h3&gt;
+&lt;div id=&#34;filter&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Filter&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;df.filter(items=, like=None)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;iloc&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;a href=&#34;https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.iloc.html&#34; target=&#34;_blank&#34;&gt;Iloc &lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;df.iloc[row_position, col_position]    #general format&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;iloc&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;a href=&#34;https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.iloc.html&#34; target=&#34;_blank&#34;&gt;Iloc &lt;/a&gt;&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;df.iloc[row_position, col_position]    # general format&lt;/code&gt;&lt;/pre&gt;
 &lt;p class=&#34;note&#34;&gt;
 COPY of dataframe is slice is returned. This CANNOT be used in assignment. Also, note that only integers, its derivations and boolean arrays can be used to index.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;loc&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;a href=&#34;https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.loc.html&#34; target=&#34;_blank&#34;&gt;Loc&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;index = (df.Color==&amp;quot;Red&amp;quot;) &amp;amp; (df.Item==&amp;quot;Shirt&amp;quot;)        #produces a boolean array
-df.loc[index]        #returns original dataframe sliced
+&lt;div id=&#34;loc&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;a href=&#34;https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.loc.html&#34; target=&#34;_blank&#34;&gt;Loc&lt;/a&gt;&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;index = (df.Color==&amp;quot;Red&amp;quot;) &amp;amp; (df.Item==&amp;quot;Shirt&amp;quot;)        # produces a boolean array
+df.loc[index]        # returns original dataframe sliced
 
 
 df.loc[row_indexer, col_indexer]        #general format&lt;/code&gt;&lt;/pre&gt;
@@ -363,11 +360,11 @@ df.loc[row_indexer, col_indexer]        #general format&lt;/code&gt;&lt;/pre&gt;
 &lt;b&gt;Note&lt;/b&gt;: colon “:” is not needed by col_indexer like in &lt;em&gt;df.loc[index, :]&lt;/em&gt; to choose all columns, and slice of ORIGINAL dataframe is returned. This can be used for assignment.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;query-columns&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Query (columns)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;df.query(&amp;#39;expression&amp;#39;)    #expression must be conditional using column variable/s
-                          #prefix &amp;quot;@&amp;quot; before variable name if outside of dataframe env.
-                          #prefix ` ` to encapsulate variable name with spaces&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;query-columns&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Query (columns)&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;df.query(&amp;#39;expression&amp;#39;)    # expression must be conditional using column variable/s
+                          # prefix &amp;quot;@&amp;quot; before variable name if outside of dataframe env.
+                          # prefix ` ` to encapsulate variable name with spaces&lt;/code&gt;&lt;/pre&gt;
 &lt;p class=&#34;note&#34;&gt;
 Can be used to filter rows.
 &lt;/p&gt;
@@ -376,41 +373,41 @@ Can be used to filter rows.
 &lt;/div&gt;
 &lt;div id=&#34;data-processing&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Data Processing&lt;/h2&gt;
-&lt;div id=&#34;apply-a-function-on-a-pandas-object&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Apply (a function on a pandas object)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;df.apply(FUN, axis=0, *args)    #FUN: any (valid) function to apply
-                                #axis: axis to assess
-                                #*args: additional keyword arguments for FUN&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;apply-a-function-on-a-pandas-object&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Apply (a function on a pandas object)&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;df.apply(FUN, axis=0, *args)    # FUN: any (valid) function to apply
+                                # axis: axis to assess
+                                # *args: additional keyword arguments for FUN&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;assign-new-columns&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Assign (new columns)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;df.assign(col_name = col_1*col_2/col_3)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;assign-new-columns&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Assign (new columns)&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;df.assign(col_4 = col_1*col_2/col_3)&lt;/code&gt;&lt;/pre&gt;
 &lt;p class=&#34;note&#34;&gt;
 Used to create new columns. Similar to “mutate” in R.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;get-dummies-aka-one-hot-encoding&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Get Dummies (aka One Hot Encoding)&lt;/h3&gt;
+&lt;div id=&#34;get-dummies-one-hot-encoding&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Get Dummies (One Hot Encoding)&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;df.get_dummies(dummy_na=False, columns=None, sparse=False, drop_first=False, dtype=np.uint8)
-        #dummy_na: if True, adds dummy column for NA
-        #columns: if !None, columns specified will be one hot encoded
-        #sparse: whether resulting columns will be SparseArray objects (True) or NumPy arrays(False) 
-        #drop_first: removes first unique dummy variable from unique objects in column
-        #dtype: data type for new columns (e.g. float)
+        # dummy_na: if True, adds dummy column for NA
+        # columns: if !None, columns specified will be one hot encoded
+        # sparse: whether resulting columns will be SparseArray objects (True) or NumPy arrays(False) 
+        # drop_first: removes first unique dummy variable from unique objects in column
+        # dtype: data type for new columns (e.g. float)
 
 
 Series.get_dummies(dummy_na=False, columns=None, sparse=False, drop_first=False, dtype=&amp;#39;np.uint8&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;group-by-then-transform&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Group by, then Transform&lt;/h3&gt;
+&lt;div id=&#34;group-by-then-transform&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Group by, then Transform&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;df.groupby(by=category).transform(FUN)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;note&#34;&gt;
 &lt;p&gt;Grouping a dataframe then transforming it is a very common operation. A dataframe is converted into a “GroupBy” object depending on &lt;em&gt;category&lt;/em&gt;, which may be a string or list of strings representing column names. Then the resulting object’s values are passed into &lt;em&gt;FUN&lt;/em&gt; by the transform function and a column of the same size is returned.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;handling-na&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Handling NA&lt;/h3&gt;
+&lt;div id=&#34;handling-na&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Handling NA&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;#Finding NA and inverse
 df.isna()
 Series.isna()
@@ -421,51 +418,50 @@ Series.isna()
 
 #Dropping NA
 df.dropna(axis=0, how=&amp;#39;any&amp;#39;, thresh=None, subset=None, inplace=False)
-        #axis: axis to assess
-        #how: when to drop axis (e.g. how=&amp;#39;all&amp;#39; drops IFF all values are NA)
-        #thresh: number of NAs in axis to drop
-        #subset: labels on axis to be considered
-        #inplace: by default, returns new object. If True, modifies existing object
+        # axis: axis to assess
+        # how: when to drop axis (e.g. how=&amp;#39;all&amp;#39; drops IFF all values are NA)
+        # thresh: number of NAs in axis to drop
+        # subset: labels on axis to be considered
+        # inplace: by default, returns new object. If True, modifies existing object
         
 Series.dropna(axis=0, how=None,inplace=False)
 
 
 #Filling NA
 df.fillna(value=None, method=None, axis=None, inplace=False, limit=None)
-        #value: value to fill holes
-        #method: method for filling holes.*
-        #inplace: by default, returns new object. If True, modifies existing object
-        #limit: max number of consecutive NAs to fill. Will be left as NA if value is exceeded
+        # value: value to fill holes
+        # method: method for filling holes.*
+        # inplace: by default, returns new object. If True, modifies existing object
+        # limit: max number of consecutive NAs to fill. Will be left as NA if value is exceeded
 
 Series.fillna(value=None, method=None, axis=None, inplace=False, limit=None)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;mapping-passing-each-cell-into-a-function-and-replacing-the-input&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Mapping, passing each cell into a function and replacing the input&lt;/h3&gt;
+&lt;div id=&#34;mapping&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Mapping&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;df.applymap(FUN)
 Series.map(FUN)&lt;/code&gt;&lt;/pre&gt;
 &lt;p class=&#34;note&#34;&gt;
 Iterates by rows (for Series) and cell (for DataFrame), passing cell value into function with the output value replacing its input value.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;piping-data-through-multiple-functions&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Piping data (through multiple functions)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;(df.pipe(FUN1)
-    .pipe(FUN2, arg1=foo)                  
-    .pipe((FUN3, &amp;quot;arg2&amp;quot;), arg1=bar)        #when FUN3&amp;#39;s main arg. is not df, supply tuple
-                                                where str contains location for df (e.g. &amp;quot;arg2&amp;quot;)
+&lt;div id=&#34;piping-data-through-multiple-functions&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Piping Data (through multiple functions)&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;df.pipe(FUN1).pipe(FUN2, arg1=foo).pipe((FUN3, &amp;quot;arg2&amp;quot;), arg1=bar)        
+    # when FUN3&amp;#39;s main arg. is not df, supply tuple
+      where str contains location for df (e.g. &amp;quot;arg2&amp;quot;)
 )&lt;/code&gt;&lt;/pre&gt;
 &lt;p class=&#34;note&#34;&gt;
 &lt;b&gt;NOTE&lt;/b&gt;: similar to %&amp;gt;% operation in R.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;rolling&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Rolling&lt;/h3&gt;
+&lt;div id=&#34;rolling&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Rolling&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;df.rolling(num_observations).FUN()
 Series.rolling(num_observations).FUN()
 
 
-#Example of counting observations every 7 days past
-Series.rolling(&amp;#39;7d&amp;#39;).count()-1        #subtraction excludes day &lt;/code&gt;&lt;/pre&gt;
+# Example of counting observations every 7 days past
+Series.rolling(&amp;#39;7d&amp;#39;).count()-1        # subtraction excludes day &lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;note&#34;&gt;
 &lt;p&gt;This is similar to GroupBy then Transform, but function is applied to “rolls” going down a specific column/index.&lt;/p&gt;
 &lt;/div&gt;
@@ -494,8 +490,6 @@ A great resource for comparing df.&lt;strong&gt;agg&lt;/strong&gt;(), df.&lt;str
 
 
 &lt;style&gt;
-&lt;!-- body {background-color: #476e52 !important;} --&gt;
-&lt;!-- h3,h4{color: #e3e0bc !important;} --&gt;
 .note{font-size: 10pt;
       line-height: 20pt;
       padding-bottom: 10px}
@@ -546,15 +540,15 @@ simulations &amp;lt;- sapply(Ns, function(N){
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+02&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.040000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.14000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+04&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.079900&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.08040&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+06&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.082951&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.08336&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -623,6 +617,12 @@ University of Toronto
 &lt;/summary&gt;
 &lt;p&gt;
 &lt;table&gt;
+&lt;colgroup&gt;
+&lt;col width=&#34;6%&#34; /&gt;
+&lt;col width=&#34;14%&#34; /&gt;
+&lt;col width=&#34;64%&#34; /&gt;
+&lt;col width=&#34;14%&#34; /&gt;
+&lt;/colgroup&gt;
 &lt;thead&gt;
 &lt;tr class=&#34;header&#34;&gt;
 &lt;th align=&#34;center&#34;&gt;Year&lt;/th&gt;
@@ -636,31 +636,55 @@ University of Toronto
 &lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;BCH210&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Biochemistry I&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;IP&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;A-&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;BCH311&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Biochemistry II&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;In Progress&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;BIO230&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;From Genes to Organisms&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;IP&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;A+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;BIO260&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Genetics&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;In Progress&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;CSC148&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Intro to Computer Science&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;In Progress&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;CSC165&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Mathematical Expression and Reasoning for Computer Science&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;In Progress&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;MAT223&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Linear Algebra I&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;IP&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;A+&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;PSY270&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Intro to Cognitive Psychology&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;IP&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Credited&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;STA299&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Research Opportunity Program&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;IP&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;In Progress&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1&lt;/td&gt;

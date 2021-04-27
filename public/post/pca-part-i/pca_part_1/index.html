@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="A quick briefer on the use of Dimensionality Reduction!">
+  <meta name="description" content="Here is a brief overview on Principal Component Analysis, one of the most popular methods of dimensionality reduction today!">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/pca-part-i/pca_part_1/">
@@ -236,14 +236,14 @@
   
   <meta property="og:site_name" content="Stanley Z. Hua">
   <meta property="og:url" content="/post/pca-part-i/pca_part_1/">
-  <meta property="og:title" content="PCA Part I. Intro to Dimensionality Reduction | Stanley Z. Hua">
-  <meta property="og:description" content="A quick briefer on the use of Dimensionality Reduction!"><meta property="og:image" content="/img/me">
+  <meta property="og:title" content="PCA Part I. Intuition | Stanley Z. Hua">
+  <meta property="og:description" content="Here is a brief overview on Principal Component Analysis, one of the most popular methods of dimensionality reduction today!"><meta property="og:image" content="/img/me">
   <meta property="twitter:image" content="/img/me"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-01-02T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2021-01-04T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2021-01-02T23:24:44-05:00">
+    <meta property="article:modified_time" content="2021-01-02T19:59:31-04:00">
   
 
   
@@ -269,10 +269,10 @@
     "@type": "WebPage",
     "@id": "/post/pca-part-i/pca_part_1/"
   },
-  "headline": "PCA Part I. Intro to Dimensionality Reduction",
+  "headline": "PCA Part I. Intuition",
   
-  "datePublished": "2021-01-02T00:00:00Z",
-  "dateModified": "2021-01-02T23:24:44-05:00",
+  "datePublished": "2021-01-04T00:00:00Z",
+  "dateModified": "2021-01-02T19:59:31-04:00",
   
   "author": {
     "@type": "Person",
@@ -287,7 +287,7 @@
       "url": "/images/logo_hu65ab962506affe5c14e8a2f7a1d1d040_271848_192x192_fit_lanczos_2.png"
     }
   },
-  "description": "A quick briefer on the use of Dimensionality Reduction!"
+  "description": "Here is a brief overview on Principal Component Analysis, one of the most popular methods of dimensionality reduction today!"
 }
 </script>
 
@@ -305,7 +305,7 @@
 
 
 
-  <title>PCA Part I. Intro to Dimensionality Reduction | Stanley Z. Hua</title>
+  <title>PCA Part I. Intuition | Stanley Z. Hua</title>
 
 </head>
 <body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
@@ -560,7 +560,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>PCA Part I. Intro to Dimensionality Reduction</h1>
+  <h1>PCA Part I. Intuition</h1>
 
   
 
@@ -624,34 +624,60 @@
   <div class="article-container">
 
     <div class="article-style">
-      
-
-
-<style>
-h1{font-size: 165%;}
+      <style>
 body {font-size: 80%}
 .note{font-size: 10pt;
       line-height: 20pt;
       padding-bottom: 10px}
 p{text-indent: 2em;}
+
 details{font-size: 10pt;}
 summary{font-size: 100% !important;}
 </style>
-<p>Imagine a newly-founded insurance company collects data on their customers (e.g. their sex, age, occupation, location). With this information, the company would like to group their customers, in order to ascertain who are more likely to have risks to their health. To make a profit, the executives believe that customers in high-risk groups should be charged more expensive premiums. They decide to outsource this problem to you. Now, you are given a table with 100,000 customers and 1000 different column variables. What do you do?</p>
-<p>If you’re stubborn, you can try to compare all 1000 variables for all 100,000 customers, but this is an impossible task, possibly even for a machine. There are simply way too many <em>dimensions</em> or variables to look at. What if you could inspect 2 or 3 variables instead? Though still a Herculean task for any human, it’s far more reasonable to compare two numbers than 1000.</p>
-<hr />
-<p>This brings us to the <strong>Curse of Dimensionality</strong>, which tells us that as the number of dimensions in our data increase, the distance between our data points are going to become equal. This is important! Most methods of grouping people (or clustering data points) is based on <em>Euclidean</em> distance between points. Intuitively, this is to say that the customers cannot be differentiated from one another, so how do you cluster them into groups?</p>
-<p>Generally, there are two ways you could <strong><em>reduce</em></strong> the <strong><em>dimensionality</em></strong> of your data. You can either select the top n number of most impactful variables related to health risk, such as age and occupation. Or you could represent those variables in another way. I am referring to 1) Feature Selection, and 2) Dimensionality Reduction. Make no mistake. They are very different methods!</p>
-<details>
-<summary>Enrichment</summary>
 <div class="note">
-<p><b>NOTE</b>: The <em>new</em> variables are combinations of the old variables. They will have no interpretable meaning. In feature selection, you’re simply keeping some variables and dropping the rest. Those variables retain their meaning!</p>
+<b>DISCLAIMER</b>: This is an introduction into PCA and does not go into depth on the statistics or code. Tread carefully! 
+</div>
+<hr>
+<h3>OVERVIEW</h3>
+<p>Principle Component Analysis (PCA) is known for two things: 1) Dimensionality Reduction, and 2) Structure Analysis. Note that it can also be used for <strong>factor extraction</strong>, the first step in Factor Analysis.</p>
+<div class="note">
+<b>NOTE</b>: There are plenty of resources online if you wish to learn more about Factor Analysis, but they will not be covered here!
+</div>
+<br>
+<h4>TERMINOLOGY</h4>
+<p>So as not to lose anyone, let&rsquo;s define some useful terminology! 
+<br><br></p>
+<p><strong>Features</strong> are what we are measuring.</p>
+<details>
+<summary>Example</summary>
+<p>Say we have a table with <i>y</i> rows and <i>x</i> columns, then we have <i>x</i> features. Imagine each row being the names of someone you know, and each column measure something distinct about all persons listed (e.g. their height, weight, deepest darkest secrets, etc.). These things we're measuring are the features.</p>
+</details>
+<br>
+<p><strong>Dimensionality Reduction</strong> is exactly what it sounds like. The goal is to reduce the number of dimensions (i.e. number of features), while retaining useful information from the original data.</p>
+<details>
+<summary>Example and Enrichment</summary>
+<p>Say you wish to visualize your data, in order to get an understanding of the relationships between each feature. However, you have too many features. It becomes impossible to plot them on an x-y graph. How do you visualize this without destroying your computer let alone the laws of physics? Simple, you reduce the number of dimensions to 2. Now, you can plot it on a coordinate plane! </p>
+<div class="note">
+<b>NOTE</b>: Dimensionality Reduction is different from <i>Feature Selection</i> (e.g. L1 Regularization, L2 Regularization, etc.). The goal of feature selection is to select the most important features. Meanwhile, dimensionality reduction is used to lessen the number of dimensions while capturing the variation in the original data as much as possible.
 </div>
 </details>
-<p><br></p>
-<p>The one I will be discussing soon is <strong>Dimensionality Reduction</strong>. The goal of which is to <strong><em>represent</em></strong> as much <strong><em>useful</em></strong> information in your data with the fewest number of dimensions.</p>
-<p>Imagine all the useful information about your participants could be represented with one or more <em>new</em> variables that can explain almost as much as those 1000 variables. That is the essence of dimensionality reduction! Now, you can proceed with grouping the company’s customers.</p>
-<p>In Part II, we will focus on building intuition for Principal Component Analysis, a frequently used dimensionality reduction method. See you there!</p>
+<br>
+<p>Given p features, <strong>Principal Components</strong> are the [1, min(n, p)] new variables extracted from n features using Principal Component Analysis. You can think of them as new axes to view the original data. <em>However, you can no longer interpret the principal components the same way you did with previous features</em>.</p>
+<details>
+<summary>Enrichment</summary>
+If you have 10 features and you transform them via PCA to get 10 principal components, they are not the same. If you previously had age and weight, now you simply have axes for data points with no interpretable meaning unlike the original variables. With PCA, you may end up with combinations of these variables. Tell me, is there meaning in a new variable that is 30% age and 70% weight?
+</details>
+<br><br>
+<h3>GENERAL IDEA</h3>
+<p>To build intuition about what happens in Principal Component Analysis, let&rsquo;s use the graph below as an example.</p>
+<p><img src="/post/PCA-Part-I/2020-10-10-pca-for-dummies.en_files/figure-html/plot-1.png" width="336" style="display: block; margin: auto;" /></p>
+<p>Here, we have 2 features. You can imagine each point representing an observation (e.g. one of your participants).</p>
+<p>When you implement PCA, imagine a line placed at the mean (of all the data points). Imagine rotating it, and every time that you rotate it, it changes how far each observation (i.e. its projection onto the line) point is from the center of the line. This is also called the <strong>squared distances</strong>. And this is what we&rsquo;re trying to <em>maximize</em>.</p>
+<p>By doing so, it is as if we are trying to find a line where the observations are farthest from center. Thus, we capture the most amount of variation along this line, and this line is known as a principal component!</p>
+<p>Once again, notice how the features no longer have anything to do with the new axes (principal component). Also notice that if you had 3 or more features, graphing it like we did is no longer possible.</p>
+<p>In Part II, we will explore how to do PCA in Python. See you there!</p>
+<h3>Additional Resources</h3>
+<p>StatQuest has great videos explaining what I mentioned with the graph with more detail!</p>
 
     </div>
 
@@ -681,7 +707,7 @@ summary{font-size: 100% !important;}
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/post/pca-part-i/pca_part_1/&amp;text=PCA%20Part%20I.%20Intro%20to%20Dimensionality%20Reduction" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=/post/pca-part-i/pca_part_1/&amp;text=PCA%20Part%20I.%20Intuition" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -694,7 +720,7 @@ summary{font-size: 100% !important;}
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/post/pca-part-i/pca_part_1/&amp;t=PCA%20Part%20I.%20Intro%20to%20Dimensionality%20Reduction" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=/post/pca-part-i/pca_part_1/&amp;t=PCA%20Part%20I.%20Intuition" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -707,7 +733,7 @@ summary{font-size: 100% !important;}
       
       
       <li>
-        <a href="mailto:?subject=PCA%20Part%20I.%20Intro%20to%20Dimensionality%20Reduction&amp;body=/post/pca-part-i/pca_part_1/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=PCA%20Part%20I.%20Intuition&amp;body=/post/pca-part-i/pca_part_1/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -720,7 +746,7 @@ summary{font-size: 100% !important;}
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/post/pca-part-i/pca_part_1/&amp;title=PCA%20Part%20I.%20Intro%20to%20Dimensionality%20Reduction" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=/post/pca-part-i/pca_part_1/&amp;title=PCA%20Part%20I.%20Intuition" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -733,7 +759,7 @@ summary{font-size: 100% !important;}
       
       
       <li>
-        <a href="whatsapp://send?text=PCA%20Part%20I.%20Intro%20to%20Dimensionality%20Reduction%20/post/pca-part-i/pca_part_1/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=PCA%20Part%20I.%20Intuition%20/post/pca-part-i/pca_part_1/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -746,7 +772,7 @@ summary{font-size: 100% !important;}
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/post/pca-part-i/pca_part_1/&amp;title=PCA%20Part%20I.%20Intro%20to%20Dimensionality%20Reduction" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=/post/pca-part-i/pca_part_1/&amp;title=PCA%20Part%20I.%20Intuition" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -911,7 +937,7 @@ summary{font-size: 100% !important;}
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/post/pca-part-ii/pca_part_2/">PCA Part II. Intuition</a></li>
+      <li><a href="/post/intro-dim-red/intro_to_dimred/">Intro to Dimensionality Reduction</a></li>
       
     </ul>
   </div>

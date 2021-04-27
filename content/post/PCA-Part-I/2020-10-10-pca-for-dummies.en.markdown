@@ -1,8 +1,8 @@
 ---
-title: PCA Part II. Intuition
+title: PCA Part I. Intuition
 author: 
 date: '2021-01-04'
-slug: pca_part_2
+slug: pca_part_1
 categories: []
 tags:
   - Data Science
@@ -36,7 +36,7 @@ summary{font-size: 100% !important;}
 
 <h3>OVERVIEW</h3>
 
-Principle Component Analysis (PCA) is known for two things: 1) Dimensionality Reduction, and 2) Structure Analysis. However more generally, it is used for **factor extraction**, which is needed in Factor Analysis. 
+Principle Component Analysis (PCA) is known for two things: 1) Dimensionality Reduction, and 2) Structure Analysis. Note that it can also be used for **factor extraction**, the first step in Factor Analysis. 
 
 <div class="note">
 <b>NOTE</b>: There are plenty of resources online if you wish to learn more about Factor Analysis, but they will not be covered here!
@@ -81,7 +81,7 @@ To build intuition about what happens in Principal Component Analysis, let's use
 
 
 
-<img src="/post/PCA-Part-II/2020-10-10-pca-for-dummies.en_files/figure-html/plot-1.png" width="336" style="display: block; margin: auto;" />
+<img src="/post/PCA-Part-I/2020-10-10-pca-for-dummies.en_files/figure-html/plot-1.png" width="336" style="display: block; margin: auto;" />
 
 Here, we have 2 features. You can imagine each point representing an observation (e.g. one of your participants). 
 
@@ -92,7 +92,7 @@ By doing so, it is as if we are trying to find a line where the observations are
 
 Once again, notice how the features no longer have anything to do with the new axes (principal component). Also notice that if you had 3 or more features, graphing it like we did is no longer possible.
 
-In Part III, we will explore how to do PCA in Python. See you there!
+In Part II, we will explore how to do PCA in Python. See you there!
 
 
 <h3>Additional Resources</h3>
