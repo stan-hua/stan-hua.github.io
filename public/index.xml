@@ -540,15 +540,15 @@ simulations &amp;lt;- sapply(Ns, function(N){
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+02&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.070000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.10000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+04&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.080600&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.08370&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+06&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.083659&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.08329&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -810,6 +810,14 @@ Intro to Machine Learning&lt;/p&gt;
       <link>/project/covid19-policy-hackathon-int/</link>
       <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
       <guid>/project/covid19-policy-hackathon-int/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kaggle RANZCR-CLiP Challenge</title>
+      <link>/project/ranzcr-clip/</link>
+      <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>/project/ranzcr-clip/</guid>
       <description></description>
     </item>
     

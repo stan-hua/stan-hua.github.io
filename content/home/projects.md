@@ -26,12 +26,12 @@ subtitle = ""
     tag = "*"
   
   [[content.filter_button]]
-    name = "Data Visualization"
-    tag = "Data Visualization"
+    name = "Completed"
+    tag = "Completed"
   
   [[content.filter_button]]
-    name = "Other"
-    tag = "Other"
+    name = "In Progress"
+    tag = "In Progress"
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.
