@@ -6,6 +6,6 @@ image:
   focal_point: Smart
 summary: In a team of five, designed a policy memo to address the issues of schools closing and plan for safe school reopening in Nigeria.
 tags:
-- Other
+- Completed
 title: COVID19 Policy Hackathon
 ---

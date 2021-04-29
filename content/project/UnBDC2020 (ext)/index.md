@@ -6,6 +6,6 @@ image:
   focal_point: Smart
 summary: Correlation between case fatality rate and days since index case for countries in Southern Europe
 tags:
-- Data Visualization
+- Completed
 title: UnBDC 2020 Entry
 ---

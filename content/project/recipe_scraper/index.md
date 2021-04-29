@@ -6,6 +6,6 @@ image:
   focal_point: Smart
 summary: Recipe scraper for AllRecipes.com. Created with R, shiny, flexdashboard, and shinyapps.io
 tags:
-- Other
+- Completed
 title: AllRecipes Recipe Scraper
 ---

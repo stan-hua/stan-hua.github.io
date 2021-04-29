@@ -117,8 +117,3 @@ renderUI({blurb()})
 
 ```
 
-
-
-
-
-<!-- FUTURE PLANS: Give option for advanced settings (so other sites can be used), and give option to generate PDF -->
