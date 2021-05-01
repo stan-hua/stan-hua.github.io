@@ -49,9 +49,9 @@ user_groups:
 
 Having migrated from the Philippines in 2019, my first year of university was filled with new experiences, encounters, independence, new habits for studying and living, and a greater hunger to learn. 
 
-During my time with Prof. <a href="http://www.tyrrell4innovation.ca">Pascal Tyrrell</a>, I learned about applications of data science and deep learning in the field of medicine and medical imaging. This experience motivates me to pursue the intersection of data science and molecular biology/personalized medicine.
+During my time with Prof. <a href="http://www.tyrrell4innovation.ca">Pascal Tyrrell</a>, I learned about applications of data science and deep learning in the field of medicine and medical imaging. This experience strongly motivates me to pursue the intersection of data science and molecular biology/personalized medicine.
 
-This summer, I will be working with Prof. <a href="http://www.moseslab.csb.utoronto.ca/">Alan Moses</a> and Alex Lu to create CytoImageNet, a dataset of open-source microscopy images for use in training classification models to extract image features specific to cells.
+This summer, I will be working with Prof. <a href="http://www.moseslab.csb.utoronto.ca/">Alan Moses</a> and Alex Lu to create CytoImageNet, collecting open-source microscopy images for use in pretraining supervised models to extract image features specific to cells.
 
 ---
 

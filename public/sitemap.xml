@@ -18,6 +18,41 @@
   </url>
   
   <url>
+    <loc>/project/cytoimagenet/</loc>
+    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/cluster-analysis/</loc>
+    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/in-progress/</loc>
+    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/</loc>
+    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/completed/</loc>
+    <lastmod>2021-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/ranzcr-clip/</loc>
+    <lastmod>2021-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tag/data-science/</loc>
     <lastmod>2021-01-02T23:24:44-05:00</lastmod>
   </url>
@@ -25,11 +60,6 @@
   <url>
     <loc>/post/pca-part-i/pca_part_1/</loc>
     <lastmod>2021-01-02T19:59:31-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2021-01-02T23:24:44-05:00</lastmod>
   </url>
   
   <url>
@@ -43,17 +73,12 @@
   </url>
   
   <url>
+    <loc>/project/ms-vasculitis/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/project/recipe_scraper/</loc>
-    <lastmod>2020-08-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/completed/</loc>
-    <lastmod>2020-08-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/</loc>
     <lastmod>2020-08-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -134,11 +159,6 @@
   
   <url>
     <loc>/project/covid19-policy-hackathon-int/</loc>
-    <lastmod>2020-06-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/ranzcr-clip/</loc>
     <lastmod>2020-06-13T00:00:00+00:00</lastmod>
   </url>
   

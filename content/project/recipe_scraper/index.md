@@ -4,8 +4,8 @@ external_link: https://stan-hua.shinyapps.io/RecipeScraper/
 image:
   caption: 
   focal_point: Smart
-summary: Recipe scraper for AllRecipes.com. Created with R, shiny, flexdashboard, and shinyapps.io
+summary: Scrapes recipe instructions and ingredients from AllRecipes.com. Made with R, shiny, flexdashboard, and shinyapps.io
 tags:
 - Completed
-title: AllRecipes Recipe Scraper
+title: Recipe Scraper
 ---

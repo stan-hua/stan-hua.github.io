@@ -35,6 +35,30 @@
     </item>
     
     <item>
+      <title>CytoImageNet for bio-image transfer learning</title>
+      <link>/project/cytoimagenet/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <guid>/project/cytoimagenet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dataset Heterogeneity on CNN Model Training</title>
+      <link>/project/cluster-analysis/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <guid>/project/cluster-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kaggle RANZCR-CLiP Challenge</title>
+      <link>/project/ranzcr-clip/</link>
+      <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>/project/ranzcr-clip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>PCA Part I. Intuition</title>
       <link>/post/pca-part-i/pca_part_1/</link>
       <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
@@ -133,7 +157,15 @@ summary{font-size: 100% !important;}
     </item>
     
     <item>
-      <title>AllRecipes Recipe Scraper</title>
+      <title>Multiple Sclerosis vs. Vasculitis</title>
+      <link>/project/ms-vasculitis/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/project/ms-vasculitis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recipe Scraper</title>
       <link>/project/recipe_scraper/</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
       <guid>/project/recipe_scraper/</guid>
@@ -540,15 +572,15 @@ simulations &amp;lt;- sapply(Ns, function(N){
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+02&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.10000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.090000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+04&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.08370&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.082500&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+06&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.08329&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.083171&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -810,14 +842,6 @@ Intro to Machine Learning&lt;/p&gt;
       <link>/project/covid19-policy-hackathon-int/</link>
       <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
       <guid>/project/covid19-policy-hackathon-int/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kaggle RANZCR-CLiP Challenge</title>
-      <link>/project/ranzcr-clip/</link>
-      <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>/project/ranzcr-clip/</guid>
       <description></description>
     </item>
     

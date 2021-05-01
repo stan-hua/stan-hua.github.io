@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>In Progress | Stanley Z. Hua</title>
+    <link>/tag/in-progress/</link>
+      <atom:link href="/tag/in-progress/index.xml" rel="self" type="application/rss+xml" />
+    <description>In Progress</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 May 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/me</url>
+      <title>In Progress</title>
+      <link>/tag/in-progress/</link>
+    </image>
+    
+    <item>
+      <title>CytoImageNet for bio-image transfer learning</title>
+      <link>/project/cytoimagenet/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <guid>/project/cytoimagenet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dataset Heterogeneity on CNN Model Training</title>
+      <link>/project/cluster-analysis/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <guid>/project/cluster-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multiple Sclerosis vs. Vasculitis</title>
+      <link>/project/ms-vasculitis/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/project/ms-vasculitis/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

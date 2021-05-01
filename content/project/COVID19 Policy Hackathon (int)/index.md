@@ -4,7 +4,7 @@ external_link: project/covidpolicy.pdf
 image:
   caption: 
   focal_point: Smart
-summary: In a team of five, designed a policy memo to address the issues of schools closing and plan for safe school reopening in Nigeria.
+summary: Working in a team of five, designed a policy memorandum to address the issues of schools closing and create a plan for safe school reopening in Nigeria.
 tags:
 - Completed
 title: COVID19 Policy Hackathon
