@@ -35,7 +35,7 @@
     </item>
     
     <item>
-      <title>CytoImageNet for bio-image transfer learning</title>
+      <title>CytoImageNet for Bioimage Transfer Learning</title>
       <link>/project/cytoimagenet/</link>
       <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
       <guid>/project/cytoimagenet/</guid>
@@ -630,31 +630,55 @@ sample_means &amp;lt;- replicate(B, {
 
 
 &lt;style&gt;
-summary h3{ 
-  display: inline-block;
-  font-size:20px;
-  font-family:&#34;Quicksand&#34;;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-p{font-size: 80%; 
-text-indent: 2em;
-line-height: 0.5}
+  summary h3{ 
+    display: inline-block;
+    font-size:20px;
+    font-family:&#34;Quicksand&#34;;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  h4{
+    color: #45421D;
+  }
+  h5{
+    display: inline-block;
+    color: black
+  }
+  
+  p{font-size: 80%; 
+  text-indent: 2em;
+  line-height: 0.5}
 &lt;/style&gt;
+&lt;h2&gt;
+University of Toronto
+&lt;/h2&gt;
+&lt;p&gt;
+&lt;h4&gt;
+Foundations in Life Sciences
+&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Courses Taken&lt;/strong&gt;: BIO120, BIO130, BIO230, BIO260, BCH210, BCH311&lt;/p&gt;
+&lt;p&gt;Developed a good understanding of topics in molecular biology, genetics and biochemistry.&lt;/p&gt;
+&lt;h4&gt;
+Foundations in Computer Science
+&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Courses Taken&lt;/strong&gt;: CSC108, CSC148, CSC165, CSC258&lt;/p&gt;
+&lt;h4&gt;
+Foundation in Statistical Sciences and Mathematics
+&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Courses Taken&lt;/strong&gt;: MAT135, MAT136, MAT223, MAT235&lt;/p&gt;
+&lt;h4&gt;
+Basics of Cognitive Psychology
+&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Courses Taken&lt;/strong&gt;: PSY100, PSY270&lt;/p&gt;
+&lt;/p&gt;
 &lt;details&gt;
 &lt;summary&gt;
-&lt;h3&gt;
-University of Toronto
-&lt;/h3&gt;
+&lt;h5&gt;
+Grades
+&lt;/h5&gt;
 &lt;/summary&gt;
 &lt;p&gt;
 &lt;table&gt;
-&lt;colgroup&gt;
-&lt;col width=&#34;6%&#34; /&gt;
-&lt;col width=&#34;14%&#34; /&gt;
-&lt;col width=&#34;64%&#34; /&gt;
-&lt;col width=&#34;14%&#34; /&gt;
-&lt;/colgroup&gt;
 &lt;thead&gt;
 &lt;tr class=&#34;header&#34;&gt;
 &lt;th align=&#34;center&#34;&gt;Year&lt;/th&gt;
@@ -674,7 +698,7 @@ University of Toronto
 &lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;BCH311&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Biochemistry II&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;In Progress&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;A+&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
@@ -686,19 +710,19 @@ University of Toronto
 &lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;BIO260&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Genetics&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;In Progress&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;A-&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;CSC148&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Intro to Computer Science&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;In Progress&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;A+&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;CSC165&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Mathematical Expression and Reasoning for Computer Science&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;In Progress&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;A&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
@@ -716,7 +740,7 @@ University of Toronto
 &lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;STA299&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Research Opportunity Program&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;In Progress&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;A+&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1&lt;/td&gt;

@@ -4,7 +4,7 @@ authors:
 bio: Documenting interesting concepts for the future.
 education:
   courses:
-  - course: H.BSc. Bioinformatics & Computational Biology
+  - course: H.BSc. Computer Science and Bioinformatics & Computational Biology
     institution: University of Toronto
     year: 2023, 3.88/4
 email: "stanley.hua@mail.utoronto.ca"
@@ -47,16 +47,16 @@ user_groups:
 
 
 
-Having migrated from the Philippines in 2019, my first year of university was filled with new experiences, encounters, independence, new habits for studying and living, and a greater hunger to learn. 
+Having migrated from the Philippines in 2019, my first year of university was filled with new experiences, encounters, independence, new habits for living, and a greater hunger to learn. 
 
-During my time with Prof. <a href="http://www.tyrrell4innovation.ca">Pascal Tyrrell</a>, I learned about common problems in applications of biostatistics and deep learning in the field of medicine and medical imaging. This experience was pivotal in directing my interests towards application of data science in healthcare (and Personalized Medicine).
+During my time with Prof. <a href="http://www.tyrrell4innovation.ca">Pascal Tyrrell</a>, I learned about common problems in applications of deep learning in the field of medicine and medical imaging. This experience sparked my interest in the use of data science and machine learning for improving healthcare.
 
-This summer, I will be working with Prof. <a href="http://www.moseslab.csb.utoronto.ca/">Alan Moses</a> and Alex Lu to create CytoImageNet. CytoImageNet will be an image dataset (compiling open-source microscopy data) for use in training convolutional neural networks; with the goal of providing researchers a convenient means of extracting image features specific to cell biology.
+I am currently working with Prof. <a href="http://www.moseslab.csb.utoronto.ca/">Alan Moses</a> and <a href="http://www.moseslab.csb.utoronto.ca/alexlu/">Alex Lu</a> to create CytoImageNet. CytoImageNet will be a large-scale image dataset of open-source microscopy data; for pretraining convolutional neural network models; with the goal of providing biologists a fast and automatic means for extracting biologically-relevant image features.
 
 ---
 
-**LANGUAGES**:  <span class="smaller">[Python, R, Shell Script, SQL, HTML, CSS, LaTeX, MATLAB]</span>
+**LANGUAGES**:  <span class="smaller">[Python, R, Shell Script, SQL, HTML, CSS, MATLAB]</span>
 
-<span class="libraries">***Python Libraries***:</span>  <span class="smaller">[pandas, numpy, matplotlib, tensorflow, keras, sklearn, PIL, cv2, ast, xgboost, lightgbm, tkinter]</span>
+<span class="libraries">***Python Libraries***:</span>  <span class="smaller">[pandas, dask, numpy, matplotlib, tensorflow, keras, sklearn, PIL, cv2, xgboost, lightgbm, tkinter]</span>
 
 <span class="libraries">***R Libraries***:</span>  <span class="smaller">[rvest, ggplot2, tidyverse, dplyr, blogdown, knitr, shiny, flexdashboard]</span>

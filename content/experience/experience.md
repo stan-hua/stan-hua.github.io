@@ -35,27 +35,27 @@ date_format = "Jan 2006"
 #   * Ateneo Investment Club Member
 #   """
 
-[[experience]]
-  title = "Student Teacher"
-  company = "Corazon Aquino Elementary School"
-  company_url = ""
-  location = "Philippines"
-  date_start = "2016-01-01"
-  date_end = "2016-02-01"
-  description = """
-  Collaborated with four peers to help a class of 40 students review elementary Math concepts.
-  """
-
-[[experience]]
-  title = "Tutor"
-  company = "St. Mary's Elementary School"
-  company_url = ""
-  location = "Philippines"
-  date_start = "2018-11-01"
-  date_end = "2019-02-01"
-  description = """
-  Prepared teaching material weekly to tutor elementary school students in Math and English.
-  """
+# [[experience]]
+#   title = "Student Teacher"
+#   company = "Corazon Aquino Elementary School"
+#   company_url = ""
+#   location = "Philippines"
+#   date_start = "2016-01-01"
+#   date_end = "2016-02-01"
+#   description = """
+#   Collaborated with four peers to help a class of 40 students review elementary Math concepts.
+#   """
+# 
+# [[experience]]
+#   title = "Tutor"
+#   company = "St. Mary's Elementary School"
+#   company_url = ""
+#   location = "Philippines"
+#   date_start = "2018-11-01"
+#   date_end = "2019-02-01"
+#   description = """
+#   Prepared teaching material weekly to tutor elementary school students in Math and English.
+#   """
 
 [[experience]]
   title = "Volunteer Photographer"
@@ -74,7 +74,7 @@ date_format = "Jan 2006"
   company_url = ""
   location = "Canada"
   date_start = "2020-04-01"
-  date_end = ""
+  date_end = "2021-05-01"
   description = """
   * Increased the club's online presence through social media initiatives
   * Initiated and constructed a community forums for members to interact via a subreddit
@@ -113,13 +113,12 @@ date_format = "Jan 2006"
   date_start = "2020-09-01"
   date_end = "2021-05-01"
   description = """
-  Assisted in the duties of the Social Director. Assisted in the curation of the BCBSU Newsletter.
-
+  Assisted  the Social Director in the curating the BCBSU Newsletter.
   """
   
   
 [[experience]]
-  title = "Undergraduate Research Project"
+  title = "Undergraduate Researcher"
   company = "Tyrrell Lab"
   company_url = "http://www.tyrrell4innovation.ca"
   location = "Remote"
@@ -135,12 +134,22 @@ date_format = "Jan 2006"
 [[experience]]
   title = "Undergraduate Summer Research Project"
   company = "Moses Lab"
-  company_url = "http://www.tyrrell4innovation.ca"
+  company_url = "http://www.moseslab.csb.utoronto.ca/"
   location = "Remote"
   date_start = "2021-05-03"
   date_end = ""
   description = """
-  Compiling microscopy datasets to create CytoImageNet; an image dataset for cytoimage transfer learning
+  Created a large-scale image dataset CytoImageNet for bioimage transfer learning for microscopy images. Curated metadata for 2.7 million images and used Dask for analyzing the large data table
   """
-  
+
+[[experience]]
+  title = "Resident Assistant"
+  company = "UofT ISSC: Independent Summer Statistics Community"
+  company_url = ""
+  location = "Remote"
+  date_start = "2021-04-01"
+  date_end = "2021-07-01"
+  description = """
+  Presented a practical workshop on the use of the Python Pandas library for data manipulation and exploration. Played a role in workshop planning for the Python learning community.
+  """
 +++

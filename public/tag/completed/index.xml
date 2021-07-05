@@ -5,12 +5,20 @@
     <link>/tag/completed/</link>
       <atom:link href="/tag/completed/index.xml" rel="self" type="application/rss+xml" />
     <description>Completed</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 May 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/me</url>
       <title>Completed</title>
       <link>/tag/completed/</link>
     </image>
+    
+    <item>
+      <title>Dataset Heterogeneity on CNN Model Training</title>
+      <link>/project/cluster-analysis/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <guid>/project/cluster-analysis/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Kaggle RANZCR-CLiP Challenge</title>

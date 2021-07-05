@@ -14,16 +14,24 @@ draft: false
 share: false
 ---
 <style>
-summary h3{ 
-  display: inline-block;
-  font-size:20px;
-  font-family:"Quicksand";
-  margin-top: 0;
-  margin-bottom: 0;
-}
-p{font-size: 80%; 
-text-indent: 2em;
-line-height: 0.5}
+  summary h3{ 
+    display: inline-block;
+    font-size:20px;
+    font-family:"Quicksand";
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  h4{
+    color: #45421D;
+  }
+  h5{
+    display: inline-block;
+    color: black
+  }
+  
+  p{font-size: 80%; 
+  text-indent: 2em;
+  line-height: 0.5}
 </style>
 
 ```{r setup,include=FALSE}
@@ -50,10 +58,31 @@ df_grades<-rbind(second_year,first_year) %>% datatable(rownames = FALSE,
               targets = 0),
               list(className = 'dt-center', targets = 1))))
 ```
+
+<h2>University of Toronto</h2>
+<p>
+
+<h4>Foundations in Life Sciences</h4> **Courses Taken**: BIO120, BIO130, BIO230, BIO260, BCH210, BCH311
+
+Developed a good understanding of topics in molecular biology, genetics and biochemistry.
+
+<h4>Foundations in Computer Science</h4> **Courses Taken**: CSC108, CSC148, CSC165, CSC258
+
+
+<h4>Foundation in Statistical Sciences and Mathematics</h4> **Courses Taken**: MAT135, MAT136, MAT223, MAT235
+
+
+<h4>Basics of Cognitive Psychology</h4> **Courses Taken**: PSY100, PSY270
+
+</p>
+
+
 <details>
 <summary>
-<h3>University of Toronto</h3>
+<h5>Grades</h5>
 </summary><p>
+
+
 ```{r output, echo=FALSE}
 # widgetframe::frameWidget(df, height=320)
 knitr::kable(rbind(second_year,first_year), align="cclc")
