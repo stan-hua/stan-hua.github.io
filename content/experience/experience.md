@@ -57,16 +57,16 @@ date_format = "Jan 2006"
 #   Prepared teaching material weekly to tutor elementary school students in Math and English.
 #   """
 
-[[experience]]
-  title = "Volunteer Photographer"
-  company = "West Neighbourhood House"
-  company_url = ""
-  location = "Canada"
-  date_start = "2020-02-01"
-  date_end = "2020-02-01"
-  description = """
-  Documented the organization's community services in preparation for their annual report.
-  """
+# [[experience]]
+#   title = "Volunteer Photographer"
+#   company = "West Neighbourhood House"
+#   company_url = ""
+#   location = "Canada"
+#   date_start = "2020-02-01"
+#   date_end = "2020-02-01"
+#   description = """
+#   Documented the organization's community services in preparation for their annual report.
+#   """
 
 # [[experience]]
 #   title = "Events Coordinator"
@@ -92,17 +92,17 @@ date_format = "Jan 2006"
 #   """
 #   
   
-# [[experience]]
-#   title = "Founder, President"
-#   company = "UofT Offline"
-#   company_url = ""
-#   location = "Online"
-#   date_start = "2020-08-25"
-#   date_end = "2021-05-01"
-#   description = """
-# * Founded a ULife-recognized organization to make up for the lack of opportunities for undergraduates to socialize while pursuing education remotely 
-# * Conducted weekly socials and events throughout readings weeks through the Discord platform
-#   """
+[[experience]]
+  title = "Founder, President"
+  company = "UofT Offline"
+  company_url = ""
+  location = "Online"
+  date_start = "2020-08-25"
+  date_end = "2021-05-01"
+  description = """
+* Founded a ULife-recognized organization to make up for the lack of opportunities for undergraduates to socialize while pursuing education remotely
+* Conducted weekly socials and events throughout readings weeks through the Discord platform
+  """
 
 
 # [[experience]]
