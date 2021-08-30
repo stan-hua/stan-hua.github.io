@@ -96,12 +96,11 @@ date_format = "Jan 2006"
   title = "Founder, President"
   company = "UofT Offline"
   company_url = ""
-  location = "Online"
+  location = "Remote"
   date_start = "2020-08-25"
   date_end = "2021-05-01"
   description = """
-* Founded a ULife-recognized organization to make up for the lack of opportunities for undergraduates to socialize while pursuing education remotely
-* Conducted weekly socials and events throughout readings weeks through the Discord platform
+Founded a ULife-recognized organization to make up for the lack of opportunities for undergraduates to socialize while pursuing education remotely. Conducted weekly socials and events throughout the school year using the Discord platform.
   """
 
 

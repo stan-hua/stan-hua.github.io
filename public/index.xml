@@ -572,15 +572,15 @@ simulations &amp;lt;- sapply(Ns, function(N){
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+02&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.090000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.060000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+04&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.082500&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.081600&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;1e+06&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.083171&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.083332&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -859,22 +859,6 @@ Intro to Machine Learning&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Here lies my first blog post.&lt;/strong&gt;&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>COVID19 Policy Hackathon</title>
-      <link>/project/covid19-policy-hackathon-int/</link>
-      <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>/project/covid19-policy-hackathon-int/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>UnBDC 2020 Entry</title>
-      <link>/project/unbdc2020-ext/</link>
-      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
-      <guid>/project/unbdc2020-ext/</guid>
-      <description></description>
     </item>
     
     <item>

@@ -52,21 +52,5 @@
       <description></description>
     </item>
     
-    <item>
-      <title>COVID19 Policy Hackathon</title>
-      <link>/project/covid19-policy-hackathon-int/</link>
-      <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>/project/covid19-policy-hackathon-int/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>UnBDC 2020 Entry</title>
-      <link>/project/unbdc2020-ext/</link>
-      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
-      <guid>/project/unbdc2020-ext/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

@@ -4,7 +4,7 @@ external_link: https://github.com/stan-hua/CytoImageNet
 image:
   caption: 
   focal_point: Smart
-summary: The goal of the study is to provide biologists a means to automatically extract biologically meaningful image features from their microscopy images. We seek to do so by compiling open-source microscopy datasets of cells to create a pretraining dataset for training popular Convolutional Neural Network architectures for transfer learning.
+summary: Curated a large-scale dataset of openly-sourced microscopy images to use in pretraining convolutional neural networks. The goal is to provide biologists a convenient and fast means to extract biologically-meaningful image features from their images.
 tags:
 - In Progress
 title: CytoImageNet for Bioimage Transfer Learning
