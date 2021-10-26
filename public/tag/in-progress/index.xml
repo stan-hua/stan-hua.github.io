@@ -5,7 +5,7 @@
     <link>/tag/in-progress/</link>
       <atom:link href="/tag/in-progress/index.xml" rel="self" type="application/rss+xml" />
     <description>In Progress</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 May 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Sep 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/me</url>
       <title>In Progress</title>
@@ -13,18 +13,10 @@
     </image>
     
     <item>
-      <title>CytoImageNet for Bioimage Transfer Learning</title>
-      <link>/project/cytoimagenet/</link>
-      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
-      <guid>/project/cytoimagenet/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Multiple Sclerosis vs. Vasculitis</title>
-      <link>/project/ms-vasculitis/</link>
-      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/project/ms-vasculitis/</guid>
+      <title>Modeling Kidney Ultrasound Images over Time for Hydronephrosis Prediction.</title>
+      <link>/project/hydronephrosis/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>/project/hydronephrosis/</guid>
       <description></description>
     </item>
     

@@ -18,6 +18,26 @@
   </url>
   
   <url>
+    <loc>/tag/in-progress/</loc>
+    <lastmod>2021-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/hydronephrosis/</loc>
+    <lastmod>2021-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/</loc>
+    <lastmod>2021-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2021-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tag/completed/</loc>
     <lastmod>2021-05-01T00:00:00+00:00</lastmod>
   </url>
@@ -29,21 +49,6 @@
   
   <url>
     <loc>/project/cluster-analysis/</loc>
-    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/in-progress/</loc>
-    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/</loc>
-    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2021-05-01T00:00:00+00:00</lastmod>
   </url>
   
