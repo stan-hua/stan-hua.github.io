@@ -4,14 +4,13 @@ authors:
 bio: Documenting interesting concepts for the future.
 education:
   courses:
-  - course: H.BSc. Computer Science and Bioinformatics & Computational Biology
+  - course: H.BSc. Computer Science & Bioinformatics
     institution: University of Toronto
-    year: 2023, 3.88/4
+    year: 2023, 3.84/4
 email: "stanley.hua@mail.utoronto.ca"
 interests:
 - Data Science
 - Deep Learning
-- Medicine
 organizations:
 - name: University of Toronto
   url: ""
@@ -29,7 +28,7 @@ social:
 - icon: kaggle
   icon_pack: fab
   link: https://www.kaggle.com/stanleyhua
-  
+
 superuser: true
 title: Stanley Z. Hua
 user_groups:
@@ -55,12 +54,12 @@ On the other hand, my time with Prof. <a href="http://www.moseslab.csb.utoronto.
 
 These experiences have deepened my appreciation for the data collection, storage and preprocessing pipelines that occur before modeling. 
 
-Personally, I find it beautiful how a plethora of sophisticated tools come together in harmony to create a potentially simple yet impactful story.
+I find it beautiful how a plethora of sophisticated tools can come together in harmony to create a simple yet potentially impactful story.
 
 ---
 
-**LANGUAGES**:  <span class="smaller">[Python, R, Shell Script, SQL, HTML, CSS, MATLAB]</span>
+**LANGUAGES**:  <span class="smaller">[Python, SQL, R, Java, Shell Script, HTML/CSS, MATLAB]</span>
 
-<span class="libraries">***Python Libraries***:</span>  <span class="smaller">[pandas, dask, numpy, matplotlib, tensorflow, keras, pytorch, sklearn, xgboost, lightgbm, PIL, cv2,]</span>
+<span class="libraries">***Python Libraries***:</span>  <span class="smaller">[pandas, dask, numpy, matplotlib, tensorflow, keras, pytorch, sklearn, xgboost, lightgbm, open-cv]</span>
 
 <span class="libraries">***R Libraries***:</span>  <span class="smaller">[rvest, ggplot2, tidyverse, dplyr, blogdown, knitr, shiny, flexdashboard]</span>

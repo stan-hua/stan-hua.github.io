@@ -28,10 +28,10 @@
 #  url = "publications/"
 #  weight = 40
 
-[[main]]
-  name = "Courses"
-  url = "courses/"
-  weight = 50
+#[[main]]
+#  name = "Courses"
+#  url = "courses/"
+#  weight = 50
   
 [[main]]
   name = "Posts"
