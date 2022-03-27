@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python Libraries | Stanley Z. Hua</title>
-    <link>/tag/python-libraries/</link>
-      <atom:link href="/tag/python-libraries/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://stanhua.rbind.io/tag/python-libraries/</link>
+      <atom:link href="https://stanhua.rbind.io/tag/python-libraries/index.xml" rel="self" type="application/rss+xml" />
     <description>Python Libraries</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 11 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/me</url>
+      <url>https://stanhua.rbind.io/img/me</url>
       <title>Python Libraries</title>
-      <link>/tag/python-libraries/</link>
+      <link>https://stanhua.rbind.io/tag/python-libraries/</link>
     </image>
     
     <item>
       <title>Save the Pandas...library</title>
-      <link>/post/pandas/useful_commands_to_remember/</link>
+      <link>https://stanhua.rbind.io/post/pandas/useful_commands_to_remember/</link>
       <pubDate>Sat, 11 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/post/pandas/useful_commands_to_remember/</guid>
+      <guid>https://stanhua.rbind.io/post/pandas/useful_commands_to_remember/</guid>
       <description>
 
 

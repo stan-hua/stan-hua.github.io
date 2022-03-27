@@ -6,11 +6,13 @@ education:
   courses:
   - course: H.BSc. Computer Science & Bioinformatics
     institution: University of Toronto
-    year: 2023, 3.84/4
+    year: 2023, 3.85/4
 email: "stanley.hua@mail.utoronto.ca"
 interests:
 - Data Science
+- Machine Learning
 - Deep Learning
+- Software Engineering
 organizations:
 - name: University of Toronto
   url: ""
@@ -42,23 +44,34 @@ user_groups:
   .libraries{
     font-size: 90%;
   }
+  .note{font-size: 10pt;
+        line-height: 20pt;
+        padding-bottom: 10px}
+  p{text-indent: 2em;}
+  details{font-size: 10pt;}
+  summary{font-size: 100% !important;}
 </style>
 
 
 
-Aspiring to become an industry data scientist, I am passionate about using data science tools to answer questions. I strongly value mentorship, and I enjoy the process of explaining concepts in a way that is easy for my listener to understand.
+I am passionate about answering meaningful questions through the use of software development and data science. I strongly value communicating complex concepts in a way that is easy to understand.
 
-Previously a premed, my research experience with Prof. <a href="http://www.tyrrell4innovation.ca">Pascal Tyrrell</a> truly sparked my interest in the use of data science to create an impact. Here, I learnt about the problems that arise for statistical and deep learning models when there are too few data samples. My project focused on improving a methodology for capturing the effect of dataset heterogeneity (from small sample sizes) on CNN model training. Specifically, I focused on the effects of decisions made in the dimensionality reduction step (PCA) before cluster analysis.
+My past experiences involve machine learning and deep learning research, applied in healthcare.
 
-On the other hand, my time with Prof. <a href="http://www.moseslab.csb.utoronto.ca/">Alan Moses</a> and <a href="https://www.alexluresearch.com/">Alex Lu</a> taught me about the challenges of handling vast amounts of unstardardized image data. Under their expertise, I curated and trained models on CytoImageNet, a large-scale dataset of openly-sourced microscopy image data in the hopes of providing biologists a fast and automatic means for extracting biologically-relevant information from their images. 
+I've tackled three questions:
 
-Currently, I am working with Prof. <a href="https://goldenberglab.ca/">Anna Goldenberg</a> and <a href="https://sites.google.com/view/laurenerdman/home">Lauren Erdman</a> to improve the prediction of obstructive hydronephrosis in children using deep learning from kidney ultrasound images. Since a patient normally takes multiple ultrasounds over time, we are curious to know if models perform better given a sequence of patient images over time versus images from one time point.
+1. If we train deep learning models (CNN) on biological images (CytoImageNet), does it learn more biologically-meaningful image features than models trained on images of every day objects (ImageNet)?
 
-These experiences have deepened my appreciation for the data collection, storage and preprocessing pipelines that occur before modeling. I find it fascinating how a plethora of sophisticated tools can come together to create a simple yet impactful story.
+2. Can we improve ultrasound-based prediction of kidney disease, by adapting image-based deep learning models (2D CNNs) to take in all of a patient's data over time?
+
+3. Does dimensionality (PCA) affect clustering (K-Means) of medical images under small sample sizes?
+
+
+I find it fascinating how a plethora of sophisticated tools can come together to create a simple yet impactful story.
 
 ---
 
-**LANGUAGES**:  <span class="smaller">[Python, SQL, R, Java, Shell Script, HTML/CSS, MATLAB]</span>
+**LANGUAGES**:  <span class="smaller">[Python, SQL, R, Java, Shell Script, C, HTML/CSS, MATLAB, Assembly]</span>
 
 <span class="libraries">***Python Libraries***:</span>  <span class="smaller">[pandas, dask, numpy, matplotlib, tensorflow, keras, pytorch, sklearn, xgboost, lightgbm, open-cv]</span>
 

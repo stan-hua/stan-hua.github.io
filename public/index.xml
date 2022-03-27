@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stanley Z. Hua</title>
-    <link>/</link>
-      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://stanhua.rbind.io/</link>
+      <atom:link href="https://stanhua.rbind.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Stanley Z. Hua</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/me</url>
+      <url>https://stanhua.rbind.io/img/me</url>
       <title>Stanley Z. Hua</title>
-      <link>/</link>
+      <link>https://stanhua.rbind.io/</link>
     </image>
     
     <item>
       <title>Example Talk</title>
-      <link>/talk/example/</link>
+      <link>https://stanhua.rbind.io/talk/example/</link>
       <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
-      <guid>/talk/example/</guid>
+      <guid>https://stanhua.rbind.io/talk/example/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
@@ -36,41 +36,41 @@
     
     <item>
       <title>Modeling Kidney Ultrasound Images over Time for Hydronephrosis Prediction.</title>
-      <link>/project/hydronephrosis/</link>
+      <link>https://stanhua.rbind.io/project/hydronephrosis/</link>
       <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
-      <guid>/project/hydronephrosis/</guid>
+      <guid>https://stanhua.rbind.io/project/hydronephrosis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CytoImageNet for Bioimage Transfer Learning</title>
-      <link>/project/cytoimagenet/</link>
+      <link>https://stanhua.rbind.io/project/cytoimagenet/</link>
       <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
-      <guid>/project/cytoimagenet/</guid>
+      <guid>https://stanhua.rbind.io/project/cytoimagenet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dataset Heterogeneity on CNN Model Training</title>
-      <link>/project/cluster-analysis/</link>
+      <link>https://stanhua.rbind.io/project/cluster-analysis/</link>
       <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
-      <guid>/project/cluster-analysis/</guid>
+      <guid>https://stanhua.rbind.io/project/cluster-analysis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kaggle RANZCR-CLiP Challenge</title>
-      <link>/project/ranzcr-clip/</link>
+      <link>https://stanhua.rbind.io/project/ranzcr-clip/</link>
       <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>/project/ranzcr-clip/</guid>
+      <guid>https://stanhua.rbind.io/project/ranzcr-clip/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>PCA Part I. Intuition</title>
-      <link>/post/pca-part-i/pca_part_1/</link>
+      <title>PCA for Dimensionality Reduction</title>
+      <link>https://stanhua.rbind.io/post/pca-part-i/pca_part_1/</link>
       <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>/post/pca-part-i/pca_part_1/</guid>
+      <guid>https://stanhua.rbind.io/post/pca-part-i/pca_part_1/</guid>
       <description>&lt;style&gt;
 body {font-size: 80%}
 .note{font-size: 10pt;
@@ -81,31 +81,20 @@ p{text-indent: 2em;}
 details{font-size: 10pt;}
 summary{font-size: 100% !important;}
 &lt;/style&gt;
-&lt;div class=&#34;note&#34;&gt;
-&lt;b&gt;DISCLAIMER&lt;/b&gt;: This is an introduction into PCA and does not go into depth on the statistics or code. Tread carefully! 
-&lt;/div&gt;
 &lt;hr&gt;
 &lt;h3&gt;OVERVIEW&lt;/h3&gt;
 &lt;p&gt;Principle Component Analysis (PCA) is known for two things: 1) Dimensionality Reduction, and 2) Structure Analysis. Note that it can also be used for &lt;strong&gt;factor extraction&lt;/strong&gt;, the first step in Factor Analysis.&lt;/p&gt;
 &lt;div class=&#34;note&#34;&gt;
 &lt;b&gt;NOTE&lt;/b&gt;: There are plenty of resources online if you wish to learn more about Factor Analysis, but they will not be covered here!
 &lt;/div&gt;
-&lt;br&gt;
 &lt;h4&gt;TERMINOLOGY&lt;/h4&gt;
-&lt;p&gt;So as not to lose anyone, let&amp;rsquo;s define some useful terminology! 
-&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt; are what we are measuring.&lt;/p&gt;
-&lt;details&gt;
-&lt;summary&gt;Example&lt;/summary&gt;
-&lt;p&gt;Say we have a table with &lt;i&gt;y&lt;/i&gt; rows and &lt;i&gt;x&lt;/i&gt; columns, then we have &lt;i&gt;x&lt;/i&gt; features. Imagine each row being the names of someone you know, and each column measure something distinct about all persons listed (e.g. their height, weight, deepest darkest secrets, etc.). These things we&#39;re measuring are the features.&lt;/p&gt;
-&lt;/details&gt;
-&lt;br&gt;
-&lt;p&gt;&lt;strong&gt;Dimensionality Reduction&lt;/strong&gt; is exactly what it sounds like. The goal is to reduce the number of dimensions (i.e. number of features), while retaining useful information from the original data.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;High dimensionality&lt;/strong&gt; means that the data has a lot of variables. Think 1000+ column variables!&lt;/p&gt;
+&lt;p&gt;The goal of &lt;strong&gt;Dimensionality Reduction&lt;/strong&gt; is to reduce the number of dimensions, while retaining as much useful information from the original data as possible.&lt;/p&gt;
 &lt;details&gt;
 &lt;summary&gt;Example and Enrichment&lt;/summary&gt;
-&lt;p&gt;Say you wish to visualize your data, in order to get an understanding of the relationships between each feature. However, you have too many features. It becomes impossible to plot them on an x-y graph. How do you visualize this without destroying your computer let alone the laws of physics? Simple, you reduce the number of dimensions to 2. Now, you can plot it on a coordinate plane! &lt;/p&gt;
+&lt;p&gt;Say you wish to visualize your data, in order to get an understanding of the relationships between each feature. However, you have too many features. It becomes impossible to plot them on an x-y graph. How do you visualize this without destroying your computer let alone the laws of physics? You can reduce the number of dimensions to 2, then plot it on a coordinate plane! &lt;/p&gt;
 &lt;div class=&#34;note&#34;&gt;
-&lt;b&gt;NOTE&lt;/b&gt;: Dimensionality Reduction is different from &lt;i&gt;Feature Selection&lt;/i&gt; (e.g. L1 Regularization, L2 Regularization, etc.). The goal of feature selection is to select the most important features. Meanwhile, dimensionality reduction is used to lessen the number of dimensions while capturing the variation in the original data as much as possible.
+&lt;b&gt;NOTE&lt;/b&gt;: Dimensionality Reduction is different from &lt;i&gt;Feature Selection&lt;/i&gt; (e.g. L1 Regularization, L2 Regularization, etc.). The goal of feature selection is to select the most important features. Meanwhile, dimensionality reduction is used to project high-dimensional data onto a set of low-dimensional features.
 &lt;/div&gt;
 &lt;/details&gt;
 &lt;br&gt;
@@ -117,22 +106,66 @@ If you have 10 features and you transform them via PCA to get 10 principal compo
 &lt;br&gt;&lt;br&gt;
 &lt;h3&gt;GENERAL IDEA&lt;/h3&gt;
 &lt;p&gt;To build intuition about what happens in Principal Component Analysis, let&amp;rsquo;s use the graph below as an example.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/PCA-Part-I/2020-10-10-pca-for-dummies.en_files/figure-html/plot-1.png&#34; width=&#34;336&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stanhua.rbind.io/post/PCA-Part-I/2020-10-10-pca-for-dummies.en_files/figure-html/plot-1.png&#34; width=&#34;336&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Here, we have 2 features. You can imagine each point representing an observation (e.g. one of your participants).&lt;/p&gt;
 &lt;p&gt;When you implement PCA, imagine a line placed at the mean (of all the data points). Imagine rotating it, and every time that you rotate it, it changes how far each observation (i.e. its projection onto the line) point is from the center of the line. This is also called the &lt;strong&gt;squared distances&lt;/strong&gt;. And this is what we&amp;rsquo;re trying to &lt;em&gt;maximize&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;By doing so, it is as if we are trying to find a line where the observations are farthest from center. Thus, we capture the most amount of variation along this line, and this line is known as a principal component!&lt;/p&gt;
 &lt;p&gt;Once again, notice how the features no longer have anything to do with the new axes (principal component). Also notice that if you had 3 or more features, graphing it like we did is no longer possible.&lt;/p&gt;
-&lt;p&gt;In Part II, we will explore how to do PCA in Python. See you there!&lt;/p&gt;
+&lt;h3 id=&#34;example-code&#34;&gt;Example Code&lt;/h3&gt;
+&lt;p&gt;We provide a brief example of how to perform PCA on your data in Python. 
+Be aware of a few things:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;When you have less rows (observations) than columns (variables), you can at most have the number of dimensions as the number of rows.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For intuition, we can only fit at most m different lines through those m data points (observations).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If your variables are scaled differently, it is advisable to standardize your data first.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Each column may be standardized to have a mean of 0 and standard deviation of 1.&lt;/li&gt;
+&lt;li&gt;e.g. column A has values greater than 10,000, while column B has values around 50.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;import pandas as pd
+from sklearn.decomposition import PCA
+
+
+def reduce_dim(X, dims=2) -&amp;gt; pd.DataFrame:
+    &amp;quot;&amp;quot;&amp;quot;
+    Given a dataframe with n variables and m rows, perform PCA
+    and project X to reduce the dimensionality.
+    
+    Parameters
+    ----------
+    X : pd.Dataframe or array-like
+      A table of (n columns x m rows).
+    dims: int
+      The desired number of variables (i.e. dimensionality)
+      after transforming &amp;lt;X&amp;gt;.
+    
+    Returns
+    -------
+    pd.DataFrame
+      The input X projected onto (&amp;lt;dims&amp;gt; columns x m rows).
+    &amp;quot;&amp;quot;&amp;quot;
+    pca = PCA(n_components=dims)
+    X_transformed = pd.DataFrame(pca.fit_transform(X))
+    return X_transformed
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Thanks for reading!&lt;/strong&gt;&lt;/p&gt;
 &lt;h3&gt;Additional Resources&lt;/h3&gt;
-&lt;p&gt;StatQuest has great videos explaining what I mentioned with the graph with more detail!&lt;/p&gt;
+&lt;p&gt;StatQuest has great videos explaining what I mentioned with the graph with more detail! (&lt;a href=&#34;https://www.youtube.com/watch?v=FgakZw6K1QQ&#34;&gt;https://www.youtube.com/watch?v=FgakZw6K1QQ&lt;/a&gt;)&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Intro to Dimensionality Reduction</title>
-      <link>/post/intro-dim-red/intro_to_dimred/</link>
+      <link>https://stanhua.rbind.io/post/intro-dim-red/intro_to_dimred/</link>
       <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>/post/intro-dim-red/intro_to_dimred/</guid>
+      <guid>https://stanhua.rbind.io/post/intro-dim-red/intro_to_dimred/</guid>
       <description>
 
 
@@ -166,25 +199,25 @@ summary{font-size: 100% !important;}
     
     <item>
       <title>Multiple Sclerosis vs. Vasculitis</title>
-      <link>/project/ms-vasculitis/</link>
+      <link>https://stanhua.rbind.io/project/ms-vasculitis/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/project/ms-vasculitis/</guid>
+      <guid>https://stanhua.rbind.io/project/ms-vasculitis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recipe Scraper</title>
-      <link>/project/recipe_scraper/</link>
+      <link>https://stanhua.rbind.io/project/recipe_scraper/</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>/project/recipe_scraper/</guid>
+      <guid>https://stanhua.rbind.io/project/recipe_scraper/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Connecting to a remote server</title>
-      <link>/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</link>
+      <link>https://stanhua.rbind.io/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</guid>
+      <guid>https://stanhua.rbind.io/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</guid>
       <description>&lt;style&gt;
 .note{font-size: 10pt;
       line-height: 20pt;
@@ -257,64 +290,10 @@ sudo sshfs -o allow_other,default_permissions username@ip_address:/file_path /mn
     </item>
     
     <item>
-      <title>Distributions</title>
-      <link>/post/distributions/variety/</link>
-      <pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/post/distributions/variety/</guid>
-      <description>
-
-
-&lt;style&gt;
-.bod{
-  font-family: Arial;
-  font-size: 10pt;
-  display: inline-block;
-  margin-left: 15px;
-  text-indent: 50px;
-}
-h2{
-  text-decoration: underline;
-  padding-top: 15px;
-  font-family: &#34;Arial&#34;;
-  text-align: left;
-}
-&lt;!-- h3{  --&gt;
-&lt;!--   display: list-item; --&gt;
-&lt;!--   list-style-type: upper-roman;; --&gt;
-&lt;!--   list-style-position: inside; --&gt;
-&lt;!--   font-size:17px; --&gt;
-&lt;!--   font-family:&#34;Cambria&#34;; --&gt;
-&lt;!--   font-style: italic; --&gt;
-&lt;!--   margin-left: 7px; --&gt;
-&lt;!-- } --&gt;
-
-&lt;/style&gt;
-&lt;div id=&#34;normal-distribution&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Normal Distribution&lt;/h2&gt;
-&lt;p class=&#34;bod&#34;&gt;
-Probably one of the most important distributions in statistics, the normal distribution is most notably used in hypothesis testing and confidence intervals.
-&lt;/p&gt;
-&lt;div id=&#34;testing-out-the-central-limit-theorem&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Testing out the Central Limit Theorem&lt;/h3&gt;
-&lt;p class=&#34;bod&#34;&gt;
-To make an illustrative point, RStudio’s built-in dataset BJsales will be used. The data describes the number of sales every day for some consecutive months. Its probability density was graphed below.
-&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/Distributions/variety_files/figure-html/plot-1.png&#34; width=&#34;307.2&#34; /&gt;&lt;/p&gt;
-&lt;p class=&#34;bod&#34;&gt;
-Notice how the distribution is bimodal with one peak centered at 217 and the other at 257! Now look what happens when you take 30 samples from
-&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/Distributions/variety_files/figure-html/plot2-1.png&#34; width=&#34;307.2&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Save the Pandas...library</title>
-      <link>/post/pandas/useful_commands_to_remember/</link>
+      <link>https://stanhua.rbind.io/post/pandas/useful_commands_to_remember/</link>
       <pubDate>Sat, 11 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/post/pandas/useful_commands_to_remember/</guid>
+      <guid>https://stanhua.rbind.io/post/pandas/useful_commands_to_remember/</guid>
       <description>
 
 
@@ -523,9 +502,9 @@ A great resource for comparing df.&lt;strong&gt;agg&lt;/strong&gt;(), df.&lt;str
     
     <item>
       <title>Monte Carlo Simulations</title>
-      <link>/post/monte-carlo-simulations/monte-carlo-simulations/</link>
+      <link>https://stanhua.rbind.io/post/monte-carlo-simulations/monte-carlo-simulations/</link>
       <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/post/monte-carlo-simulations/monte-carlo-simulations/</guid>
+      <guid>https://stanhua.rbind.io/post/monte-carlo-simulations/monte-carlo-simulations/</guid>
       <description>
 
 
@@ -631,9 +610,9 @@ sample_means &amp;lt;- replicate(B, {
     
     <item>
       <title>Courses Completed</title>
-      <link>/courses/</link>
+      <link>https://stanhua.rbind.io/courses/</link>
       <pubDate>Fri, 03 Jul 2020 18:50:01 -0400</pubDate>
-      <guid>/courses/</guid>
+      <guid>https://stanhua.rbind.io/courses/</guid>
       <description>
 
 
@@ -851,17 +830,17 @@ Intro to Machine Learning&lt;/p&gt;
     
     <item>
       <title>Experience</title>
-      <link>/experience/</link>
+      <link>https://stanhua.rbind.io/experience/</link>
       <pubDate>Thu, 02 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/experience/</guid>
+      <guid>https://stanhua.rbind.io/experience/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A First</title>
-      <link>/post/first/a-first/</link>
+      <link>https://stanhua.rbind.io/post/first/a-first/</link>
       <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/post/first/a-first/</guid>
+      <guid>https://stanhua.rbind.io/post/first/a-first/</guid>
       <description>
 
 
@@ -871,9 +850,9 @@ Intro to Machine Learning&lt;/p&gt;
     
     <item>
       <title>An example preprint / working paper</title>
-      <link>/publication/preprint/</link>
+      <link>https://stanhua.rbind.io/publication/preprint/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/preprint/</guid>
+      <guid>https://stanhua.rbind.io/publication/preprint/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
@@ -886,9 +865,9 @@ Intro to Machine Learning&lt;/p&gt;
     
     <item>
       <title>Slides</title>
-      <link>/slides/example/</link>
+      <link>https://stanhua.rbind.io/slides/example/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>/slides/example/</guid>
+      <guid>https://stanhua.rbind.io/slides/example/</guid>
       <description>&lt;h1 id=&#34;create-slides-in-markdown-with-academic&#34;&gt;Create slides in Markdown with Academic&lt;/h1&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic&lt;/a&gt; | 
@@ -1020,9 +999,9 @@ Three
     
     <item>
       <title>An example conference paper</title>
-      <link>/publication/conference-paper/</link>
+      <link>https://stanhua.rbind.io/publication/conference-paper/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      <guid>/publication/conference-paper/</guid>
+      <guid>https://stanhua.rbind.io/publication/conference-paper/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.

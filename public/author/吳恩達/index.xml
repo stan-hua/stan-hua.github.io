@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>吳恩達 | Stanley Z. Hua</title>
-    <link>/author/%E5%90%B3%E6%81%A9%E9%81%94/</link>
-      <atom:link href="/author/%E5%90%B3%E6%81%A9%E9%81%94/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://stanhua.rbind.io/author/%E5%90%B3%E6%81%A9%E9%81%94/</link>
+      <atom:link href="https://stanhua.rbind.io/author/%E5%90%B3%E6%81%A9%E9%81%94/index.xml" rel="self" type="application/rss+xml" />
     <description>吳恩達</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
     <image>
-      <url>/img/me</url>
+      <url>https://stanhua.rbind.io/img/me</url>
       <title>吳恩達</title>
-      <link>/author/%E5%90%B3%E6%81%A9%E9%81%94/</link>
+      <link>https://stanhua.rbind.io/author/%E5%90%B3%E6%81%A9%E9%81%94/</link>
     </image>
     
   </channel>

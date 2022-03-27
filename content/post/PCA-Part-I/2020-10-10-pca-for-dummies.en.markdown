@@ -1,5 +1,5 @@
 ---
-title: PCA Part I. Intuition
+title: PCA for Dimensionality Reduction
 author: 
 date: '2021-01-04'
 slug: pca_part_1
@@ -27,11 +27,6 @@ p{text-indent: 2em;}
 details{font-size: 10pt;}
 summary{font-size: 100% !important;}
 </style>
-
-<div class="note">
-<b>DISCLAIMER</b>: This is an introduction into PCA and does not go into depth on the statistics or code. Tread carefully! 
-</div>
-
 ---
 
 <h3>OVERVIEW</h3>
@@ -41,29 +36,21 @@ Principle Component Analysis (PCA) is known for two things: 1) Dimensionality Re
 <div class="note">
 <b>NOTE</b>: There are plenty of resources online if you wish to learn more about Factor Analysis, but they will not be covered here!
 </div>
-<br>
+
 
 <h4>TERMINOLOGY</h4>
 
-So as not to lose anyone, let's define some useful terminology! 
-<br><br>
+**High dimensionality** means that the data has a lot of variables. Think 1000+ column variables!
 
-**Features** are what we are measuring. 
 
-<details>
-<summary>Example</summary>
-<p>Say we have a table with <i>y</i> rows and <i>x</i> columns, then we have <i>x</i> features. Imagine each row being the names of someone you know, and each column measure something distinct about all persons listed (e.g. their height, weight, deepest darkest secrets, etc.). These things we're measuring are the features.</p>
-</details>
-<br>
-
-**Dimensionality Reduction** is exactly what it sounds like. The goal is to reduce the number of dimensions (i.e. number of features), while retaining useful information from the original data.
+The goal of **Dimensionality Reduction** is to reduce the number of dimensions, while retaining as much useful information from the original data as possible.
 
 <details>
 <summary>Example and Enrichment</summary>
-<p>Say you wish to visualize your data, in order to get an understanding of the relationships between each feature. However, you have too many features. It becomes impossible to plot them on an x-y graph. How do you visualize this without destroying your computer let alone the laws of physics? Simple, you reduce the number of dimensions to 2. Now, you can plot it on a coordinate plane! </p>
+<p>Say you wish to visualize your data, in order to get an understanding of the relationships between each feature. However, you have too many features. It becomes impossible to plot them on an x-y graph. How do you visualize this without destroying your computer let alone the laws of physics? You can reduce the number of dimensions to 2, then plot it on a coordinate plane! </p>
 
 <div class="note">
-<b>NOTE</b>: Dimensionality Reduction is different from <i>Feature Selection</i> (e.g. L1 Regularization, L2 Regularization, etc.). The goal of feature selection is to select the most important features. Meanwhile, dimensionality reduction is used to lessen the number of dimensions while capturing the variation in the original data as much as possible.
+<b>NOTE</b>: Dimensionality Reduction is different from <i>Feature Selection</i> (e.g. L1 Regularization, L2 Regularization, etc.). The goal of feature selection is to select the most important features. Meanwhile, dimensionality reduction is used to project high-dimensional data onto a set of low-dimensional features.
 </div>
 </details>
 <br>
@@ -92,9 +79,53 @@ By doing so, it is as if we are trying to find a line where the observations are
 
 Once again, notice how the features no longer have anything to do with the new axes (principal component). Also notice that if you had 3 or more features, graphing it like we did is no longer possible.
 
-In Part II, we will explore how to do PCA in Python. See you there!
 
+### Example Code
+
+We provide a brief example of how to perform PCA on your data in Python. 
+Be aware of a few things:
+
+1. When you have less rows (observations) than columns (variables), you can at most have the number of dimensions as the number of rows.
+    + For intuition, we can only fit at most m different lines through those m data points (observations).
+
+2. If your variables are scaled differently, it is advisable to standardize your data first.
+    + Each column may be standardized to have a mean of 0 and standard deviation of 1.
+    + e.g. column A has values greater than 10,000, while column B has values around 50.
+
+
+
+```r
+import pandas as pd
+from sklearn.decomposition import PCA
+
+
+def reduce_dim(X, dims=2) -> pd.DataFrame:
+    """
+    Given a dataframe with n variables and m rows, perform PCA
+    and project X to reduce the dimensionality.
+    
+    Parameters
+    ----------
+    X : pd.Dataframe or array-like
+      A table of (n columns x m rows).
+    dims: int
+      The desired number of variables (i.e. dimensionality)
+      after transforming <X>.
+    
+    Returns
+    -------
+    pd.DataFrame
+      The input X projected onto (<dims> columns x m rows).
+    """
+    pca = PCA(n_components=dims)
+    X_transformed = pd.DataFrame(pca.fit_transform(X))
+    return X_transformed
+```
+
+
+**Thanks for reading!**
 
 <h3>Additional Resources</h3>
 
-StatQuest has great videos explaining what I mentioned with the graph with more detail! 
+StatQuest has great videos explaining what I mentioned with the graph with more detail! (https://www.youtube.com/watch?v=FgakZw6K1QQ)
+

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Done | Stanley Z. Hua</title>
-    <link>/tag/done/</link>
-      <atom:link href="/tag/done/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://stanhua.rbind.io/tag/done/</link>
+      <atom:link href="https://stanhua.rbind.io/tag/done/index.xml" rel="self" type="application/rss+xml" />
     <description>Done</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Sep 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/me</url>
+      <url>https://stanhua.rbind.io/img/me</url>
       <title>Done</title>
-      <link>/tag/done/</link>
+      <link>https://stanhua.rbind.io/tag/done/</link>
     </image>
     
     <item>
-      <title>Multiple Sclerosis vs. Vasculitis</title>
-      <link>/project/ms-vasculitis/</link>
-      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/project/ms-vasculitis/</guid>
+      <title>Modeling Kidney Ultrasound Images over Time for Hydronephrosis Prediction.</title>
+      <link>https://stanhua.rbind.io/project/hydronephrosis/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://stanhua.rbind.io/project/hydronephrosis/</guid>
       <description></description>
     </item>
     

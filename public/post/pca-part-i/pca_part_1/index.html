@@ -30,7 +30,7 @@
   <meta name="description" content="Here is a brief overview on Principal Component Analysis, one of the most popular methods of dimensionality reduction today!">
 
   
-  <link rel="alternate" hreflang="en-us" href="/post/pca-part-i/pca_part_1/">
+  <link rel="alternate" hreflang="en-us" href="https://stanhua.rbind.io/post/pca-part-i/pca_part_1/">
 
   
 
@@ -220,7 +220,7 @@
   <link rel="icon" type="image/png" href="/images/icon_huea891856249bd769b49597572da4f941_1200821_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_huea891856249bd769b49597572da4f941_1200821_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="/post/pca-part-i/pca_part_1/">
+  <link rel="canonical" href="https://stanhua.rbind.io/post/pca-part-i/pca_part_1/">
 
   
   
@@ -235,10 +235,10 @@
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Stanley Z. Hua">
-  <meta property="og:url" content="/post/pca-part-i/pca_part_1/">
-  <meta property="og:title" content="PCA Part I. Intuition | Stanley Z. Hua">
-  <meta property="og:description" content="Here is a brief overview on Principal Component Analysis, one of the most popular methods of dimensionality reduction today!"><meta property="og:image" content="/img/me">
-  <meta property="twitter:image" content="/img/me"><meta property="og:locale" content="en-us">
+  <meta property="og:url" content="https://stanhua.rbind.io/post/pca-part-i/pca_part_1/">
+  <meta property="og:title" content="PCA for Dimensionality Reduction | Stanley Z. Hua">
+  <meta property="og:description" content="Here is a brief overview on Principal Component Analysis, one of the most popular methods of dimensionality reduction today!"><meta property="og:image" content="https://stanhua.rbind.io/img/me">
+  <meta property="twitter:image" content="https://stanhua.rbind.io/img/me"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2021-01-04T00:00:00&#43;00:00">
@@ -267,9 +267,9 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "/post/pca-part-i/pca_part_1/"
+    "@id": "https://stanhua.rbind.io/post/pca-part-i/pca_part_1/"
   },
-  "headline": "PCA Part I. Intuition",
+  "headline": "PCA for Dimensionality Reduction",
   
   "datePublished": "2021-01-04T00:00:00Z",
   "dateModified": "2021-01-02T19:59:31-04:00",
@@ -284,7 +284,7 @@
     "name": "Stanley Z. Hua",
     "logo": {
       "@type": "ImageObject",
-      "url": "/images/icon_huea891856249bd769b49597572da4f941_1200821_192x192_fill_lanczos_center_2.png"
+      "url": "https://stanhua.rbind.io/images/icon_huea891856249bd769b49597572da4f941_1200821_192x192_fill_lanczos_center_2.png"
     }
   },
   "description": "Here is a brief overview on Principal Component Analysis, one of the most popular methods of dimensionality reduction today!"
@@ -305,7 +305,7 @@
 
 
 
-  <title>PCA Part I. Intuition | Stanley Z. Hua</title>
+  <title>PCA for Dimensionality Reduction | Stanley Z. Hua</title>
 
 </head>
 <body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
@@ -469,7 +469,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/experience/"><span>Experiences</span></a>
+          <a class="nav-link " href="/publications/"><span>Publications</span></a>
         </li>
 
         
@@ -558,7 +558,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>PCA Part I. Intuition</h1>
+  <h1>PCA for Dimensionality Reduction</h1>
 
   
 
@@ -632,31 +632,20 @@ p{text-indent: 2em;}
 details{font-size: 10pt;}
 summary{font-size: 100% !important;}
 </style>
-<div class="note">
-<b>DISCLAIMER</b>: This is an introduction into PCA and does not go into depth on the statistics or code. Tread carefully! 
-</div>
 <hr>
 <h3>OVERVIEW</h3>
 <p>Principle Component Analysis (PCA) is known for two things: 1) Dimensionality Reduction, and 2) Structure Analysis. Note that it can also be used for <strong>factor extraction</strong>, the first step in Factor Analysis.</p>
 <div class="note">
 <b>NOTE</b>: There are plenty of resources online if you wish to learn more about Factor Analysis, but they will not be covered here!
 </div>
-<br>
 <h4>TERMINOLOGY</h4>
-<p>So as not to lose anyone, let&rsquo;s define some useful terminology! 
-<br><br></p>
-<p><strong>Features</strong> are what we are measuring.</p>
-<details>
-<summary>Example</summary>
-<p>Say we have a table with <i>y</i> rows and <i>x</i> columns, then we have <i>x</i> features. Imagine each row being the names of someone you know, and each column measure something distinct about all persons listed (e.g. their height, weight, deepest darkest secrets, etc.). These things we're measuring are the features.</p>
-</details>
-<br>
-<p><strong>Dimensionality Reduction</strong> is exactly what it sounds like. The goal is to reduce the number of dimensions (i.e. number of features), while retaining useful information from the original data.</p>
+<p><strong>High dimensionality</strong> means that the data has a lot of variables. Think 1000+ column variables!</p>
+<p>The goal of <strong>Dimensionality Reduction</strong> is to reduce the number of dimensions, while retaining as much useful information from the original data as possible.</p>
 <details>
 <summary>Example and Enrichment</summary>
-<p>Say you wish to visualize your data, in order to get an understanding of the relationships between each feature. However, you have too many features. It becomes impossible to plot them on an x-y graph. How do you visualize this without destroying your computer let alone the laws of physics? Simple, you reduce the number of dimensions to 2. Now, you can plot it on a coordinate plane! </p>
+<p>Say you wish to visualize your data, in order to get an understanding of the relationships between each feature. However, you have too many features. It becomes impossible to plot them on an x-y graph. How do you visualize this without destroying your computer let alone the laws of physics? You can reduce the number of dimensions to 2, then plot it on a coordinate plane! </p>
 <div class="note">
-<b>NOTE</b>: Dimensionality Reduction is different from <i>Feature Selection</i> (e.g. L1 Regularization, L2 Regularization, etc.). The goal of feature selection is to select the most important features. Meanwhile, dimensionality reduction is used to lessen the number of dimensions while capturing the variation in the original data as much as possible.
+<b>NOTE</b>: Dimensionality Reduction is different from <i>Feature Selection</i> (e.g. L1 Regularization, L2 Regularization, etc.). The goal of feature selection is to select the most important features. Meanwhile, dimensionality reduction is used to project high-dimensional data onto a set of low-dimensional features.
 </div>
 </details>
 <br>
@@ -673,9 +662,53 @@ If you have 10 features and you transform them via PCA to get 10 principal compo
 <p>When you implement PCA, imagine a line placed at the mean (of all the data points). Imagine rotating it, and every time that you rotate it, it changes how far each observation (i.e. its projection onto the line) point is from the center of the line. This is also called the <strong>squared distances</strong>. And this is what we&rsquo;re trying to <em>maximize</em>.</p>
 <p>By doing so, it is as if we are trying to find a line where the observations are farthest from center. Thus, we capture the most amount of variation along this line, and this line is known as a principal component!</p>
 <p>Once again, notice how the features no longer have anything to do with the new axes (principal component). Also notice that if you had 3 or more features, graphing it like we did is no longer possible.</p>
-<p>In Part II, we will explore how to do PCA in Python. See you there!</p>
+<h3 id="example-code">Example Code</h3>
+<p>We provide a brief example of how to perform PCA on your data in Python. 
+Be aware of a few things:</p>
+<ol>
+<li>
+<p>When you have less rows (observations) than columns (variables), you can at most have the number of dimensions as the number of rows.</p>
+<ul>
+<li>For intuition, we can only fit at most m different lines through those m data points (observations).</li>
+</ul>
+</li>
+<li>
+<p>If your variables are scaled differently, it is advisable to standardize your data first.</p>
+<ul>
+<li>Each column may be standardized to have a mean of 0 and standard deviation of 1.</li>
+<li>e.g. column A has values greater than 10,000, while column B has values around 50.</li>
+</ul>
+</li>
+</ol>
+<pre><code class="language-r">import pandas as pd
+from sklearn.decomposition import PCA
+
+
+def reduce_dim(X, dims=2) -&gt; pd.DataFrame:
+    &quot;&quot;&quot;
+    Given a dataframe with n variables and m rows, perform PCA
+    and project X to reduce the dimensionality.
+    
+    Parameters
+    ----------
+    X : pd.Dataframe or array-like
+      A table of (n columns x m rows).
+    dims: int
+      The desired number of variables (i.e. dimensionality)
+      after transforming &lt;X&gt;.
+    
+    Returns
+    -------
+    pd.DataFrame
+      The input X projected onto (&lt;dims&gt; columns x m rows).
+    &quot;&quot;&quot;
+    pca = PCA(n_components=dims)
+    X_transformed = pd.DataFrame(pca.fit_transform(X))
+    return X_transformed
+</code></pre>
+<p><strong>Thanks for reading!</strong></p>
 <h3>Additional Resources</h3>
-<p>StatQuest has great videos explaining what I mentioned with the graph with more detail!</p>
+<p>StatQuest has great videos explaining what I mentioned with the graph with more detail! (<a href="https://www.youtube.com/watch?v=FgakZw6K1QQ">https://www.youtube.com/watch?v=FgakZw6K1QQ</a>)</p>
 
     </div>
 
@@ -705,7 +738,7 @@ If you have 10 features and you transform them via PCA to get 10 principal compo
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/post/pca-part-i/pca_part_1/&amp;text=PCA%20Part%20I.%20Intuition" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://stanhua.rbind.io/post/pca-part-i/pca_part_1/&amp;text=PCA%20for%20Dimensionality%20Reduction" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -718,7 +751,7 @@ If you have 10 features and you transform them via PCA to get 10 principal compo
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/post/pca-part-i/pca_part_1/&amp;t=PCA%20Part%20I.%20Intuition" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://stanhua.rbind.io/post/pca-part-i/pca_part_1/&amp;t=PCA%20for%20Dimensionality%20Reduction" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -731,7 +764,7 @@ If you have 10 features and you transform them via PCA to get 10 principal compo
       
       
       <li>
-        <a href="mailto:?subject=PCA%20Part%20I.%20Intuition&amp;body=/post/pca-part-i/pca_part_1/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=PCA%20for%20Dimensionality%20Reduction&amp;body=https://stanhua.rbind.io/post/pca-part-i/pca_part_1/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -744,7 +777,7 @@ If you have 10 features and you transform them via PCA to get 10 principal compo
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/post/pca-part-i/pca_part_1/&amp;title=PCA%20Part%20I.%20Intuition" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://stanhua.rbind.io/post/pca-part-i/pca_part_1/&amp;title=PCA%20for%20Dimensionality%20Reduction" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -757,7 +790,7 @@ If you have 10 features and you transform them via PCA to get 10 principal compo
       
       
       <li>
-        <a href="whatsapp://send?text=PCA%20Part%20I.%20Intuition%20/post/pca-part-i/pca_part_1/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=PCA%20for%20Dimensionality%20Reduction%20https://stanhua.rbind.io/post/pca-part-i/pca_part_1/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -770,7 +803,7 @@ If you have 10 features and you transform them via PCA to get 10 principal compo
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/post/pca-part-i/pca_part_1/&amp;title=PCA%20Part%20I.%20Intuition" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://stanhua.rbind.io/post/pca-part-i/pca_part_1/&amp;title=PCA%20for%20Dimensionality%20Reduction" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -811,7 +844,7 @@ If you have 10 features and you transform them via PCA to get 10 principal compo
       
 
       <div class="media-body">
-        <h5 class="card-title"><a href="/">Stanley Z. Hua</a></h5>
+        <h5 class="card-title"><a href="https://stanhua.rbind.io/">Stanley Z. Hua</a></h5>
         <h6 class="card-subtitle">Undergraduate</h6>
         <p class="card-text">Documenting interesting concepts for the future.</p>
         <ul class="network-icon" aria-hidden="true">

@@ -2,61 +2,61 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects | Stanley Z. Hua</title>
-    <link>/project/</link>
-      <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://stanhua.rbind.io/project/</link>
+      <atom:link href="https://stanhua.rbind.io/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Sep 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/me</url>
+      <url>https://stanhua.rbind.io/img/me</url>
       <title>Projects</title>
-      <link>/project/</link>
+      <link>https://stanhua.rbind.io/project/</link>
     </image>
     
     <item>
       <title>Modeling Kidney Ultrasound Images over Time for Hydronephrosis Prediction.</title>
-      <link>/project/hydronephrosis/</link>
+      <link>https://stanhua.rbind.io/project/hydronephrosis/</link>
       <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
-      <guid>/project/hydronephrosis/</guid>
+      <guid>https://stanhua.rbind.io/project/hydronephrosis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CytoImageNet for Bioimage Transfer Learning</title>
-      <link>/project/cytoimagenet/</link>
+      <link>https://stanhua.rbind.io/project/cytoimagenet/</link>
       <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
-      <guid>/project/cytoimagenet/</guid>
+      <guid>https://stanhua.rbind.io/project/cytoimagenet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dataset Heterogeneity on CNN Model Training</title>
-      <link>/project/cluster-analysis/</link>
+      <link>https://stanhua.rbind.io/project/cluster-analysis/</link>
       <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
-      <guid>/project/cluster-analysis/</guid>
+      <guid>https://stanhua.rbind.io/project/cluster-analysis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kaggle RANZCR-CLiP Challenge</title>
-      <link>/project/ranzcr-clip/</link>
+      <link>https://stanhua.rbind.io/project/ranzcr-clip/</link>
       <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>/project/ranzcr-clip/</guid>
+      <guid>https://stanhua.rbind.io/project/ranzcr-clip/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Multiple Sclerosis vs. Vasculitis</title>
-      <link>/project/ms-vasculitis/</link>
+      <link>https://stanhua.rbind.io/project/ms-vasculitis/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/project/ms-vasculitis/</guid>
+      <guid>https://stanhua.rbind.io/project/ms-vasculitis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recipe Scraper</title>
-      <link>/project/recipe_scraper/</link>
+      <link>https://stanhua.rbind.io/project/recipe_scraper/</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>/project/recipe_scraper/</guid>
+      <guid>https://stanhua.rbind.io/project/recipe_scraper/</guid>
       <description></description>
     </item>
     
