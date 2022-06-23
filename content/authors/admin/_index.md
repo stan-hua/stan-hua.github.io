@@ -4,9 +4,9 @@ authors:
 bio: Documenting interesting concepts for the future.
 education:
   courses:
-  - course: H.BSc. Computer Science & Bioinformatics
+  - course: H.BSc. Computer Science
     institution: University of Toronto
-    year: 2023, 3.85/4
+    year: 2024, 3.86/4
 email: "stanley.hua@mail.utoronto.ca"
 interests:
 - Data Science
@@ -56,9 +56,7 @@ user_groups:
 
 I am passionate about answering meaningful questions through the use of software development and data science. I strongly value communicating complex concepts in a way that is easy to understand.
 
-My past experiences involve machine learning and deep learning research, applied in healthcare.
-
-I've tackled three questions:
+In my past AI/ML research experiences, I've tackled three questions, applied to healthcare:
 
 1. If we train deep learning models (CNN) on biological images (CytoImageNet), does it learn more biologically-meaningful image features than models trained on images of every day objects (ImageNet)?
 
@@ -67,8 +65,7 @@ I've tackled three questions:
 3. Does dimensionality (PCA) affect clustering (K-Means) of medical images under small sample sizes?
 
 
-I find it fascinating how a plethora of sophisticated tools can come together to create a simple yet impactful story.
-
+It truly is fascinating how intricate tools and techniqued can be woven together to create a simple yet impactful story.
 ---
 
 **LANGUAGES**:  <span class="smaller">[Python, SQL, R, Java, Shell Script, C, HTML/CSS, MATLAB, Assembly]</span>
