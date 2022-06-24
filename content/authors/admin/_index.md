@@ -65,7 +65,7 @@ In my past AI/ML research experiences, I've tackled three questions, applied to 
 3. Does dimensionality (PCA) affect clustering (K-Means) of medical images under small sample sizes?
 
 
-It truly is fascinating how intricate tools and techniqued can be woven together to create a simple yet impactful story.
+It truly is fascinating how intricate tools and techniques can be woven together to create a simple yet impactful story.
 
 ---
 
