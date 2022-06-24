@@ -66,6 +66,7 @@ In my past AI/ML research experiences, I've tackled three questions, applied to 
 
 
 It truly is fascinating how intricate tools and techniqued can be woven together to create a simple yet impactful story.
+
 ---
 
 **LANGUAGES**:  <span class="smaller">[Python, SQL, R, Java, Shell Script, C, HTML/CSS, MATLAB, Assembly]</span>
