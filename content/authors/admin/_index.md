@@ -1,7 +1,7 @@
 ---
 authors:
 - admin
-bio: Documenting interesting concepts for the future.
+bio: A data enthusiast, documenting interesting concepts for the future.
 education:
   courses:
   - course: H.BSc. Computer Science
@@ -47,30 +47,41 @@ user_groups:
   .note{font-size: 10pt;
         line-height: 20pt;
         padding-bottom: 10px}
+
   p{text-indent: 2em;}
   details{font-size: 10pt;}
   summary{font-size: 100% !important;}
+
+  blockquote{margin: 0;}
+
+  noindent{text-indent: -3em;}
 </style>
 
 
 
-I am passionate about answering meaningful questions through the use of software development and data science. I strongly value communicating complex concepts in a way that is easy to understand.
+Hi! My name is Stan, and I am currently a Software Engineer intern at Intel and a part-time Junior Machine Learning Specialist at SickKids.
 
-In my past AI/ML research experiences, I've tackled three questions, applied to healthcare:
+I am passionate about answering meaningful questions through the use of sound software development and rigorous data science. I value the ability to communicate complex ideas in a way that is easy to understand.
 
-1. If we train deep learning models (CNN) on biological images (CytoImageNet), does it learn more biologically-meaningful image features than models trained on images of every day objects (ImageNet)?
-
-2. Can we improve ultrasound-based prediction of kidney disease, by adapting image-based deep learning models (2D CNNs) to take in all of a patient's data over time?
-
-3. Does dimensionality (PCA) affect clustering (K-Means) of medical images under small sample sizes?
-
-
-It truly is fascinating how intricate tools and techniques can be woven together to create a simple yet impactful story.
+<br>
 
 ---
 
-**LANGUAGES**:  <span class="smaller">[Python, SQL, R, Java, Shell Script, C, HTML/CSS, MATLAB, Assembly]</span>
+<span style="margin-left: -2em">In the past, I've tackled three AI/ML research questions:</span>
 
-<span class="libraries">***Python Libraries***:</span>  <span class="smaller">[pandas, dask, numpy, matplotlib, tensorflow, keras, pytorch, sklearn, xgboost, lightgbm, open-cv]</span>
+<blockquote>
+        <ol>
+            <li>If we train deep learning models (CNN) on biological images (CytoImageNet), does it learn more biologically-meaningful image features than models trained on images of every day objects (ImageNet)?</li>
+            <li>Can we improve ultrasound image-based prediction of a kidney disease, by adapting image-based deep learning models (2D CNNs) to take in all of a patient's data over time?</li>
+            <li>Does dimensionality (PCA) affect clustering (K-Means) of medical image features under small sample sizes?</li>
+        </ol>
+</blockquote>
 
-<span class="libraries">***R Libraries***:</span>  <span class="smaller">[rvest, ggplot2, tidyverse, dplyr, blogdown, knitr, shiny, flexdashboard]</span>
+---
+
+<div class="noindent">
+<b>LANGUAGES</b>:  <span class="smaller">[Python, SQL, Shell Script, Javascript, HTML/CSS, C/C++, R, Java]</span><br>
+<span class="libraries"><b><i>Python Libraries</b></i>:</span>  <span class="smaller">[pandas, dask, numpy, matplotlib, pytorch, sklearn, tensorflow, keras, opencv]</span>
+</div>
+
+<br>
