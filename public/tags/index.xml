@@ -1,16 +1,87 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags | Stanley Z. Hua</title>
-    <link>https://stanhua.rbind.io/tags/</link>
-      <atom:link href="https://stanhua.rbind.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Sep 2021 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://stanhua.rbind.io/img/me</url>
-      <title>Tags</title>
-      <link>https://stanhua.rbind.io/tags/</link>
-    </image>
+    <title>Tags on Stanley Z. Hua</title>
+    <link>https://example.com/tags/</link>
+    <description>Recent content in Tags on Stanley Z. Hua</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Jan 2021 16:12:29 -0700</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ai</title>
+      <link>https://example.com/tags/ai/</link>
+      <pubDate>Mon, 11 Jan 2021 16:12:29 -0700</pubDate>
+      
+      <guid>https://example.com/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deep_learning</title>
+      <link>https://example.com/tags/deep_learning/</link>
+      <pubDate>Mon, 11 Jan 2021 16:12:29 -0700</pubDate>
+      
+      <guid>https://example.com/tags/deep_learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>neural_networks</title>
+      <link>https://example.com/tags/neural_networks/</link>
+      <pubDate>Mon, 11 Jan 2021 16:12:29 -0700</pubDate>
+      
+      <guid>https://example.com/tags/neural_networks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dimensionality-reduction</title>
+      <link>https://example.com/tags/dimensionality-reduction/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/dimensionality-reduction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine-learning</title>
+      <link>https://example.com/tags/machine-learning/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software</title>
+      <link>https://example.com/tags/software/</link>
+      <pubDate>Sat, 01 Aug 2020 16:04:19 -0700</pubDate>
+      
+      <guid>https://example.com/tags/software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ml</title>
+      <link>https://example.com/tags/ml/</link>
+      <pubDate>Tue, 12 May 2020 16:11:56 -0700</pubDate>
+      
+      <guid>https://example.com/tags/ml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>startups</title>
+      <link>https://example.com/tags/startups/</link>
+      <pubDate>Tue, 12 May 2020 16:11:56 -0700</pubDate>
+      
+      <guid>https://example.com/tags/startups/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

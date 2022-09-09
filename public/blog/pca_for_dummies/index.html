@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="en-us"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Noto+Serif+JP&family=Cormorant+Garamond&family=Libre+Baskerville&family=Source+Serif+Pro&family=Crimson+Text&family=Inter&family=Crimson+Pro&family=Literata&family=Ubuntu+Mono&family=Inter&family=Roboto">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    
+    
+
+    <title>Stanley Z. Hua | Principal Component Analysis (PCA) for Dummies</title>
+
+
+    
+
+</head><body class="container d-flex flex-column min-vh-100">
+
+<div class="blog_nav_bar secondary_font ">
+    
+    
+    <a class="navbar-brand" href="/">about</a>
+    
+    
+    
+    <a class="navbar-brand" href="/blog">« all posts</a>
+    
+    
+</div>
+
+
+
+<h3>
+    <a class="title" href="/blog/pca_for_dummies/">Principal Component Analysis (PCA) for Dummies</a>
+</h3>
+
+<div class="reading_time secondary_font text-muted ">
+    <span>
+        Jan 2 2021 · 4 min read
+    </span>
+
+</div>
+
+
+
+
+<div class="tags_navigation">
+    
+    <a class="tag" href="/tags/ai/">#ai</a>
+    
+    <a class="tag" href="/tags/machine-learning/">#machine-learning</a>
+    
+    <a class="tag" href="/tags/dimensionality-reduction/">#dimensionality-reduction</a>
+    
+</div>
+
+
+<div class="toc ">
+    <div>
+        <strong>Table of Contents</strong>
+    </div>
+    <div>
+        
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#motivation">Motivation</a>
+      <ul>
+        <li><a href="#curse-of-dimensionality">Curse of Dimensionality</a></li>
+        <li><a href="#dimensionality-reduction">Dimensionality Reduction</a></li>
+      </ul>
+    </li>
+    <li><a href="#principal-component-analysis">Principal Component Analysis</a>
+      <ul>
+        <li><a href="#a-few-caveats">A Few Caveats</a></li>
+        <li><a href="#example-code">Example Code</a></li>
+      </ul>
+    </li>
+    <li><a href="#additional-resources">Additional Resources</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+<h1 id="motivation">Motivation</h1>
+<p>Imagine a company collects plenty data on their customers (100+ different types). With this information, the company would like to group their customers, preferably shown in a visualization that&rsquo;s easy to understand. They decide to outsource this problem to you. You are given a table with <strong>100,000 customers</strong> and <strong>1000 different types of information</strong> (variables) for each customer.</p>
+<p>What do you do?</p>
+<p>You can try to compare all 1000 variables for all 100,000 customers one-by-one, but this is an impossible tasks. There are simply way too many variables (or dimensions) to look at.</p>
+<h2 id="curse-of-dimensionality">Curse of Dimensionality</h2>
+<p>This brings us to the <strong>Curse of Dimensionality</strong>, which tells us that as the number of dimensions in our data increase, the distance between our data points become almost equal. This is important! This means it&rsquo;ll only get harder and harder to differentiate customers from one another,.</p>
+<h2 id="dimensionality-reduction">Dimensionality Reduction</h2>
+<p>What if you could reduce the number of variables to 2 instead? Comparing two numbers is far more reasonable, compared to 1000.</p>
+<p>If only we had a method to <em><strong>reduce the number of variables</strong></em>&hellip;</p>
+<p>There are generally two ways: <strong>(1) Feature Selection</strong>, where you choose the top N most impactful variables based on what you&rsquo;re trying to understand (in our case, how customers can be similar/dissimilar), or <strong>(2) Dimensionality Reduction</strong>, where you try to represent the information from all variables in fewer number of dimensions.</p>
+<p>We will be focusing on the latter (Dimensionality Reduction). Introduce&hellip; <strong>Principal Component Analysis</strong> (PCA)!</p>
+<br>
+<br>
+<h1 id="principal-component-analysis">Principal Component Analysis</h1>
+<p>The goal of <strong>Principal Component Analysis</strong> is to reduce the number of dimensions, while retaining as much useful information from the original data as possible.</p>
+<p>To build intuition, let&rsquo;s use the graph below as an example.</p>
+<p align="center">
+  <img src="/images/blog/intro_to_pca/intuition.png" width='50%' height='auto'>
+</p>
+<p>Here, we have 2 features. <strong>NOTE</strong>: &ldquo;Feature&rdquo; = &ldquo;Variable&rdquo; = &ldquo;Dimension&rdquo;. Each data point represents an observation (a customer).</p>
+<p>When performing PCA, imagine multiple lines are placed at the centre of all the data points. Imagine rotating each, and every time that you rotate it, it changes how far each data point is from the line (also called <strong>squared distances</strong>). We would like to <em>minimize</em> this for each line we place, but with the restraint that each line has to be orthogonal to one another (i.e., perpendicular for 2 lines).</p>
+<p>To sum up the steps simply:</p>
+<ol>
+<li>
+<p><strong>Find lines</strong> that capture the most amount of variation (information), and this line is known as a principal component!</p>
+</li>
+<li>
+<p><strong>Project</strong> each data point to its closest point on each of the lines.</p>
+</li>
+<li>
+<p><strong>Take the top K</strong> principal components and drop the rest.</p>
+</li>
+</ol>
+<p>Notice how these principle components (lines) can no longer be interpreted as simply as Feature 1/2, so we lose interpretability of each individual line. This is a <strong>drawback</strong> of using this method. However, we gain a lot from performing dimensionality reduction. Less dimensions means (1) it could be <strong>plotted</strong>, (2) <strong>less compute</strong> is needed to train models or store the transformed data.</p>
+<h2 id="a-few-caveats">A Few Caveats</h2>
+<ol>
+<li>If you have originally 100 variables, you can only have at most 100 principal components (lines) to choose from.</li>
+<li>When you have less rows (observations) than columns (variables), you can at most have the number of dimensions as the number of rows.
+<ul>
+<li>For intuition, we can only fit at most m different lines through those m data points (observations).</li>
+</ul>
+</li>
+<li>If your variables are scaled differently, it is advisable to standardize your data first.
+<ul>
+<li>Each column may be standardized to have a mean of 0 and standard deviation of 1.</li>
+<li>e.g. column A has values greater than 10,000, while column B has values around 50.</li>
+</ul>
+</li>
+</ol>
+<h2 id="example-code">Example Code</h2>
+<p>We provide a brief example of how to perform PCA on your data in Python.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">from</span> sklearn.decomposition <span style="color:#f92672">import</span> PCA
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reduce_dim</span>(X, dims<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">-&gt;</span> pd<span style="color:#f92672">.</span>DataFrame:
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    Given a dataframe with n variables and m rows, perform PCA
+</span><span style="color:#e6db74">    and project X to reduce the dimensionality.
+</span><span style="color:#e6db74">    
+</span><span style="color:#e6db74">    Parameters
+</span><span style="color:#e6db74">    ----------
+</span><span style="color:#e6db74">    X : pd.Dataframe or array-like
+</span><span style="color:#e6db74">      A table of (n columns x m rows).
+</span><span style="color:#e6db74">    dims: int
+</span><span style="color:#e6db74">      The desired number of variables (i.e. dimensionality)
+</span><span style="color:#e6db74">      after transforming &lt;X&gt;.
+</span><span style="color:#e6db74">    
+</span><span style="color:#e6db74">    Returns
+</span><span style="color:#e6db74">    -------
+</span><span style="color:#e6db74">    pd.DataFrame
+</span><span style="color:#e6db74">      The input X projected onto (&lt;dims&gt; columns x m rows).
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    pca <span style="color:#f92672">=</span> PCA(n_components<span style="color:#f92672">=</span>dims)
+    X_transformed <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(pca<span style="color:#f92672">.</span>fit_transform(X))
+    <span style="color:#66d9ef">return</span> X_transformed
+</code></pre></div><h1 id="additional-resources">Additional Resources</h1>
+<p>StatQuest has a great <a href="https://www.youtube.com/watch?v=FgakZw6K1QQ">video</a> explaining PCA in great detail!</p>
+<br>
+<p>Thanks for reading!</p>
+
+
+<footer class="mt-auto d-flex justify-content-center text-muted small secondary_font">
+    <span class="text-muted">Copyright (c) 2022, Stanley Hua,
+        <a class="text-muted" href="https://github.com/hadisinaee/avicenna" target="_blank"> created by Avicenna
+            (MIT)</a>
+    </span>
+</footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+<script>
+    feather.replace()
+</script></body>
+
+</html>

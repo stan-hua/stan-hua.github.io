@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>economy on Stanley Z. Hua</title>
+    <link>https://example.com/tags/economy/</link>
+    <description>Recent content in economy on Stanley Z. Hua</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 May 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/economy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Secrets To ML – Even In This Down Economy</title>
+      <link>https://example.com/blog/blog1/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/blog/blog1/</guid>
+      <description>Nulla fermentum blandit metus sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam.</description>
+    </item>
+    
+  </channel>
+</rss>

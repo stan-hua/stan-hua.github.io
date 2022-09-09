@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>startups on Stanley Z. Hua</title>
+    <link>https://example.com/tags/startups/</link>
+    <description>Recent content in startups on Stanley Z. Hua</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 May 2020 16:11:56 -0700</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/startups/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>5 Best Ways To Sell ML</title>
+      <link>https://example.com/blog/blog3/</link>
+      <pubDate>Tue, 12 May 2020 16:11:56 -0700</pubDate>
+      
+      <guid>https://example.com/blog/blog3/</guid>
+      <description>Pellentesque dapibus nec velit sit amet venenatis. Nam mauris elit, feugiat vitae massa a, scelerisque pretium justo. Aliquam eu quam suscipit, gravida dolor auctor, porttitor risus. Integer at dui blandit, scelerisque nunc vel, gravida neque. Vivamus at nisi lacinia, bibendum ipsum a, dignissim nibh. Ut urna eros, consequat ut tristique id, egestas non lectus. Cras placerat condimentum orci, et cursus tortor tempus in. Aenean sodales leo sed scelerisque molestie. Duis tempus lectus sed velit fermentum, quis auctor dolor mattis.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>deep-learning on Stanley Z. Hua</title>
+    <link>https://example.com/tags/deep-learning/</link>
+    <description>Recent content in deep-learning on Stanley Z. Hua</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 Jun 2019 16:04:19 -0700</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>7 Ways To Keep Your ML Growing Without Burning The Midnight Oil</title>
+      <link>https://example.com/blog/blog2/</link>
+      <pubDate>Fri, 07 Jun 2019 16:04:19 -0700</pubDate>
+      
+      <guid>https://example.com/blog/blog2/</guid>
+      <description>Nulla fermentum blandit metus sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>neural_networks on Stanley Z. Hua</title>
+    <link>https://example.com/tags/neural_networks/</link>
+    <description>Recent content in neural_networks on Stanley Z. Hua</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Jan 2021 16:12:29 -0700</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/neural_networks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Picture Your ML On Top. Read This And Make It So</title>
+      <link>https://example.com/blog/blog4/</link>
+      <pubDate>Mon, 11 Jan 2021 16:12:29 -0700</pubDate>
+      
+      <guid>https://example.com/blog/blog4/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget dui justo. Sed bibendum sollicitudin neque, et iaculis ligula dapibus eget. Etiam faucibus augue non posuere blandit. Phasellus ex ex, ultricies quis eleifend vel, imperdiet a felis. Sed ipsum velit, ullamcorper nec lacus fermentum, ullamcorper sagittis libero. Pellentesque hendrerit quam eget nunc ullamcorper mattis. Etiam sed nisi ac ipsum semper interdum. Nunc vulputate vitae nibh vitae convallis. Cras in ante arcu.</description>
+    </item>
+    
+  </channel>
+</rss>

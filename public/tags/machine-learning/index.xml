@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>machine-learning on Stanley Z. Hua</title>
+    <link>https://example.com/tags/machine-learning/</link>
+    <description>Recent content in machine-learning on Stanley Z. Hua</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 Jan 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Principal Component Analysis (PCA) for Dummies</title>
+      <link>https://example.com/blog/pca_for_dummies/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/blog/pca_for_dummies/</guid>
+      <description>Table of Contents Motivation  Curse of Dimensionality Dimensionality Reduction   Principal Component Analysis  A Few Caveats Example Code   Additional Resources   Motivation Imagine a company collects plenty data on their customers (100+ different types). With this information, the company would like to group their customers, preferably shown in a visualization that&amp;rsquo;s easy to understand. They decide to outsource this problem to you.</description>
+    </item>
+    
+  </channel>
+</rss>

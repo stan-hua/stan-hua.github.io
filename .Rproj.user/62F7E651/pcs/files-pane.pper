@@ -1,8 +1,8 @@
 {
-    "path" : "~/Website/content/publication",
+    "path" : "D:/projects/personal_website/content/blog",
     "sortOrder" : [
         {
-            "ascending" : false,
+            "ascending" : true,
             "columnIndex" : 2
         }
     ]

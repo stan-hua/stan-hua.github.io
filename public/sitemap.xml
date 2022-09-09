@@ -3,222 +3,92 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://stanhua.rbind.io/talk/example/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <loc>https://example.com/tags/ai/</loc>
+    <lastmod>2021-01-11T16:12:29-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stanhua.rbind.io/talk/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <loc>https://example.com/blog/</loc>
+    <lastmod>2021-01-11T16:12:29-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stanhua.rbind.io/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <loc>https://example.com/tags/deep_learning/</loc>
+    <lastmod>2021-01-11T16:12:29-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stanhua.rbind.io/tag/done/</loc>
-    <lastmod>2021-09-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/tags/neural_networks/</loc>
+    <lastmod>2021-01-11T16:12:29-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stanhua.rbind.io/project/hydronephrosis/</loc>
-    <lastmod>2021-09-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/blog/blog4/</loc>
+    <lastmod>2021-01-11T16:12:29-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stanhua.rbind.io/project/</loc>
-    <lastmod>2021-09-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/</loc>
+    <lastmod>2021-01-11T16:12:29-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stanhua.rbind.io/tags/</loc>
-    <lastmod>2021-09-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/tags/</loc>
+    <lastmod>2021-01-11T16:12:29-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stanhua.rbind.io/tag/completed/</loc>
-    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/tags/dimensionality-reduction/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stanhua.rbind.io/project/cytoimagenet/</loc>
-    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/tags/machine-learning/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stanhua.rbind.io/project/cluster-analysis/</loc>
-    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/blog/pca_for_dummies/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stanhua.rbind.io/project/ranzcr-clip/</loc>
-    <lastmod>2021-02-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/news/</loc>
+    <lastmod>2020-11-20T17:51:47+03:30</lastmod>
   </url>
   
   <url>
-    <loc>https://stanhua.rbind.io/tag/data-science/</loc>
-    <lastmod>2021-01-02T23:24:44-05:00</lastmod>
+    <loc>https://example.com/about/</loc>
+    <lastmod>2020-10-20T17:51:47+03:30</lastmod>
   </url>
   
   <url>
-    <loc>https://stanhua.rbind.io/post/pca-part-i/pca_part_1/</loc>
-    <lastmod>2021-01-02T19:59:31-04:00</lastmod>
+    <loc>https://example.com/blog/connecting_to_remote_servers/</loc>
+    <lastmod>2020-08-01T16:04:19-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stanhua.rbind.io/post/</loc>
-    <lastmod>2021-01-02T23:24:44-05:00</lastmod>
+    <loc>https://example.com/tags/software/</loc>
+    <lastmod>2020-08-01T16:04:19-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stanhua.rbind.io/post/intro-dim-red/intro_to_dimred/</loc>
-    <lastmod>2021-01-02T23:24:44-05:00</lastmod>
+    <loc>https://example.com/blog/blog3/</loc>
+    <lastmod>2020-05-12T16:11:56-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stanhua.rbind.io/project/ms-vasculitis/</loc>
-    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+    <loc>https://example.com/tags/ml/</loc>
+    <lastmod>2020-05-12T16:11:56-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stanhua.rbind.io/project/recipe_scraper/</loc>
-    <lastmod>2020-08-26T00:00:00+00:00</lastmod>
+    <loc>https://example.com/tags/startups/</loc>
+    <lastmod>2020-05-12T16:11:56-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stanhua.rbind.io/categories/</loc>
-    <lastmod>2020-08-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/post/remote-server/connecting-to-remote-servers-via-ssfhs-ssh/</loc>
-    <lastmod>2020-08-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/tag/other/</loc>
-    <lastmod>2020-08-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/category/others/</loc>
-    <lastmod>2020-08-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/category/python/</loc>
-    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/tag/python-libraries/</loc>
-    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/post/pandas/useful_commands_to_remember/</loc>
-    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/tag/modeling/</loc>
-    <lastmod>2020-07-11T22:55:04-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/post/monte-carlo-simulations/monte-carlo-simulations/</loc>
-    <lastmod>2020-07-11T22:55:04-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/category/r/</loc>
-    <lastmod>2020-07-11T22:55:04-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/tag/statistics-and-probability/</loc>
-    <lastmod>2020-07-11T22:55:04-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/courses/</loc>
-    <lastmod>2020-07-03T18:50:01-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/experience/</loc>
-    <lastmod>2020-07-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/post/first/a-first/</loc>
-    <lastmod>2020-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/publication-type/3/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/publication/preprint/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/authors/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/publication_types/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/publication/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/tag/source-themes/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/author/stanley-z.-hua/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/slides/</loc>
-    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/slides/example/</loc>
-    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/publication-type/1/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/publication/conference-paper/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/author/robert-ford/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stanhua.rbind.io/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
+    <loc>https://example.com/categories/</loc>
   </url>
   
 </urlset>

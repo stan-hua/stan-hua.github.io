@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>news on Stanley Z. Hua</title>
+    <link>https://example.com/news/</link>
+    <description>Recent content in news on Stanley Z. Hua</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Nov 2020 17:51:47 +0330</lastBuildDate>
+    
+	<atom:link href="https://example.com/news/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

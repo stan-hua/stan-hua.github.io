@@ -1,16 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories | Stanley Z. Hua</title>
-    <link>https://stanhua.rbind.io/categories/</link>
-      <atom:link href="https://stanhua.rbind.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <description>Categories</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://stanhua.rbind.io/img/me</url>
-      <title>Categories</title>
-      <link>https://stanhua.rbind.io/categories/</link>
-    </image>
+    <title>Categories on Stanley Z. Hua</title>
+    <link>https://example.com/categories/</link>
+    <description>Recent content in Categories on Stanley Z. Hua</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
     
   </channel>
 </rss>
