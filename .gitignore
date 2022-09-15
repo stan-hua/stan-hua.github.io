@@ -1,7 +1,5 @@
-.Rproj.user
+.Rproj.user/*
 .Rhistory
 .RData
 .Ruserdata
-*.pper
-.Rproj.user/62F7E651/sources/prop/INDEX
-.Rproj.user/shared/notebooks/paths
+.R*
