@@ -11,8 +11,12 @@ default_news_icon: "file-text"
 num_news: 5
 
 news_items:
+- text: "Longitudinal HN paper accepted!"
+  icon: "file-text"
+  extra_text: "SIPAIM, Sept. 2022."
+  date: 2022-09-14
 - text: "The beginning of my Software Engineering journey with **Intel**!"
-  icon: "code"
+  icon: "cpu"
   extra_text: "Performance Analysis & Infrastructure Team @ Intel, May 2022."
   date: 2022-05-04
 - text: "Now a *Junior ML Specialist!* Computer Vision & Time Series Analysis"
@@ -23,6 +27,10 @@ news_items:
   extra_text: "AI in Healthcare, Sept. 2021."
   icon: "clipboard"
   date: 2021-09-01
+- text: "CytoImageNet paper & poster accepted!"
+  extra_text: "NeurIPS LMRL Workshop, Oct. 2021."
+  icon: "file-text"
+  date: 2021-10-01
 - text: "Joining the **Moses Lab**! Exploring Computer Vision applied to Microscopy Images"
   extra_text: "AI/ML Research in Biology, May. 2021."
   icon: "clipboard"
