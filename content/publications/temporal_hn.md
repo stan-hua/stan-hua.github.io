@@ -7,6 +7,7 @@ authors:
 date: "2022-11-09"
 
 links:
+    pdf: "temporal_hn_paper.pdf"
     code: 'https://github.com/stan-hua/temporal_hydronephrosis/'
 
 publication: "18th International Symposium on Medical Information Processing and Analysis (SIPAIM)"
