@@ -11,24 +11,27 @@ default_news_icon: "file-text"
 num_news: 5
 
 news_items:
-- text: "Longitudinal HN paper accepted!"
+- text: "Paper & presentation accepted @ **SIPAIM**!"
   icon: "file-text"
-  extra_text: "SIPAIM, Sept. 2022."
+  link: https://arxiv.org/abs/2212.13535
+  extra_text: "in Valparaiso, Chile, Nov. 2022."
   date: 2022-09-14
-- text: "The beginning of my Software Engineering journey with **Intel**!"
+- text: "Starting my Software Engineering PEY @ **Intel**"
   icon: "cpu"
-  extra_text: "Performance Analysis & Infrastructure Team @ Intel, May 2022."
+  extra_text: "Performance Analysis & Infrastructure Team, May 2022."
   date: 2022-05-04
-- text: "Now a *Junior ML Specialist!* Computer Vision & Time Series Analysis"
+- text: "Starting as a Junior ML Specialist @ **SickKids**"
   icon: "code"
-  extra_text: "AI in Medicine (AIM) Team @ SickKids, March 2022."
+  extra_text: "AI in Medicine (AIM) Team, March 2022."
   date: 2022-05-04
-- text: "Joining the **Goldenberg Lab**! Video-Based Deep Learning on Ultrasound Images over Time"
+- text: "Joining the **Goldenberg** Lab"
   extra_text: "AI in Healthcare, Sept. 2021."
   icon: "clipboard"
+  link: https://goldenberglab.ca/
   date: 2021-09-01
-- text: "CytoImageNet paper & poster accepted!"
-  extra_text: "NeurIPS LMRL Workshop, Oct. 2021."
+- text: "My first paper & poster accepted @ **NeurIPS** LMRL Workshop!"
+  extra_text: "Virtual, Dec. 2021."
+  link: https://arxiv.org/abs/2111.11646
   icon: "file-text"
   date: 2021-10-01
 - text: "Joining the **Moses Lab**! Exploring Computer Vision applied to Microscopy Images"

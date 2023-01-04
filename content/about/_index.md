@@ -37,6 +37,17 @@ academia:
 
 **Hi!** My name is Stan, and I am currently a **Software Engineer intern** at Intel and a part-time **Junior Machine Learning Specialist** at SickKids.
 
-I am passionate about answering meaningful questions through rigorous data science, sound software development and succinct presentation.
+What I value:
+1. answering challenging and meaningful questions through rigorous data science
+2. communicating ideas in a way that builds intuition, not hinders it
 
-One of my favorite sayings: **K.I.S.S.** (Keep It Simple Stupid).
+
+<br>
+
+```
+Congratulations if you've made it this far!
+
+Feel free to connect with me on LinkedIn or shoot me an email saying "Open sesame".
+```
+
+<br>
