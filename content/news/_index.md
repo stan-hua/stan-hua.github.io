@@ -11,6 +11,11 @@ default_news_icon: "file-text"
 num_news: 5
 
 news_items:
+- text: "Poster accepted @ **ISBI**!"
+  icon: "file-text"
+  link: isbi_poster.pdf
+  extra_text: "in Cartagena, Colombia, Apr. 2023."
+  date: 2023-04-18
 - text: "Paper & presentation accepted @ **SIPAIM**!"
   icon: "file-text"
   link: https://arxiv.org/abs/2212.13535
@@ -29,7 +34,7 @@ news_items:
   icon: "clipboard"
   link: https://goldenberglab.ca/
   date: 2021-09-01
-- text: "My first paper & poster accepted @ **NeurIPS** LMRL Workshop!"
+- text: "First-ever paper & poster accepted @ **NeurIPS** LMRL Workshop!"
   extra_text: "Virtual, Dec. 2021."
   link: https://arxiv.org/abs/2111.11646
   icon: "file-text"
@@ -46,9 +51,4 @@ news_items:
   extra_text: "Jul. 2019."
   icon: "home"
   date: 2019-07-17
-# - text: "How to write a good paper?"
-#   link: https://https://feathericons.com//
-#   extra_text: "HotOS'19."
-#   icon: "youtube"
-#   date: 2020-11-20
 ---

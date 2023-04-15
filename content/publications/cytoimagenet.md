@@ -12,6 +12,7 @@ links:
     pdf: https://arxiv.org/pdf/2111.11646.pdf
     code: https://github.com/stan-hua/CytoImageNet
     video: https://youtu.be/qfEA-UR6tVM
+    poster: https://github.com/stan-hua/CytoImageNet/blob/master/poster.pdf
     dataset: https://www.kaggle.com/datasets/stanleyhua/cytoimagenet
 
 ---
