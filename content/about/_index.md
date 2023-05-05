@@ -35,7 +35,7 @@ academia:
         end_date: "2024 (Expected)"
 ---
 
-**Hi!** My name is Stan, and I am currently a **Software Engineer intern** at Intel and a part-time **Junior Machine Learning Specialist** at SickKids.
+**Hi!** My name is Stan, and I am currently a part-time **Junior Machine Learning Specialist** at SickKids.
 
 What I value:
 1. answering challenging and meaningful questions through rigorous data science
