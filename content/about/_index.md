@@ -35,7 +35,7 @@ academia:
         end_date: "2024 (Expected)"
 ---
 
-**Hi!** My name is Stan, and I am currently a part-time **Junior Machine Learning Specialist** at SickKids.
+**Hi!** My name is Stan, and I am currently a Data Science intern @ Wealthsimple, and a part-time **Junior Machine Learning Specialist** at SickKids.
 
 What I value:
 1. answering challenging and meaningful questions through rigorous data science
@@ -47,7 +47,9 @@ What I value:
 ```
 Congratulations if you've made it this far!
 
-Feel free to connect with me on LinkedIn or shoot me an email saying "Open sesame".
+Do connect with me on LinkedIn or shoot me an email saying "Open sesame".
+
+Would love to hear about you!
 ```
 
 <br>
