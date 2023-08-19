@@ -35,11 +35,11 @@ academia:
         end_date: "2024 (Expected)"
 ---
 
-**Hi!** My name is Stan, and I am currently a Data Science intern @ Wealthsimple, and a part-time **Junior Machine Learning Specialist** at SickKids.
+**Hi!** My name is Stan, and I am currently a Data Science intern @ Wealthsimple.
 
 What I value:
-1. answering challenging and meaningful questions through rigorous data science
-2. communicating ideas in a way that builds intuition, not hinders it
+1. answering challenging and meaningful questions through novel yet rigorous data science
+2. communicating ideas in a way that builds intuition and promotes discussion
 
 
 <br>
