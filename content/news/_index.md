@@ -11,21 +11,33 @@ default_news_icon: "file-text"
 num_news: 5
 
 news_items:
+- text: "Ended position at **SickKids**"
+  icon: "code"
+  extra_text: "Aug. 2023."
+  date: 2023-08-09
+- text: "Started Data Science internship @ **Wealthsimple**!"
+  icon: "database"
+  date: 2023-07-12
+  extra_text: "Data Products Team, June 2023."
 - text: "Poster accepted @ **ISBI**!"
   icon: "file-text"
   link: isbi_poster.pdf
   extra_text: "in Cartagena, Colombia, Apr. 2023."
   date: 2023-04-18
+- text: "Finished internship @ **Intel**"
+  icon: "cpu"
+  extra_text: "Performance Analysis & Infrastructure Team, Apr. 2023."
+  date: 2023-04-14
 - text: "Paper & presentation accepted @ **SIPAIM**!"
   icon: "file-text"
   link: https://arxiv.org/abs/2212.13535
   extra_text: "in Valparaiso, Chile, Nov. 2022."
   date: 2022-09-14
-- text: "Starting my Software Engineering PEY @ **Intel**"
+- text: "Started my Software Engineering PEY @ **Intel**"
   icon: "cpu"
   extra_text: "Performance Analysis & Infrastructure Team, May 2022."
   date: 2022-05-04
-- text: "Starting as a Junior ML Specialist @ **SickKids**"
+- text: "Started as a Junior ML Specialist @ **SickKids**"
   icon: "code"
   extra_text: "AI in Medicine (AIM) Team, March 2022."
   date: 2022-05-04
