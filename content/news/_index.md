@@ -11,7 +11,7 @@ default_news_icon: "file-text"
 num_news: 5
 
 news_items:
-- text: "Ended position at **SickKids**"
+- text: "Ended position @ **SickKids**"
   icon: "code"
   extra_text: "Aug. 2023."
   date: 2023-08-09
