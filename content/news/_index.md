@@ -11,6 +11,10 @@ default_news_icon: "file-text"
 num_news: 5
 
 news_items:
+- text: "Ended internship @ **Wealthsimple**"
+  icon: "code"
+  extra_text: "Sept. 2023."
+  date: 2023-08-09
 - text: "Ended position @ **SickKids**"
   icon: "code"
   extra_text: "Aug. 2023."

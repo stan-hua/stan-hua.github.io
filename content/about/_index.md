@@ -35,11 +35,17 @@ academia:
         end_date: "2024 (Expected)"
 ---
 
-**Hi!** My name is Stan, and I am currently a Data Science intern @ Wealthsimple.
+**Hi!** My name is Stan. I am a future Data Scientist / Research Engineer!
 
-What I value:
-1. answering challenging and meaningful questions through novel yet rigorous data science
-2. communicating ideas in a way that builds intuition and promotes discussion
+Currently, I am applying to jobs and graduate school programs in the US, starting in 2024.
+
+In the past, I've worked on interesting problems in difficult domains (healthcare, finance) with different types of data (images/videos, text, tabular).
+
+Here are a couple of things I enjoy/value:
+1. answering meaningful questions through novel yet rigorous data science
+2. engineering of robust/scalable machine learning systems
+3. communicating ideas in a way that builds intuition
+4. [slow science](https://en.wikipedia.org/wiki/Slow_science)
 
 
 <br>
