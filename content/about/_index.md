@@ -37,7 +37,7 @@ academia:
 
 **Hi!** My name is Stan. I am a future Data Scientist / Research Engineer!
 
-Currently, I am applying to jobs and graduate school programs in the US, starting in 2024.
+Currently, I am applying to jobs and graduate school programs in the US / Canada, starting in 2024.
 
 In the past, I've worked on interesting problems in difficult domains (healthcare, finance) with different types of data (images/videos, text, tabular).
 
