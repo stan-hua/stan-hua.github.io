@@ -8,6 +8,7 @@ authors:
 date: "2023-04-15"
 
 links:
+    abstract: "https://stan-hua.github.io/isbi_paper.pdf"
     code: 'https://github.com/stan-hua/view_hn'
     poster: "https://stan-hua.github.io/isbi_poster.pdf"
 
