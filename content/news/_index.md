@@ -16,6 +16,22 @@ news_items:
   link: https://youtu.be/pEqTQYa_Rm0?si=lrEWVo-5HWf02N4w
   extra_text: "in Boston, USA, Oct. 2023."
   date: 2023-04-18
+- text: "Abstract and poster accepted @ **ISBI**!"
+  icon: "file-text"
+  link: isbi_poster.pdf
+  extra_text: "in Cartagena, Colombia, Apr. 2023."
+  date: 2023-04-18
+- text: "Paper and oral presentation accepted @ **SIPAIM**!"
+  icon: "file-text"
+  link: https://arxiv.org/abs/2212.13535
+  extra_text: "in Valparaiso, Chile, Nov. 2022."
+  date: 2022-09-14
+- text: "First-ever paper and poster accepted @ **NeurIPS** LMRL Workshop!"
+  extra_text: "Virtual, Dec. 2021."
+  link: https://arxiv.org/abs/2111.11646
+  icon: "file-text"
+  date: 2021-10-01
+
 # - text: "Ended internship @ **Wealthsimple**"
 #   icon: "code"
 #   extra_text: "Sept. 2023."
@@ -28,20 +44,10 @@ news_items:
 #   icon: "database"
 #   date: 2023-07-12
 #   extra_text: "Data Products Team, June 2023."
-- text: "Abstract and poster accepted @ **ISBI**!"
-  icon: "file-text"
-  link: isbi_poster.pdf
-  extra_text: "in Cartagena, Colombia, Apr. 2023."
-  date: 2023-04-18
 # - text: "Finished internship @ **Intel**"
 #   icon: "cpu"
 #   extra_text: "Performance Analysis & Infrastructure Team, Apr. 2023."
 #   date: 2023-04-14
-- text: "Paper and oral presentation accepted @ **SIPAIM**!"
-  icon: "file-text"
-  link: https://arxiv.org/abs/2212.13535
-  extra_text: "in Valparaiso, Chile, Nov. 2022."
-  date: 2022-09-14
 # - text: "Started my Software Engineering PEY @ **Intel**"
 #   icon: "cpu"
 #   extra_text: "Performance Analysis & Infrastructure Team, May 2022."
@@ -55,11 +61,6 @@ news_items:
 #   icon: "clipboard"
 #   link: https://goldenberglab.ca/
 #   date: 2021-09-01
-- text: "First-ever paper & poster accepted @ **NeurIPS** LMRL Workshop!"
-  extra_text: "Virtual, Dec. 2021."
-  link: https://arxiv.org/abs/2111.11646
-  icon: "file-text"
-  date: 2021-10-01
 # - text: "Joining the **Moses Lab**! Exploring Computer Vision applied to Microscopy Images"
 #   extra_text: "AI/ML Research in Biology, May. 2021."
 #   icon: "clipboard"
