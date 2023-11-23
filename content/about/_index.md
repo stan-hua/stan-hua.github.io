@@ -35,7 +35,7 @@ academia:
         end_date: "2024 (Expected)"
 ---
 
-**Hi!** My name is Stan, and I want to create machine learning models that generalize.
+**Hi!** My name is Stan, and I want to create machine learning models that generalize. 
 
 I am particularly interested in methods that improve generalization when labeled data is scarce and noisy. In the past, I've explored:
 1. Large domain-specific pre-training datasets for transfer learning with microscopy images
