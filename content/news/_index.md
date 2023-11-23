@@ -11,7 +11,7 @@ default_news_icon: "file-text"
 num_news: 5
 
 news_items:
-- text: "Gave a talk at the Broad Institute's MIA Seminar Series entitled "Towards Meaningful Pretraining Data"!"
+- text: "Gave a talk at the Broad Institute's MIA Seminar Series entitled 'Towards Meaningful Pretraining Data'!"
   icon: "briefcase"
   link: https://youtu.be/pEqTQYa_Rm0?si=lrEWVo-5HWf02N4w
   extra_text: "in Boston, USA, Oct. 2023."
