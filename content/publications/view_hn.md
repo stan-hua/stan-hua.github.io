@@ -11,6 +11,6 @@ links:
     code: 'https://github.com/stan-hua/view_hn'
     poster: "https://stan-hua.github.io/isbi_poster.pdf"
 
-publication: "20th International Symposium on Biomedical Imaging (ISBI)"
+publication: "20th IEEE International Symposium on Biomedical Imaging (ISBI)"
 ---
 

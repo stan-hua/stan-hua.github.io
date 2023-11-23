@@ -16,9 +16,9 @@ socials:
     google_scholar: "citations?user=PNDkjjQAAAAJ&hl=en&authuser=1"
 
 interests:
-    - Data Science
-    - Deep Learning
-    - Software Engineering
+    - Robust Machine Learning
+    - Transfer Learning
+    - Self-Supervised Learning
 
 affiliations:
     - affiliation:
@@ -35,27 +35,14 @@ academia:
         end_date: "2024 (Expected)"
 ---
 
-**Hi!** My name is Stan. I am a future Data Scientist / Research Engineer!
+**Hi!** My name is Stan, and I want to create machine learning models that generalize.
 
-Currently, I am applying to jobs and graduate school programs in the US / Canada, starting in 2024.
+I am particularly interested in methods that improve generalization when labeled data is scarce and noisy. In the past, I've explored:
+1. Large domain-specific pre-training datasets for transfer learning with microscopy images
+2. Supervised contrastive pre-training to improve generalization of ultrasound video models across hospitals
+3. Large language models for automated soft-labeling of domain-specific text with prompt engineering
 
-In the past, I've worked on interesting problems in difficult domains (healthcare, finance) with different types of data (images/videos, text, tabular).
+I am also a believer of [slow science](https://en.wikipedia.org/wiki/Slow_science) when possible.
 
-Here are a couple of things I enjoy/value:
-1. answering meaningful questions through novel yet rigorous data science
-2. engineering of robust/scalable machine learning systems
-3. communicating ideas in a way that builds intuition
-4. [slow science](https://en.wikipedia.org/wiki/Slow_science)
+Shoot me an email if you'd like to chat! And do include the word "stupefy" in your email.
 
-
-<br>
-
-```
-Congratulations if you've made it this far!
-
-Do connect with me on LinkedIn or shoot me an email saying "Open sesame".
-
-Would love to hear about you!
-```
-
-<br>

@@ -6,7 +6,7 @@ authors:
 - Alan Moses
 date: "2021-12-01"
 
-publication: "NeurIPS Workshop (Learning Meaningful Representations of Life)"
+publication: "NeurIPS Workshop on Learning Meaningful Representations of Life"
 
 links:
     pdf: https://arxiv.org/pdf/2111.11646.pdf
