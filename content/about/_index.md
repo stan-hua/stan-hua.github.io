@@ -4,7 +4,7 @@ date: 2020-10-20T17:51:47+03:30
 draft: false
 headless: true
 
-full_name: "Stanley Z.Hua"
+full_name: "Stanley Z. Hua"
 profile_picture: "profile.png"
 cv: "cv.pdf"
 # set to false if you don't want to show your blog
@@ -30,12 +30,12 @@ academia:
     - course:
         degree: "B.Sc."
         institution:  "University of Toronto"
-        major: "Computer Science Specialist, Statistics Minor"
+        major: "Computer Science Specialist"
         start_date: "2019"
-        end_date: "2024 (Expected)"
+        end_date: "2024"
 ---
 
-**Hi!** My name is Stan, and I want to create machine learning models that generalize. 
+**Hi!** My name is Stan, and I want to create machine learning models for healthcare that generalize and improve patient care.
 
 I am particularly interested in methods that improve generalization when labeled data is scarce and noisy. In the past, I've explored:
 1. Large domain-specific pre-training datasets for transfer learning with microscopy images
@@ -45,4 +45,3 @@ I am particularly interested in methods that improve generalization when labeled
 I am also a believer of [slow science](https://en.wikipedia.org/wiki/Slow_science) when possible.
 
 Shoot me an email if you'd like to chat! And do include the word "stupefy" in your email.
-
