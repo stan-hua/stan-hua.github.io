@@ -35,9 +35,10 @@ academia:
         end_date: "2024"
 ---
 
-**Hi!** My name is Stan, and I want to create equitable and robust machine learning models that can meaningfully improve patient care.
+**Hi!** My name is Stan, and I want to create equitable and robust machine learning systems that can meaningfully improve patient care, especially for those in under-served populations.
 
-I care deeply about the usefulness of my ML models when deployed clinically, and thus much of my research interests are revolve around methods to improve generalization when data is not representative, noisily labeled or completely unlabeled. I've worked on a variety of topics:
+I care deeply about the usefulness of machine learning when deployed clinically, and thus much of my research interests revolve around methods to improve generalization when data is not representative, noisily labeled or completely unlabeled. I’ve worked on a variety of topics:
+
 1. Automatic classification of anatomical planes in pediatric renal ultrasound sequences for enabling community point-of-care ultrasound
 2. Longitudinal adaptation and evaluation of a deep ultrasound classifier of a severe pediatric hydronephrosis
 3. Curating a large dataset of openly available microscopy images for developing microscopy foundation models and transfer learning
