@@ -11,6 +11,11 @@ default_news_icon: "file-text"
 num_news: 5
 
 news_items:
+- text: "Abstract and poster accepted @ Nature Precision Child Health Conference!"
+  icon: "file-text"
+  link: 2024_nature_pch_poster.pdf
+  extra_text: "in Toronto, CA, Sept. 2024."
+  date: 2024-09-30
 - text: "Gave a talk at the Broad Institute's MIA Seminar Series entitled 'Towards Meaningful Pretraining Data'!"
   icon: "briefcase"
   link: https://youtu.be/pEqTQYa_Rm0?si=lrEWVo-5HWf02N4w
