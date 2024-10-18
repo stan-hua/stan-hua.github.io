@@ -5,7 +5,7 @@ draft: false
 headless: true
 
 full_name: "Stanley Z. Hua"
-profile_picture: "profile.png"
+profile_picture: "profile.jpg"
 cv: "cv.pdf"
 # set to false if you don't want to show your blog
 blog: true
