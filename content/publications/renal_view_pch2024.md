@@ -8,6 +8,7 @@ date: "2024-09-30"
 links:
     code: 'https://github.com/stan-hua/view_hn'
     poster: "https://stan-hua.github.io/2024_nature_pch_poster.pdf"
+    demo: "https://stan-hua.github.io/renalview_demo.png"
 
 publication: "Nature Conference on Precision Child Health"
 ---
