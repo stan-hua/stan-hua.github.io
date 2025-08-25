@@ -32,6 +32,7 @@ academia:
         major: "Computational Precision Health"
         start_date: "2025"
         end_date: "2030 (Expected)"
+    - course:
         degree: "PhD."
         institution:  "University of California, San Francisco"
         major: "Computational Precision Health"
