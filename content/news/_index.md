@@ -11,6 +11,20 @@ default_news_icon: "file-text"
 num_news: 5
 
 news_items:
+- text: "Life update: moved to California!"
+  icon: "send"
+  extra_text: "Aug. 2025."
+  date: 2025-08-20
+- text: "Paper published @ PLOS Digital Health!"
+  icon: "file-text"
+  link: https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000939
+  extra_text: "Aug. 2025."
+  date: 2025-08-05
+- text: "Paper preprint @ medRxiv!"
+  icon: "file-text"
+  link: https://www.medrxiv.org/content/10.1101/2025.06.06.25328913v1
+  extra_text: "June 2025."
+  date: 2025-06-07
 - text: "Abstract and poster accepted @ Nature Precision Child Health Conference!"
   icon: "file-text"
   link: 2024_nature_pch_poster.pdf
