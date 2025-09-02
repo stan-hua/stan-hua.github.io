@@ -13,7 +13,7 @@ blog: true
 socials:
     github: "stan-hua"
     linkedin: "stanley-z-hua"
-    google_scholar: "citations?user=PNDkjjQAAAAJ&hl=en"
+    google_scholar: "citations?user=NInWR_MAAAAJ&hl=en"
 
 interests:
     - Trustworthy ML for Health
