@@ -54,4 +54,4 @@ I also believe in [slow science](https://en.wikipedia.org/wiki/Slow_science), wh
 
 Shoot me an email if you'd like to chat! And if you include the word "stupefy" in your email, I'll know you read this :).
 
-If you'd like to work with me in a mentor-mentee relationship, please fill out this [form](https://tally.so/r/yPyrkg) in addition to shooting me an email!
+<!-- If you'd like to work with me in a mentor-mentee relationship, please fill out this [form](https://tally.so/r/yPyrkg) in addition to shooting me an email! -->
