@@ -11,7 +11,7 @@ authors:
 date: "2026-04-01"
 
 links:
-    paper: "https://www.nature.com/articles/s44360-026-00111-3
+    paper: "https://www.nature.com/articles/s44360-026-00111-3"
     code: 'https://github.com/stan-hua/ped_vs_adults-cxr'
     poster: "https://stan-hua.github.io/peds_poster.pdf"
 
