@@ -8,7 +8,7 @@ full_name: "Stanley Z. Hua"
 profile_picture: "profile.png"
 cv: "cv.pdf"
 # set to false if you don't want to show your blog
-blog: true
+blog: false
 
 socials:
     github: "stan-hua"

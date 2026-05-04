@@ -9,7 +9,7 @@ date: "2021-12-01"
 publication: "NeurIPS Workshop on Learning Meaningful Representations of Life"
 
 links:
-    pdf: https://arxiv.org/pdf/2111.11646.pdf
+    paper: https://arxiv.org/pdf/2111.11646.pdf
     code: https://github.com/stan-hua/CytoImageNet
     video: https://youtu.be/qfEA-UR6tVM
     poster: https://github.com/stan-hua/CytoImageNet/blob/master/poster.pdf

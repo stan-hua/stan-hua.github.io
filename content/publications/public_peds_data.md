@@ -1,5 +1,5 @@
 ---
-title: "Lack of children in public medical imaging data points to growing age bias in biomedical AI"
+title: "Underrepresentation of children in public medical imaging datasets"
 authors:
 - Stanley Hua
 - Nicholas Heller
@@ -8,11 +8,12 @@ authors:
 - Irene Y. Chen
 - Alex X. Lu
 - Lauren Erdman
-date: "2026-03-01"
+date: "2026-04-01"
 
 links:
-    preprint: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12259205/"
+    paper: "https://www.nature.com/articles/s44360-026-00111-3
     code: 'https://github.com/stan-hua/ped_vs_adults-cxr'
+    poster: "https://stan-hua.github.io/peds_poster.pdf"
 
 publication: "Nature Health"
 ---

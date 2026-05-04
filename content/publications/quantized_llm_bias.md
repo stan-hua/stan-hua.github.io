@@ -7,9 +7,10 @@ authors:
 date: "2026-03-01"
 
 links:
-    preprint: "https://arxiv.org/abs/2602.06181"
+    paper: "https://arxiv.org/abs/2602.06181"
     code: 'https://github.com/stan-hua/PostTrainingBiasBenchmark'
+    poster: "https://stan-hua.github.io/iclr_poster.pdf"
 
-publication: "ICLR 2026 Workshop on Agents in the Wild & Workshop on Principled Design for Trustworthy AI"
+publication: "ICLR Workshop on Principled Design for Trustworthy AI (Spotlight)"
 ---
 
