@@ -11,11 +11,11 @@ default_news_icon: "file-text"
 num_news: 5
 
 news_items:
-- text: "Paper on social bias in quantized LLMs in 2 x ICLR Workshops!"
+- text: "Project on social bias in quantized LLMs presented in 2 x ICLR Workshops!"
   icon: "file-text"
   link: https://arxiv.org/abs/2602.06181
   extra_text: "in Rio de Janeiro, Brazil, Apr. 2026."
-- text: "Paper on public pediatric data gap in Nature Health!"
+- text: "Project on pediatric gap in public datasets published in Nature Health!"
   icon: "file-text"
   link: https://www.medrxiv.org/content/10.1101/2025.06.06.25328913v1
   extra_text: "March 2026"
@@ -23,13 +23,13 @@ news_items:
   icon: "send"
   extra_text: "Aug. 2025."
   date: 2025-08-20
-- text: "Paper on longitudinal modeling of hydronephrosis in PLOS Digital Health!"
+- text: "Project on modeling surgery decisions for hydronephrosis with repeat ultrasounds out in PLOS Digital Health!"
   icon: "file-text"
   link: https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000939
   extra_text: "Aug. 2025."
   date: 2025-08-05
   date: 2025-06-07
-- text: "Poster on automated renal view labeling at Nature Precision Child Health Conference!"
+- text: "Project on kidney ultrasound view classification presented at Nature Precision Child Health Conference!"
   icon: "file-text"
   link: 2024_nature_pch_poster.pdf
   extra_text: "in Toronto, CA, Sept. 2024."
@@ -39,7 +39,7 @@ news_items:
   link: https://youtu.be/pEqTQYa_Rm0?si=lrEWVo-5HWf02N4w
   extra_text: "in Boston, USA, Oct. 2023."
   date: 2023-04-18
-- text: "Poster at **ISBI**!"
+- text: "Project on supervised contrastive learning for view classification presented at **ISBI**!"
   icon: "file-text"
   link: isbi_poster.pdf
   extra_text: "in Cartagena, Colombia, Apr. 2023."
