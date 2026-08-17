@@ -11,14 +11,21 @@ default_news_icon: "file-text"
 num_news: 5
 
 news_items:
-- text: "Project on social bias in quantized LLMs presented in 2 x ICLR Workshops!"
+- text: "Social bias changes in quantized LLMs paper accepted to COLM!"
+  icon: "file-text"
+  link: https://arxiv.org/abs/2602.06181
+  extra_text: "in San Francisco, USA, Oct. 2026."
+- text: "Social bias changes in quantized LLMs paper presented in 2 x ICLR Workshops!"
   icon: "file-text"
   link: https://arxiv.org/abs/2602.06181
   extra_text: "in Rio de Janeiro, Brazil, Apr. 2026."
-- text: "Project on pediatric gap in public datasets published in Nature Health!"
+- text: "Quantifying children in public datasets project published in Nature Health!"
   icon: "file-text"
   link: https://www.medrxiv.org/content/10.1101/2025.06.06.25328913v1
   extra_text: "March 2026"
+- text: "Serving as assistant chair for NeurIPS position papers track!"
+  icon: "send"
+  extra_text: "Dec. 2025."
 - text: "Life update: moved to California!"
   icon: "send"
   extra_text: "Aug. 2025."
