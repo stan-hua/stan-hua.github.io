@@ -7,8 +7,6 @@ content_type: "news"
 
 section_settings:
     show_section: true
-    title: ''
+    title: 'News'
     # subtitle: 'news section subtitle'
 ---
-
-home/news.md

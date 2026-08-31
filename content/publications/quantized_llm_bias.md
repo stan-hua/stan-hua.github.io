@@ -11,6 +11,10 @@ links:
     code: 'https://github.com/stan-hua/PostTrainingBiasBenchmark'
     poster: "https://stan-hua.github.io/iclr_poster.pdf"
 
-publication: "COLM 2026 & ICLR 2026 Workshop on Trustworthy AI (Spotlight)"
+venues:
+  - name: "COLM 2026"
+    type: conference
+  - name: "ICLR 2026 Workshop on Trustworthy AI (Spotlight)"
+    type: workshop
 ---
 

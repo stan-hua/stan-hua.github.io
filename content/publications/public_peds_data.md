@@ -15,6 +15,8 @@ links:
     code: 'https://github.com/stan-hua/ped_vs_adults-cxr'
     poster: "https://stan-hua.github.io/peds_poster.pdf"
 
-publication: "Nature Health"
+venues:
+  - name: "Nature Health"
+    type: journal
 ---
 

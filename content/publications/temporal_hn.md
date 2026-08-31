@@ -12,6 +12,10 @@ links:
     paper: "https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000939"
     code: 'https://github.com/stan-hua/temporal_hydronephrosis/'
 
-publication: "PLOS Digital Health (2025) & SIPAIM (2022)"
+venues:
+  - name: "PLOS Digital Health (2025)"
+    type: journal
+  - name: "SIPAIM (2022)"
+    type: conference
 ---
 

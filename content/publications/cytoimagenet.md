@@ -6,7 +6,9 @@ authors:
 - Alan Moses
 date: "2021-12-01"
 
-publication: "NeurIPS Workshop on Learning Meaningful Representations of Life"
+venues:
+  - name: "NeurIPS Workshop on Learning Meaningful Representations of Life"
+    type: workshop
 
 links:
     paper: https://arxiv.org/pdf/2111.11646.pdf
@@ -16,6 +18,3 @@ links:
     dataset: https://www.kaggle.com/datasets/stanleyhua/cytoimagenet
 
 ---
-
-
-[See the wiki page for tutorial!](https://github.com/hadisinaee/avicenna/wiki)

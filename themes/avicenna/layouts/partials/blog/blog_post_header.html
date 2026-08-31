@@ -1,22 +1,13 @@
-{{ $readTime := mul (div (countwords .Content) 220.0) 60 }}
+{{ $readTime := math.Ceil (div (countwords .Content) 220.0) }}
 
-<h3>
-    <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
-</h3>
+<h2 class="post__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
 
-<div class="reading_time secondary_font text-muted ">
-    <span>
-        {{ .Date | time.Format "Jan 2 2006" }} · {{ math.Ceil (div $readTime 60) }} min read
-    </span>
-
+<div class="post__meta">
+    {{ .Date | time.Format "Jan 2, 2006" }} &middot; {{ $readTime }} min read
 </div>
 
-
-<!-- show tags if they are any -->
-{{ if .Params.tags }}
-<div class="tags_navigation">
-    {{ range .Params.tags }}
-    <a class="tag" href="/tags/{{ . }}/">#{{ . }}</a>
-    {{ end }}
+{{ with .Params.tags }}
+<div class="post__tags">
+    {{ range . }}<a class="tag" href="{{ (printf "/tags/%s/" (urlize .)) | relURL }}">#{{ . }}</a>{{ end }}
 </div>
 {{ end }}

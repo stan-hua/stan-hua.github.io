@@ -1,9 +1,7 @@
 {{ define "main" }}
-
-{{ partial "blog/blog_navbar.html" (dict "1" "about" "2" "blog")}}
-
-{{ partial "blog/blog_post_header.html" . }}
-
-{{ emojify .Content }}
-
+<article class="prose">
+    {{ partial "blog/blog_navbar.html" (dict "showAll" true) }}
+    {{ partial "blog/blog_post_header.html" . }}
+    <div class="prose__body">{{ emojify .Content }}</div>
+</article>
 {{ end }}

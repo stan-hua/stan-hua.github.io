@@ -15,6 +15,10 @@ socials:
     linkedin: "stanley-z-hua"
     google_scholar: "citations?user=NInWR_MAAAAJ&hl=en"
 
+# One or two sentences on what you're working on right now.
+# The "Currently" block stays hidden while this is empty -- nothing is written for you.
+currently: "Reading on sequential hypothesis testing and changepoint detection, trying out ultimate frisbee, and thinking about creating a club."
+
 interests:
     - Trustworthy ML for Health
     - Accessible Health Tech

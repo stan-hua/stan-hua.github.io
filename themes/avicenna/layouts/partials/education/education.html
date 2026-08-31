@@ -1,0 +1,21 @@
+{{/* Education lives on the /about page, not in a section of its own. */}}
+{{ $about := .Site.GetPage "/about" }}
+
+{{ with $about.Params.academia }}
+<div class="edu">
+    {{ range . }}
+    <div class="edu__row">
+        <div>
+            <div class="edu__inst">{{ .course.institution }}</div>
+            <div class="edu__deg">
+                {{ .course.degree }} {{ .course.major }}{{ with .course.minor }}, Minor: {{ . }}{{ end }}
+            </div>
+            {{ with .course.other_info }}<div class="edu__deg">{{ . }}</div>{{ end }}
+        </div>
+        <div class="edu__dates">
+            {{ .course.start_date }} &ndash; {{ with .course.end_date }}{{ . }}{{ else }}present{{ end }}
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

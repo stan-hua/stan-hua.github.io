@@ -1,8 +1,22 @@
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-    crossorigin="anonymous"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
 <script>
-    feather.replace()
+    (function () {
+        var btn = document.querySelector(".theme-toggle");
+        if (!btn) return;
+        function label(t) {
+            btn.setAttribute("aria-label", t === "dark" ? "Switch to light theme" : "Switch to dark theme");
+        }
+        label(document.documentElement.getAttribute("data-theme") || "light");
+        btn.addEventListener("click", function () {
+            var root = document.documentElement;
+            var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+            root.setAttribute("data-theme", next);
+            label(next);
+            try { localStorage.setItem("theme", next); } catch (e) {}
+        });
+    })();
 </script>
+
+{{ if .IsHome }}
+{{ $field := resources.Get "js/field.js" | minify | fingerprint }}
+<script src="{{ $field.RelPermalink }}" integrity="{{ $field.Data.Integrity }}" defer></script>
+{{ end }}

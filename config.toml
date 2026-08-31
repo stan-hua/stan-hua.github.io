@@ -1,4 +1,4 @@
-baseURL = "https://example.com"
+baseURL = "https://stan-hua.github.io/"
 
 # set your your own ga token here.
 googleAnalytics = ""
@@ -15,6 +15,11 @@ title = "Stanley Z. Hua"
 # number of posts to show on the blog page
 paginate = 10
 
+# only `tags` is used (by blog posts); drop Hugo's default `categories` taxonomy,
+# which was generating empty pages nothing linked to
+[taxonomies]
+tag = "tags"
+
 [markup]
 [markup.tableOfContents]
 endLevel = 3
@@ -26,5 +31,8 @@ startLevel = 1
     unsafe = true
 
 [params]
-# it is used for the copy-right section of your page
+# used in the footer copyright line
 name = "Stanley Hua"
+# author name to emphasise in publication author lists; must match the spelling used
+# in each publication's `authors` list
+author = "Stanley Hua"

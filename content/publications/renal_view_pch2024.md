@@ -10,6 +10,8 @@ links:
     poster: "https://stan-hua.github.io/2024_nature_pch_poster.pdf"
     demo: "https://stan-hua.github.io/renalview_demo.mp4"
 
-publication: "Nature Conference on Precision Child Health"
+venues:
+  - name: "Nature Conference on Precision Child Health"
+    type: conference
 ---
 

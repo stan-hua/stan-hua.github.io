@@ -1,49 +1,36 @@
 {{ define "main" }}
 
-{{ $headlessPage := .Site.GetPage "/home" }}
+{{ $about := .Site.GetPage "/about" }}
+{{ $home  := .Site.GetPage "/home" }}
 
-{{ range where ($headlessPage.Resources.ByType "page") "Params.section_settings.show_section" true}}
+<canvas id="field" aria-hidden="true"></canvas>
 
-{{ $content_type := .Params.content_type }}
-{{ if not $content_type }}
-NO CONTENT TYPE FOUND. Set content_type = "{{.Params.title | lower }}"
-{{ end }}
+<div class="shell">
+    <div class="card">
 
-{{ $title := .Params.title }}
-{{ if .Params.section_settings.title }}
-{{ $title = .Params.section_settings.title }}
-{{ end }}
+        {{ partial "core/identity.html" $about }}
 
-{{ $subtitle := "" }}
-{{ if .Params.section_settings.subtitle }}
-{{ $subtitle = .Params.section_settings.subtitle }}
-{{ end }}
+        {{/* Each stub in content/home/ declares a content_type and dispatches to the
+             matching partial; the partial decides where its own data comes from. */}}
+        {{ range where ($home.Resources.ByType "page") "Params.section_settings.show_section" true }}
 
-{{ if or $title (eq $content_type "about")}}
-<div class="row w-100">
-    <div class="col w-100">
-        {{if or $title $subtitle}}
-        <div class="row w-100">
-            <div class="col w-100">
-                {{if $title }}
-                <h3 class="row  w-100 section-title main_color"> {{ $title }} </h3>
-                {{ end }}
+        {{ $content_type := .Params.content_type }}
+        {{ if not $content_type }}
+        {{ errorf "content/home/%s: set content_type (e.g. content_type: %q)" .File.LogicalName (lower .Params.title) }}
+        {{ end }}
 
-                {{ if $subtitle}}
-                <h6 class="row w-100 section-subtitle  text-muted"> {{ $subtitle }} </h6>
-                {{end}}
-            </div>
-        </div>
-        {{end}}
+        {{ $title := .Params.section_settings.title | default "" }}
+        {{ $subtitle := .Params.section_settings.subtitle | default "" }}
 
-        {{- partial (printf "%s/%s.html" $content_type $content_type) . -}}
+        <section class="section">
+            {{ with $title }}<h2 class="section__title">{{ . }}</h2>{{ end }}
+            {{ with $subtitle }}<p class="section__subtitle">{{ . }}</p>{{ end }}
+            {{- partial (printf "%s/%s.html" $content_type $content_type) . -}}
+        </section>
+
+        {{ end }}
+
     </div>
 </div>
 
-{{end}}
-
-<!-- this is for range -->
-{{end}}
-
-<!-- this is for block -->
-{{end}}
+{{ end }}

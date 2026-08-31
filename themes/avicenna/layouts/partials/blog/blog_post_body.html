@@ -1,8 +1,5 @@
-<div>{{ .Summary | truncate 500 }}</div>
+<div class="post__summary">{{ .Summary | plainify | htmlUnescape | truncate 320 }}</div>
 
 {{ if .Truncated }}
-<!-- This <div> includes a read more link, but only if the summary is truncated... -->
-<div class="read_more">
-    <a href="{{ .RelPermalink }}">Read More…</a>
-</div>
+<div class="post__more"><a href="{{ .RelPermalink }}">Read more &rarr;</a></div>
 {{ end }}

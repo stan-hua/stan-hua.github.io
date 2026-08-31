@@ -1,11 +1,16 @@
-<!-- <div class='about col h-100 '> -->
+{{ $about := .Site.GetPage .Params.content_type }}
 
-<div class="about row w-100">
-    {{ partial "about/introduction.html" . }}
+{{ with $about.Content }}<div class="bio">{{ . }}</div>{{ end }}
+
+{{/* The Currently block stays hidden until `currently` is filled in on content/about/_index.md. */}}
+{{ if or $about.Params.currently $about.Params.interests }}
+<div class="now">
+    <div class="now__cap"><span class="now__dot"></span>Currently</div>
+    {{ with $about.Params.currently }}<div class="now__body">{{ . | markdownify }}</div>{{ end }}
+    {{ with $about.Params.interests }}
+    <div class="now__tags">
+        {{ range . }}<span class="chip chip--plain">{{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
 </div>
-
-<div class="about row w-100">
-    {{ partial "about/interests_academia.html" . }}
-</div>
-
-<!-- </div> -->
+{{ end }}

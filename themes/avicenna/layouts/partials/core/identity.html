@@ -1,0 +1,56 @@
+{{/* Context: the /about page. Ledger header — photo left, identity right. */}}
+<header class="id">
+
+    {{ with .Params.profile_picture }}
+    {{ $photo := resources.Get (printf "images/%s" .) }}
+    {{ $sq := $photo.Fill "512x512 Center" }}
+    <img class="id__photo" width="156" height="156" alt="{{ $.Params.full_name }}"
+        src="{{ ($sq.Resize "156x webp q82").RelPermalink }}"
+        srcset="{{ ($sq.Resize "156x webp q82").RelPermalink }} 1x, {{ ($sq.Resize "312x webp q80").RelPermalink }} 2x">
+    {{ end }}
+
+    <div class="id__body">
+        {{ with .Params.full_name }}<h1 class="id__name">{{ . }}</h1>{{ end }}
+
+        {{ range .Params.affiliations }}
+        <div class="id__affil">
+            {{ .affiliation.title }}{{ with .affiliation.name }} &middot; {{ . }}{{ end }}
+        </div>
+        {{ with .affiliation.email }}
+        <div class="id__email"><a href="mailto:{{ . }}">{{ . }}</a></div>
+        {{ end }}
+        {{ end }}
+
+        <div class="id__icons">
+            {{ $s := .Params.socials }}
+            {{ with index $s "google_scholar" }}
+            <a href="https://scholar.google.com/{{ . }}" target="_blank" rel="noopener" aria-label="Google Scholar">
+                {{ partial "core/icon.html" "scholar" }}</a>
+            {{ end }}
+            {{ with index $s "github" }}
+            <a href="https://github.com/{{ . }}" target="_blank" rel="noopener" aria-label="GitHub">
+                {{ partial "core/icon.html" "github" }}</a>
+            {{ end }}
+            {{ with index $s "linkedin" }}
+            <a href="https://linkedin.com/in/{{ . }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+                {{ partial "core/icon.html" "linkedin" }}</a>
+            {{ end }}
+            {{ with index $s "twitter" }}
+            <a href="https://twitter.com/{{ . }}" target="_blank" rel="noopener" aria-label="Twitter">
+                {{ partial "core/icon.html" "twitter" }}</a>
+            {{ end }}
+            {{ if .Params.blog }}
+            <a href="{{ "blog" | relURL }}" aria-label="Blog">{{ partial "core/icon.html" "blog" }}</a>
+            {{ end }}
+            {{ with .Params.cv }}
+            <a href="{{ . | relURL }}" target="_blank" rel="noopener" aria-label="Curriculum vitae">
+                {{ partial "core/icon.html" "cv" }}</a>
+            {{ end }}
+
+            <button class="theme-toggle" type="button" aria-label="Switch to dark theme">
+                {{ partial "core/icon.html" "moon" }}{{ partial "core/icon.html" "sun" }}
+            </button>
+        </div>
+    </div>
+
+</header>

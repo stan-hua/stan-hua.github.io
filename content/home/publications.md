@@ -10,5 +10,3 @@ section_settings:
     title: 'Publications'
     # subtitle: ''
 ---
-
-home/publications.md

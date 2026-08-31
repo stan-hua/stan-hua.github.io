@@ -1,18 +1,13 @@
 {{ define "main" }}
+<div class="prose">
+    {{ partial "blog/blog_navbar.html" (dict "showAll" true) }}
+    <h1>Posts tagged #{{ .Data.Term }}</h1>
 
-{{ partial "blog/blog_navbar.html" (dict "1" "about" "2" "blog")}}
-
-
-<h2>Posts In <code>#{{ .Data.Term }}</code> </h2>
-
-{{ range .Pages.ByPublishDate.Reverse }}
-<p>
-    {{ partial "blog/blog_post_header.html" . }}
-
-    {{ partial "blog/blog_post_body.html" . }}
-
-</p>
-{{ end }}
-
-
+    {{ range .Pages.ByPublishDate.Reverse }}
+    <article class="post">
+        {{ partial "blog/blog_post_header.html" . }}
+        {{ partial "blog/blog_post_body.html" . }}
+    </article>
+    {{ end }}
+</div>
 {{ end }}

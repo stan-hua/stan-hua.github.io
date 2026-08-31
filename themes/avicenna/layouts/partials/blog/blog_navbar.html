@@ -1,11 +1,4 @@
-<div class="blog_nav_bar secondary_font ">
-    {{ range $key, $value := . }}
-    {{ if eq $value "about" }}
-    <a class="navbar-brand" href="/">{{ $value }}</a>
-    {{ else if eq $value "blog" }}
-    <a class="navbar-brand" href="/blog">« all posts</a>
-    {{ else }}
-    <a class="navbar-brand" href="/{{$value}}">{{ $value }}</a>
-    {{ end }}
-    {{ end }}
-</div>
+<nav class="blog-nav">
+    <a href="{{ "" | relURL }}">&larr; home</a>
+    {{ if .showAll }}<a href="{{ "blog" | relURL }}">all posts</a>{{ end }}
+</nav>
