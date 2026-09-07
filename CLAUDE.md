@@ -24,7 +24,8 @@ extended **0.128.0**, running `hugo --minify --baseURL <pages url>`. `public/` i
 
 ## Homepage architecture
 
-`layouts/index.html` renders a full-viewport `<canvas id="field">`, then one bordered `.card` containing:
+`layouts/index.html` renders one plain `<main class="page">` column — a 760px measure on the bare page
+ground, no card, no panels, no background animation — containing:
 
 1. `partials/core/identity.html` — the header, rendered directly from `content/about/_index.md`.
 2. A loop over the **headless page bundle** at `content/home/`.
@@ -37,7 +38,7 @@ declare a `content_type` plus a section title and `weight`. The loop takes every
 
 | stub | partial | reads from |
 |---|---|---|
-| `about.md` | `partials/about/about.html` | body + `currently`/`interests` of `content/about/_index.md` |
+| `about.md` | `partials/about/about.html` | body + `currently` of `content/about/_index.md` |
 | `news.md` | `partials/news/news.html` | `news_items` in `content/news/_index.md` |
 | `publications.md` | `partials/publications/publications.html` | page resources of `content/publications/` |
 | `education.md` | `partials/education/education.html` | `academia` on `content/about/_index.md` |
@@ -68,27 +69,31 @@ drives both sort order and the rendered date). `text` supports markdown and emoj
 only** — the date is rendered separately from `date`, so it must not be repeated in `where`.
 
 **Edit the bio** — the markdown body of `content/about/_index.md`. `currently` is a separate one-line field
-for what he's working on now; the Currently block hides itself when both it and `interests` are empty.
+for what he's working on now; the Currently block hides itself when that field is empty.
 
-## Theme and the ambient field
+## Theme
 
 **Light is the default and the site never follows the OS** — there is deliberately no `prefers-color-scheme`
 block in the CSS. Dark is opt-in only, via the toggle in the identity icon row, stored in `localStorage` and
 applied by an inline script in `head.html` before first paint.
 
-`assets/js/field.js` draws the background: scrolling PQRST traces whose amplitude and colour respond to the
-pointer. It is **homepage-only** (guarded by `.IsHome` in `partials/core/script.html`), disables itself below
-800px, honours `prefers-reduced-motion` with a single still frame, pauses on `visibilitychange`, and re-reads
-its palette via a `MutationObserver` on `data-theme`. The card is opaque, so text never sits over motion.
+`--ground` (the page background) and `--paper` (the surface colour that `color-mix` blends chips and tints
+against) are deliberately **the same value** in both themes, because the page is one flat surface. Keep them
+in step if either changes.
 
 ## Conventions worth keeping
 
-- **No CSS framework.** Bootstrap, jQuery, academicons and feather were all removed; Google Fonts is the only
-  external dependency left. Everything is hand-written CSS driven by custom properties in `:root`.
+- **No CSS framework, and no JS beyond the theme toggle.** Bootstrap, jQuery, academicons, feather and the
+  old background-animation canvas were all removed; Google Fonts is the only external dependency left.
+  Everything is hand-written CSS driven by custom properties in `:root`.
+- **Nothing on the homepage is a box.** Sections are separated by whitespace (the `gap` on `.page`), not by
+  borders, shadows or rounded corners. The one exception is `.scroller` — the shared scroll pane on the news
+  and publications lists, which caps their height so the page stays a readable length. Its only chrome is the
+  scrollbar thumb; give a list a `max-height` and the `scroller` class rather than inventing a new pattern.
 - **Never declare a colour only inside `[data-theme="dark"]`** — define the token in `:root` and override it
   there, or the light theme loses it.
 - **Images belong in `assets/`, not `static/`**, so they go through the image pipeline. The profile photo is a
-  10 MB source PNG that ships as a ~5 KB WebP because of this. `static/` is for files served as-is (PDFs, the
+  10 MB source PNG that ships as an ~8 KB WebP (plus a 2x variant) because of this. `static/` is for files served as-is (PDFs, the
   demo video, favicon).
 - Social icons are inline SVG via `partials/core/icon.html`; add a branch there rather than pulling in an
   icon font.

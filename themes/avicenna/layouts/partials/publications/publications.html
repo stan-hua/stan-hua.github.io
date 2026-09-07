@@ -11,7 +11,7 @@
     <span><i class="workshop"></i>Workshop</span>
 </div>
 
-<div class="pubs">
+<div class="pubs scroller">
     {{ range sort $pages "Params.date" "desc" }}
     <article class="pub">
         <div class="pub__year">{{ dateFormat "2006" .Params.date }}</div>

@@ -3,34 +3,30 @@
 {{ $about := .Site.GetPage "/about" }}
 {{ $home  := .Site.GetPage "/home" }}
 
-<canvas id="field" aria-hidden="true"></canvas>
+<main class="page">
 
-<div class="shell">
-    <div class="card">
+    {{ partial "core/identity.html" $about }}
 
-        {{ partial "core/identity.html" $about }}
+    {{/* Each stub in content/home/ declares a content_type and dispatches to the
+         matching partial; the partial decides where its own data comes from. */}}
+    {{ range where ($home.Resources.ByType "page") "Params.section_settings.show_section" true }}
 
-        {{/* Each stub in content/home/ declares a content_type and dispatches to the
-             matching partial; the partial decides where its own data comes from. */}}
-        {{ range where ($home.Resources.ByType "page") "Params.section_settings.show_section" true }}
+    {{ $content_type := .Params.content_type }}
+    {{ if not $content_type }}
+    {{ errorf "content/home/%s: set content_type (e.g. content_type: %q)" .File.LogicalName (lower .Params.title) }}
+    {{ end }}
 
-        {{ $content_type := .Params.content_type }}
-        {{ if not $content_type }}
-        {{ errorf "content/home/%s: set content_type (e.g. content_type: %q)" .File.LogicalName (lower .Params.title) }}
-        {{ end }}
+    {{ $title := .Params.section_settings.title | default "" }}
+    {{ $subtitle := .Params.section_settings.subtitle | default "" }}
 
-        {{ $title := .Params.section_settings.title | default "" }}
-        {{ $subtitle := .Params.section_settings.subtitle | default "" }}
+    <section class="section">
+        {{ with $title }}<h2 class="section__title">{{ . }}</h2>{{ end }}
+        {{ with $subtitle }}<p class="section__subtitle">{{ . }}</p>{{ end }}
+        {{- partial (printf "%s/%s.html" $content_type $content_type) . -}}
+    </section>
 
-        <section class="section">
-            {{ with $title }}<h2 class="section__title">{{ . }}</h2>{{ end }}
-            {{ with $subtitle }}<p class="section__subtitle">{{ . }}</p>{{ end }}
-            {{- partial (printf "%s/%s.html" $content_type $content_type) . -}}
-        </section>
+    {{ end }}
 
-        {{ end }}
-
-    </div>
-</div>
+</main>
 
 {{ end }}

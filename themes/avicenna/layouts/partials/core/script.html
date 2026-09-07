@@ -16,7 +16,6 @@
     })();
 </script>
 
-{{ if .IsHome }}
-{{ $field := resources.Get "js/field.js" | minify | fingerprint }}
-<script src="{{ $field.RelPermalink }}" integrity="{{ $field.Data.Integrity }}" defer></script>
-{{ end }}
+{{/* Site-wide: a click anywhere off the text opens a firework. */}}
+{{ $hanabi := resources.Get "js/hanabi.js" | minify | fingerprint }}
+<script src="{{ $hanabi.RelPermalink }}" integrity="{{ $hanabi.Data.Integrity }}" defer></script>

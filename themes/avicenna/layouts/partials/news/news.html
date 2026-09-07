@@ -1,6 +1,6 @@
 {{ $news := .Site.GetPage .Params.content_type }}
 
-<ul class="news">
+<ul class="news scroller">
     {{ range sort $news.Params.news_items "date" "desc" }}
     <li>
         <div class="news__hd">

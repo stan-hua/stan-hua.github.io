@@ -19,14 +19,9 @@ socials:
 # The "Currently" block stays hidden while this is empty -- nothing is written for you.
 currently: "Reading on sequential hypothesis testing and changepoint detection, trying out ultimate frisbee, and thinking about creating a club."
 
-interests:
-    - Trustworthy ML for Health
-    - Accessible Health Tech
-
 affiliations:
     - affiliation:
         title: "PhD Student @ UC Berkeley & UCSF"
-        name: "Berkeley, USA"
         email: "stanley.z.hua@gmail.com"
 
 academia:

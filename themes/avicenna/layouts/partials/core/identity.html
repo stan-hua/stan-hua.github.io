@@ -1,12 +1,12 @@
-{{/* Context: the /about page. Ledger header — photo left, identity right. */}}
+{{/* Context: the /about page. Portrait left, identity right. */}}
 <header class="id">
 
     {{ with .Params.profile_picture }}
     {{ $photo := resources.Get (printf "images/%s" .) }}
-    {{ $sq := $photo.Fill "512x512 Center" }}
-    <img class="id__photo" width="156" height="156" alt="{{ $.Params.full_name }}"
-        src="{{ ($sq.Resize "156x webp q82").RelPermalink }}"
-        srcset="{{ ($sq.Resize "156x webp q82").RelPermalink }} 1x, {{ ($sq.Resize "312x webp q80").RelPermalink }} 2x">
+    {{ $sq := $photo.Fill "640x640 Center" }}
+    <img class="id__photo" width="320" height="320" alt="{{ $.Params.full_name }}"
+        src="{{ ($sq.Resize "320x webp q82").RelPermalink }}"
+        srcset="{{ ($sq.Resize "320x webp q82").RelPermalink }} 1x, {{ ($sq.Resize "640x webp q78").RelPermalink }} 2x">
     {{ end }}
 
     <div class="id__body">

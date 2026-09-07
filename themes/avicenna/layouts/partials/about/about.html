@@ -3,14 +3,9 @@
 {{ with $about.Content }}<div class="bio">{{ . }}</div>{{ end }}
 
 {{/* The Currently block stays hidden until `currently` is filled in on content/about/_index.md. */}}
-{{ if or $about.Params.currently $about.Params.interests }}
+{{ with $about.Params.currently }}
 <div class="now">
     <div class="now__cap"><span class="now__dot"></span>Currently</div>
-    {{ with $about.Params.currently }}<div class="now__body">{{ . | markdownify }}</div>{{ end }}
-    {{ with $about.Params.interests }}
-    <div class="now__tags">
-        {{ range . }}<span class="chip chip--plain">{{ . }}</span>{{ end }}
-    </div>
-    {{ end }}
+    <div class="now__body">{{ . | markdownify }}</div>
 </div>
 {{ end }}
