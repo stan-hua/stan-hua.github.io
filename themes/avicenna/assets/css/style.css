@@ -35,6 +35,19 @@
   --fw-6:     #9B30FF;   /* Sr + Cu      -- purple      */
   --fw-ember: #96280A;   /* cooling spark               */
 
+  /* chart -- its own palette, deliberately not the site accent: these steps
+     were picked to clear the colour-vision, contrast and lightness checks
+     against this page's white surface, and the dark set was re-checked against
+     the dark one rather than flipped. Nothing outside the chart uses them. */
+  --tt-line:    #2A78D6;   /* the rating line and its dots */
+  --tt-up:      #1B7A4B;   /* a night that gained rating   */
+  --tt-down:    #C0392E;   /* a night that lost it         */
+  --tt-grid:    #ECEEF1;   /* hairline grid   */
+  --tt-axis:    #C7CCD3;   /* baselines       */
+  --tt-ink:     #191C21;   /* direct labels   */
+  --tt-muted:   #6E7681;   /* axis text       */
+  --tt-surface: #FFFFFF;   /* the ring that keeps a marker off its own line */
+
   /* venue types: journal > conference > workshop, by archival weight */
   --v-journal:    #12507F;
   --v-conference: #0E5A57;
@@ -68,6 +81,14 @@
   --v-journal:    #7FB2DC;
   --v-conference: #6FC3BC;
   --v-workshop:   #98A2B0;
+  --tt-line:    #3987E5;
+  --tt-up:      #4FC07E;
+  --tt-down:    #E67C72;
+  --tt-grid:    #232830;
+  --tt-axis:    #39414D;
+  --tt-ink:     #E4E8EE;
+  --tt-muted:   #828B98;
+  --tt-surface: #12151A;
 }
 
 /* --------------------------------------------------------------- base --- */
@@ -374,6 +395,115 @@ a:hover { text-decoration: underline; }
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
+
+/* --------------------------------------------------------- table tennis --- */
+
+/* The way in: the words "table tennis" inside the Currently line. Quiet on
+   purpose -- it reads as prose with a hint, not as a link. */
+.tt-trigger {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  border-bottom: 1px dotted var(--muted);
+}
+.tt-trigger:hover { color: var(--accent); border-bottom-color: currentColor; }
+.tt-trigger[aria-expanded="true"] { color: var(--accent); border-bottom-style: solid; }
+
+.tt {
+  margin-top: 22px;
+  padding-left: 18px;
+  border-left: 2px solid var(--line);
+}
+.tt--in { animation: tt-in .22s ease-out both; }
+@keyframes tt-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.tt__lede {
+  font-size: var(--step--1);
+  line-height: 1.6;
+  color: var(--muted);
+}
+.tt__lede b { color: var(--ink-2); font-variant-numeric: tabular-nums; }
+
+.tt__chart {
+  position: relative;
+  width: 100%;
+  /* Tall enough for the plot and its axis band, so nothing grows a nested
+     scrollbar. Matches the height the script draws. */
+  height: 214px;
+  margin-top: 10px;
+  touch-action: pan-y;
+}
+.tt__chart:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+.tt__svg { display: block; overflow: visible; }
+.tt__dot { transition: r .12s ease-out; }
+
+.tt__ax {
+  font-family: var(--sans);
+  font-size: 10.5px;
+  font-variant-numeric: tabular-nums;
+}
+.tt__now {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tooltip: the value leads and the label follows, because the reader already
+   knows what they are pointing at and wants the number. */
+.tt__tip {
+  position: absolute;
+  z-index: 2;
+  min-width: 128px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: 0 4px 14px rgba(16, 22, 30, .10);
+  pointer-events: none;
+  font-size: var(--step--2);
+}
+:root[data-theme="dark"] .tt__tip { box-shadow: 0 4px 14px rgba(0, 0, 0, .45); }
+.tt__tiphead {
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+  font-variant-numeric: tabular-nums;
+}
+.tt__tiprow { display: flex; align-items: baseline; gap: 6px; line-height: 1.6; }
+.tt__tiprow b { color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.tt__tiprow span { color: var(--muted); }
+
+.tt__details { margin-top: 14px; font-size: var(--step--2); }
+.tt__details summary { color: var(--muted); cursor: pointer; }
+.tt__details summary:hover { color: var(--accent); }
+.tt__tablewrap { overflow-x: auto; margin-top: 10px; }
+.tt__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--step--2);
+  font-variant-numeric: tabular-nums;
+}
+.tt__table th,
+.tt__table td {
+  padding: 6px 14px 6px 0;
+  text-align: left;
+  border-bottom: 1px solid var(--line-2);
+  white-space: nowrap;
+}
+.tt__table thead th { color: var(--muted); font-weight: 600; }
+.tt__table tbody th { font-weight: 500; color: var(--ink-2); }
+.tt__table tbody td { color: var(--ink-2); }
+.tt__table tfoot th,
+.tt__table tfoot td { font-weight: 700; color: var(--ink); border-bottom: 0; }
+.tt__up   { color: var(--tt-up); }
+.tt__down { color: var(--tt-down); }
 
 /* -------------------------------------------------------------- footer --- */
 

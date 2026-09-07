@@ -6,6 +6,15 @@
 {{ with $about.Params.currently }}
 <div class="now">
     <div class="now__cap"><span class="now__dot"></span>Currently</div>
-    <div class="now__body">{{ . | markdownify }}</div>
+
+    {{/* The words "table tennis" in that one line become the button that opens
+         the rating chart below -- the only way in, and quiet on purpose. If the
+         phrase ever leaves the sentence the button simply isn't rendered and
+         the panel stays closed, so nothing breaks. */}}
+    {{ $body := . | markdownify }}
+    {{ $trigger := `<button type="button" class="tt-trigger" aria-expanded="false" aria-controls="table-tennis">table tennis</button>` }}
+    <div class="now__body">{{ (replace $body "table tennis" $trigger 1) | safeHTML }}</div>
 </div>
 {{ end }}
+
+{{ partial "table_tennis/table_tennis.html" . }}

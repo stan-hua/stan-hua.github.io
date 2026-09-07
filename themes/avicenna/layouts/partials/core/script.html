@@ -19,3 +19,8 @@
 {{/* Site-wide: a click anywhere off the text opens a firework. */}}
 {{ $hanabi := resources.Get "js/hanabi.js" | minify | fingerprint }}
 <script src="{{ $hanabi.RelPermalink }}" integrity="{{ $hanabi.Data.Integrity }}" defer></script>
+
+{{ if .IsHome }}
+{{ $ttjs := resources.Get "js/table_tennis.js" | minify | fingerprint }}
+<script src="{{ $ttjs.RelPermalink }}" integrity="{{ $ttjs.Data.Integrity }}" defer></script>
+{{ end }}

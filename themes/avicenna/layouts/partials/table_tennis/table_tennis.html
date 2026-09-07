@@ -1,0 +1,84 @@
+{{/* Berkeley Table Tennis Club rating, from data/table_tennis.json.
+
+     Not a section of its own -- it is called from partials/about/about.html so
+     it lands between Currently and News, and it starts closed. The way in is
+     the "table tennis" button inside the Currently line.
+
+     Everything here renders server-side: with no JavaScript the panel simply
+     never opens, and the table under the disclosure is still the whole data
+     set. assets/js/table_tennis.js draws the chart from the same rows. */}}
+
+{{ $tt := .Site.Data.table_tennis }}
+{{ $s := $tt.sessions }}
+
+{{ if $s }}
+{{ $first := index $s 0 }}
+{{ $last := index $s (sub (len $s) 1) }}
+
+{{ $gw := 0 }}{{ $gl := 0 }}{{ $mw := 0 }}{{ $mp := 0 }}
+{{ range $s }}
+  {{ $gw = add $gw .games_won }}{{ $gl = add $gl .games_lost }}
+  {{ $mw = add $mw .matches_won }}{{ $mp = add $mp .matches_played }}
+{{ end }}
+
+<div class="tt" id="table-tennis" hidden>
+
+    <p class="tt__lede">
+        Because graphs are always more compelling, here's a plot of my rating at the
+        <a href="https://berkeleytabletennis.org/results" target="_blank"
+            rel="noopener">Berkeley Table Tennis Club</a>.
+    </p>
+
+    <div class="tt__chart" id="tt-chart" role="img"
+        aria-label="Line chart of Stanley Hua's club rating across {{ len $s }} Friday nights, from {{ $first.rating_pre }} on {{ dateFormat "January 2, 2006" $first.date }} to {{ $last.rating }} on {{ dateFormat "January 2, 2006" $last.date }}. One dot per night. The same numbers are in the table below."></div>
+
+    {{/* The tooltip enhances; it never gates. Every number it shows is here. */}}
+    <details class="tt__details">
+        <summary>In table format</summary>
+        <div class="tt__tablewrap">
+            <table class="tt__table">
+                <thead>
+                    <tr>
+                        <th scope="col">Night</th>
+                        <th scope="col">Rating</th>
+                        <th scope="col">Change</th>
+                        <th scope="col">Matches W&ndash;L</th>
+                        <th scope="col">Games W&ndash;L</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ range $s }}
+                    {{ $d := sub .rating .rating_pre }}
+                    <tr>
+                        <th scope="row">{{ dateFormat "Jan 2, 2006" .date }}</th>
+                        <td>{{ .rating }}</td>
+                        <td class="{{ if gt $d 0 }}tt__up{{ else if lt $d 0 }}tt__down{{ end }}">
+                            {{ if gt $d 0 }}+{{ end }}{{ $d }}
+                        </td>
+                        <td>{{ .matches_won }}&ndash;{{ sub .matches_played .matches_won }}</td>
+                        <td>{{ .games_won }}&ndash;{{ .games_lost }}</td>
+                    </tr>
+                    {{ end }}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row">Total</th>
+                        <td>{{ $last.rating }}</td>
+                        {{ $td := sub $last.rating $first.rating_pre }}
+                        <td class="{{ if gt $td 0 }}tt__up{{ else if lt $td 0 }}tt__down{{ end }}">
+                            {{ if gt $td 0 }}+{{ end }}{{ $td }}
+                        </td>
+                        <td>{{ $mw }}&ndash;{{ sub $mp $mw }}</td>
+                        <td>{{ $gw }}&ndash;{{ $gl }}</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </details>
+
+    {{/* safeJS is required: inside a <script> element Go's contextual escaping
+         otherwise turns this into a quoted JS *string* rather than JSON, and
+         JSON.parse then hands back a string instead of the rows. */}}
+    <script type="application/json" id="tt-data">{{ $s | jsonify | safeJS }}</script>
+</div>
+{{ end }}

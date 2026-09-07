@@ -43,8 +43,14 @@ declare a `content_type` plus a section title and `weight`. The loop takes every
 | `publications.md` | `partials/publications/publications.html` | page resources of `content/publications/` |
 | `education.md` | `partials/education/education.html` | `academia` on `content/about/_index.md` |
 
+(`partials/table_tennis/` has no stub — it hangs off the about partial instead.)
+
 Adding a section means adding both a stub in `content/home/` and a matching
 `partials/<type>/<type>.html`. Turning one off is `section_settings.show_section: false`.
+
+**`partials/table_tennis/` is the one partial that is deliberately not a section** — it has no
+stub, and `partials/about/about.html` calls it directly so it lands between Currently and News.
+See below.
 
 ## Editing content
 
@@ -70,6 +76,33 @@ only** — the date is rendered separately from `date`, so it must not be repeat
 
 **Edit the bio** — the markdown body of `content/about/_index.md`. `currently` is a separate one-line field
 for what he's working on now; the Currently block hides itself when that field is empty.
+
+## The table tennis panel
+
+A hidden thing: the words **"table tennis" inside the `currently` line** are the only way in.
+`partials/about/about.html` swaps that exact phrase for a `<button class="tt-trigger">` *after*
+markdown runs; reword the sentence without the phrase and no button renders, the panel stays shut,
+and nothing else breaks.
+
+The panel itself is `partials/table_tennis/table_tennis.html`, rendered closed (`hidden`) and drawn
+by `assets/js/table_tennis.js` on first open — the chart cannot be measured while the panel is
+hidden, so `render()` runs from the toggle, not on load.
+
+Data is `data/table_tennis.json` (`.Site.Data.table_tennis`), scraped from the club's published
+results. **Adding a night is an edit to that file and nothing else** — the chart, the table and the
+Total row all derive from it.
+
+Two things there that look removable and are not:
+
+- `{{ $s | jsonify | safeJS }}` — inside a `<script>` element Go's contextual escaping otherwise
+  emits the rows as a quoted JS *string*, `JSON.parse` returns a string, and the script throws
+  before it ever binds the trigger. The `Array.isArray` guard in the JS is the matching seatbelt.
+- The `<details>` table — it is the no-JS fallback and the reason the hover is a convenience rather
+  than the only route to the numbers.
+
+Chart colours are the `--tt-*` tokens, checked against this page's real surfaces in both themes
+(the line clears 3:1 as a graphic; the table's up/down figures clear 4.5:1 as text). Re-check if
+you change them.
 
 ## Theme
 
