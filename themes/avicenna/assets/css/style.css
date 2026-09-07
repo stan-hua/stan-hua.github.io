@@ -35,11 +35,15 @@
   --fw-6:     #9B30FF;   /* Sr + Cu      -- purple      */
   --fw-ember: #96280A;   /* cooling spark               */
 
-  /* chart -- its own palette, deliberately not the site accent: these steps
-     were picked to clear the colour-vision, contrast and lightness checks
-     against this page's white surface, and the dark set was re-checked against
-     the dark one rather than flipped. Nothing outside the chart uses them. */
-  --tt-line:    #2A78D6;   /* the rating line and its dots */
+  /* chart -- read by assets/js/table_tennis.js and used by nothing else. The
+     line and its dots carry the site's own accent so the plot belongs to the
+     page; it is repeated as a literal rather than var(--accent) because the
+     script reads these with getComputedStyle and needs a colour, not a
+     reference -- so keep the two in step. Every value here was checked against
+     the surface it actually renders on (the line clears 3:1 as a graphic in
+     both themes, up/down clear 4.5:1 as text), and the dark set was re-picked
+     for the dark ground rather than flipped. */
+  --tt-line:    #12507F;   /* tracks --accent */
   --tt-up:      #1B7A4B;   /* a night that gained rating   */
   --tt-down:    #C0392E;   /* a night that lost it         */
   --tt-grid:    #ECEEF1;   /* hairline grid   */
@@ -81,7 +85,7 @@
   --v-journal:    #7FB2DC;
   --v-conference: #6FC3BC;
   --v-workshop:   #98A2B0;
-  --tt-line:    #3987E5;
+  --tt-line:    #7FB2DC;   /* tracks --accent */
   --tt-up:      #4FC07E;
   --tt-down:    #E67C72;
   --tt-grid:    #232830;
