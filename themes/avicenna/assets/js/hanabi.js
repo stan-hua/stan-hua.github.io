@@ -14,16 +14,29 @@
    numbers: how fast the stars leave, how much drag and gravity they carry, and
    how long a line they draw behind themselves.
 
+   Clicking faster escalates it. Every click adds to a `heat` value that decays
+   between clicks, so a single click on a quiet page opens one modest shell and
+   a fast run of them opens a barrage of large ones. Heat drives `power`, which
+   scales how many stars a shell throws, how far, and how long they burn.
+
    Deliberately cheap: nothing happens without a fine pointer (so no phone or
-   tablet ever pays for it), nothing happens under prefers-reduced-motion, and
-   the animation loop exists only while a star is alive.
+   tablet ever pays for it), nothing happens under prefers-reduced-motion, the
+   live star count is capped, and the animation loop exists only while a star
+   is alive.
    ========================================================================== */
 
 (function () {
   "use strict";
 
-  var PIXEL  = 3;   // star size in CSS px, and the grid everything snaps to
-  var SLACK  = 3;   // px of margin around a line of text that still counts as text
+  var PIXEL  = 3;    // star size in CSS px, and the grid everything snaps to
+  var SLACK  = 3;    // px of margin around a line of text that still counts as text
+  var STARS  = 800;  // hard ceiling on live stars, so a mashed mouse stays smooth
+  var DENSE  = 350;  // above this, stop sub-stepping trails (see paint)
+
+  /* Escalation. Each click adds GAIN to heat, which decays with a TAU-ms half
+     life, so cadence -- not click count -- is what raises it. */
+  var GAIN = 0.30;
+  var TAU  = 850;
   var TOKENS = ["--fw-1", "--fw-2", "--fw-3", "--fw-4", "--fw-5", "--fw-6"];
   var SKIP   = "a, button, input, textarea, select, label, summary, code, pre";
 
@@ -108,6 +121,7 @@
   var pending = [];   // shells waiting to break, for the multi-break types
 
   function emit(o) {
+    if (stars.length >= STARS) return;
     stars.push({
       x: o.x, y: o.y, vx: o.vx, vy: o.vy,
       rgb: o.rgb,
@@ -119,21 +133,38 @@
     });
   }
 
+  /* Set from the click cadence, 1 at rest and 2 at full heat. Every entry in
+     TYPES is written at power 1 and scaled through here, so the table stays a
+     description of shape and nothing else. */
+  var power = 1;
+
+  /* Fire fn in `frames` frames at the power in force right now, not the power
+     in force when it finally runs. */
+  function later(frames, fn) {
+    var p = power;
+    pending.push({ t: frames, run: function () { power = p; fn(); } });
+  }
+
   /* A ring of stars leaving one point at one speed. Everything below is built
      out of this; `squash` flattens the ring into the ellipse a katamono ring
      shell is drawn as. */
   function shell(o) {
     var spin = o.spin === undefined ? Math.random() * Math.PI * 2 : o.spin;
     var squash = o.squash === undefined ? 1 : o.squash;
-    for (var i = 0; i < o.count; i++) {
-      var a = spin + (i / o.count) * Math.PI * 2;
-      var s = o.speed * (1 + (Math.random() - 0.5) * (o.jitter || 0));
+
+    var count = Math.round(o.count * (1 + (power - 1) * 0.50));
+    var speed = o.speed * (1 + (power - 1) * 0.80);
+    var life  = o.life  * (1 + (power - 1) * 0.28);
+
+    for (var i = 0; i < count; i++) {
+      var a = spin + (i / count) * Math.PI * 2;
+      var s = speed * (1 + (Math.random() - 0.5) * (o.jitter || 0));
       emit({
         x: o.x, y: o.y,
         vx: Math.cos(a) * s,
         vy: Math.sin(a) * s * squash,
         rgb: o.rgb,
-        life: o.life * (1 + (Math.random() - 0.5) * (o.lifeJitter || 0)),
+        life: life * (1 + (Math.random() - 0.5) * (o.lifeJitter || 0)),
         drag: o.drag, grav: o.grav, tail: o.tail, fade: o.fade
       });
     }
@@ -214,15 +245,18 @@
               drag: 0.10, grav: 0.02, tail: 6, rgb: c[0] });
 
       var spin = Math.random() * Math.PI * 2;
+      var mini = function (mx, my, rgb) {
+        return function () {
+          shell({ x: mx, y: my, count: 9, speed: 1.15, life: 46,
+                  drag: 0.09, grav: 0.030, tail: 4, rgb: rgb, jitter: 0.2 });
+        };
+      };
       for (var i = 0; i < 7; i++) {
         var a = spin + (i / 7) * Math.PI * 2;
         var r = 34 + Math.random() * 12;
-        pending.push({
-          t: 15 + Math.random() * 7,
-          x: x + Math.cos(a) * r,
-          y: y + Math.sin(a) * r,
-          rgb: Math.random() < 0.5 ? c[0] : c[1]
-        });
+        later(15 + Math.random() * 7,
+              mini(x + Math.cos(a) * r, y + Math.sin(a) * r,
+                   Math.random() < 0.5 ? c[0] : c[1]));
       }
     }
   };
@@ -230,11 +264,38 @@
   var NAMES = Object.keys(TYPES);
   var lastType = "";
 
-  function burst(x, y) {
+  /* One shell, never the same kind twice running. */
+  function fire(x, y) {
     var name = NAMES[(Math.random() * NAMES.length) | 0];
     if (name === lastType) name = NAMES[(NAMES.indexOf(name) + 1) % NAMES.length];
     lastType = name;
     TYPES[name](x, y);
+  }
+
+  var heat = 0;
+  var lastClick = 0;
+
+  function burst(x, y) {
+    /* Decay first, by however long the pause was, then add this click. Cadence
+       is what raises heat: hammering the mouse climbs, pausing resets. */
+    var now = performance.now();
+    heat = heat * Math.exp(-(now - lastClick) / TAU) + GAIN;
+    if (heat > 1) heat = 1;
+    lastClick = now;
+    power = 1 + heat;
+
+    fire(x, y);
+
+    /* Past a certain heat one shell stops being enough and it becomes a
+       barrage: extra shells walking outward from the click, a beat apart. */
+    var extra = Math.floor(heat * 2.8);
+    var trail = function (tx, ty) { return function () { fire(tx, ty); }; };
+    for (var i = 0; i < extra; i++) {
+      var spread = 60 + i * 55;
+      later(7 + i * 9 + Math.random() * 7,
+            trail(x + (Math.random() - 0.5) * spread * 2,
+                  y + (Math.random() - 0.5) * spread * 1.4));
+    }
   }
 
   /* --------------------------------------------------------------- draw --- */
@@ -262,9 +323,9 @@
     for (i = pending.length - 1; i >= 0; i--) {
       pending[i].t -= k;
       if (pending[i].t > 0) continue;
-      shell({ x: pending[i].x, y: pending[i].y, count: 9, speed: 1.15, life: 46,
-              drag: 0.09, grav: 0.030, tail: 4, rgb: pending[i].rgb, jitter: 0.2 });
+      var run = pending[i].run;
       pending.splice(i, 1);
+      run();
     }
 
     for (i = stars.length - 1; i >= 0; i--) {
@@ -287,6 +348,11 @@
   function paint() {
     ctx.clearRect(0, 0, w, h);
 
+    /* Sub-stepping each trail segment is what makes a fast star draw a solid
+       stroke, and it is also the expensive part. In the middle of a barrage
+       there is too much on screen to tell, so drop it and stay at frame rate. */
+    var dense = stars.length > DENSE;
+
     for (var s = 0; s < stars.length; s++) {
       var p = stars[s];
       var t = p.life / p.max;
@@ -307,7 +373,7 @@
         var al  = a * (0.07 + age * 0.45);
 
         var dx = x1 - x0, dy = y1 - y0;
-        var steps = Math.ceil(Math.sqrt(dx * dx + dy * dy) / PIXEL) || 1;
+        var steps = dense ? 1 : (Math.ceil(Math.sqrt(dx * dx + dy * dy) / PIXEL) || 1);
         for (var q = 0; q < steps; q++) {
           px(x0 + dx * (q / steps), y0 + dy * (q / steps), rgb, al);
         }
