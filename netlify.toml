@@ -1,0 +1,12 @@
+# stanhua.rbind.io is served by Netlify from this repo. The real site lives on GitHub Pages
+# (.github/workflows/hugo.yml), so Netlify doesn't build anything: it only redirects.
+
+[build]
+  publish = "static"
+  command = "echo 'redirect-only deploy; site is built by GitHub Pages'"
+
+[[redirects]]
+  from = "/*"
+  to = "https://stan-hua.github.io/:splat"
+  status = 301
+  force = true
